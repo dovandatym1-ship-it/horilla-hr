@@ -17,6 +17,7 @@
 | 06 | [Sổ căn cứ pháp lý và quyết định](06-DANG-KY-PHAP-LY-VA-POLICY-DECISION-LOG.md) | Pháp chế/HR/Payroll: nguồn chính thống, effective date, vấn đề BLOCKED |
 | 07 | [An ninh, phân quyền, báo cáo, tích hợp](07-BAO-MAT-PHAN-QUYEN-BAO-CAO.md) | Security/Dev/QA: RBAC, tenant, PII, report, file bank |
 | 08 | [UAT, traceability & roadmap](08-UAT-TRACEABILITY-ROADMAP.md) | PM/BA/Dev/QA: backlog 20 feature, mapping code/test, gating |
+| 09 | [Giao diện, màn hình và thông điệp tiếng Việt](09-CHUAN-HOA-GIAO-DIEN-VA-THONG-DIEP-VI.md) | BA/UX/Dev: menu, form, datagrid, workflow action, lỗi và thông báo |
 | Tổng quan | [Phân tích GAP và kế hoạch gốc](HORILLA_HRM_VIET_NAM_2026_ANALYSIS_PLAN.md) | Đọc nhanh hiện trạng/kiến trúc/lộ trình; khi có khác biệt, áp dụng bản chi tiết đã kiểm soát |
 
 ## 2. Quy tắc áp dụng và thứ tự ưu tiên
