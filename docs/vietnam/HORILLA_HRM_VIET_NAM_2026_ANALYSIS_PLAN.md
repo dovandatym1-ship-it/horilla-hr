@@ -1,5 +1,9 @@
 # HORILLA HRM — PHÂN TÍCH GAP & KẾ HOẠCH VIỆT NAM HÓA
 
+> **BẢN TỔNG QUAN — CẬP NHẬT HỆ TÀI LIỆU NGHIỆP VỤ 17/10/2026**  
+> Phạm vi chi tiết đã tách thành [STD-00](00-QUY-UOC-VA-THUAT-NGU.md), [BRD-01](01-BRD-CHUC-NANG-VA-QUY-TRINH.md), [SRS-02](02-SRS-USE-CASE-VA-BUSINESS-RULE.md), [DATA-03](03-TU-DIEN-DU-LIEU-VA-ANH-XA-CODE.md), [OPS-04](04-CHAM-CONG-CA-LAM-NGHI-PHEP.md), [PAY-05](05-TINH-LUONG-THUE-BAO-HIEM.md), [LEGAL-06](06-DANG-KY-PHAP-LY-VA-POLICY-DECISION-LOG.md), [SEC-07](07-BAO-MAT-PHAN-QUYEN-BAO-CAO.md), [DEL-08](08-UAT-TRACEABILITY-ROADMAP.md). Xem [mục lục](README.md). Nếu có khác biệt về số liệu luật, áp dụng sổ LEGAL-06 và quy tắc đã được thẩm định, **không tự sử dụng bản tổng quan này để tính tiền lương thật**. Các phần code mới chỉ là TO-BE; chưa chạy runtime/UAT.
+
+
 **Ngày lập:** 17/10/2026  
 **Repository:** https://github.com/dovandatym1-ship-it/horilla-hr  
 **Baseline:** nhánh `2.0`, commit `fad3c73f212bd9a591b743024a1e6870e01f0f20` (commit ngày 15/10/2026), `horilla/__version__.py` = `2.1.8`  
@@ -304,7 +308,7 @@ Cần thử tổ hợp vai trò + pháp nhân + API + xuất dữ liệu, không
 
 ### Triển khai mã nguồn ở các PR tiếp theo
 
-Nhánh `feature/vietnam-hrm-foundation` là bước đầu để đưa tài liệu vào repository. Sau khi duyệt, tách các tài liệu `architecture.md`, `gap-analysis.md`, `brd.md`, `data-dictionary.md`, `policy-decision-log.md`, `uat-cases.md`, bổ sung skeleton các app và bản dịch `vi` trong những PR kỹ thuật riêng. PR hiện tại chỉ chứa tài liệu, chưa thay đổi tính năng HRM.
+Nhánh `feature/vietnam-hrm-foundation` là bước đầu để đưa tài liệu vào repository. Các bản BRD/SRS/Data Dictionary/Business Rules/UAT mức tài liệu đã được tách trong `docs/vietnam/` (xem `README.md`). Sau khi duyệt, mới bổ sung skeleton các app, bản dịch `vi` và các bước tích hợp code trong những PR kỹ thuật riêng. PR hiện tại chỉ chứa tài liệu, chưa thay đổi tính năng HRM.
 
 ---
 
