@@ -1,7 +1,7 @@
 # HORILLA HRM — PHÂN TÍCH GAP & KẾ HOẠCH VIỆT NAM HÓA
 
 > **BẢN TỔNG QUAN — CẬP NHẬT HỆ TÀI LIỆU NGHIỆP VỤ 17/10/2026**  
-> Phạm vi chi tiết đã tách thành [STD-00](00-QUY-UOC-VA-THUAT-NGU.md), [BRD-01](01-BRD-CHUC-NANG-VA-QUY-TRINH.md), [SRS-02](02-SRS-USE-CASE-VA-BUSINESS-RULE.md), [DATA-03](03-TU-DIEN-DU-LIEU-VA-ANH-XA-CODE.md), [OPS-04](04-CHAM-CONG-CA-LAM-NGHI-PHEP.md), [PAY-05](05-TINH-LUONG-THUE-BAO-HIEM.md), [LEGAL-06](06-DANG-KY-PHAP-LY-VA-POLICY-DECISION-LOG.md), [SEC-07](07-BAO-MAT-PHAN-QUYEN-BAO-CAO.md), [DEL-08](08-UAT-TRACEABILITY-ROADMAP.md). Xem [mục lục](README.md). Nếu có khác biệt về số liệu luật, áp dụng sổ LEGAL-06 và quy tắc đã được thẩm định, **không tự sử dụng bản tổng quan này để tính tiền lương thật**. Các phần code mới chỉ là TO-BE; chưa chạy runtime/UAT.
+> Phạm vi chi tiết đã tách thành [STD-00](00-QUY-UOC-VA-THUAT-NGU.md), [BRD-01](01-BRD-CHUC-NANG-VA-QUY-TRINH.md), [SRS-02](02-SRS-USE-CASE-VA-BUSINESS-RULE.md), [DATA-03](03-TU-DIEN-DU-LIEU-VA-ANH-XA-CODE.md), [OPS-04](04-CHAM-CONG-CA-LAM-NGHI-PHEP.md), [PAY-05](05-TINH-LUONG-THUE-BAO-HIEM.md), [LEGAL-06](06-DANG-KY-PHAP-LY-VA-POLICY-DECISION-LOG.md), [SEC-07](07-BAO-MAT-PHAN-QUYEN-BAO-CAO.md), [DEL-08](08-UAT-TRACEABILITY-ROADMAP.md), [UI-09](09-CHUAN-HOA-GIAO-DIEN-VA-THONG-DIEP-VI.md). Xem [mục lục](README.md). Nếu có khác biệt về số liệu luật, áp dụng sổ LEGAL-06 và quy tắc đã được thẩm định, **không tự sử dụng bản tổng quan này để tính tiền lương thật**. Các phần code mới chỉ là TO-BE; chưa chạy runtime/UAT.
 
 
 **Ngày lập:** 17/10/2026  
