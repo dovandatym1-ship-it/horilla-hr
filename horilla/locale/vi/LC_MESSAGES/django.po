@@ -678,3 +678,117 @@ msgstr "Phê duyệt"
 
 msgid "Review Ongoing"
 msgstr "Đang rà soát"
+
+msgid "Sign In"
+msgstr "Đăng nhập"
+
+msgid "Login"
+msgstr "Đăng nhập"
+
+msgid "Welcome to"
+msgstr "Chào mừng đến với"
+
+msgid "HR"
+msgstr "Nhân sự"
+
+msgid "Please login to access the dashboard."
+msgstr "Vui lòng đăng nhập để truy cập hệ thống."
+
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+msgid "Password"
+msgstr "Mật khẩu"
+
+msgid "Enter Password"
+msgstr "Nhập mật khẩu"
+
+msgid "Forgot Password ?"
+msgstr "Quên mật khẩu?"
+
+msgid "Forgot password"
+msgstr "Quên mật khẩu"
+
+msgid "Show Password"
+msgstr "Hiển thị mật khẩu"
+
+msgid "Hide Password"
+msgstr "Ẩn mật khẩu"
+
+msgid "Use alphanumeric characters"
+msgstr "Dùng chữ và số"
+
+msgid "Secure Sign-in"
+msgstr "Đăng nhập an toàn"
+
+msgid "Initialize Database"
+msgstr "Khởi tạo cơ sở dữ liệu"
+
+msgid "Load Demo Data"
+msgstr "Nạp dữ liệu mẫu"
+
+msgid "Access Denied !"
+msgstr "Truy cập bị từ chối!"
+
+msgid "All Notifications"
+msgstr "Tất cả thông báo"
+
+msgid "Clear all"
+msgstr "Xóa tất cả"
+
+msgid "My Company"
+msgstr "Công ty của tôi"
+
+msgid "My Profile"
+msgstr "Hồ sơ của tôi"
+
+msgid "Logout"
+msgstr "Đăng xuất"
+
+msgid "All companies"
+msgstr "Tất cả công ty"
+
+msgid "New password"
+msgstr "Mật khẩu mới"
+
+msgid "Confirm Password"
+msgstr "Xác nhận mật khẩu"
+
+msgid "Forgot Password"
+msgstr "Quên mật khẩu"
+
+msgid "Reset Password"
+msgstr "Đặt lại mật khẩu"
+
+msgid "Loading..."
+msgstr "Đang tải..."
+
+msgid "Department Manager"
+msgstr "Trưởng phòng"
+
+msgid "Organization Chart"
+msgstr "Sơ đồ tổ chức"
+
+msgid "Timesheet"
+msgstr "Bảng chấm công"
+
+msgid "Timesheets"
+msgstr "Bảng chấm công"
+
+msgid "Attendance Dashboard"
+msgstr "Tổng quan chấm công"
+
+msgid "Leave Dashboard"
+msgstr "Tổng quan nghỉ phép"
+
+msgid "Recruitment Dashboard"
+msgstr "Tổng quan tuyển dụng"
+
+msgid "Reimbursements"
+msgstr "Hoàn trả chi phí"
+
+msgid "Add Employee"
+msgstr "Thêm nhân viên"
+
+msgid "No data"
+msgstr "Không có dữ liệu"
