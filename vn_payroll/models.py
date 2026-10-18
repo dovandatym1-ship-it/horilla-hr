@@ -11,7 +11,7 @@ from django.db import models, transaction
 from django.core.exceptions import PermissionDenied
 from base.horilla_company_manager import HorillaCompanyManager
 
-from .expression import InvalidFormula, evaluate
+from .expression import InvalidFormula, evaluate, validate_expression
 
 class FormulaRuleQuerySet(models.QuerySet):
     """Forbid bulk paths which bypass clean(), approval and version history."""
@@ -110,11 +110,7 @@ class FormulaRule(models.Model):
             errors["status"] = "Quy tắc chưa duyệt không thể chứa thời điểm duyệt."
         if self.variables and isinstance(self.variables, list) and not errors:
             try:
-                evaluate(
-                    self.expression,
-                    {name: "1" for name in self.variables},
-                    places=self.decimal_places,
-                )
+                validate_expression(self.expression, self.variables)
             except (InvalidFormula, TypeError, ValueError) as exc:
                 errors["expression"] = str(exc)
         if errors:
