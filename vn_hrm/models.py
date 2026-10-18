@@ -6,6 +6,7 @@ from django.db import models
 
 from base.horilla_company_manager import HorillaCompanyManager
 from .crypto import protect_identifier
+from .approval_guard import hr_approval_enabled
 
 
 class SensitiveNoBulkQuerySet(models.QuerySet):
@@ -139,6 +140,16 @@ class VNDependent(models.Model):
         if self.status == "verified" and not self.verified_by_id:
             raise ValidationError({"status": "Cần người xác minh người phụ thuộc."})
 
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        if self.status == "verified" and not hr_approval_enabled():
+            raise PermissionDenied("Chỉ quy trình xác minh mới được phê duyệt.")
+        if self.pk:
+            old = type(self)._base_manager.get(pk=self.pk)
+            if old.status == "verified":
+                raise PermissionDenied("Hồ sơ phụ thuộc đã duyệt không thể sửa đè.")
+        return super().save(*args, **kwargs)
+
 
 class VNContractAmendment(models.Model):
     STATUS_CHOICES = [
@@ -158,9 +169,21 @@ class VNContractAmendment(models.Model):
     status = models.CharField(
         max_length=10, choices=STATUS_CHOICES, default="draft"
     )
+    created_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True,
+        on_delete=models.PROTECT, related_name="created_vn_contract_amendments",
+    )
+    approved_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True,
+        on_delete=models.PROTECT, related_name="approved_vn_contract_amendments",
+    )
+    approved_at = models.DateTimeField(null=True, blank=True)
     objects = SensitiveManager("company")
 
     class Meta:
+        permissions = [
+            ("approve_vncontractamendment", "Can approve Vietnam contract amendments"),
+        ]
         constraints = [
             models.UniqueConstraint(
                 fields=["contract", "version"], name="vn_hrm_contract_amendment_unique"
@@ -173,6 +196,11 @@ class VNContractAmendment(models.Model):
             raise ValidationError({"effective_to": "Khoảng hiệu lực không hợp lệ."})
         if self.wage_vnd is not None and self.wage_vnd < 0:
             raise ValidationError({"wage_vnd": "Tiền lương không thể âm."})
+        if self.status == "approved":
+            if not self.approved_by_id or not self.approved_at or not self.created_by_id:
+                raise ValidationError("Phụ lục phải có đủ người lập và người duyệt.")
+            if self.approved_by_id == self.created_by_id:
+                raise ValidationError("Người duyệt và người lập phải khác nhau.")
         if self.contract_id:
             work_info = getattr(self.contract.employee_id, "employee_work_info", None)
             if work_info is not None and work_info.company_id_id != self.company_id:
@@ -180,10 +208,15 @@ class VNContractAmendment(models.Model):
 
     def save(self, *args, **kwargs):
         self.full_clean()
+        if self.status == "approved" and not hr_approval_enabled():
+            raise PermissionDenied("Phải duyệt phụ lục qua dịch vụ có phân quyền.")
         if self.pk:
             original = type(self)._base_manager.get(pk=self.pk)
             if original.status == "approved":
                 raise PermissionDenied("Phụ lục đã duyệt không thể chỉnh sửa.")
+            allowed = {"draft": ("draft", "review"), "review": ("review", "draft", "approved")}
+            if self.status not in allowed.get(original.status, ()):
+                raise ValidationError("Chuyển trạng thái phụ lục không hợp lệ.")
         return super().save(*args, **kwargs)
 
     def delete(self, *args, **kwargs):
