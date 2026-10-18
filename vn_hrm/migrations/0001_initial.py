@@ -85,6 +85,7 @@ class Migration(migrations.Migration):
                 ("created_at", models.DateTimeField(auto_now_add=True)),
                 ("company", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to="base.company")),
                 ("employee", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name="vn_leave_events", to="employee.employee")),
+                ("created_by", models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL)),
             ],
         ),
         migrations.CreateModel(
@@ -99,9 +100,17 @@ class Migration(migrations.Migration):
                 ("actor", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL)),
             ],
         ),
+        migrations.AlterModelOptions(
+            name="vnemployeelegalprofile",
+            options={"permissions": [("manage_vn_identifiers", "Can set encrypted Vietnamese identifiers"), ("reveal_vn_identifiers", "Can reveal encrypted Vietnamese identifiers")]},
+        ),
         migrations.AddConstraint(
             model_name="vnemployeelegalprofile",
             constraint=models.UniqueConstraint(fields=("company", "employee"), name="vn_hrm_employee_company_unique"),
+        ),
+        migrations.AddConstraint(
+            model_name="vnemployeelegalprofile",
+            constraint=models.UniqueConstraint(fields=("company", "citizen_digest"), condition=~models.Q(citizen_digest=""), name="vn_hrm_citizen_digest_unique"),
         ),
         migrations.AddConstraint(
             model_name="vncontractamendment",
