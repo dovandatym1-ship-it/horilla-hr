@@ -70,3 +70,11 @@ TC-SEC-007: tải đính kèm bằng URL không hợp lệ bị từ chối.
 TC-SEC-008: người dùng quản trị hạ tầng không tự có quyền xem phiếu lương.
 
 **Go/No-Go:** Không còn lỗi truy cập chéo pháp nhân; đã có biên bản kiểm thử RBAC, field-masking, export, restore; nghiệp vụ xử lý dữ liệu cá nhân có phê duyệt.
+
+
+## 8. Phụ lục Security v1.1 — Permission action/field/server và lỗi
+Phân quyền chuẩn là \`Authentication ∩ RBAC Action ∩ Company/Tenant ∩ Org Scope ∩ Field Scope ∩ Effective Delegation ∩ Separation of Duties\`. Áp cho detail, list, count, search, dashboard, download, export, bulk, Admin, background jobs và related FK lookup. Không gửi raw PII/salary vào client để rồi chỉ ẩn CSS; không cấp quyền salary cho Admin kỹ thuật theo mặc định.
+
+**Hiện trạng:** VN modules PR #3 dùng Django Admin superuser-only, **chưa** triển khai role HR/Payroll/Finance theo ma trận TO-BE. Phải thêm service-level scope, serializers, access log đọc/xuất nhạy cảm, tenant negative tests trước khi bật cho nhân viên HR.
+
+**Tài liệu áp dụng:** [ma trận role và mã lỗi](14-API-PERMISSION-ERROR-CONTRACT.md), [input validation](10-FIELD-LEVEL-VALIDATION-MATRIX.md), [UAT negative/security](15-TRACEABILITY-UAT-MATRIX.md). Các báo cáo xuất dữ liệu phải có scope theo pháp nhân tại server, log số dòng/loại field/mục đích/hash.
