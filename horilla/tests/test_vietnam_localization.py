@@ -133,3 +133,39 @@ class VietnameseCatalogueIntegrityTests(SimpleTestCase):
         with translation.override("en"):
             self.assertEqual(gettext("Sign In"), "Sign In")
 
+    def test_machine_drafts_with_misleading_hrm_terms_are_not_auto_approved(self):
+        from scripts.qa_vi_draft import review_one
+
+        self.assertTrue(
+            any(
+                "attendance" in item
+                for item in review_one(
+                    "Attendance Report", "Báo cáo người tham dự"
+                )
+            )
+        )
+        self.assertTrue(
+            any(
+                "asset" in item
+                for item in review_one(
+                    "Asset Request", "Yêu cầu xác thực"
+                )
+            )
+        )
+        self.assertTrue(
+            any(
+                "payslip" in item
+                for item in review_one(
+                    "Download Payslip", "Tải xuống tệp"
+                )
+            )
+        )
+        self.assertTrue(
+            any(
+                "observed_mt_error" in item
+                for item in review_one(
+                    "Gross pay", "Số tiền thô tục"
+                )
+            )
+        )
+
