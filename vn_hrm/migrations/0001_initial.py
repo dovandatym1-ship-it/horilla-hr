@@ -7,9 +7,9 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
     initial = True
     dependencies = [
-        ("base", "__latest__"),
-        ("employee", "__latest__"),
-        ("payroll", "__latest__"),
+        ("base", "0018_alter_holidays_is_specific"),
+        ("employee", "0009_alter_actiontype_is_active_and_more"),
+        ("payroll", "0012_alter_allowance_is_active_and_more"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
