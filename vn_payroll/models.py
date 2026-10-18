@@ -89,14 +89,14 @@ class VNRuleSet(models.Model):
         _check_parameters(self.parameters)
         if not isinstance(self.input_names, list) or len(self.input_names) > 80:
             raise ValidationError("Danh sách biến đầu vào phải chứa tối đa 80 tên.")
-        if len(set(self.input_names)) != len(self.input_names):
-            raise ValidationError("Biến đầu vào không được trùng nhau.")
         reserved = set(self.parameters) | {"min", "max", "abs", "round_vnd"}
         if any(
             not isinstance(name, str) or not CODE.fullmatch(name) or name in reserved
             for name in self.input_names
         ):
             raise ValidationError("Biến đầu vào phải viết thường và không trùng tham số/hàm.")
+        if len(set(self.input_names)) != len(self.input_names):
+            raise ValidationError("Biến đầu vào không được trùng nhau.")
         if self.status == "approved":
             if not self.approved_by_id or not self.approved_at or not self.legal_reference.strip():
                 raise ValidationError("Phải có người duyệt, ngày duyệt và căn cứ chính sách/pháp lý.")
