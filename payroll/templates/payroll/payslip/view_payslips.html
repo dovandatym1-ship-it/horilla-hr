@@ -462,7 +462,7 @@
             data: { id: ids },
             traditional: true,
             success: function (response) {
-                var mailProcessingMessage = "Mail processing.";
+                var mailProcessingMessage = "{% trans 'Mail processing.'|escapejs %}";
 
               $("#messages").html(
                 $(`
