@@ -97,3 +97,15 @@ jobs:
           horilla.tests.test_vietnam_localization
           payroll.tests.test_vietnam_currency
           --noinput
+      - name: Extract all Django gettext keys including blocktrans
+        run: |
+          python manage.py makemessages -l vi --no-wrap --ignore=node_modules --ignore=media --ignore=staticfiles
+          python scripts/audit_vi_locale.py > vietnam-extracted-gettext-audit.json
+          python -m json.tool vietnam-extracted-gettext-audit.json > /dev/null
+          echo "Extraction is for audit only; never commits generated untranslated keys."
+      - name: Upload full gettext source extraction inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-full-gettext-extraction-audit
+          path: vietnam-extracted-gettext-audit.json
+
