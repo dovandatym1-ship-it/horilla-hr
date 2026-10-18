@@ -50,7 +50,7 @@ jobs:
       - name: Install OS libraries
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends             libcairo2 libpango-1.0-0 libpangocairo-1.0-0             libgdk-pixbuf-2.0-0 libffi8 shared-mime-info
+          sudo apt-get install -y --no-install-recommends             libcairo2 libpango-1.0-0 libpangocairo-1.0-0             libgdk-pixbuf-2.0-0 libffi8 shared-mime-info gettext
       - name: Install requirements
         run: |
           python -m pip install --upgrade pip
@@ -60,6 +60,17 @@ jobs:
           if [ ! -f horilla/settings/local_settings.py ]; then
             printf '%s\n' '# Created for CI only' > horilla/settings/local_settings.py
           fi
+      - name: Compile and inventory Vietnamese UI translations
+        run: |
+          python manage.py compilemessages -l vi
+          python scripts/audit_vi_locale.py > vietnam-localization-audit.json
+          python -m json.tool vietnam-localization-audit.json > /dev/null
+          echo "Saved source-code localization inventory; not UAT approval."
+      - name: Upload Vietnamese localization inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: vietnam-localization-audit
+          path: vietnam-localization-audit.json
       - name: Django system check and migration drift
         run: |
           python manage.py check
