@@ -5680,3 +5680,835 @@ msgstr "Cả tháng"
 #: vietnam-ui-audit-remaining
 msgid "Something went wrong while processing payroll."
 msgstr "Đã xảy ra lỗi khi xử lý bảng lương."
+
+#: vietnam-ui-audit-access-actions
+msgid "A work type request already exists during this time period."
+msgstr "Đã có yêu cầu thay đổi hình thức làm việc trong khoảng thời gian này."
+
+#: vietnam-ui-audit-access-actions
+msgid "ADDRESS:"
+msgstr "ĐỊA CHỈ:"
+
+#: vietnam-ui-audit-access-actions
+msgid "AND"
+msgstr "VÀ"
+
+#: vietnam-ui-audit-access-actions
+msgid "API Key"
+msgstr "Khóa API"
+
+#: vietnam-ui-audit-access-actions
+msgid "API Secret"
+msgstr "Mã bí mật API"
+
+#: vietnam-ui-audit-access-actions
+msgid "API Token"
+msgstr "Mã truy cập API"
+
+#: vietnam-ui-audit-access-actions
+msgid "API Url"
+msgstr "Đường dẫn API"
+
+#: vietnam-ui-audit-access-actions
+msgid "API credentials might be incorrect."
+msgstr "Thông tin xác thực API có thể không đúng."
+
+#: vietnam-ui-audit-access-actions
+msgid "API request failed."
+msgstr "Yêu cầu API thất bại."
+
+#: vietnam-ui-audit-access-actions
+msgid "API token for LinkedIn integration"
+msgstr "Mã truy cập API để tích hợp LinkedIn"
+
+#: vietnam-ui-audit-access-actions
+msgid "APPROVED"
+msgstr "ĐÃ PHÊ DUYỆT"
+
+#: vietnam-ui-audit-access-actions
+msgid "ASSET"
+msgstr "TÀI SẢN"
+
+#: vietnam-ui-audit-access-actions
+msgid "ATTENDANCE"
+msgstr "CHẤM CÔNG"
+
+#: vietnam-ui-audit-access-actions
+msgid "About the role"
+msgstr "Thông tin về vị trí tuyển dụng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absence %"
+msgstr "Tỷ lệ vắng mặt (%)"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absence % by department"
+msgstr "Tỷ lệ vắng mặt theo phòng ban (%)"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absence % by shift"
+msgstr "Tỷ lệ vắng mặt theo ca (%)"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absence % by work type"
+msgstr "Tỷ lệ vắng mặt theo hình thức làm việc (%)"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absence Percentage"
+msgstr "Tỷ lệ vắng mặt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absent / MO"
+msgstr "Vắng mặt / Thiếu giờ ra"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absent / Missing Out"
+msgstr "Vắng mặt / Thiếu giờ ra"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absent Days"
+msgstr "Số ngày vắng mặt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absent days"
+msgstr "Số ngày vắng mặt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absent days (latest)"
+msgstr "Số ngày vắng mặt (gần nhất)"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absenteeism Rate"
+msgstr "Tỷ lệ vắng mặt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Absenteeism Trend"
+msgstr "Xu hướng vắng mặt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Acceptance Rate"
+msgstr "Tỷ lệ chấp nhận"
+
+#: vietnam-ui-audit-access-actions
+msgid "Acceptance rate"
+msgstr "Tỷ lệ chấp nhận"
+
+#: vietnam-ui-audit-access-actions
+msgid "Accepted"
+msgstr "Đã chấp nhận"
+
+#: vietnam-ui-audit-access-actions
+msgid "Accepted / joined"
+msgstr "Đã chấp nhận / Đã vào làm"
+
+#: vietnam-ui-audit-access-actions
+msgid "Accepted Offers"
+msgstr "Thư mời được chấp nhận"
+
+#: vietnam-ui-audit-access-actions
+msgid "Accepted÷sent"
+msgstr "Đã chấp nhận / Đã gửi"
+
+#: vietnam-ui-audit-access-actions
+msgid "Access"
+msgstr "Truy cập"
+
+#: vietnam-ui-audit-access-actions
+msgid "Access Count"
+msgstr "Số lượt truy cập"
+
+#: vietnam-ui-audit-access-actions
+msgid "Access Denied"
+msgstr "Truy cập bị từ chối"
+
+#: vietnam-ui-audit-access-actions
+msgid "Access Denied."
+msgstr "Truy cập bị từ chối."
+
+#: vietnam-ui-audit-access-actions
+msgid "Access Denied.."
+msgstr "Truy cập bị từ chối."
+
+#: vietnam-ui-audit-access-actions
+msgid "Accessibility filter saved"
+msgstr "Đã lưu bộ lọc trợ năng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Account Information"
+msgstr "Thông tin tài khoản"
+
+#: vietnam-ui-audit-access-actions
+msgid "Account Settings"
+msgstr "Cài đặt tài khoản"
+
+#: vietnam-ui-audit-access-actions
+msgid "Account created successfully.."
+msgstr "Đã tạo tài khoản thành công."
+
+#: vietnam-ui-audit-access-actions
+msgid "Account number"
+msgstr "Số tài khoản"
+
+#: vietnam-ui-audit-access-actions
+msgid "Accounts"
+msgstr "Tài khoản"
+
+#: vietnam-ui-audit-access-actions
+msgid "Action Created"
+msgstr "Đã tạo thao tác"
+
+#: vietnam-ui-audit-access-actions
+msgid "Action Date"
+msgstr "Ngày thực hiện"
+
+#: vietnam-ui-audit-access-actions
+msgid "Action Required"
+msgstr "Cần thực hiện thao tác"
+
+#: vietnam-ui-audit-access-actions
+msgid "Action Taken"
+msgstr "Thao tác đã thực hiện"
+
+#: vietnam-ui-audit-access-actions
+msgid "Action Type"
+msgstr "Loại thao tác"
+
+#: vietnam-ui-audit-access-actions
+msgid "Action Types"
+msgstr "Các loại thao tác"
+
+#: vietnam-ui-audit-access-actions
+msgid "Action types"
+msgstr "Các loại thao tác"
+
+#: vietnam-ui-audit-access-actions
+msgid "Action=delete"
+msgstr "Thao tác=xóa"
+
+#: vietnam-ui-audit-access-actions
+msgid "Actiontype not found"
+msgstr "Không tìm thấy loại thao tác"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activate"
+msgstr "Kích hoạt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activate Biometric Attendance"
+msgstr "Kích hoạt chấm công sinh trắc học"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activate Google Meet integration for video interviews"
+msgstr "Kích hoạt tích hợp Google Meet cho phỏng vấn trực tuyến"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activate LinkedIn integration for job posting"
+msgstr "Kích hoạt tích hợp LinkedIn để đăng tin tuyển dụng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activate WhatsApp Business API integration"
+msgstr "Kích hoạt tích hợp WhatsApp Business API"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activate live capture mode"
+msgstr "Bật chế độ ghi hình trực tiếp"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activated"
+msgstr "Đã kích hoạt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active 'Payslip auto generate' cannot be deleted."
+msgstr "Không thể xóa cấu hình 'Tự động tạo phiếu lương' đang hoạt động."
+
+#: vietnam-ui-audit-access-actions
+msgid "Active From"
+msgstr "Hiệu lực từ"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active Recruitments"
+msgstr "Các đợt tuyển dụng đang mở"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active Till"
+msgstr "Hiệu lực đến"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active candidates per pool"
+msgstr "Ứng viên đang hoạt động theo nguồn ứng viên"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active company scope"
+msgstr "Phạm vi công ty đang hoạt động"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active direct reports, top 10 managers"
+msgstr "Nhân viên cấp dưới đang làm việc của 10 quản lý hàng đầu"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active employees"
+msgstr "Nhân viên đang làm việc"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active employees by assigned shift"
+msgstr "Nhân viên đang làm việc theo ca được phân"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active employees by department"
+msgstr "Nhân viên đang làm việc theo phòng ban"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active employees by work type"
+msgstr "Nhân viên đang làm việc theo hình thức làm việc"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active employees per job position, stacked by department"
+msgstr "Nhân viên đang làm việc theo chức danh, phân nhóm phòng ban"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active employees who cannot be paid: missing bank details or "
+msgstr "Nhân viên đang làm việc nhưng chưa thể thanh toán: thiếu thông tin ngân hàng hoặc "
+
+#: vietnam-ui-audit-access-actions
+msgid "Active employees with joining date"
+msgstr "Nhân viên đang làm việc có ngày vào làm"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active employees, by department"
+msgstr "Nhân viên đang làm việc theo phòng ban"
+
+#: vietnam-ui-audit-access-actions
+msgid "Active headcount"
+msgstr "Số nhân viên đang làm việc"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activities:"
+msgstr "Hoạt động:"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activity"
+msgstr "Hoạt động"
+
+#: vietnam-ui-audit-access-actions
+msgid "Activity history"
+msgstr "Lịch sử hoạt động"
+
+#: vietnam-ui-audit-access-actions
+msgid "Actual Basic Pay"
+msgstr "Lương cơ bản thực tế"
+
+#: vietnam-ui-audit-access-actions
+msgid "Ad-hoc pivots per module. Use Standard Reports for curated KPIs, charts, and export."
+msgstr "Bảng phân tích linh hoạt theo từng phân hệ. Sử dụng Báo cáo chuẩn để xem chỉ số, biểu đồ và xuất dữ liệu."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add %(percent)s%% cess on top of the tax still payable."
+msgstr "Cộng thêm khoản phụ thu %(percent)s%% vào số thuế còn phải nộp."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add / View Comment"
+msgstr "Thêm / Xem bình luận"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add A Question"
+msgstr "Thêm câu hỏi"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Allowed IPs"
+msgstr "Thêm IP được phép"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Asset Report"
+msgstr "Thêm báo cáo tài sản"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Attendances"
+msgstr "Thêm chấm công"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Available Days"
+msgstr "Thêm số ngày phép khả dụng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Biometric Device"
+msgstr "Thêm thiết bị sinh trắc học"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Bonus"
+msgstr "Thêm tiền thưởng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Bonus Points"
+msgstr "Thêm điểm thưởng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Candidate"
+msgstr "Thêm ứng viên"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Candidate to Talent Pool"
+msgstr "Thêm ứng viên vào nguồn tiềm năng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Candidates"
+msgstr "Thêm các ứng viên"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Comment"
+msgstr "Thêm bình luận"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Comments"
+msgstr "Thêm bình luận"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Condition"
+msgstr "Thêm điều kiện"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Field"
+msgstr "Thêm trường dữ liệu"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Files"
+msgstr "Thêm tệp"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Fine"
+msgstr "Thêm khoản phạt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Key Result"
+msgstr "Thêm kết quả then chốt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Key Results"
+msgstr "Thêm các kết quả then chốt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Manager"
+msgstr "Thêm người quản lý"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add MoM"
+msgstr "Thêm biên bản cuộc họp"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add More"
+msgstr "Thêm nữa"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add New Employee"
+msgstr "Thêm nhân viên mới"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Note"
+msgstr "Thêm ghi chú"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Profile Edit Access"
+msgstr "Cấp quyền sửa hồ sơ"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Question"
+msgstr "Thêm câu hỏi"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Question Template"
+msgstr "Thêm mẫu câu hỏi"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Questions"
+msgstr "Thêm các câu hỏi"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Recruitment"
+msgstr "Thêm đợt tuyển dụng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Report"
+msgstr "Thêm báo cáo"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Response"
+msgstr "Thêm phản hồi"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Template"
+msgstr "Thêm mẫu"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add Tickets"
+msgstr "Thêm yêu cầu hỗ trợ"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add a Username column to the CSV"
+msgstr "Thêm cột tên đăng nhập vào CSV"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add a comment..."
+msgstr "Viết bình luận..."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add a line to this payslip"
+msgstr "Thêm một dòng vào phiếu lương"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add a note"
+msgstr "Thêm ghi chú"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add a note..."
+msgstr "Nhập ghi chú..."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add a quick note above to keep the team aligned."
+msgstr "Thêm ghi chú nhanh ở trên để nhóm cùng nắm thông tin."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add assignees"
+msgstr "Thêm người được giao"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add at least one recipient email."
+msgstr "Thêm ít nhất một địa chỉ email người nhận."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add attachments"
+msgstr "Thêm tệp đính kèm"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add candidate"
+msgstr "Thêm ứng viên"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add employees (Members)"
+msgstr "Thêm nhân viên (thành viên)"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add filter"
+msgstr "Thêm bộ lọc"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add from library"
+msgstr "Thêm từ thư viện"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add level"
+msgstr "Thêm cấp độ"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add members"
+msgstr "Thêm thành viên"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add more IP address.."
+msgstr "Thêm địa chỉ IP khác."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add more filter"
+msgstr "Thêm bộ lọc khác"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add more managers.."
+msgstr "Thêm người quản lý khác."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add more option.."
+msgstr "Thêm tùy chọn khác."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add more options.."
+msgstr "Thêm các tùy chọn khác."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add more shift.."
+msgstr "Thêm ca khác."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add more shifts.."
+msgstr "Thêm các ca khác."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add more work types.."
+msgstr "Thêm các hình thức làm việc khác."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add note"
+msgstr "Thêm ghi chú"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add notes"
+msgstr "Thêm ghi chú"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add or remove components"
+msgstr "Thêm hoặc xóa thành phần"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add points"
+msgstr "Thêm điểm"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add selected"
+msgstr "Thêm mục đã chọn"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add slab"
+msgstr "Thêm bậc"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add step"
+msgstr "Thêm bước"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add task"
+msgstr "Thêm công việc"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to"
+msgstr "Thêm vào"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to Rejected"
+msgstr "Chuyển vào danh sách bị từ chối"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to Sill Zone"
+msgstr "Thêm vào nhóm kỹ năng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to Talent Pool"
+msgstr "Thêm vào nguồn ứng viên tiềm năng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to batch"
+msgstr "Thêm vào đợt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to offboarding"
+msgstr "Thêm vào quy trình nghỉ việc"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to these employees"
+msgstr "Thêm cho các nhân viên này"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to view"
+msgstr "Thêm vào chế độ xem"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add to view…"
+msgstr "Thêm vào chế độ xem…"
+
+#: vietnam-ui-audit-access-actions
+msgid "Add your company profile — name, logo and timezone."
+msgstr "Bổ sung hồ sơ doanh nghiệp — tên, logo và múi giờ."
+
+#: vietnam-ui-audit-access-actions
+msgid "Add your first employee to bring everything together."
+msgstr "Thêm nhân viên đầu tiên để bắt đầu quản lý tập trung."
+
+#: vietnam-ui-audit-access-actions
+msgid "Added "
+msgstr "Đã thêm "
+
+#: vietnam-ui-audit-access-actions
+msgid "Added Employee"
+msgstr "Nhân viên đã thêm"
+
+#: vietnam-ui-audit-access-actions
+msgid "Added on"
+msgstr "Được thêm ngày"
+
+#: vietnam-ui-audit-access-actions
+msgid "Added on top of the computed tax, as a percentage of it."
+msgstr "Được cộng vào số thuế đã tính theo tỷ lệ phần trăm."
+
+#: vietnam-ui-audit-access-actions
+msgid "Added to Onboarding"
+msgstr "Đã thêm vào tiếp nhận nhân sự"
+
+#: vietnam-ui-audit-access-actions
+msgid "Added to Selected Allowances"
+msgstr "Đã thêm vào phụ cấp được chọn"
+
+#: vietnam-ui-audit-access-actions
+msgid "Added to Selected Deductions"
+msgstr "Đã thêm vào khấu trừ được chọn"
+
+#: vietnam-ui-audit-access-actions
+msgid "Added to this employee"
+msgstr "Đã thêm cho nhân viên này"
+
+#: vietnam-ui-audit-access-actions
+msgid "Added to view."
+msgstr "Đã thêm vào chế độ xem."
+
+#: vietnam-ui-audit-access-actions
+msgid "Added {} points to the bonus account"
+msgstr "Đã cộng {} điểm vào tài khoản thưởng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Additional Work Types"
+msgstr "Các hình thức làm việc bổ sung"
+
+#: vietnam-ui-audit-access-actions
+msgid "Additional info"
+msgstr "Thông tin bổ sung"
+
+#: vietnam-ui-audit-access-actions
+msgid "Adds this value to each selected record's existing Available "
+msgstr "Cộng giá trị này vào số ngày khả dụng hiện tại của từng bản ghi đã chọn "
+
+#: vietnam-ui-audit-access-actions
+msgid "Adds up the day columns as you type. Every day of "
+msgstr "Tự động cộng các cột ngày khi bạn nhập. Mỗi ngày "
+
+#: vietnam-ui-audit-access-actions
+msgid "Adjusted Basic"
+msgstr "Lương cơ bản đã điều chỉnh"
+
+#: vietnam-ui-audit-access-actions
+msgid "Admins / Superusers"
+msgstr "Quản trị viên / Siêu quản trị"
+
+#: vietnam-ui-audit-access-actions
+msgid "Advanced"
+msgstr "Nâng cao"
+
+#: vietnam-ui-audit-access-actions
+msgid "Advertisement / Event"
+msgstr "Quảng cáo / Sự kiện"
+
+#: vietnam-ui-audit-access-actions
+msgid "After"
+msgstr "Sau"
+
+#: vietnam-ui-audit-access-actions
+msgid "After subtracting approved leave"
+msgstr "Sau khi trừ ngày nghỉ phép đã duyệt"
+
+#: vietnam-ui-audit-access-actions
+msgid "Age"
+msgstr "Tuổi"
+
+#: vietnam-ui-audit-access-actions
+msgid "Age (days)"
+msgstr "Số ngày đã qua"
+
+#: vietnam-ui-audit-access-actions
+msgid "Age Bands"
+msgstr "Nhóm tuổi"
+
+#: vietnam-ui-audit-access-actions
+msgid "Age of open candidates since application (created_at) by stage — "
+msgstr "Thời gian ứng tuyển của các ứng viên đang xử lý theo giai đoạn — "
+
+#: vietnam-ui-audit-access-actions
+msgid "Age since application"
+msgstr "Thời gian từ lúc ứng tuyển"
+
+#: vietnam-ui-audit-access-actions
+msgid "Ageing"
+msgstr "Thời gian tồn đọng"
+
+#: vietnam-ui-audit-access-actions
+msgid "Aging risk"
+msgstr "Nguy cơ quá hạn"
+
+#: vietnam-ui-audit-access-actions
+msgid "Agree"
+msgstr "Đồng ý"
+
+#: vietnam-ui-audit-access-actions
+msgid "Alerts"
+msgstr "Cảnh báo"
+
+#: vietnam-ui-audit-access-actions
+msgid "Align"
+msgstr "Căn chỉnh"
+
+#: vietnam-ui-audit-access-actions
+msgid "All\tSettings"
+msgstr "Tất cả\tCài đặt"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Attendances"
+msgstr "Tất cả bản ghi chấm công"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Caught Up!"
+msgstr "Bạn đã xem hết!"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Companies"
+msgstr "Tất cả công ty"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Company"
+msgstr "Tất cả công ty"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Dates"
+msgstr "Tất cả ngày"
+
+#: vietnam-ui-audit-access-actions
+msgid "All FAQ"
+msgstr "Tất cả câu hỏi thường gặp"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Leave Balances"
+msgstr "Tất cả số dư phép"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Leave types are Restricted"
+msgstr "Tất cả loại nghỉ phép đều bị hạn chế"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Objective"
+msgstr "Tất cả mục tiêu"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Objectives"
+msgstr "Tất cả mục tiêu"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Settings"
+msgstr "Tất cả cài đặt"
+
+#: vietnam-ui-audit-access-actions
+msgid "All Timesheets"
+msgstr "Tất cả bảng giờ công"
+
+#: vietnam-ui-audit-access-actions
+msgid "All active employees"
+msgstr "Tất cả nhân viên đang làm việc"
+
+#: vietnam-ui-audit-access-actions
+msgid "All caught up"
+msgstr "Bạn đã xem hết"
+
+#: vietnam-ui-audit-access-actions
+msgid "All changes made to this record"
+msgstr "Toàn bộ thay đổi của bản ghi này"
+
+#: vietnam-ui-audit-access-actions
+msgid "All company"
+msgstr "Tất cả công ty"
+
+#: vietnam-ui-audit-access-actions
+msgid "All departments"
+msgstr "Tất cả phòng ban"
+
+#: vietnam-ui-audit-access-actions
+msgid "All earnings, basic pay among them"
+msgstr "Tất cả khoản thu nhập, bao gồm lương cơ bản"
+
+#: vietnam-ui-audit-access-actions
+msgid "All exits — see Standard Report for detail"
+msgstr "Tất cả lượt nghỉ việc — xem chi tiết trong Báo cáo chuẩn"
