@@ -13,6 +13,7 @@ from decimal import Decimal
 from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.utils import timezone
 
 
 class VNEmployeeLegalProfile(models.Model):
@@ -53,7 +54,7 @@ class VNEmployeeLegalProfile(models.Model):
                 raise ValidationError({key: "Chỉ lưu bốn chữ số cuối, không nhập mã định danh đầy đủ."})
         for key in ("citizen_id_vault_ref", "tax_id_vault_ref", "social_insurance_vault_ref"):
             ref = getattr(self, key)
-            if ref and any(ch.isspace() for ch in ref):
+            if ref and (ref.isdigit() or any(ch.isspace() for ch in ref)):
                 raise ValidationError({key: "Mã tham chiếu vault phải là mã opaque, không chứa dữ liệu gốc."})
         if self.employee_id and self.company_id:
             assigned = getattr(self.employee, "employee_work_info", None)
@@ -98,6 +99,10 @@ class VNDependent(models.Model):
             raise ValidationError("Ngày hết quyền lợi phải sau ngày bắt đầu.")
         if self.identity_suffix and (len(self.identity_suffix) != 4 or not self.identity_suffix.isdigit()):
             raise ValidationError("Chỉ lưu bốn chữ số cuối của mã định danh.")
+        if self.identity_vault_ref and (
+            self.identity_vault_ref.isdigit() or any(ch.isspace() for ch in self.identity_vault_ref)
+        ):
+            raise ValidationError("Chỉ lưu mã tham chiếu kho bảo mật, không lưu số định danh.")
         if self.employee_id and self.company_id:
             assigned = getattr(self.employee, "employee_work_info", None)
             if assigned and assigned.company_id_id and assigned.company_id_id != self.company_id:
@@ -120,6 +125,15 @@ class VNContractAmendment(models.Model):
         max_length=20, choices=[("draft", "Nháp"), ("approved", "Đã duyệt")],
         default="draft",
     )
+    created_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT, null=True, blank=True,
+        related_name="+"
+    )
+    approved_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT, null=True, blank=True,
+        related_name="+"
+    )
+    approved_at = models.DateTimeField(null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -135,8 +149,13 @@ class VNContractAmendment(models.Model):
 
     def clean(self):
         super().clean()
-        if self.new_monthly_wage_vnd < 0:
+        if self.new_monthly_wage_vnd is not None and self.new_monthly_wage_vnd < 0:
             raise ValidationError("Lương tháng mới không thể âm.")
+        if self.status == "approved":
+            if not self.approved_by_id or not self.approved_at:
+                raise ValidationError("Phụ lục phải có người và thời điểm phê duyệt.")
+            if self.created_by_id and self.created_by_id == self.approved_by_id:
+                raise ValidationError("Người lập không được tự duyệt phụ lục.")
         if self.contract_id and self.company_id:
             assignment = getattr(self.contract.employee_id, "employee_work_info", None)
             if assignment and assignment.company_id_id and assignment.company_id_id != self.company_id:
@@ -147,6 +166,16 @@ class VNContractAmendment(models.Model):
             raise ValidationError("Phụ lục đã duyệt không được sửa đè.")
         self.full_clean()
         return super().save(*args, **kwargs)
+
+    def approve(self, user):
+        if self.status != "draft":
+            raise ValidationError("Chỉ phê duyệt phụ lục đang Nháp.")
+        if self.created_by_id == user.pk:
+            raise ValidationError("Người lập không được tự phê duyệt.")
+        self.status = "approved"
+        self.approved_by = user
+        self.approved_at = timezone.now()
+        self.save()
 
 
 class VNAttendanceCorrection(models.Model):
@@ -160,8 +189,13 @@ class VNAttendanceCorrection(models.Model):
         choices=[("pending", "Chờ duyệt"), ("approved", "Đã duyệt"), ("rejected", "Đã từ chối")],
         default="pending",
     )
+    requested_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.PROTECT,
+        related_name="+"
+    )
     reviewed_by = models.ForeignKey(
-        settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.PROTECT
+        settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.PROTECT,
+        related_name="+"
     )
     reviewed_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -176,6 +210,11 @@ class VNAttendanceCorrection(models.Model):
             raise ValidationError("Điều chỉnh công phải nằm trong giới hạn một ngày.")
         if not self.reason.strip():
             raise ValidationError("Bắt buộc ghi lý do điều chỉnh.")
+        if self.status != "pending":
+            if not self.reviewed_by_id or not self.reviewed_at:
+                raise ValidationError("Quyết định phải có người và thời điểm duyệt.")
+            if self.requested_by_id and self.requested_by_id == self.reviewed_by_id:
+                raise ValidationError("Người đề nghị không được tự duyệt.")
 
     def save(self, *args, **kwargs):
         if self.pk and VNAttendanceCorrection.objects.filter(pk=self.pk).exclude(status="pending").exists():
