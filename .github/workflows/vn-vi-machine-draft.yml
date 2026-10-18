@@ -15,7 +15,7 @@ permissions:
 jobs:
   draft-only:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     env:
       HF_HUB_DISABLE_TELEMETRY: "1"
       TRANSFORMERS_NO_ADVISORY_WARNINGS: "1"
@@ -32,14 +32,14 @@ jobs:
           pip install "transformers>=4.45,<5" sentencepiece polib
       - name: Build fuzzy Vietnamese drafts without modifying production locale
         run: |
-          python scripts/generate_vi_draft.py --out /tmp/vn-i18n-draft --batch-size 16
+          python scripts/generate_vi_draft.py --out /tmp/vn-i18n-draft --batch-size 8 --model-id VietAI/envit5-translation
           python -m json.tool /tmp/vn-i18n-draft/review_report.json >/dev/null
           cat /tmp/vn-i18n-draft/review_report.json | head -n 16
       - name: Upload translated draft and QA report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: vn-i18n-machine-draft-review-required
+          name: vn-i18n-envit5-draft-review-required
           path: /tmp/vn-i18n-draft/
           if-no-files-found: warn
           retention-days: 14
