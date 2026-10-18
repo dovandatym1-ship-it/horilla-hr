@@ -69,6 +69,9 @@ class Migration(migrations.Migration):
                 ("wage_vnd", models.DecimalField(decimal_places=0, max_digits=20)),
                 ("reason", models.TextField(blank=True)),
                 ("status", models.CharField(choices=[("draft", "Nháp"), ("review", "Chờ duyệt"), ("approved", "Đã duyệt")], default="draft", max_length=10)),
+                ("approved_at", models.DateTimeField(blank=True, null=True)),
+                ("created_by", models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name="created_vn_contract_amendments", to=settings.AUTH_USER_MODEL)),
+                ("approved_by", models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name="approved_vn_contract_amendments", to=settings.AUTH_USER_MODEL)),
                 ("company", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to="base.company")),
                 ("contract", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name="vn_amendments", to="payroll.contract")),
             ],
@@ -111,6 +114,10 @@ class Migration(migrations.Migration):
         migrations.AddConstraint(
             model_name="vnemployeelegalprofile",
             constraint=models.UniqueConstraint(fields=("company", "citizen_digest"), condition=~models.Q(citizen_digest=""), name="vn_hrm_citizen_digest_unique"),
+        ),
+        migrations.AlterModelOptions(
+            name="vncontractamendment",
+            options={"permissions": [("approve_vncontractamendment", "Can approve Vietnam contract amendments")]},
         ),
         migrations.AddConstraint(
             model_name="vncontractamendment",
