@@ -64,10 +64,10 @@ def effective_contract_wage(*, company_id, contract, on_date):
             "version": item.version,
             "wage_type": contract.wage_type,
         }
-    if contract.wage is None:
-        raise ValidationError("Hợp đồng chưa có mức lương.")
+    if contract.pay_rate is None:
+        raise ValidationError("Hợp đồng chưa có mức lương hoặc đơn giá giờ.")
     return {
-        "wage": as_decimal(contract.wage, field="Lương hợp đồng Horilla"),
+        "wage": as_decimal(contract.pay_rate, field="Mức lương/đơn giá Horilla"),
         "source": "legacy_horilla_float",
         "source_id": contract.pk,
         "version": None,
@@ -198,6 +198,17 @@ def preview_with_hrm_sources(
     FormulaRule.variables may name vn_* variables explicitly; they cannot
     override reserved Horilla engine variables or quietly affect net pay.
     """
+    if not isinstance(payroll_data, dict):
+        raise ValidationError("Không có payload tính lương nguồn hợp lệ.")
+    payload_employee = payroll_data.get("employee")
+    if (
+        getattr(payload_employee, "pk", None) != employee_id
+        or payroll_data.get("start_date") != start_date
+        or payroll_data.get("end_date") != end_date
+    ):
+        raise ValidationError(
+            "Payload tính lương không khớp nhân viên/kỳ nguồn đã phê duyệt."
+        )
     snapshot = period_sources(
         actor=actor, company_id=company_id, employee_id=employee_id,
         contract_id=contract_id, start_date=start_date, end_date=end_date,
