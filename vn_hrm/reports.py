@@ -4,17 +4,19 @@ Intentionally aggregate-only: no names, citizen IDs, tax IDs, payslip JSON,
 account numbers, individual wages or raw sensitive metadata are exported.
 """
 
+import csv
 from decimal import Decimal
+from io import StringIO
 
 from django.core.exceptions import ValidationError
 
 from payroll.models.models import Payslip
 from vn_payroll.decimal_tools import as_decimal, vnd
-from .services import require_company_permission
+from vn_payroll.services import require_permission
 
 
 def payroll_period_summary(*, actor, company_id, start_date, end_date):
-    require_company_permission(actor, company_id, "view_vnleaveledgerevent")
+    require_permission(actor, company_id, "view_payslip")
     if start_date is None or end_date is None or end_date < start_date:
         raise ValidationError("Khoảng ngày báo cáo không hợp lệ.")
     rows = Payslip._base_manager.filter(
@@ -46,3 +48,20 @@ def payroll_period_summary(*, actor, company_id, start_date, end_date):
         "source": "horilla_confirmed_or_paid_float_converted_to_decimal",
         "is_statutory_report": False,
     }
+
+
+def payroll_period_summary_csv(*, actor, company_id, start_date, end_date):
+    """Export aggregate-only financial review CSV; never row-level personal data."""
+    result = payroll_period_summary(
+        actor=actor, company_id=company_id,
+        start_date=start_date, end_date=end_date,
+    )
+    output = StringIO()
+    keys = (
+        "company_id", "start_date", "end_date", "payslip_count",
+        "gross_total_vnd", "net_total_vnd", "currency",
+    )
+    writer = csv.DictWriter(output, fieldnames=keys, lineterminator="\n")
+    writer.writeheader()
+    writer.writerow({key: result[key] for key in keys})
+    return output.getvalue()
