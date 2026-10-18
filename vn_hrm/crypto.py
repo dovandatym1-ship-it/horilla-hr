@@ -5,6 +5,7 @@ nor derivation from Django SECRET_KEY is allowed. Plan key rotation separately.
 """
 
 import base64
+import binascii
 import hashlib
 import hmac
 import re
@@ -26,7 +27,7 @@ def _key():
         if len(secret) != 32:
             raise ValueError("Invalid Fernet key length")
         Fernet(key)
-    except (ValueError, TypeError, UnicodeError) as exc:
+    except (ValueError, TypeError, UnicodeError, binascii.Error) as exc:
         raise ImproperlyConfigured("Invalid VN_PII_FERNET_KEY") from exc
     return key, secret
 
