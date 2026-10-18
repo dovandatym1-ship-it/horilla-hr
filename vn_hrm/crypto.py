@@ -36,7 +36,7 @@ def normalize_identifier(value):
     if not isinstance(value, str):
         raise ValidationError("Mã định danh phải là chuỗi.")
     normalized = re.sub(r"[\s-]", "", value).upper()
-    if not 4 <= len(normalized) <= 32 or not normalized.isalnum():
+    if not re.fullmatch(r"[A-Z0-9]{4,32}", normalized):
         raise ValidationError("Mã định danh phải gồm 4–32 ký tự chữ hoặc số.")
     return normalized
 
