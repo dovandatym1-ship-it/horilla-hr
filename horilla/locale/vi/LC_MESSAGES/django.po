@@ -6512,3 +6512,763 @@ msgstr "Tất cả khoản thu nhập, bao gồm lương cơ bản"
 #: vietnam-ui-audit-access-actions
 msgid "All exits — see Standard Report for detail"
 msgstr "Tất cả lượt nghỉ việc — xem chi tiết trong Báo cáo chuẩn"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All fields"
+msgstr "Tất cả trường"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All filing statuses"
+msgstr "Tất cả trạng thái khai thuế"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All filter cleared"
+msgstr "Đã xóa toàn bộ bộ lọc"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All genders"
+msgstr "Tất cả giới tính"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All leave types"
+msgstr "Tất cả loại nghỉ phép"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All locations"
+msgstr "Tất cả địa điểm"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All managers"
+msgstr "Tất cả quản lý"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All offer statuses"
+msgstr "Tất cả trạng thái thư mời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All open recruitments"
+msgstr "Tất cả đợt tuyển dụng đang mở"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All open recruitments — active candidates at each stage"
+msgstr "Tất cả đợt tuyển dụng đang mở — ứng viên đang xử lý ở từng giai đoạn"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All positions"
+msgstr "Tất cả vị trí"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All provided IP addresses are already in the allowed list."
+msgstr "Tất cả địa chỉ IP đã cung cấp đều nằm trong danh sách cho phép."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All recorded assets"
+msgstr "Tất cả tài sản đã ghi nhận"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All recruitments"
+msgstr "Tất cả đợt tuyển dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All rights reserved."
+msgstr "Bảo lưu mọi quyền."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All roles"
+msgstr "Tất cả vai trò"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All rows were either blank, skipped, or had errors."
+msgstr "Tất cả các dòng đều trống, bị bỏ qua hoặc có lỗi."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All shifts"
+msgstr "Tất cả ca"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All sources"
+msgstr "Tất cả nguồn"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All statuses"
+msgstr "Tất cả trạng thái"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All time"
+msgstr "Toàn thời gian"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All time allowance."
+msgstr "Phụ cấp áp dụng mọi kỳ."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All types"
+msgstr "Tất cả loại"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "All work types"
+msgstr "Tất cả hình thức làm việc"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allcocate this grace time for Check-In Attendance"
+msgstr "Áp dụng khoảng thời gian ân hạn khi chấm công vào"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allcocate this grace time for Check-Out Attendance"
+msgstr "Áp dụng khoảng thời gian ân hạn khi chấm công ra"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocate Allowance"
+msgstr "Phân bổ phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocate Asset"
+msgstr "Cấp phát tài sản"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocate Deduction"
+msgstr "Phân bổ khấu trừ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocated"
+msgstr "Đã phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocated By"
+msgstr "Người phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocated Date"
+msgstr "Ngày phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocated Employee"
+msgstr "Nhân viên được phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocated Hours"
+msgstr "Giờ được phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocated Shift Requests"
+msgstr "Yêu cầu đổi ca đã phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocated User"
+msgstr "Người dùng được phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocated days"
+msgstr "Số ngày đã phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocation"
+msgstr "Phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocation deleted successfully"
+msgstr "Đã xóa phân bổ thành công"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocation feature not possible to this candidate"
+msgstr "Không thể sử dụng chức năng phân bổ cho ứng viên này"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allocations"
+msgstr "Các phân bổ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow All Users to Export Data"
+msgstr "Cho phép mọi người dùng xuất dữ liệu"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow Resignation Request"
+msgstr "Cho phép gửi đơn nghỉ việc"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow adding a fine for an employee when an asset is returned"
+msgstr "Cho phép thêm khoản phạt khi nhân viên hoàn trả tài sản"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow administrators to block or unblock employee login accounts."
+msgstr "Cho phép quản trị viên khóa hoặc mở khóa tài khoản đăng nhập của nhân viên."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow admins to block or unblock employee login"
+msgstr "Cho phép quản trị viên khóa hoặc mở khóa đăng nhập của nhân viên"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow candidates to track their recruitment pipeline status"
+msgstr "Cho phép ứng viên theo dõi trạng thái quy trình tuyển dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow candidates to view their recruitment rating"
+msgstr "Cho phép ứng viên xem đánh giá tuyển dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow close"
+msgstr "Cho phép đóng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow create, view, edit, delete and other actions"
+msgstr "Cho phép tạo, xem, sửa, xóa và các thao tác khác"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow employees to mark attendance using face detection"
+msgstr "Cho phép nhân viên chấm công bằng nhận diện khuôn mặt"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow employees to submit resignation requests"
+msgstr "Cho phép nhân viên gửi đơn nghỉ việc"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allow every user of this company to export data from any module."
+msgstr "Cho phép mọi người dùng của công ty xuất dữ liệu từ bất kỳ phân hệ nào."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance & Deduction"
+msgstr "Phụ cấp và khấu trừ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance & Deduction Reports"
+msgstr "Báo cáo phụ cấp và khấu trừ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance Eligibility"
+msgstr "Điều kiện hưởng phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance On"
+msgstr "Căn cứ phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance and deduction component mix from payslip heads "
+msgstr "Cơ cấu phụ cấp và khấu trừ từ dữ liệu phiếu lương "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance components"
+msgstr "Các thành phần phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance created"
+msgstr "Đã tạo phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance created."
+msgstr "Đã tạo phụ cấp."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance deleted successfully"
+msgstr "Đã xóa phụ cấp thành công"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance duplicated successfully"
+msgstr "Đã nhân bản phụ cấp thành công"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance excluded"
+msgstr "Phụ cấp không áp dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance not found"
+msgstr "Không tìm thấy phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance not found."
+msgstr "Không tìm thấy phụ cấp."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance on"
+msgstr "Căn cứ tính phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance removed from the salary structure"
+msgstr "Đã xóa phụ cấp khỏi cơ cấu lương"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowance updated."
+msgstr "Đã cập nhật phụ cấp."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowances total"
+msgstr "Tổng phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowed Clock-In"
+msgstr "Giờ vào được phép"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowed Clock-Out"
+msgstr "Giờ ra được phép"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowed IP Addresses or Network Prefixes"
+msgstr "Địa chỉ IP hoặc dải mạng được phép"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Allowed Time"
+msgstr "Thời gian cho phép"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Already Added!"
+msgstr "Đã thêm!"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Already Answered"
+msgstr "Đã trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Already Returned"
+msgstr "Đã hoàn trả"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Already added"
+msgstr "Đã thêm"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Already has a payslip for this period"
+msgstr "Đã có phiếu lương cho kỳ này"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Already loaded"
+msgstr "Đã tải"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Already request exits on same date"
+msgstr "Đã có yêu cầu trong cùng ngày"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Already taken off the pay above, not subtracted again"
+msgstr "Đã được trừ vào khoản lương phía trên, không khấu trừ lần nữa"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Also Send to"
+msgstr "Đồng thời gửi đến"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Also Sent to"
+msgstr "Đã đồng gửi đến"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Also send to"
+msgstr "Đồng thời gửi đến"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Alternate In/Out Device"
+msgstr "Thiết bị chấm công vào/ra thay thế"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Always"
+msgstr "Luôn luôn"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Amount Per"
+msgstr "Số tiền cho mỗi"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Amount Per Attendance"
+msgstr "Số tiền mỗi lượt chấm công"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Amount Per One Hour"
+msgstr "Số tiền mỗi giờ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Amount should be greater than zero."
+msgstr "Số tiền phải lớn hơn 0."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An Employee with this Email already exists"
+msgstr "Đã có nhân viên sử dụng địa chỉ email này"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An Employee with this Email already exists in company {}"
+msgstr "Đã có nhân viên sử dụng địa chỉ email này tại công ty {}"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An active contract already exists for this employee."
+msgstr "Nhân viên này đã có hợp đồng còn hiệu lực."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An approved compensatory leave request cannot be deleted."
+msgstr "Không thể xóa đơn nghỉ bù đã được phê duyệt."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An approved expense paid back to an employee."
+msgstr "Khoản chi phí được duyệt hoàn trả cho nhân viên."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An approved leave exists"
+msgstr "Đã có đơn nghỉ phép được phê duyệt"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An approved shift request already exists during this time period."
+msgstr "Đã có yêu cầu đổi ca được duyệt trong khoảng thời gian này."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An approved work type request already exists "
+msgstr "Đã có yêu cầu đổi hình thức làm việc được duyệt "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An asset with this tracking ID already exists."
+msgstr "Đã có tài sản với mã theo dõi này."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An attachment is required for this leave request"
+msgstr "Đơn nghỉ phép này bắt buộc phải có tệp đính kèm"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An attendance request exists for updating this attendance prior to validation."
+msgstr "Đã có yêu cầu điều chỉnh bản ghi chấm công này trước khi xác nhận."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An employee related to this user's credentials does not exist."
+msgstr "Không tồn tại nhân viên liên kết với tài khoản đăng nhập này."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An employee with this email already exists"
+msgstr "Đã tồn tại nhân viên sử dụng email này"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred"
+msgstr "Đã xảy ra lỗi"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred while changing the theme"
+msgstr "Đã xảy ra lỗi khi thay đổi giao diện"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred while creating employee data."
+msgstr "Đã xảy ra lỗi khi tạo dữ liệu nhân viên."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred while deleting the allowance"
+msgstr "Đã xảy ra lỗi khi xóa phụ cấp"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred while deleting the stage."
+msgstr "Đã xảy ra lỗi khi xóa giai đoạn."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred while trying to delete the filing status."
+msgstr "Đã xảy ra lỗi khi xóa trạng thái khai thuế."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred: "
+msgstr "Đã xảy ra lỗi: "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred: {}"
+msgstr "Đã xảy ra lỗi: {}"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An error occurred: {}."
+msgstr "Đã xảy ra lỗi: {}."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "An {} contract already exists for {}"
+msgstr "Đã có hợp đồng trạng thái {} cho {}"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Announcement"
+msgstr "Thông báo chung"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Announcement Expire"
+msgstr "Hết hạn thông báo"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Announcement created successfully."
+msgstr "Đã tạo thông báo thành công."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Announcement deleted successfully."
+msgstr "Đã xóa thông báo thành công."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Announcement not found or has been deleted."
+msgstr "Không tìm thấy thông báo hoặc thông báo đã bị xóa."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Announcement not found."
+msgstr "Không tìm thấy thông báo."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Announcement updated successfully."
+msgstr "Đã cập nhật thông báo thành công."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Announcements still active, newest first"
+msgstr "Các thông báo còn hiệu lực, mới nhất trước"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Anonymous"
+msgstr "Ẩn danh"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Anonymous Complaint"
+msgstr "Khiếu nại ẩn danh"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Anonymous Feedback"
+msgstr "Phản hồi ẩn danh"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "AnonymousFeedback not found"
+msgstr "Không tìm thấy phản hồi ẩn danh"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Another component"
+msgstr "Thành phần khác"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answer"
+msgstr "Câu trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answer View"
+msgstr "Xem câu trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answer every required question to submit."
+msgstr "Vui lòng trả lời tất cả câu hỏi bắt buộc trước khi gửi."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answer not found"
+msgstr "Không tìm thấy câu trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answer view"
+msgstr "Xem câu trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answerable Employees"
+msgstr "Nhân viên cần trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answerable employees"
+msgstr "Nhân viên cần trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answered Employees"
+msgstr "Nhân viên đã trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answered employees: "
+msgstr "Nhân viên đã trả lời: "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Answers"
+msgstr "Các câu trả lời"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Anviz Biometric"
+msgstr "Sinh trắc học Anviz"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Anviz test connection successful."
+msgstr "Kiểm tra kết nối Anviz thành công."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Any"
+msgstr "Bất kỳ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "App"
+msgstr "Ứng dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "App Name"
+msgstr "Tên ứng dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "App Secret"
+msgstr "Mã bí mật ứng dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Appearance"
+msgstr "Giao diện"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applicable For"
+msgstr "Áp dụng cho"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applicable on clock-in"
+msgstr "Áp dụng khi chấm công vào"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applicable on clock-out"
+msgstr "Áp dụng khi chấm công ra"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application"
+msgstr "Đơn ứng tuyển"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application Form"
+msgstr "Biểu mẫu ứng tuyển"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application Submitted"
+msgstr "Đã gửi đơn ứng tuyển"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application Tracking"
+msgstr "Theo dõi hồ sơ ứng tuyển"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application Tracking is disabled "
+msgstr "Đã tắt theo dõi hồ sơ ứng tuyển "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application Tracking is enabled "
+msgstr "Đã bật theo dõi hồ sơ ứng tuyển "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application saved."
+msgstr "Đã lưu đơn ứng tuyển."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application under review"
+msgstr "Đơn ứng tuyển đang được xem xét"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application → joining"
+msgstr "Từ ứng tuyển đến vào làm"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Application → joining (candidate-weighted)"
+msgstr "Từ ứng tuyển đến vào làm (theo trọng số ứng viên)"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applied"
+msgstr "Đã áp dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applied Filters"
+msgstr "Bộ lọc đã áp dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applied Filters: "
+msgstr "Bộ lọc đã áp dụng: "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applied Position"
+msgstr "Vị trí đã ứng tuyển"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applied filters"
+msgstr "Bộ lọc đã áp dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applied through the salary structure"
+msgstr "Được áp dụng qua cơ cấu lương"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applied to"
+msgstr "Áp dụng cho"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applies"
+msgstr "Áp dụng"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applies to"
+msgstr "Áp dụng cho"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applies to all employees"
+msgstr "Áp dụng cho tất cả nhân viên"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applies to the selected employees only."
+msgstr "Chỉ áp dụng cho nhân viên đã chọn."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applies to this employee only."
+msgstr "Chỉ áp dụng cho nhân viên này."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applies up to an annual wage base that is raised most years; "
+msgstr "Áp dụng đến mức trần căn cứ lương năm, thường được điều chỉnh hằng năm; "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applies when"
+msgstr "Áp dụng khi"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applies when it happens — a loan granted, leave unpaid — not by being ticked here. Its settings live on the component."
+msgstr "Chỉ áp dụng khi phát sinh nghiệp vụ như giải ngân khoản vay hoặc nghỉ không lương, không phải khi tích chọn tại đây. Cấu hình nằm tại thành phần lương."
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Apply Now"
+msgstr "Ứng tuyển ngay"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Apply for this role"
+msgstr "Ứng tuyển vị trí này"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Apply to all employees"
+msgstr "Áp dụng cho mọi nhân viên"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Apply to every active employee"
+msgstr "Áp dụng cho tất cả nhân viên đang làm việc"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Applying for"
+msgstr "Ứng tuyển vị trí"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approval Manager"
+msgstr "Người quản lý phê duyệt"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approval Managers"
+msgstr "Người quản lý phê duyệt"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approval date not stored; ageing uses created date"
+msgstr "Không lưu ngày phê duyệt; thời gian tồn đọng tính theo ngày tạo"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approval depends on the"
+msgstr "Việc phê duyệt phụ thuộc vào"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approve OT"
+msgstr "Duyệt làm thêm giờ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approve Overtime (OT < min.OT)"
+msgstr "Duyệt làm thêm giờ (OT dưới ngưỡng tối thiểu)"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approve Requests"
+msgstr "Phê duyệt yêu cầu"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approve as Overtime"
+msgstr "Duyệt là làm thêm giờ"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approve cancellation request"
+msgstr "Phê duyệt yêu cầu hủy"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approve ≥"
+msgstr "Duyệt ≥"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approved %(model)s can't perform this action "
+msgstr "%(model)s đã phê duyệt không thể thực hiện thao tác này "
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approved Leave Days"
+msgstr "Ngày nghỉ phép đã duyệt"
+
+#: vietnam-ui-audit-allocations-applications
+msgid "Approved OT hours"
+msgstr "Số giờ OT đã duyệt"
