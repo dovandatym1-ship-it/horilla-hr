@@ -29,10 +29,10 @@ def verify_policy_cases(
     require_permission(actor, company_id, "preview_formularule")
     if not isinstance(effective_on, date):
         raise ValidationError("Ngày kiểm thử quy tắc không hợp lệ.")
-    if not isinstance(cases, list) or len(cases) < min_cases:
-        raise ValidationError("Cần đủ ca kiểm thử độc lập trước khi nghiệm thu.")
     if not isinstance(min_cases, int) or isinstance(min_cases, bool) or min_cases < 3:
         raise ValidationError("Mức tối thiểu là ba ca kiểm thử.")
+    if not isinstance(cases, list) or len(cases) < min_cases:
+        raise ValidationError("Cần đủ ca kiểm thử độc lập trước khi nghiệm thu.")
     rule = rule_for_date(
         company_id=company_id, code=code, effective_on=effective_on
     )
