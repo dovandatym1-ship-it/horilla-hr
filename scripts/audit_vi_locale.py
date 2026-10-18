@@ -130,8 +130,7 @@ def main():
             values = visible_candidates(content)
             candidate_count += len(values)
             for value in values:
-                if len(literal_samples) < 60:
-                    literal_samples.append({"file": relative, "text": value[:120]})
+                literal_samples.append({"file": relative, "text": value[:120]})
         elif path.suffix == ".py":
             refs["django"].update(m.group(2) for m in PYTHON_GETTEXT.finditer(content))
         elif path.suffix == ".js":
@@ -174,7 +173,8 @@ def main():
             "djangojs": missing_js,
         },
         "unwrapped_html_candidates": candidate_count,
-        "unwrapped_html_examples": literal_samples,
+        "unwrapped_html_examples": literal_samples[:60],
+        "unwrapped_html_all": literal_samples,
         "ready_for_100_percent_claim": False,
         "warning": (
             "Approximate static audit only. Contextual/plural gettext, dynamically "
