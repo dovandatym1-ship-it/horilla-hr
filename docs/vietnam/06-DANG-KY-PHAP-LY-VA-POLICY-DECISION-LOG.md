@@ -61,3 +61,11 @@ Nguồn CSDL quốc gia `ItemID=175027` hiển thị **“Hết hiệu lực to�
 Tạo issue `REG-CHANGE` khi có văn bản mới → thu thập URL, số, ban hành, hiệu lực, đối tượng → Pháp chế phân tích thay thế/chuyển tiếp → BA lập GAP và tác động các module → Payroll/HR xác nhận công thức với golden cases → test song song kỳ cũ/kỳ mới → Approver duyệt → publish version tương lai → xác minh sản xuất → retire version cũ (không xóa). Mọi nguồn không xác nhận được phải thể hiện `BLOCKED` thay vì ghi “đúng pháp luật”.
 
 **Lưu ý:** Thông tin tra cứu phản ánh thời điểm 17/10/2026. Khi triển khai hoặc sử dụng thực tế phải kiểm tra biến động pháp lý và thẩm định lại.
+
+
+## 7. Phụ lục Decision Gate v1.1
+**Tất cả tham số luật/tỷ lệ/hệ số/đối tượng đều là cấu hình theo phiên bản pháp nhân, đối tượng, ngày áp dụng, người lập/người duyệt, nguồn văn bản và trường hợp ngoại lệ.** Phải kiểm tra văn bản có hiệu lực/sửa đổi/điều khoản chuyển tiếp bằng nguồn chính thức và Kế toán/Pháp chế ký duyệt trước khi tạo Golden Cases production; không lấy một giá trị từ nguồn tổng hợp rồi coi mặc định cho mọi người.
+
+Quyết định đang mở và chủ sở hữu được liệt kê tại [GAP-16 §4](16-CODE-TO-DOC-GAP.md): mã nhân viên, vault/PII, người phụ thuộc, chồng HĐ, điều chỉnh công, OT, phép, PIT/BH/rounding, bank reconciliation, RBAC và cutover.
+
+**Mỗi decision record bắt buộc:** ID, vấn đề, phương án và tác động, căn cứ văn bản/đường dẫn + đoạn/khoản, phạm vi áp dụng, from/to, người soạn, HR/Payroll/Pháp chế phê duyệt, ngày quyết định, status OPEN/APPROVED/RETIRED, test oracle và phương án hồi tố. \`OPEN\` có ảnh hưởng critical ⇒ \`BLOCKED_BY_POLICY\` ở UC/API.
