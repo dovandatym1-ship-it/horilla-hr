@@ -81,6 +81,7 @@ INSTALLED_APPS = [
     "asset",
     "attendance",
     "payroll",
+    "vn_payroll.apps.VnPayrollConfig",
     "accessibility",
     "horilla_audit",
     "horilla_widgets",
