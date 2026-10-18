@@ -48,9 +48,9 @@ def _calculate(node, variables, depth):
     if isinstance(node, ast.Constant):
         if type(node.value) is bool:
             return node.value
-        if type(node.value) in (int, float):
-            return as_decimal(str(node.value))
-        raise FormulaError("Only numeric and boolean constants are allowed.")
+        if type(node.value) is int:
+            return as_decimal(node.value)
+        raise FormulaError("Decimal rates must be named parameters; only integer literals are allowed.")
     if isinstance(node, ast.Name):
         if not NAME_PATTERN.fullmatch(node.id) or node.id not in variables:
             raise FormulaError("Unknown variable: " + node.id)
@@ -158,10 +158,10 @@ def validate_syntax(expression):
         if isinstance(node, ast.Name) and not NAME_PATTERN.fullmatch(node.id):
             raise FormulaError("Invalid name in expression.")
         if isinstance(node, ast.Constant):
-            if type(node.value) not in (bool, int, float):
-                raise FormulaError("Only numeric/boolean literals are allowed.")
-            if type(node.value) is not bool:
-                as_decimal(str(node.value))
+            if type(node.value) not in (bool, int):
+                raise FormulaError("Rates with decimals must be supplied as string parameters.")
+            if type(node.value) is int:
+                as_decimal(node.value)
         if isinstance(node, ast.Call):
             if not isinstance(node.func, ast.Name) or node.func.id not in {
                 "min", "max", "abs", "round_vnd"
