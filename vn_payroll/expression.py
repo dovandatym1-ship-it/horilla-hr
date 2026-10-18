@@ -6,7 +6,8 @@ This module is purely computational; it does not assert statutory compliance.
 """
 
 import ast
-from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
+import re
+from decimal import Decimal, DivisionByZero, InvalidOperation, Overflow, ROUND_HALF_UP
 
 
 class InvalidFormula(ValueError):
@@ -27,7 +28,7 @@ def _decimal(value):
         result = Decimal(str(value))
     except (InvalidOperation, ValueError) as exc:
         raise InvalidFormula("Invalid decimal input") from exc
-    if not result.is_finite() or abs(result.adjusted()) > 18:
+    if not result.is_finite() or (result and abs(result.adjusted()) > 18):
         raise InvalidFormula("Amount out of supported bounds")
     return result
 
@@ -52,7 +53,7 @@ def evaluate(expression, variables, *, places=0):
         if not isinstance(name, str) or not name.isidentifier() or name.startswith("_"):
             raise InvalidFormula("Invalid variable name")
         env[name] = _decimal(value)
-    if not isinstance(places, int) or places < 0 or places > 6:
+    if isinstance(places, bool) or not isinstance(places, int) or places < 0 or places > 6:
         raise InvalidFormula("Decimal places must be between 0 and 6")
     try:
         parsed = ast.parse(expression, mode="eval")
@@ -68,9 +69,15 @@ def evaluate(expression, variables, *, places=0):
             return walk(node.body, depth + 1)
         if isinstance(node, ast.Constant):
             if type(node.value) in (int, float):
-                # Syntax float literals are parsed from the exact lexical text
-                # where possible; avoid allowing long float scientific notation.
-                return _decimal(node.value)
+                # Python AST converts 0.105 to binary float. Parse its exact
+                # source text instead so payroll never inherits float error.
+                source = ast.get_source_segment(expression, node)
+                if source is None or not re.fullmatch(
+                    r"(?:[0-9][0-9_]*)(?:\.[0-9_]+)?(?:[eE][+-]?[0-9_]+)?|\.[0-9_]+(?:[eE][+-]?[0-9_]+)?",
+                    source,
+                ):
+                    raise InvalidFormula("Invalid numeric literal")
+                return _decimal(source.replace("_", ""))
             raise InvalidFormula("Only numeric literals are allowed")
         if isinstance(node, ast.Name):
             if node.id not in env:
@@ -92,7 +99,7 @@ def evaluate(expression, variables, *, places=0):
                     if not b:
                         raise InvalidFormula("Division by zero")
                     result = a / b
-            except (InvalidOperation, OverflowError) as exc:
+            except (InvalidOperation, DivisionByZero, Overflow, OverflowError) as exc:
                 raise InvalidFormula("Arithmetic error") from exc
             return _decimal(result)
         if isinstance(node, ast.Call) and isinstance(node.func, ast.Name):
@@ -110,5 +117,5 @@ def evaluate(expression, variables, *, places=0):
     quantum = Decimal("1").scaleb(-places)
     try:
         return result.quantize(quantum, rounding=ROUND_HALF_UP)
-    except InvalidOperation as exc:
+    except (InvalidOperation, Overflow) as exc:
         raise InvalidFormula("Rounding failed") from exc
