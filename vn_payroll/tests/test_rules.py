@@ -19,7 +19,9 @@ class VNRuleBookTests(TestCase):
             company=self.company, code="monthly_payroll", title="Bảng lương tùy chỉnh",
             version=1, effective_from=date(2026, 1, 1),
             legal_reference="Quy chế lương đã được duyệt nội bộ",
-            parameters={"rate": "0.1"}, input_names=["salary"], created_by=self.maker,
+            parameters={"rate": "0.1"}, input_names=["salary"],
+            golden_cases=[{"inputs": {"salary": "10000000"}, "expected": {"net": "9000000"}}],
+            created_by=self.maker,
         )
         VNPayRule.objects.create(
             rule_set=self.book, code="gross", position=10, category="earning",
