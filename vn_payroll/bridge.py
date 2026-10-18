@@ -103,6 +103,8 @@ def preview_from_horilla(
             "version": rule.version,
             "effective_on": effective_on.isoformat(),
             "expression": rule.expression,
+            "calculation_kind": rule.calculation_kind,
+            "brackets": rule.brackets,
             "inputs": inputs,
         },
         ensure_ascii=False,
