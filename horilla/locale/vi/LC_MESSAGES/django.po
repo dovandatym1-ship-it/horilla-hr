@@ -8272,3 +8272,783 @@ msgstr "Số điểm có thể quy đổi:"
 #: vietnam-ui-reviewed-asset-attendance
 msgid "Balance updated"
 msgstr "Đã cập nhật số dư"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Acc./Cheque No."
+msgstr "Số tài khoản / Số séc"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Address"
+msgstr "Địa chỉ ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank City"
+msgstr "Thành phố ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Code"
+msgstr "Mã ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Code #1"
+msgstr "Mã ngân hàng số 1"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Code #2"
+msgstr "Mã ngân hàng số 2"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Country"
+msgstr "Quốc gia ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Info"
+msgstr "Thông tin ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Info Updated"
+msgstr "Đã cập nhật thông tin ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank Information"
+msgstr "Thông tin ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank State"
+msgstr "Tỉnh/bang ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank account"
+msgstr "Tài khoản ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank details updated"
+msgstr "Đã cập nhật thông tin ngân hàng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bank details updated."
+msgstr "Đã cập nhật thông tin ngân hàng."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Base"
+msgstr "Cơ sở"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Base DN"
+msgstr "DN gốc"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Based"
+msgstr "Dựa trên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Based On Week"
+msgstr "Dựa trên tuần"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Based On Week Day"
+msgstr "Dựa trên ngày trong tuần"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Based On Weekday"
+msgstr "Dựa trên ngày trong tuần"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Based On week"
+msgstr "Dựa trên tuần"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Based on"
+msgstr "Dựa trên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Based on week"
+msgstr "Dựa trên tuần"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Based on week day"
+msgstr "Dựa trên ngày trong tuần"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basic"
+msgstr "Cơ bản"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basic Identity"
+msgstr "Thông tin định danh cơ bản"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basic Pay As Set"
+msgstr "Lương cơ bản đã thiết lập"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basic Pay Deductions"
+msgstr "Khấu trừ trên lương cơ bản"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basic Salary (from)"
+msgstr "Lương cơ bản (từ)"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basic Salary (till)"
+msgstr "Lương cơ bản (đến)"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basic pay"
+msgstr "Lương cơ bản"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basic pay this period"
+msgstr "Lương cơ bản kỳ này"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basics"
+msgstr "Thông tin cơ bản"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Basis"
+msgstr "Căn cứ tính"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch Attendance"
+msgstr "Chấm công theo đợt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch Name"
+msgstr "Tên đợt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch Number"
+msgstr "Mã lô"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch Number Update"
+msgstr "Cập nhật mã lô"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch name"
+msgstr "Tên đợt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch number deleted"
+msgstr "Đã xóa mã lô"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch number in-use"
+msgstr "Mã lô đang được sử dụng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch number not found"
+msgstr "Không tìm thấy mã lô"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch number not found."
+msgstr "Không tìm thấy mã lô."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batch updated successfully."
+msgstr "Đã cập nhật đợt thành công."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Batches"
+msgstr "Các đợt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Before"
+msgstr "Trước"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Before period"
+msgstr "Trước kỳ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Behind"
+msgstr "Chậm tiến độ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Behind / at risk"
+msgstr "Chậm tiến độ / Có nguy cơ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Best source"
+msgstr "Nguồn phù hợp nhất"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Between"
+msgstr "Trong khoảng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Biometric Attendance"
+msgstr "Chấm công sinh trắc học"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Biometric Device"
+msgstr "Thiết bị sinh trắc học"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Biometric Devices"
+msgstr "Các thiết bị sinh trắc học"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Biometric Template"
+msgstr "Mẫu sinh trắc học"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Biometric device not found"
+msgstr "Không tìm thấy thiết bị sinh trắc học"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Biometric device not found."
+msgstr "Không tìm thấy thiết bị sinh trắc học."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Biometric device not supported."
+msgstr "Thiết bị sinh trắc học không được hỗ trợ."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Biometric user not found"
+msgstr "Không tìm thấy người dùng sinh trắc học"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Birthday"
+msgstr "Sinh nhật"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Birthdays & Anniversaries"
+msgstr "Sinh nhật và ngày kỷ niệm"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Block Account"
+msgstr "Khóa tài khoản"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Blocker"
+msgstr "Vướng mắc"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Body"
+msgstr "Nội dung"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Account created"
+msgstr "Đã tạo tài khoản điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Added"
+msgstr "Đã thêm khoản thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Encashment"
+msgstr "Quy đổi tiền thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Encashments"
+msgstr "Các khoản quy đổi tiền thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus For"
+msgstr "Thưởng cho"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Point Encashment"
+msgstr "Quy đổi điểm thưởng thành tiền"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Point Setting"
+msgstr "Thiết lập điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Point Setting deleted"
+msgstr "Đã xóa thiết lập điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Point Settings"
+msgstr "Các thiết lập điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Points"
+msgstr "Điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus Unit"
+msgstr "Đơn vị điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus account Created"
+msgstr "Đã tạo tài khoản điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus points"
+msgstr "Điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus points paid out."
+msgstr "Đã thanh toán điểm thưởng."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus points to encash"
+msgstr "Điểm thưởng cần quy đổi thành tiền"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus points to encash."
+msgstr "Điểm thưởng cần quy đổi thành tiền."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bonus to encash"
+msgstr "Tiền thưởng cần quy đổi"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "BonusPointSetting not found"
+msgstr "Không tìm thấy thiết lập điểm thưởng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Boolean"
+msgstr "Đúng/Sai"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bottom"
+msgstr "Dưới cùng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Branch"
+msgstr "Chi nhánh"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Break Point Condition"
+msgstr "Điều kiện ngưỡng"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bridge steps"
+msgstr "Các bước chuyển tiếp"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Browse"
+msgstr "Duyệt chọn"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bucket"
+msgstr "Nhóm"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Allocate Leave"
+msgstr "Phân bổ phép hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Approve"
+msgstr "Phê duyệt hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Approve Requests"
+msgstr "Duyệt hàng loạt yêu cầu"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Change Task"
+msgstr "Thay đổi công việc hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Feedback"
+msgstr "Phản hồi hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Feedback request "
+msgstr "Yêu cầu phản hồi hàng loạt "
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Mail"
+msgstr "Gửi email hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Payslip"
+msgstr "Phiếu lương hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Reject"
+msgstr "Từ chối hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Reject Requests"
+msgstr "Từ chối hàng loạt yêu cầu"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Rejection Reason"
+msgstr "Lý do từ chối hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Request"
+msgstr "Yêu cầu hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Stage Change"
+msgstr "Thay đổi giai đoạn hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Update"
+msgstr "Cập nhật hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk Update Employees"
+msgstr "Cập nhật hàng loạt nhân viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk feedback"
+msgstr "Phản hồi hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk mail"
+msgstr "Gửi email hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk stage change"
+msgstr "Thay đổi giai đoạn hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Bulk-Requests"
+msgstr "Yêu cầu hàng loạt"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Business ID"
+msgstr "Mã doanh nghiệp"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By"
+msgstr "Theo"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By Department"
+msgstr "Theo phòng ban"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By Employee Type"
+msgstr "Theo loại nhân viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By asset status"
+msgstr "Theo trạng thái tài sản"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By calendar days"
+msgstr "Theo ngày lịch"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By component"
+msgstr "Theo thành phần"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By department"
+msgstr "Theo phòng ban"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By working days"
+msgstr "Theo ngày làm việc"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "By-Pass-Biometric"
+msgstr "Bỏ qua sinh trắc học"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CITY:"
+msgstr "THÀNH PHỐ:"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "COMPANY:"
+msgstr "CÔNG TY:"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "COSEC Attendance Arguments"
+msgstr "Tham số chấm công COSEC"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CSV (.csv)"
+msgstr "Tệp CSV (.csv)"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CTC"
+msgstr "Tổng chi phí nhân sự (CTC)"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CTC Down"
+msgstr "Phân bổ từ tổng chi phí (CTC)"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CTC Down structure"
+msgstr "Cơ cấu phân bổ từ CTC"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Calculate Daily Leave Amount"
+msgstr "Tính tiền nghỉ phép theo ngày"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Calculate daily leave amount"
+msgstr "Tính tiền nghỉ phép theo ngày"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Calculate example"
+msgstr "Tính thử ví dụ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Calculation"
+msgstr "Phép tính"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Can export"
+msgstr "Có quyền xuất dữ liệu"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Can subscribe"
+msgstr "Có quyền đăng ký"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Can view Birthdays"
+msgstr "Có quyền xem sinh nhật"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Can view Department Chart"
+msgstr "Có quyền xem biểu đồ phòng ban"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Can view Employees Chart"
+msgstr "Có quyền xem biểu đồ nhân viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Can view Gender Chart"
+msgstr "Có quyền xem biểu đồ giới tính"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Can't Archive"
+msgstr "Không thể lưu trữ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Can't claim again"
+msgstr "Không thể nhận xử lý lại"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cancel / Reject"
+msgstr "Hủy / Từ chối"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cancel Rejection"
+msgstr "Hủy quyết định từ chối"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cancel Request"
+msgstr "Yêu cầu hủy"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Canceled / Rejected"
+msgstr "Đã hủy / Bị từ chối"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cancellation Reason"
+msgstr "Lý do hủy"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cancelled & Rejected"
+msgstr "Đã hủy và bị từ chối"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Added"
+msgstr "Đã thêm ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Added successfully."
+msgstr "Đã thêm ứng viên thành công."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate By Stage Type"
+msgstr "Ứng viên theo loại giai đoạn"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Details"
+msgstr "Chi tiết ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Does not exists."
+msgstr "Ứng viên không tồn tại."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Does not exists.."
+msgstr "Ứng viên không tồn tại."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Filter"
+msgstr "Bộ lọc ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Offer Letter Status"
+msgstr "Trạng thái thư mời làm việc"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Onboarding Stage"
+msgstr "Giai đoạn tiếp nhận ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Portal"
+msgstr "Cổng thông tin ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Ratings Given"
+msgstr "Đánh giá ứng viên đã thực hiện"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Rejection Reason"
+msgstr "Lý do từ chối ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Reports"
+msgstr "Báo cáo ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Self Tracking"
+msgstr "Ứng viên tự theo dõi hồ sơ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Tasks View"
+msgstr "Xem công việc ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate Updated Successfully."
+msgstr "Đã cập nhật ứng viên thành công."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate added successfully."
+msgstr "Đã thêm ứng viên thành công."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate added."
+msgstr "Đã thêm ứng viên."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate deleted successfully."
+msgstr "Đã xóa ứng viên thành công."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate deleted successfully.."
+msgstr "Đã xóa ứng viên thành công."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate doesnot exist"
+msgstr "Ứng viên không tồn tại"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate edited successfully."
+msgstr "Đã sửa ứng viên thành công."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate not found"
+msgstr "Không tìm thấy ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate not found."
+msgstr "Không tìm thấy ứng viên."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate on Onboard"
+msgstr "Ứng viên đang tiếp nhận"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate reject reason saved"
+msgstr "Đã lưu lý do từ chối ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate rejection not found"
+msgstr "Không tìm thấy thông tin từ chối ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate sequence updated"
+msgstr "Đã cập nhật thứ tự ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate stage updated"
+msgstr "Đã cập nhật giai đoạn ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate task not found"
+msgstr "Không tìm thấy công việc ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate updated successfully."
+msgstr "Đã cập nhật ứng viên thành công."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidate view status updated"
+msgstr "Đã cập nhật trạng thái xem ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CandidateDocument not found"
+msgstr "Không tìm thấy tài liệu ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CandidateRating not found"
+msgstr "Không tìm thấy đánh giá ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CandidateStage not found"
+msgstr "Không tìm thấy giai đoạn ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "CandidateTask not found"
+msgstr "Không tìm thấy công việc ứng viên"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidates Per Stage"
+msgstr "Ứng viên theo giai đoạn"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidates Started Onboarding"
+msgstr "Ứng viên bắt đầu tiếp nhận"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidates by Onboarding Stage"
+msgstr "Ứng viên theo giai đoạn tiếp nhận"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Candidates by Stage (snapshot)"
+msgstr "Ứng viên theo giai đoạn (ảnh chụp dữ liệu)"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cannot Change Stage"
+msgstr "Không thể thay đổi giai đoạn"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cannot be paid"
+msgstr "Không thể trả lương"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cannot change payslip status."
+msgstr "Không thể thay đổi trạng thái phiếu lương."
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Cannot submit leave request"
+msgstr "Không thể gửi đơn nghỉ phép"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Capacity"
+msgstr "Sức chứa"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Capped"
+msgstr "Đã áp trần"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Capped for display"
+msgstr "Giới hạn khi hiển thị"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Card Count"
+msgstr "Số lượng thẻ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Card Number"
+msgstr "Số thẻ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Card Status"
+msgstr "Trạng thái thẻ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Card Type"
+msgstr "Loại thẻ"
+
+#: vietnam-ui-reviewed-payroll-bank-candidate
+msgid "Careers"
+msgstr "Cơ hội nghề nghiệp"
