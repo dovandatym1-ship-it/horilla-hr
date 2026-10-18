@@ -185,6 +185,8 @@ class VNRuleSet(models.Model):
             raise ValidationError("Chỉ phê duyệt cấu hình ở trạng thái Chờ duyệt.")
         if not approver or not approver.is_authenticated:
             raise ValidationError("Người phê duyệt không hợp lệ.")
+        if not self.created_by_id:
+            raise ValidationError("Thiếu người lập bộ công thức.")
         if self.created_by_id == approver.pk:
             raise ValidationError("Người lập không được tự phê duyệt.")
         if not self.lines.exists():
