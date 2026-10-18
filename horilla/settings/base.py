@@ -37,6 +37,8 @@ ALLOWED_HOSTS = env("ALLOWED_HOSTS")
 CSRF_TRUSTED_ORIGINS = env("CSRF_TRUSTED_ORIGINS")
 HORILLA_ENV = env("HORILLA_ENV", default="")
 REDIS_URL = env("REDIS_URL", default=None)
+# Independent key used for Vietnamese sensitive identifiers; never auto-generated.
+VN_PII_FERNET_KEY = env("VN_PII_FERNET_KEY", default="")
 
 # Default site ID for django.contrib.sites framework.
 SITE_ID = 1
@@ -82,6 +84,7 @@ INSTALLED_APPS = [
     "attendance",
     "payroll",
     "vn_payroll.apps.VnPayrollConfig",
+    "vn_hrm.apps.VnHrmConfig",
     "accessibility",
     "horilla_audit",
     "horilla_widgets",
