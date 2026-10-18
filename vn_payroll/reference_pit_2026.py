@@ -30,7 +30,7 @@ MONTHLY_BRACKETS = (
 
 
 def resident_monthly_salary_pit(
-    *, tax_year, taxable_salary_before_deductions, compulsory_insurance,
+    *, tax_year, tax_residency, taxable_salary_before_deductions, compulsory_insurance,
     verified_dependents, other_approved_deductions="0",
 ):
     """Return pure Decimal calculation, requiring explicit 2026 residency scope.
@@ -38,7 +38,13 @@ def resident_monthly_salary_pit(
     `taxable_salary_before_deductions` MUST already exclude non-taxable
     allowances/reimbursements. Do not infer this from Horilla gross_pay.
     `other_approved_deductions` only after independent supporting evidence.
+    Tax residency must be explicitly supplied by verified HR legal records.
     """
+    if tax_residency != "resident":
+        raise ValidationError(
+            "Bộ thuế lũy tiến này chỉ áp dụng cá nhân cư trú; "
+            "không được suy diễn thuế cho cá nhân không cư trú."
+        )
     if tax_year != YEAR or isinstance(tax_year, bool):
         raise ValidationError("Bộ tham chiếu chỉ áp dụng kỳ tính thuế 2026.")
     if not isinstance(verified_dependents, int) or isinstance(verified_dependents, bool):
