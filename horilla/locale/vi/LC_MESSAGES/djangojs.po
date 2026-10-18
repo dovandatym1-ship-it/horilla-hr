@@ -524,3 +524,55 @@ msgstr "Yêu cầu thất bại (mã trạng thái %(status)s)."
 #: vietnam-ui-js-runtime
 msgid "The request took too long to respond."
 msgstr "Yêu cầu phản hồi quá lâu."
+
+#: vietnam-ui-js-completion
+msgid "A rejection reason is required."
+msgstr "Bắt buộc nhập lý do từ chối."
+
+#: vietnam-ui-js-completion
+msgid "An attendance request exists for updating this attendance prior to validation."
+msgstr "Đã có yêu cầu điều chỉnh chấm công này trước khi xác nhận."
+
+#: vietnam-ui-js-completion
+msgid "Feedback"
+msgstr "Phản hồi"
+
+#: vietnam-ui-js-completion
+msgid "Hired Candidates"
+msgstr "Ứng viên đã tuyển"
+
+#: vietnam-ui-js-completion
+msgid "Imported Successfully!"
+msgstr "Nhập dữ liệu thành công!"
+
+#: vietnam-ui-js-completion
+msgid "Key Result"
+msgstr "Kết quả then chốt"
+
+#: vietnam-ui-js-completion
+msgid "Name of Employees"
+msgstr "Tên nhân viên"
+
+#: vietnam-ui-js-completion
+msgid "Number of Candidates"
+msgstr "Số lượng ứng viên"
+
+#: vietnam-ui-js-completion
+msgid "Objective"
+msgstr "Mục tiêu"
+
+#: vietnam-ui-js-completion
+msgid "Please upload a file with the .xlsx extension only."
+msgstr "Chỉ được tải lên tệp có phần mở rộng .xlsx."
+
+#: vietnam-ui-js-completion
+msgid "Rejection reason"
+msgstr "Lý do từ chối"
+
+#: vietnam-ui-js-completion
+msgid "The candidate is being moved from %(from)s to the %(to)s stage. Do you want to proceed?"
+msgstr "Ứng viên sẽ được chuyển từ giai đoạn %(from)s sang %(to)s. Bạn có muốn tiếp tục không?"
+
+#: vietnam-ui-js-completion
+msgid "Upload Completed!"
+msgstr "Tải lên hoàn tất!"
