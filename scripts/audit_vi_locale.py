@@ -81,18 +81,16 @@ def source_files():
 
 
 def visible_candidates(contents):
-    """Find likely untranslated English copy, not icon names, entities or VI.
+    """Find likely untranslated English copy, excluding icon glyphs and VI.
 
-    The audit is heuristic and does not certify screen-level localization.
-    Treat placeholders, Django expressions, names and renderer metadata as
-    non-copy to avoid inflating the actionable untranslated UI inventory.
+    This is a heuristic; only real UI tests establish screen-level coverage.
     """
     contents = re.sub(
-        r"{%\\s*comment\\s*%}.*?{%\\s*endcomment\\s*%}",
+        r"{%\s*comment\s*%}.*?{%\s*endcomment\s*%}",
         "", contents, flags=re.S,
     )
     contents = re.sub(
-        r"<!--.*?-->|<script\\b.*?</script>|<style\\b.*?</style>",
+        r"<!--.*?-->|<script\b.*?</script>|<style\b.*?</style>",
         "", contents, flags=re.S | re.I,
     )
 
@@ -101,8 +99,7 @@ def visible_candidates(contents):
             return False
         if VI_DIACRITICS.search(value):
             return False
-        if re.fullmatch(r"(?:&[a-zA-Z]+;?|[.,;:()\\s])+",
-                        value):
+        if re.fullmatch(r"(?:&[a-zA-Z]+;?|[.,;:()\s])+", value):
             return False
         if re.fullmatch(r"[a-z][a-z0-9_-]*", value) and (
             "_" in value or "-" in value
@@ -122,8 +119,8 @@ def visible_candidates(contents):
             continue
         parent_tag = contents[contents.rfind("<", 0, match.start()):match.start()]
         if re.search(
-            r"<(?:ion-icon|mat-icon|i|span)\\b[^>]*(?:material-icons|"
-            r"material-symbols|icon-font|class=[\\\"'][^\\\"']*\\bicon\\b)",
+            r"<(?:ion-icon|mat-icon|i|span)\b[^>]*(?:material-icons|"
+            r"material-symbols|icon-font|\bicon\b)",
             parent_tag, flags=re.I,
         ):
             continue
