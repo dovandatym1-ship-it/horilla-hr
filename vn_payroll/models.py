@@ -111,7 +111,7 @@ class VNRuleSet(models.Model):
             if not self.approved_by_id or not self.approved_at or not self.legal_reference.strip():
                 raise ValidationError("Phải có người duyệt, ngày duyệt và căn cứ chính sách/pháp lý.")
             # Distinct approved versions may not overlap for the same topic.
-            existing = VNRuleSet.objects.filter(
+            existing = VNRuleSet._base_manager.filter(
                 company_id=self.company_id, code=self.code, status="approved"
             ).exclude(pk=self.pk)
             for prior in existing.only("effective_from", "effective_to"):
@@ -122,7 +122,7 @@ class VNRuleSet(models.Model):
 
     def save(self, *args, **kwargs):
         if self.pk:
-            old = VNRuleSet.objects.get(pk=self.pk)
+            old = VNRuleSet._base_manager.get(pk=self.pk)
             if old.status == "approved":
                 # Permit retirement only; never overwrite approved evidence.
                 immutable = (
