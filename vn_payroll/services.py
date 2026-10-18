@@ -16,6 +16,7 @@ from base.auth_backends import (
 )
 from base.models import Company
 from .models import FormulaRule
+from .approval_guard import allow_approval_transition
 
 
 def require_permission(actor, company_id, codename):
@@ -66,7 +67,8 @@ def approve_rule(rule_id, company_id, actor):
     rule.status = "approved"
     rule.approved_by = actor
     rule.approved_at = timezone.now()
-    rule.save()
+    with allow_approval_transition():
+        rule.save()
     return rule
 
 
@@ -77,7 +79,8 @@ def retire_rule(rule_id, company_id, actor):
     if rule.status != "approved":
         raise ValidationError("Chỉ quy tắc đang duyệt mới được ngừng áp dụng.")
     rule.status = "retired"
-    rule.save()
+    with allow_approval_transition():
+        rule.save()
     return rule
 
 
