@@ -77,7 +77,8 @@ class VNRuleSetAdmin(StrictAdmin):
     search_fields = ("code", "title")
     readonly_fields = ("created_by", "approved_by", "approved_at", "created_at", "status")
     inlines = [VNPayRuleInline]
-    actions = ["submit_for_review", "return_to_draft", "approve_checked", "retire_approved"]
+    # Retirement needs an effective-date policy; new versions supersede old ones.
+    actions = ["submit_for_review", "return_to_draft", "approve_checked"]
 
     def get_inlines(self, request, obj):
         if obj is not None and obj.status != "draft":
