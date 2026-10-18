@@ -23,6 +23,12 @@ class FormulaRuleQuerySet(models.QuerySet):
     def delete(self):
         raise PermissionDenied("Chỉ được xóa từng bản nháp sau khi kiểm tra quyền.")
 
+    def bulk_create(self, objs, **kwargs):
+        raise PermissionDenied("Không hỗ trợ tạo hàng loạt công thức bỏ qua kiểm tra.")
+
+    def bulk_update(self, objs, fields, **kwargs):
+        raise PermissionDenied("Không hỗ trợ sửa hàng loạt công thức bỏ qua kiểm tra.")
+
 
 FormulaRuleManager = HorillaCompanyManager.from_queryset(FormulaRuleQuerySet)
 
