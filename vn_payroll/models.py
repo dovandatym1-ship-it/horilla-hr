@@ -244,3 +244,72 @@ class FormulaAuditEvent(models.Model):
 
     def delete(self, *args, **kwargs):
         raise PermissionDenied("Không được xóa nhật ký quy tắc.")
+
+
+class VNPayrollReconciliationSnapshot(models.Model):
+    """Immutable audit evidence of one approved rule preview, NEVER a payline.
+
+    A new source fingerprint produces a new snapshot, never rewrites historical
+    calculations. No API or background job can use this row as a payment order.
+    """
+
+    company = models.ForeignKey(
+        "base.Company", on_delete=models.PROTECT,
+        related_name="vn_payroll_reconciliation_snapshots",
+    )
+    employee = models.ForeignKey(
+        "employee.Employee", on_delete=models.PROTECT,
+        related_name="vn_payroll_reconciliation_snapshots",
+    )
+    contract = models.ForeignKey(
+        "payroll.Contract", on_delete=models.PROTECT,
+        related_name="vn_payroll_reconciliation_snapshots",
+    )
+    rule = models.ForeignKey(
+        FormulaRule, on_delete=models.PROTECT,
+        related_name="reconciliation_snapshots",
+    )
+    actor = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT,
+        related_name="vn_payroll_reconciliation_snapshots",
+    )
+    period_start = models.DateField()
+    period_end = models.DateField()
+    source_sha256 = models.CharField(max_length=64)
+    input_sha256 = models.CharField(max_length=64)
+    record_sha256 = models.CharField(max_length=64, unique=True)
+    rule_version = models.PositiveIntegerField()
+    result_exact = models.DecimalField(max_digits=24, decimal_places=6)
+    created_at = models.DateTimeField(auto_now_add=True)
+    objects = FormulaRuleManager("company")
+
+    class Meta:
+        ordering = ["-created_at", "-pk"]
+        permissions = [
+            ("record_vnpayrollreconciliationsnapshot",
+             "Can record Vietnam payroll reconciliation evidence"),
+        ]
+
+    def clean(self):
+        super().clean()
+        if self.period_end and self.period_start and self.period_end < self.period_start:
+            raise ValidationError("Kỳ đối soát không hợp lệ.")
+        if self.rule_id and self.rule.company_id != self.company_id:
+            raise ValidationError("Quy tắc đối soát thuộc pháp nhân khác.")
+        if self.result_exact is not None and not self.result_exact.is_finite():
+            raise ValidationError("Kết quả đối soát không hữu hạn.")
+        for key in ("source_sha256", "input_sha256", "record_sha256"):
+            digest = getattr(self, key)
+            if not isinstance(digest, str) or len(digest) != 64 or any(
+                char not in "0123456789abcdef" for char in digest
+            ):
+                raise ValidationError("Giá trị fingerprint không hợp lệ.")
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            raise PermissionDenied("Bản đối soát bất biến; chỉ được tạo bản mới.")
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise PermissionDenied("Không được xóa chứng cứ đối soát lương.")
