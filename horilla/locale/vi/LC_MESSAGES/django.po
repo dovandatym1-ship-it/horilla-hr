@@ -4556,3 +4556,339 @@ msgstr "Ngày trả lương"
 #: vietnam-ui-hrm-extra
 msgid "Based on the saved settings. Save to see a change reflected here."
 msgstr "Dựa trên cấu hình đã lưu. Hãy lưu để cập nhật kết quả hiển thị."
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Offboarding Dashboard"
+msgstr "Tổng quan nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Offboarding Pipeline"
+msgstr "Quy trình nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Employees by stage"
+msgstr "Nhân viên theo giai đoạn"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Resignation Status"
+msgstr "Trạng thái nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Letter submissions"
+msgstr "Đơn xin nghỉ việc đã gửi"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Task Completion"
+msgstr "Hoàn thành công việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "All offboarding tasks"
+msgstr "Toàn bộ công việc bàn giao"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Department Attrition"
+msgstr "Tỷ lệ nghỉ việc theo phòng ban"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Offboarding by department"
+msgstr "Nghỉ việc theo phòng ban"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Exit Reasons"
+msgstr "Lý do nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Why employees leave"
+msgstr "Lý do nhân viên nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Monthly Exits"
+msgstr "Số nhân viên nghỉ việc theo tháng"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Employees exiting per month"
+msgstr "Nhân viên nghỉ việc từng tháng"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Notice Period Tracker"
+msgstr "Theo dõi thời gian báo trước"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Employees whose notice period ends in the next 30 days"
+msgstr "Nhân viên hết thời gian báo trước trong 30 ngày tới"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Unreturned Assets"
+msgstr "Tài sản chưa bàn giao"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Assets not yet returned"
+msgstr "Tài sản chưa hoàn trả"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Active Offboarding"
+msgstr "Hồ sơ nghỉ việc đang xử lý"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Exit Rate"
+msgstr "Tỷ lệ nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Resignations"
+msgstr "Đơn xin nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Tasks Done"
+msgstr "Công việc đã hoàn tất"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Notice Ending Soon"
+msgstr "Sắp hết thời gian báo trước"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Next 7 days"
+msgstr "Trong 7 ngày tới"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "No offboarding stages"
+msgstr "Chưa có giai đoạn nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "No resignations"
+msgstr "Không có đơn xin nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "No tasks"
+msgstr "Không có công việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Exits"
+msgstr "Lượt nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "No exit reasons recorded"
+msgstr "Chưa ghi nhận lý do nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "No exits in this period"
+msgstr "Không có nhân viên nghỉ việc trong kỳ"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Exiting"
+msgstr "Đang nghỉ việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "No notice periods ending in the next 30 days"
+msgstr "Không có thời gian báo trước nào kết thúc trong 30 ngày tới"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Ended"
+msgstr "Đã kết thúc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "All assets returned"
+msgstr "Đã bàn giao toàn bộ tài sản"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Not Returned"
+msgstr "Chưa hoàn trả"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Date of joining"
+msgstr "Ngày vào làm"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Probation ends"
+msgstr "Ngày kết thúc thử việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Job position"
+msgstr "Vị trí công việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Offer letter"
+msgstr "Thư mời làm việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "mail open outline"
+msgstr "Biểu tượng mở thư"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Send Portal / Start Onboarding"
+msgstr "Gửi cổng thông tin / Bắt đầu tiếp nhận"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Send Portal / Start onboarding"
+msgstr "Gửi cổng thông tin / Bắt đầu tiếp nhận"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid " Do you want to delete this record"
+msgstr " Bạn có muốn xóa bản ghi này không?"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Hired Candidates"
+msgstr "Ứng viên đã tuyển"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Offer letter status :"
+msgstr "Trạng thái thư mời làm việc:"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Send Portal"
+msgstr "Gửi liên kết cổng thông tin"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Joining Set"
+msgstr "Đã thiết lập ngày vào làm"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Joining Not-Set"
+msgstr "Chưa thiết lập ngày vào làm"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Portal Not-Sent"
+msgstr "Chưa gửi liên kết cổng thông tin"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Portal Sent"
+msgstr "Đã gửi liên kết cổng thông tin"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "At present, There are no Candidates onboarding."
+msgstr "Hiện chưa có ứng viên đang tiếp nhận."
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "My Onboarding Tasks"
+msgstr "Công việc tiếp nhận của tôi"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Task"
+msgstr "Công việc"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Todo"
+msgstr "Cần làm"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Scheduled"
+msgstr "Đã lên lịch"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Ongoing"
+msgstr "Đang tiến hành"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Stuck"
+msgstr "Bị đình trệ"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "candidates in this task"
+msgstr "ứng viên trong công việc này"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "No records available at the moment."
+msgstr "Hiện không có bản ghi nào."
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Open"
+msgstr "Đang mở"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Closed"
+msgstr "Đã đóng"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Changed by"
+msgstr "Người thay đổi"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "oh-link--secondary"
+msgstr "Liên kết phụ"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Created the ticket "
+msgstr "Đã tạo yêu cầu hỗ trợ "
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "updated"
+msgstr "đã cập nhật"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Attach Files"
+msgstr "Đính kèm tệp"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Type something..."
+msgstr "Nhập nội dung..."
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Send Message"
+msgstr "Gửi tin nhắn"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Ticket Details"
+msgstr "Chi tiết yêu cầu hỗ trợ"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Ticket Info"
+msgstr "Thông tin yêu cầu hỗ trợ"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Ticket ID:"
+msgstr "Mã yêu cầu hỗ trợ:"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Created:"
+msgstr "Được tạo:"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Last activity:"
+msgstr "Hoạt động gần nhất:"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Tags:"
+msgstr "Nhãn:"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Responsibility"
+msgstr "Người chịu trách nhiệm"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid " Claim Requests"
+msgstr " Yêu cầu nhận xử lý"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Documents"
+msgstr "Tài liệu"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "File Upload"
+msgstr "Tải tệp lên"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Delete attachment"
+msgstr "Xóa tệp đính kèm"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Are you sure you want to delete this file?"
+msgstr "Bạn có chắc chắn muốn xóa tệp này không?"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Create Tag"
+msgstr "Tạo nhãn"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "View File"
+msgstr "Xem tệp"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Something went wrong, the status was not updated."
+msgstr "Đã xảy ra lỗi, trạng thái chưa được cập nhật."
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Ticket Type"
+msgstr "Loại yêu cầu hỗ trợ"
+
+#: vietnam-ui-onboarding-offboarding-support
+msgid "Till date"
+msgstr "Đến ngày"
