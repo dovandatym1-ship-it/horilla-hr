@@ -55,10 +55,19 @@ class VNEmployeeLegalProfile(models.Model):
     objects = HorillaCompanyManager("company")
 
     class Meta:
+        permissions = [
+            ("manage_vn_identifiers", "Can set encrypted Vietnamese identifiers"),
+            ("reveal_vn_identifiers", "Can reveal encrypted Vietnamese identifiers"),
+        ]
         constraints = [
             models.UniqueConstraint(
                 fields=["company", "employee"], name="vn_hrm_employee_company_unique"
-            )
+            ),
+            models.UniqueConstraint(
+                fields=["company", "citizen_digest"],
+                condition=~models.Q(citizen_digest=""),
+                name="vn_hrm_citizen_digest_unique",
+            ),
         ]
 
     def set_identifier(self, kind, value):
@@ -181,6 +190,9 @@ class VNLeaveLedgerEvent(models.Model):
     effective_on = models.DateField()
     reason = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.PROTECT
+    )
     objects = HorillaCompanyManager("company")
 
     class Meta:
@@ -191,7 +203,17 @@ class VNLeaveLedgerEvent(models.Model):
             )
         ]
 
+    def clean(self):
+        super().clean()
+        if self.units is None or self.units == 0:
+            raise ValidationError({"units": "Giá trị số dư phép không được bằng 0."})
+        if self.event_type in ("debit", "expiry") and self.units > 0:
+            raise ValidationError({"units": "Sự kiện trừ/hết phép phải là số âm."})
+        if self.event_type in ("accrual", "credit") and self.units < 0:
+            raise ValidationError({"units": "Sự kiện cộng/hoàn phép phải là số dương."})
+
     def save(self, *args, **kwargs):
+        self.full_clean()
         if self.pk:
             raise PermissionDenied("Nhật ký phép không thể sửa; tạo giao dịch điều chỉnh.")
         return super().save(*args, **kwargs)
