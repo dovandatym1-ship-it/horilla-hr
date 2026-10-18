@@ -3380,3 +3380,835 @@ msgstr "Gửi liên kết cổng thông tin / Bắt đầu tiếp nhận"
 #: vietnam-ui-cross-module
 msgid "Send Portal Link"
 msgstr "Gửi liên kết cổng thông tin"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Total Projects"
+msgstr "Tổng số dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "New Projects"
+msgstr "Dự án mới"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Projects in progress"
+msgstr "Dự án đang triển khai"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Project Status"
+msgstr "Trạng thái dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Task Status"
+msgstr "Trạng thái công việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Projects due in this month"
+msgstr "Dự án đến hạn trong tháng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Projects"
+msgstr "Dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "View Project"
+msgstr "Xem dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "caret down outline"
+msgstr "Biểu tượng mở danh sách"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Add Stage"
+msgstr "Thêm giai đoạn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Add Task"
+msgstr "Thêm công việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid " Are you sure you want to delete this stage?"
+msgstr " Bạn có chắc chắn muốn xóa giai đoạn này không?"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Task Managers"
+msgstr "Người quản lý công việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Stage"
+msgstr "Giai đoạn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Document"
+msgstr "Tài liệu"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Do you really want to delete this task?"
+msgstr "Bạn có chắc chắn muốn xóa công việc này không?"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Empty"
+msgstr "Trống"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No tasks found in this stage."
+msgstr "Không có công việc nào trong giai đoạn này."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Enter a page number and press Enter"
+msgstr "Nhập số trang rồi nhấn Enter"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No Records found"
+msgstr "Không tìm thấy bản ghi"
+
+#: vietnam-ui-project-settings-payroll
+msgid "for:"
+msgstr "cho:"
+
+#: vietnam-ui-project-settings-payroll
+msgid "library outline"
+msgstr "Biểu tượng thư viện"
+
+#: vietnam-ui-project-settings-payroll
+msgid "add sharp"
+msgstr "Biểu tượng thêm"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Select Row"
+msgstr "Chọn dòng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Mail Automations"
+msgstr "Tự động gửi email"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Configure automated email triggers based on model events and conditions."
+msgstr "Cấu hình tự động gửi email theo sự kiện và điều kiện của dữ liệu."
+
+#: vietnam-ui-project-settings-payroll
+msgid "My Dashboard"
+msgstr "Trang tổng quan của tôi"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Switch to the main dashboard"
+msgstr "Chuyển sang trang tổng quan chính"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Admin Dashboard"
+msgstr "Trang tổng quan quản trị"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Monthly Attendance Summary"
+msgstr "Tổng hợp chấm công tháng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Previous month"
+msgstr "Tháng trước"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Month"
+msgstr "Tháng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Next month"
+msgstr "Tháng sau"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Announcements"
+msgstr "Thông báo chung"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Birthdays"
+msgstr "Sinh nhật"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Birthdays this month"
+msgstr "Sinh nhật trong tháng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Upcoming Holidays"
+msgstr "Các ngày nghỉ lễ sắp tới"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Next 30 days"
+msgstr "Trong 30 ngày tới"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Present This Month"
+msgstr "Ngày có mặt trong tháng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "late"
+msgstr "đi muộn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Pending Leave Requests"
+msgstr "Đơn nghỉ phép chờ xử lý"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Assigned Tasks"
+msgstr "Công việc được giao"
+
+#: vietnam-ui-project-settings-payroll
+msgid "to do & in progress"
+msgstr "cần làm và đang thực hiện"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Open Goals"
+msgstr "Mục tiêu đang mở"
+
+#: vietnam-ui-project-settings-payroll
+msgid "active objectives"
+msgstr "mục tiêu đang hoạt động"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Unable to load attendance summary"
+msgstr "Không thể tải bảng tổng hợp chấm công"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No announcements"
+msgstr "Không có thông báo chung"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No more birthdays this month"
+msgstr "Không còn sinh nhật nào khác trong tháng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No upcoming holidays"
+msgstr "Không có ngày nghỉ lễ sắp tới"
+
+#: vietnam-ui-project-settings-payroll
+msgid "System Preferences"
+msgstr "Tùy chọn hệ thống"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Configure system defaults, display formatting, and data access controls."
+msgstr "Cấu hình mặc định, định dạng hiển thị và kiểm soát truy cập dữ liệu."
+
+#: vietnam-ui-project-settings-payroll
+msgid "General Defaults"
+msgstr "Thiết lập mặc định"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Formatting & Localization"
+msgstr "Định dạng và ngôn ngữ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Data & Access Controls"
+msgstr "Dữ liệu và phân quyền"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Languages"
+msgstr "Ngôn ngữ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "About"
+msgstr "Giới thiệu"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Horilla HR"
+msgstr "Horilla HR"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Quote this version when reporting a problem."
+msgstr "Cung cấp số phiên bản này khi báo lỗi."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Release notes"
+msgstr "Ghi chú phát hành"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Old password"
+msgstr "Mật khẩu cũ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Enter Old Password"
+msgstr "Nhập mật khẩu cũ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "New Password"
+msgstr "Mật khẩu mới"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Enter New Password"
+msgstr "Nhập mật khẩu mới"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Re-Enter Password"
+msgstr "Nhập lại mật khẩu"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Save Password"
+msgstr "Lưu mật khẩu"
+
+#: vietnam-ui-project-settings-payroll
+msgid "At-Work Tracker"
+msgstr "Theo dõi giờ làm việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "By enabling this feature user's will be able to see their current day worked hours in live on the navbar (inside the check in button)."
+msgstr "Khi bật tính năng này, người dùng có thể xem số giờ làm trong ngày theo thời gian thực trên thanh điều hướng (trong nút chấm công vào)."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Allocate"
+msgstr "Phân bổ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Project Dashboard"
+msgstr "Tổng quan dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Active tasks breakdown"
+msgstr "Phân bố công việc đang thực hiện"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Top Active Projects"
+msgstr "Dự án đang hoạt động nổi bật"
+
+#: vietnam-ui-project-settings-payroll
+msgid "In progress — by task count"
+msgstr "Đang thực hiện — theo số công việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Project Timesheet"
+msgstr "Bảng thời gian dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Hours logged per project"
+msgstr "Giờ công ghi nhận theo dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Top Contributors"
+msgstr "Nhân viên đóng góp nổi bật"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Employees who completed tasks in this period"
+msgstr "Nhân viên đã hoàn thành công việc trong kỳ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Task Deadlines"
+msgstr "Thời hạn công việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Tasks due soon or overdue"
+msgstr "Công việc sắp đến hạn hoặc quá hạn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Next 14 days & overdue"
+msgstr "Trong 14 ngày tới và đã quá hạn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "projects"
+msgstr "dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Today's Tasks"
+msgstr "Công việc hôm nay"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Due Today"
+msgstr "Đến hạn hôm nay"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Nearing Deadline"
+msgstr "Sắp đến hạn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Next 14 Days"
+msgstr "Trong 14 ngày tới"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Overdue Tasks"
+msgstr "Công việc quá hạn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Past End Date"
+msgstr "Đã quá ngày kết thúc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Projects Ending Soon"
+msgstr "Dự án sắp kết thúc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No tasks in this period"
+msgstr "Không có công việc trong kỳ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No timesheet entries in this period"
+msgstr "Không có bản ghi giờ công trong kỳ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Hours"
+msgstr "Giờ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No in-progress projects in this period"
+msgstr "Không có dự án đang triển khai trong kỳ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No completed tasks in this period"
+msgstr "Không có công việc hoàn thành trong kỳ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No upcoming deadlines"
+msgstr "Không có thời hạn sắp tới"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No of Tasks"
+msgstr "Số công việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Search name or badge ID"
+msgstr "Tìm theo tên hoặc mã nhân viên"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Will be paid"
+msgstr "Sẽ được trả lương"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Blocked"
+msgstr "Bị chặn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "must be fixed first"
+msgstr "cần được xử lý trước"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Few paid days"
+msgstr "Ít ngày hưởng lương"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Excluded"
+msgstr "Bị loại trừ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "no payslip possible"
+msgstr "không thể lập phiếu lương"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Download summary sheet"
+msgstr "Tải bảng tổng hợp"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Upload filled sheet"
+msgstr "Tải lên bảng đã điền"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Starting the run…"
+msgstr "Đang bắt đầu chạy bảng lương…"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Attendance this period"
+msgstr "Chấm công trong kỳ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "shown"
+msgstr "đang hiển thị"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Blocked first"
+msgstr "Xử lý các mục bị chặn trước"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Present"
+msgstr "Có mặt"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Paid leave"
+msgstr "Nghỉ có lương"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Unpaid leave"
+msgstr "Nghỉ không lương"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Absent"
+msgstr "Vắng mặt"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Week off"
+msgstr "Nghỉ hằng tuần"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Working days"
+msgstr "Ngày làm việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Paid days"
+msgstr "Ngày hưởng lương"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Customize columns"
+msgstr "Tùy chỉnh cột"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Regularise attendance"
+msgstr "Điều chỉnh chấm công"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Open attendance"
+msgstr "Mở chấm công"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Edit contract"
+msgstr "Sửa hợp đồng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Nobody here matches that search."
+msgstr "Không có ai phù hợp với nội dung tìm kiếm."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Nobody in this run can be given a payslip."
+msgstr "Không có nhân viên nào trong đợt này đủ điều kiện lập phiếu lương."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Not included"
+msgstr "Không được tính"
+
+#: vietnam-ui-project-settings-payroll
+msgid "First page"
+msgstr "Trang đầu"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Previous page"
+msgstr "Trang trước"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Page number"
+msgstr "Số trang"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Next page"
+msgstr "Trang sau"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Last page"
+msgstr "Trang cuối"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Formula. Type numbers and + - * / ( ), arrows move the cursor, Backspace deletes."
+msgstr "Công thức. Nhập số và các toán tử + - * / ( ), dùng phím mũi tên để di chuyển con trỏ, Backspace để xóa."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Click the box and type numbers and + - * / ( ) from the keyboard. Click a token to put the cursor after it; the left and right arrows move it, Backspace deletes before it, Delete after it."
+msgstr "Nhấp vào ô rồi nhập số và các toán tử + - * / ( ) bằng bàn phím. Nhấp vào một thành phần để đặt con trỏ sau thành phần đó; dùng mũi tên để di chuyển, Backspace xóa phía trước và Delete xóa phía sau."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Components"
+msgstr "Thành phần"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Search components"
+msgstr "Tìm thành phần"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Worked out by payroll"
+msgstr "Được tính từ bảng lương"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Your components"
+msgstr "Thành phần của bạn"
+
+#: vietnam-ui-project-settings-payroll
+msgid "None yet — create an allowance or deduction and it appears here."
+msgstr "Chưa có thành phần nào — hãy tạo phụ cấp hoặc khấu trừ để hiển thị tại đây."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Operators"
+msgstr "Toán tử"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Functions"
+msgstr "Hàm"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Round to whole numbers (or round(x, 2) to 2 decimals)"
+msgstr "Làm tròn đến số nguyên (hoặc round(x, 2) để lấy hai chữ số thập phân)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Number"
+msgstr "Số"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Live preview"
+msgstr "Xem trước trực tiếp"
+
+#: vietnam-ui-project-settings-payroll
+msgid "on a sample basic pay of"
+msgstr "với mức lương cơ bản ví dụ là"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Tap a component below to start."
+msgstr "Chọn thành phần bên dưới để bắt đầu."
+
+#: vietnam-ui-project-settings-payroll
+msgid "using"
+msgstr "sử dụng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "estimated"
+msgstr "ước tính"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Could not work it out."
+msgstr "Không thể tính toán."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Could not reach the server."
+msgstr "Không thể kết nối máy chủ."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Years of service: counted from the employee joining date to the end of the pay period, with decimals (6.4). Use round(...) for whole years."
+msgstr "Số năm làm việc: tính từ ngày nhân viên vào làm đến cuối kỳ lương, bao gồm phần thập phân (6,4). Dùng round(...) để làm tròn năm."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Years of the active contract: counted from the start date of the active contract to the end of the pay period, with decimals (2.5). Use round(...) for whole years."
+msgstr "Số năm hợp đồng hiện hành: tính từ ngày bắt đầu hợp đồng còn hiệu lực đến cuối kỳ lương, bao gồm phần thập phân (2,5). Dùng round(...) để làm tròn năm."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Note"
+msgstr "Ghi chú"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Select All Contracts"
+msgstr "Chọn tất cả hợp đồng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Unselect All Contracts"
+msgstr "Bỏ chọn tất cả hợp đồng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Export Contracts"
+msgstr "Xuất hợp đồng"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Something on this step needs attention"
+msgstr "Có nội dung trong bước này cần kiểm tra"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Formula"
+msgstr "Công thức"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No formula yet."
+msgstr "Chưa có công thức."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Build formula"
+msgstr "Thiết lập công thức"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Employer formula"
+msgstr "Công thức phần doanh nghiệp"
+
+#: vietnam-ui-project-settings-payroll
+msgid "No employer formula yet."
+msgstr "Chưa có công thức phần doanh nghiệp."
+
+#: vietnam-ui-project-settings-payroll
+msgid "A percentage already follows the period, so this setting has nothing to scale here."
+msgstr "Tỷ lệ phần trăm đã áp dụng theo kỳ, nên thiết lập này không cần quy đổi thêm."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Enter an amount to see what it allows."
+msgstr "Nhập số tiền để xem kết quả cho phép."
+
+#: vietnam-ui-project-settings-payroll
+msgid "How this works out"
+msgstr "Cách tính"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Example periods. A real one follows the company calendar and the employee's contract."
+msgstr "Đây là các kỳ ví dụ. Kỳ thực tế dựa trên lịch công ty và hợp đồng nhân viên."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Add another rule"
+msgstr "Thêm quy tắc khác"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Add condition"
+msgstr "Thêm điều kiện"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Save And Add Another"
+msgstr "Lưu và thêm tiếp"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Build the formula"
+msgstr "Thiết lập công thức"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Tap the components and operators you want — no code, no syntax."
+msgstr "Chọn các thành phần và toán tử cần dùng — không cần lập trình hay nhớ cú pháp."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Done"
+msgstr "Xong"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Build the employer formula"
+msgstr "Thiết lập công thức phần doanh nghiệp"
+
+#: vietnam-ui-project-settings-payroll
+msgid "What the employer pays alongside this deduction. Same components, same operators."
+msgstr "Khoản doanh nghiệp đóng tương ứng với khấu trừ này. Sử dụng cùng các thành phần và toán tử."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Contribution Deduction"
+msgstr "Khấu trừ khoản đóng góp"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Deduct From"
+msgstr "Khấu trừ từ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Assign"
+msgstr "Gán"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Task manager"
+msgstr "Người quản lý công việc"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Task members"
+msgstr "Thành viên thực hiện"
+
+#: vietnam-ui-project-settings-payroll
+msgid " Time sheet"
+msgstr " Bảng chấm công dự án"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Can create"
+msgstr "Có quyền tạo"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Can view"
+msgstr "Có quyền xem"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Can edit"
+msgstr "Có quyền sửa"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Can delete"
+msgstr "Có quyền xóa"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Mail Server"
+msgstr "Máy chủ thư"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Select All Columns"
+msgstr "Chọn tất cả các cột"
+
+#: vietnam-ui-project-settings-payroll
+msgid "File name:"
+msgstr "Tên tệp:"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Import Records"
+msgstr "Nhập bản ghi"
+
+#: vietnam-ui-project-settings-payroll
+msgid "cloud upload"
+msgstr "Biểu tượng tải lên đám mây"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Do you want to download the template?"
+msgstr "Bạn có muốn tải tệp mẫu không?"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Import Help"
+msgstr "Hướng dẫn nhập liệu"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Audit & History"
+msgstr "Kiểm toán và lịch sử"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Manage history tags and configure which models and fields are tracked in the audit log."
+msgstr "Quản lý nhãn lịch sử và cấu hình các model, trường được ghi nhận vào nhật ký kiểm toán."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Create and manage tags used to categorise records in the audit history log."
+msgstr "Tạo và quản lý nhãn dùng để phân loại bản ghi trong nhật ký lịch sử."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Date Format"
+msgstr "Định dạng ngày"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Select how dates are displayed across the system."
+msgstr "Chọn cách hiển thị ngày trong toàn hệ thống."
+
+#: vietnam-ui-project-settings-payroll
+msgid "How dates are displayed across the system for the selected company."
+msgstr "Cách hiển thị ngày trong toàn hệ thống cho công ty được chọn."
+
+#: vietnam-ui-project-settings-payroll
+msgid "Day, Month, Year (e.g., 30-12-2023)"
+msgstr "Ngày-Tháng-Năm (ví dụ: 30-12-2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Day, Month, Year (e.g., 30.12.2023)"
+msgstr "Ngày.Tháng.Năm (ví dụ: 30.12.2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Day, Month, Year (e.g., 30/12/2023)"
+msgstr "Ngày/Tháng/Năm (ví dụ: 30/12/2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Month, Day, Year (e.g., 12/30/2023)"
+msgstr "Tháng/Ngày/Năm (ví dụ: 12/30/2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Year, Month, Day (e.g., 2023-12-30)"
+msgstr "Năm-Tháng-Ngày (ví dụ: 2023-12-30)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Year, Month, Day (e.g., 2023/12/30)"
+msgstr "Năm/Tháng/Ngày (ví dụ: 2023/12/30)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Full Month Name, Day, Year (e.g., January 1, 2023)"
+msgstr "Tên tháng đầy đủ, ngày, năm (ví dụ: January 1, 2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Day, Full Month Name, Year (e.g., 1 January, 2023)"
+msgstr "Ngày, tên tháng đầy đủ, năm (ví dụ: 1 January, 2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Abbreviated Month Name, Day, Year (e.g., Jan. 1, 2023)"
+msgstr "Tên tháng viết tắt, ngày, năm (ví dụ: Jan. 1, 2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Day, Abbreviated Month Name, Year (e.g., 1 Jan. 2023)"
+msgstr "Ngày, tên tháng viết tắt, năm (ví dụ: 1 Jan. 2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Full Day Name, Full Month Name, Day, Year (e.g., Monday, January 1, 2023)"
+msgstr "Tên thứ, tên tháng đầy đủ, ngày, năm (ví dụ: Monday, January 1, 2023)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Time Format"
+msgstr "Định dạng giờ"
+
+#: vietnam-ui-project-settings-payroll
+msgid "Select how times are displayed across the system."
+msgstr "Chọn cách hiển thị giờ trong toàn hệ thống."
+
+#: vietnam-ui-project-settings-payroll
+msgid "How times are displayed across the system for the selected company."
+msgstr "Cách hiển thị giờ trong toàn hệ thống cho công ty được chọn."
+
+#: vietnam-ui-project-settings-payroll
+msgid "12 Hr. (e.g., 06:00 AM or 06:00 PM)"
+msgstr "Giờ 12 tiếng (ví dụ: 06:00 AM hoặc 06:00 PM)"
+
+#: vietnam-ui-project-settings-payroll
+msgid "24 Hr. (e.g., 06:00 or 18:00)"
+msgstr "Giờ 24 tiếng (ví dụ: 06:00 hoặc 18:00)"
