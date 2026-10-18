@@ -81,3 +81,9 @@ Các TC còn lại về công/OT/phép nằm ở tài liệu OPS-04; các TC thu
 6. feature/vn-reports — báo cáo, bank export, audit, tenant scoping.
 
 Tất cả PR code chạy qua review và CI; không force-push lên 2.0, không merge âm thầm. Sau khi cập nhật upstream phải kiểm tra migration và contract/API compatibility.
+
+
+## 7. Phụ lục UAT v1.1 — Traceability và tiêu chí PASS
+Các testcase mục 3 ở trên là danh mục ban đầu. [MATRIX-15](15-TRACEABILITY-UAT-MATRIX.md) là bảng bổ sung liên kết đầy đủ 23 UC với validation, workflow, mã lỗi, testcase biên, trùng, đồng thời, pháp nhân và bằng chứng. Mỗi test phải có branch/commit SHA, dữ liệu synthetic, expected độc lập, kết quả thực, ảnh/log che nhạy cảm, reviewer và trạng thái.
+
+**Current execution status:** tất cả TC mới ghi **DESIGNED / NOT RUN**; không công bố Django runtime/CI/UAT đã PASS khi chưa chạy. Phần model code PR #3 chỉ đánh CODE_STATIC_ONLY. **DoR:** UC+BR+DE+WF+permission+error+TC+policy owner rõ; **DoD:** test từng mức/unit/integration/E2E + migration + UAT có evidence, policy legal chốt và không tồn tại GAP P0 chưa đóng.
