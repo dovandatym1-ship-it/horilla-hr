@@ -56,11 +56,11 @@ class VietnamPayrollReportsTests(TestCase):
         with self.assertRaises(PermissionDenied):
             self.report(actor=self.no_access)
 
-    def test_prevent_double_count_same_employee_period(self):
+    def test_duplicate_payslip_is_rejected_before_reporting(self):
         self.slip(self.employee_a, "confirmed")
-        self.slip(self.employee_a, "paid")
         with self.assertRaises(ValidationError):
-            self.report()
+            self.slip(self.employee_a, "paid")
+        self.assertEqual(self.report()["payslip_count"], 1)
 
     def test_csv_contains_only_aggregates(self):
         self.slip(self.employee_a, "paid")
