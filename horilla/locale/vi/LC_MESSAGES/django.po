@@ -2528,3 +2528,855 @@ msgstr "Xem hướng dẫn sử dụng"
 #: vietnam-ui-core-pages
 msgid "Clear All"
 msgstr "Xóa tất cả"
+
+#: vietnam-ui-cross-module
+msgid "Clashed Leave Requests"
+msgstr "Đơn nghỉ phép bị trùng lịch"
+
+#: vietnam-ui-cross-module
+msgid "close outline"
+msgstr "Biểu tượng đóng"
+
+#: vietnam-ui-cross-module
+msgid "Rejection"
+msgstr "Từ chối"
+
+#: vietnam-ui-cross-module
+msgid "Import Leave Requests"
+msgstr "Nhập đơn nghỉ phép"
+
+#: vietnam-ui-cross-module
+msgid "Uploading..."
+msgstr "Đang tải lên..."
+
+#: vietnam-ui-cross-module
+msgid "Upload a File"
+msgstr "Tải tệp lên"
+
+#: vietnam-ui-cross-module
+msgid "Drag and drop files here"
+msgstr "Kéo và thả tệp vào đây"
+
+#: vietnam-ui-cross-module
+msgid "Download Template"
+msgstr "Tải tệp mẫu"
+
+#: vietnam-ui-cross-module
+msgid "Leave Request Alert."
+msgstr "Cảnh báo đơn nghỉ phép."
+
+#: vietnam-ui-cross-module
+msgid "has interview in the requested date."
+msgstr "có lịch phỏng vấn vào ngày đề nghị nghỉ."
+
+#: vietnam-ui-cross-module
+msgid "Are you sure you want to proceed with the request?"
+msgstr "Bạn có chắc chắn muốn tiếp tục gửi yêu cầu?"
+
+#: vietnam-ui-cross-module
+msgid "Would you like to proceed?"
+msgstr "Bạn có muốn tiếp tục không?"
+
+#: vietnam-ui-cross-module
+msgid "Select All Candidates"
+msgstr "Chọn tất cả ứng viên"
+
+#: vietnam-ui-cross-module
+msgid "Unselect All Candidates"
+msgstr "Bỏ chọn tất cả ứng viên"
+
+#: vietnam-ui-cross-module
+msgid "Export Candidates"
+msgstr "Xuất dữ liệu ứng viên"
+
+#: vietnam-ui-cross-module
+msgid "Rating"
+msgstr "Đánh giá"
+
+#: vietnam-ui-cross-module
+msgid "Resume"
+msgstr "Sơ yếu lý lịch"
+
+#: vietnam-ui-cross-module
+msgid "Options"
+msgstr "Tùy chọn"
+
+#: vietnam-ui-cross-module
+msgid "Converted to employee."
+msgstr "Đã chuyển thành nhân viên."
+
+#: vietnam-ui-cross-module
+msgid "Stars"
+msgstr "Số sao"
+
+#: vietnam-ui-cross-module
+msgid "Are you sure you want to convert this candidate into an employee?"
+msgstr "Bạn có chắc chắn muốn chuyển ứng viên này thành nhân viên?"
+
+#: vietnam-ui-cross-module
+msgid "To employee "
+msgstr "Chuyển thành nhân viên "
+
+#: vietnam-ui-cross-module
+msgid "Converted "
+msgstr "Đã chuyển "
+
+#: vietnam-ui-cross-module
+msgid "Candidate in Onboarding "
+msgstr "Ứng viên đang tiếp nhận "
+
+#: vietnam-ui-cross-module
+msgid "Candidate is Converted "
+msgstr "Ứng viên đã được chuyển đổi "
+
+#: vietnam-ui-cross-module
+msgid "To Talent Pool"
+msgstr "Chuyển vào nguồn ứng viên tiềm năng"
+
+#: vietnam-ui-cross-module
+msgid "Added In Rejected Candidates"
+msgstr "Đã thêm vào danh sách ứng viên bị từ chối"
+
+#: vietnam-ui-cross-module
+msgid "Add To Rejected Candidates"
+msgstr "Thêm vào danh sách ứng viên bị từ chối"
+
+#: vietnam-ui-cross-module
+msgid "Do you want to archive this candidate?"
+msgstr "Bạn có muốn lưu trữ ứng viên này không?"
+
+#: vietnam-ui-cross-module
+msgid "Un Archive"
+msgstr "Khôi phục"
+
+#: vietnam-ui-cross-module
+msgid "Do you want to un-archive this candidate?"
+msgstr "Bạn có muốn khôi phục ứng viên này không?"
+
+#: vietnam-ui-cross-module
+msgid "Do you want to delete this candidate?"
+msgstr "Bạn có muốn xóa ứng viên này không?"
+
+#: vietnam-ui-cross-module
+msgid "Interviewer"
+msgstr "Người phỏng vấn"
+
+#: vietnam-ui-cross-module
+msgid "Interview Date"
+msgstr "Ngày phỏng vấn"
+
+#: vietnam-ui-cross-module
+msgid "Interview Time"
+msgstr "Giờ phỏng vấn"
+
+#: vietnam-ui-cross-module
+msgid " Reveal"
+msgstr " Hiển thị"
+
+#: vietnam-ui-cross-module
+msgid " Collapse"
+msgstr " Thu gọn"
+
+#: vietnam-ui-cross-module
+msgid "Are you sure you want to remove this interviewer?"
+msgstr "Bạn có chắc chắn muốn bỏ người phỏng vấn này?"
+
+#: vietnam-ui-cross-module
+msgid " Remove"
+msgstr " Xóa"
+
+#: vietnam-ui-cross-module
+msgid "Interviewers"
+msgstr "Người phỏng vấn"
+
+#: vietnam-ui-cross-module
+msgid "Interview Completed"
+msgstr "Phỏng vấn đã hoàn thành"
+
+#: vietnam-ui-cross-module
+msgid "Expired Interview"
+msgstr "Lịch phỏng vấn đã quá hạn"
+
+#: vietnam-ui-cross-module
+msgid "Upcoming Interview"
+msgstr "Lịch phỏng vấn sắp tới"
+
+#: vietnam-ui-cross-module
+msgid "Interview Today"
+msgstr "Phỏng vấn hôm nay"
+
+#: vietnam-ui-cross-module
+msgid " Edit"
+msgstr " Chỉnh sửa"
+
+#: vietnam-ui-cross-module
+msgid " Are you sure you want to delete this interview?"
+msgstr " Bạn có chắc chắn muốn xóa lịch phỏng vấn này?"
+
+#: vietnam-ui-cross-module
+msgid "No Interviews Found."
+msgstr "Không tìm thấy lịch phỏng vấn."
+
+#: vietnam-ui-cross-module
+msgid "Onboarding Dashboard"
+msgstr "Tổng quan tiếp nhận nhân viên"
+
+#: vietnam-ui-cross-module
+msgid "Quarter"
+msgstr "Quý"
+
+#: vietnam-ui-cross-module
+msgid "Offer Letter Status"
+msgstr "Trạng thái thư mời làm việc"
+
+#: vietnam-ui-cross-module
+msgid "All candidates"
+msgstr "Tất cả ứng viên"
+
+#: vietnam-ui-cross-module
+msgid "By Job Position"
+msgstr "Theo vị trí công việc"
+
+#: vietnam-ui-cross-module
+msgid "Candidates per position"
+msgstr "Số ứng viên theo vị trí"
+
+#: vietnam-ui-cross-module
+msgid "Candidates in Final Stage"
+msgstr "Ứng viên ở giai đoạn cuối"
+
+#: vietnam-ui-cross-module
+msgid "By job position — active recruitments"
+msgstr "Theo vị trí — đợt tuyển dụng đang triển khai"
+
+#: vietnam-ui-cross-module
+msgid "Managing Tasks"
+msgstr "Quản lý công việc"
+
+#: vietnam-ui-cross-module
+msgid "Tasks assigned to you"
+msgstr "Công việc được giao cho bạn"
+
+#: vietnam-ui-cross-module
+msgid "Onboarding Candidates"
+msgstr "Ứng viên đang tiếp nhận"
+
+#: vietnam-ui-cross-module
+msgid "Candidate Rate In Final Stage"
+msgstr "Tỷ lệ ứng viên ở giai đoạn cuối"
+
+#: vietnam-ui-cross-module
+msgid "Finished"
+msgstr "Đã hoàn tất"
+
+#: vietnam-ui-cross-module
+msgid "Stucked Tasks"
+msgstr "Công việc bị đình trệ"
+
+#: vietnam-ui-cross-module
+msgid "Tasks"
+msgstr "Công việc"
+
+#: vietnam-ui-cross-module
+msgid "Portal Incomplete"
+msgstr "Chưa hoàn thành cổng thông tin"
+
+#: vietnam-ui-cross-module
+msgid "No candidates"
+msgstr "Không có ứng viên"
+
+#: vietnam-ui-cross-module
+msgid "Final Stage"
+msgstr "Giai đoạn cuối"
+
+#: vietnam-ui-cross-module
+msgid "No pending tasks"
+msgstr "Không có công việc đang chờ"
+
+#: vietnam-ui-cross-module
+msgid "done"
+msgstr "đã xong"
+
+#: vietnam-ui-cross-module
+msgid "Exit Ratio"
+msgstr "Tỷ lệ nghỉ việc"
+
+#: vietnam-ui-cross-module
+msgid "Archived Employees / Total Employees"
+msgstr "Nhân viên đã lưu trữ / Tổng nhân viên"
+
+#: vietnam-ui-cross-module
+msgid "Exiting to Joining Ratio"
+msgstr "Tỷ lệ nghỉ việc so với vào làm"
+
+#: vietnam-ui-cross-module
+msgid "Exiting Employees : Joining Employees"
+msgstr "Nhân viên nghỉ việc : Nhân viên vào làm"
+
+#: vietnam-ui-cross-module
+msgid "Archived Employees"
+msgstr "Nhân viên đã lưu trữ"
+
+#: vietnam-ui-cross-module
+msgid "Department - JobPosition Offboarding"
+msgstr "Nghỉ việc theo phòng ban và chức danh"
+
+#: vietnam-ui-cross-module
+msgid "Joining and Offboarding Chart"
+msgstr "Biểu đồ nhân viên vào làm và nghỉ việc"
+
+#: vietnam-ui-cross-module
+msgid "Ticket ID"
+msgstr "Mã yêu cầu hỗ trợ"
+
+#: vietnam-ui-cross-module
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: vietnam-ui-cross-module
+msgid "Owner"
+msgstr "Người phụ trách"
+
+#: vietnam-ui-cross-module
+msgid "Type"
+msgstr "Loại"
+
+#: vietnam-ui-cross-module
+msgid "Forward to"
+msgstr "Chuyển tiếp đến"
+
+#: vietnam-ui-cross-module
+msgid "Assigned to"
+msgstr "Người được giao"
+
+#: vietnam-ui-cross-module
+msgid "Priority"
+msgstr "Mức ưu tiên"
+
+#: vietnam-ui-cross-module
+msgid "Tags"
+msgstr "Nhãn"
+
+#: vietnam-ui-cross-module
+msgid "Low"
+msgstr "Thấp"
+
+#: vietnam-ui-cross-module
+msgid "Medium"
+msgstr "Trung bình"
+
+#: vietnam-ui-cross-module
+msgid "High"
+msgstr "Cao"
+
+#: vietnam-ui-cross-module
+msgid "Do you want to archive this ticket?"
+msgstr "Bạn có muốn lưu trữ yêu cầu hỗ trợ này không?"
+
+#: vietnam-ui-cross-module
+msgid "archive sharp"
+msgstr "Biểu tượng lưu trữ"
+
+#: vietnam-ui-cross-module
+msgid "Do you want to un-archive this ticket?"
+msgstr "Bạn có muốn khôi phục yêu cầu hỗ trợ này không?"
+
+#: vietnam-ui-cross-module
+msgid "Un-archive"
+msgstr "Khôi phục lưu trữ"
+
+#: vietnam-ui-cross-module
+msgid "Are you sure you want to delete\tthis Ticket?"
+msgstr "Bạn có chắc chắn muốn xóa yêu cầu hỗ trợ này?"
+
+#: vietnam-ui-cross-module
+msgid "Claim Requests"
+msgstr "Yêu cầu nhận xử lý"
+
+#: vietnam-ui-cross-module
+msgid "Claim"
+msgstr "Nhận xử lý"
+
+#: vietnam-ui-cross-module
+msgid "There are no tickets at the moment."
+msgstr "Hiện chưa có yêu cầu hỗ trợ nào."
+
+#: vietnam-ui-cross-module
+msgid "Ticket Dashboard"
+msgstr "Tổng quan yêu cầu hỗ trợ"
+
+#: vietnam-ui-cross-module
+msgid "Ticket Status"
+msgstr "Trạng thái yêu cầu hỗ trợ"
+
+#: vietnam-ui-cross-module
+msgid "All tickets"
+msgstr "Tất cả yêu cầu hỗ trợ"
+
+#: vietnam-ui-cross-module
+msgid "Priority Breakdown"
+msgstr "Phân bố mức ưu tiên"
+
+#: vietnam-ui-cross-module
+msgid "Open tickets by priority"
+msgstr "Yêu cầu đang mở theo mức ưu tiên"
+
+#: vietnam-ui-cross-module
+msgid "Tickets by Type"
+msgstr "Yêu cầu theo loại"
+
+#: vietnam-ui-cross-module
+msgid "Suggestion, complaint, service, etc."
+msgstr "Đề xuất, khiếu nại, dịch vụ, v.v."
+
+#: vietnam-ui-cross-module
+msgid "Tickets by Department"
+msgstr "Yêu cầu theo phòng ban"
+
+#: vietnam-ui-cross-module
+msgid "Open tickets raised by department"
+msgstr "Yêu cầu đang mở theo phòng ban gửi"
+
+#: vietnam-ui-cross-module
+msgid "Ticket Trend"
+msgstr "Xu hướng yêu cầu hỗ trợ"
+
+#: vietnam-ui-cross-module
+msgid "Created vs resolved — 6 months up to period end"
+msgstr "Số yêu cầu tạo mới và đã xử lý trong 6 tháng đến cuối kỳ"
+
+#: vietnam-ui-cross-module
+msgid "Recent Tickets"
+msgstr "Yêu cầu hỗ trợ gần đây"
+
+#: vietnam-ui-cross-module
+msgid "Tickets in this period"
+msgstr "Yêu cầu hỗ trợ trong kỳ"
+
+#: vietnam-ui-cross-module
+msgid "Custom"
+msgstr "Tùy chỉnh"
+
+#: vietnam-ui-cross-module
+msgid "Open Tickets"
+msgstr "Yêu cầu đang mở"
+
+#: vietnam-ui-cross-module
+msgid "On Hold"
+msgstr "Tạm dừng"
+
+#: vietnam-ui-cross-module
+msgid "Resolution Rate"
+msgstr "Tỷ lệ giải quyết"
+
+#: vietnam-ui-cross-module
+msgid "Resolved Of"
+msgstr "Đã giải quyết trên"
+
+#: vietnam-ui-cross-module
+msgid "Created"
+msgstr "Đã tạo"
+
+#: vietnam-ui-cross-module
+msgid "Overdue"
+msgstr "Quá hạn"
+
+#: vietnam-ui-cross-module
+msgid "Past Deadline"
+msgstr "Quá thời hạn"
+
+#: vietnam-ui-cross-module
+msgid "Unassigned"
+msgstr "Chưa phân công"
+
+#: vietnam-ui-cross-module
+msgid "Awaiting Assignment"
+msgstr "Chờ phân công"
+
+#: vietnam-ui-cross-module
+msgid "No tickets"
+msgstr "Không có yêu cầu hỗ trợ"
+
+#: vietnam-ui-cross-module
+msgid "Tickets"
+msgstr "Yêu cầu hỗ trợ"
+
+#: vietnam-ui-cross-module
+msgid "types"
+msgstr "loại"
+
+#: vietnam-ui-cross-module
+msgid "Resolved"
+msgstr "Đã giải quyết"
+
+#: vietnam-ui-cross-module
+msgid "Canceled"
+msgstr "Đã hủy"
+
+#: vietnam-ui-cross-module
+msgid "Asset Dashboard"
+msgstr "Tổng quan tài sản"
+
+#: vietnam-ui-cross-module
+msgid "Asset Status"
+msgstr "Trạng thái tài sản"
+
+#: vietnam-ui-cross-module
+msgid "In use, available, unavailable"
+msgstr "Đang sử dụng, sẵn có, không khả dụng"
+
+#: vietnam-ui-cross-module
+msgid "Request Status"
+msgstr "Trạng thái yêu cầu"
+
+#: vietnam-ui-cross-module
+msgid "Asset requests"
+msgstr "Yêu cầu cấp phát tài sản"
+
+#: vietnam-ui-cross-module
+msgid "Assets by Category"
+msgstr "Tài sản theo danh mục"
+
+#: vietnam-ui-cross-module
+msgid "Share of in use, available and not available per category"
+msgstr "Tỷ trọng tài sản đang dùng, sẵn có và không khả dụng theo danh mục"
+
+#: vietnam-ui-cross-module
+msgid "Value by Category"
+msgstr "Giá trị theo danh mục"
+
+#: vietnam-ui-cross-module
+msgid "Total purchase cost"
+msgstr "Tổng chi phí mua sắm"
+
+#: vietnam-ui-cross-module
+msgid "Assets by Department"
+msgstr "Tài sản theo phòng ban"
+
+#: vietnam-ui-cross-module
+msgid "Allocated assets ranked by department"
+msgstr "Tài sản đã phân bổ theo phòng ban"
+
+#: vietnam-ui-cross-module
+msgid "Asset Age"
+msgstr "Tuổi tài sản"
+
+#: vietnam-ui-cross-module
+msgid "Fleet age distribution"
+msgstr "Phân bố tuổi tài sản"
+
+#: vietnam-ui-cross-module
+msgid "Expiring Soon"
+msgstr "Sắp hết hạn"
+
+#: vietnam-ui-cross-module
+msgid "Assets expiring in the next 30 days"
+msgstr "Tài sản hết hạn trong 30 ngày tới"
+
+#: vietnam-ui-cross-module
+msgid "Next 30 Days"
+msgstr "Trong 30 ngày tới"
+
+#: vietnam-ui-cross-module
+msgid "Recent Allocations"
+msgstr "Phân bổ gần đây"
+
+#: vietnam-ui-cross-module
+msgid "Assets allocated in this period"
+msgstr "Tài sản phân bổ trong kỳ"
+
+#: vietnam-ui-cross-module
+msgid "Total Assets"
+msgstr "Tổng tài sản"
+
+#: vietnam-ui-cross-module
+msgid "In Use"
+msgstr "Đang sử dụng"
+
+#: vietnam-ui-cross-module
+msgid "Available"
+msgstr "Sẵn có"
+
+#: vietnam-ui-cross-module
+msgid "Not Available"
+msgstr "Không khả dụng"
+
+#: vietnam-ui-cross-module
+msgid "Awaiting Approval"
+msgstr "Chờ phê duyệt"
+
+#: vietnam-ui-cross-module
+msgid "Service Requests"
+msgstr "Yêu cầu dịch vụ"
+
+#: vietnam-ui-cross-module
+msgid "Warranty Expiring Soon"
+msgstr "Sắp hết bảo hành"
+
+#: vietnam-ui-cross-module
+msgid "Could not load KPIs"
+msgstr "Không thể tải chỉ số KPI"
+
+#: vietnam-ui-cross-module
+msgid "No assets"
+msgstr "Không có tài sản"
+
+#: vietnam-ui-cross-module
+msgid "Could not load data"
+msgstr "Không thể tải dữ liệu"
+
+#: vietnam-ui-cross-module
+msgid "No requests"
+msgstr "Không có yêu cầu"
+
+#: vietnam-ui-cross-module
+msgid "categories"
+msgstr "danh mục"
+
+#: vietnam-ui-cross-module
+msgid "in use"
+msgstr "đang sử dụng"
+
+#: vietnam-ui-cross-module
+msgid "available"
+msgstr "sẵn có"
+
+#: vietnam-ui-cross-module
+msgid "not available"
+msgstr "không khả dụng"
+
+#: vietnam-ui-cross-module
+msgid "assets"
+msgstr "tài sản"
+
+#: vietnam-ui-cross-module
+msgid "Value"
+msgstr "Giá trị"
+
+#: vietnam-ui-cross-module
+msgid "No allocated assets"
+msgstr "Không có tài sản đã phân bổ"
+
+#: vietnam-ui-cross-module
+msgid "No purchase date data"
+msgstr "Không có dữ liệu ngày mua"
+
+#: vietnam-ui-cross-module
+msgid "No assets expiring soon"
+msgstr "Không có tài sản sắp hết hạn"
+
+#: vietnam-ui-cross-module
+msgid "No recent allocations"
+msgstr "Không có phân bổ gần đây"
+
+#: vietnam-ui-cross-module
+msgid "Performance Dashboard"
+msgstr "Tổng quan hiệu suất"
+
+#: vietnam-ui-cross-module
+msgid "Summary tiles show all-time totals and do not follow the selected period."
+msgstr "Các thẻ tổng quan hiển thị số liệu toàn kỳ và không thay đổi theo khoảng thời gian đã chọn."
+
+#: vietnam-ui-cross-module
+msgid "Objective Status"
+msgstr "Trạng thái mục tiêu"
+
+#: vietnam-ui-cross-module
+msgid "Active objectives"
+msgstr "Mục tiêu đang hoạt động"
+
+#: vietnam-ui-cross-module
+msgid "Key Result Status"
+msgstr "Trạng thái kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "Key results"
+msgstr "Kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "Feedback Status"
+msgstr "Trạng thái phản hồi"
+
+#: vietnam-ui-cross-module
+msgid "360° feedback cycles"
+msgstr "Các đợt đánh giá 360 độ"
+
+#: vietnam-ui-cross-module
+msgid "Department Performance"
+msgstr "Hiệu suất theo phòng ban"
+
+#: vietnam-ui-cross-module
+msgid "Avg objective progress by department"
+msgstr "Tiến độ mục tiêu trung bình theo phòng ban"
+
+#: vietnam-ui-cross-module
+msgid "OKR Progress Overview"
+msgstr "Tổng quan tiến độ OKR"
+
+#: vietnam-ui-cross-module
+msgid "Top objectives with key result breakdown"
+msgstr "Các mục tiêu nổi bật và phân rã kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "Top Performers"
+msgstr "Nhân viên có thành tích nổi bật"
+
+#: vietnam-ui-cross-module
+msgid "Employees with objectives in this period"
+msgstr "Nhân viên có mục tiêu trong kỳ"
+
+#: vietnam-ui-cross-module
+msgid "Upcoming Meetings"
+msgstr "Cuộc họp sắp tới"
+
+#: vietnam-ui-cross-module
+msgid "Meetings in the next 14 days"
+msgstr "Cuộc họp trong 14 ngày tới"
+
+#: vietnam-ui-cross-module
+msgid "Next 14 days"
+msgstr "Trong 14 ngày tới"
+
+#: vietnam-ui-cross-module
+msgid "Objectives"
+msgstr "Mục tiêu"
+
+#: vietnam-ui-cross-module
+msgid "Open Assignments"
+msgstr "Công việc còn mở"
+
+#: vietnam-ui-cross-module
+msgid "Average progress across all employee key results,"
+msgstr "Tiến độ trung bình của toàn bộ kết quả then chốt của nhân viên,"
+
+#: vietnam-ui-cross-module
+msgid "Avg Progress"
+msgstr "Tiến độ trung bình"
+
+#: vietnam-ui-cross-module
+msgid "Total Key Result Progress"
+msgstr "Tổng tiến độ kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "Total Key Results"
+msgstr "Tổng số kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "Key Results"
+msgstr "Kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "At Risk"
+msgstr "Có nguy cơ trễ"
+
+#: vietnam-ui-cross-module
+msgid "Objectives Need Attention"
+msgstr "Mục tiêu cần chú ý"
+
+#: vietnam-ui-cross-module
+msgid "Feedback"
+msgstr "Phản hồi"
+
+#: vietnam-ui-cross-module
+msgid "All Reviewed"
+msgstr "Đã đánh giá tất cả"
+
+#: vietnam-ui-cross-module
+msgid "No objectives"
+msgstr "Không có mục tiêu"
+
+#: vietnam-ui-cross-module
+msgid "statuses"
+msgstr "trạng thái"
+
+#: vietnam-ui-cross-module
+msgid "No key results"
+msgstr "Không có kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "No feedback"
+msgstr "Không có phản hồi"
+
+#: vietnam-ui-cross-module
+msgid "On Track"
+msgstr "Đúng tiến độ"
+
+#: vietnam-ui-cross-module
+msgid "Needs Attention"
+msgstr "Cần chú ý"
+
+#: vietnam-ui-cross-module
+msgid "completed"
+msgstr "đã hoàn thành"
+
+#: vietnam-ui-cross-module
+msgid "No upcoming meetings"
+msgstr "Không có cuộc họp sắp tới"
+
+#: vietnam-ui-cross-module
+msgid "attendees"
+msgstr "người tham dự"
+
+#: vietnam-ui-cross-module
+msgid "arrow-back-outline"
+msgstr "Biểu tượng quay lại"
+
+#: vietnam-ui-cross-module
+msgid "Total employee objectives"
+msgstr "Tổng mục tiêu nhân viên"
+
+#: vietnam-ui-cross-module
+msgid "Total key results"
+msgstr "Tổng kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "Total feedbacks"
+msgstr "Tổng số phản hồi"
+
+#: vietnam-ui-cross-module
+msgid "Objective status"
+msgstr "Trạng thái mục tiêu"
+
+#: vietnam-ui-cross-module
+msgid "No objectives are available."
+msgstr "Không có mục tiêu nào."
+
+#: vietnam-ui-cross-module
+msgid "Key result status"
+msgstr "Trạng thái kết quả then chốt"
+
+#: vietnam-ui-cross-module
+msgid "No key results are available."
+msgstr "Không có kết quả then chốt nào."
+
+#: vietnam-ui-cross-module
+msgid "Feedback status"
+msgstr "Trạng thái phản hồi"
+
+#: vietnam-ui-cross-module
+msgid "No feedbacks are available."
+msgstr "Không có phản hồi nào."
+
+#: vietnam-ui-cross-module
+msgid "Objectives At-Risk"
+msgstr "Mục tiêu có nguy cơ trễ"
+
+#: vietnam-ui-cross-module
+msgid "No OKRs are currently At-Risk."
+msgstr "Hiện không có OKR nào có nguy cơ trễ."
+
+#: vietnam-ui-cross-module
+msgid "Template as Attachments"
+msgstr "Đính kèm tệp mẫu"
+
+#: vietnam-ui-cross-module
+msgid "Other Attachments"
+msgstr "Tệp đính kèm khác"
+
+#: vietnam-ui-cross-module
+msgid "Send portal link / Trigger Onboarding"
+msgstr "Gửi liên kết cổng thông tin / Bắt đầu tiếp nhận"
+
+#: vietnam-ui-cross-module
+msgid "Send Portal Link"
+msgstr "Gửi liên kết cổng thông tin"
