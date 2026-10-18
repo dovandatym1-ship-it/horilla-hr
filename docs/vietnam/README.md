@@ -39,3 +39,20 @@
 
 ## 4. Về nội dung tiếng Việt
 Toàn bộ tài liệu nghiệp vụ dùng tiếng Việt có dấu, nhất quán các khái niệm: **Nhân viên**, **Hợp đồng lao động**, **Bảng công**, **Kỳ lương**, **Lương Gross/Net**, **Bảo hiểm xã hội**, **Thuế TNCN**, **Người phụ thuộc**, **Phê duyệt**, **Chốt kỳ**. Chuỗi giao diện tiếng Việt phải được trích xuất và dịch theo i18n chuẩn trong một PR code khác; hiện PR này **chỉ bổ sung/chỉnh tài liệu**.
+
+## BỔ SUNG BASELINE v1.1 — Phân rã validation, UC, workflow và code GAP (18/10/2026)
+**Cách áp dụng:** các tài liệu 00–09 giữ phần bối cảnh, BRD, SRS và chuyên đề; các đặc tả 10–16 là phụ lục chi tiết có hiệu lực ưu tiên khi bản 00–09 thiếu field-level validation, state transition, action guard, API error hoặc test. Các số liệu/luật trong hồ sơ vẫn phải do người có thẩm quyền xác minh trước production.
+
+| Tài liệu | Mục đích | Status |
+|---|---|---|
+| [10 — Field-level validation](10-FIELD-LEVEL-VALIDATION-MATRIX.md) | Trường dữ liệu, độ dài, kiểu, nullable, liên trường, quyền, mã lỗi; code vs spec | DRAFT / CODE STATIC + TO-BE |
+| [11 — UI / Form / Datagrid / Action](11-UI-FORM-ACTION-SPECIFICATION.md) | Trường giao diện, nút thao tác, bulk, message, trạng thái màn hình | DRAFT / TO-BE |
+| [12 — Chi tiết 23 Use Case](12-USE-CASE-DETAILS.md) | Actor, PRE, MAIN, ALT, POST, audit, trace | DRAFT / TO-BE |
+| [13 — Workflow / State transition](13-WORKFLOW-STATE-TRANSITIONS.md) | Guard, quyền, trạng thái, exception, khóa kỳ, rollback, hiệu lực | DRAFT / CODE STATIC + TO-BE |
+| [14 — API / RBAC / Errors / Audit](14-API-PERMISSION-ERROR-CONTRACT.md) | Contract dự kiến; tenant+field scope và thông điệp lỗi | DRAFT / TO-BE |
+| [15 — Traceability / UAT](15-TRACEABILITY-UAT-MATRIX.md) | 23 UC và bộ positive, negative, boundary, concurrency test | DESIGNED / NOT RUN |
+| [16 — Code-to-doc GAP](16-CODE-TO-DOC-GAP.md) | 20 GAP, priority, code evidence, trách nhiệm đóng GAP | OPEN |
+
+**Truy vết tối thiểu:** \`BRD → Feature → UC → BR → DE/Validation → Workflow → Screen/API → Model/Service → Test → Evidence → Sign-off\`. Nếu một mắt xích còn trống: không gắn nhãn READY/DONE. Một test đã được viết không đồng nghĩa đã chạy PASS.
+
+**Phạm vi cập nhật:** thực hiện trên nhánh docs \`feature/vietnam-hrm-foundation\` (PR #1) để review; không merge PR #2/#3 và không thay code production. Các model VN code mới ở PR #3 được đối chiếu tĩnh, không coi là giao diện HR đã hoàn thiện.
