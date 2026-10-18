@@ -9700,3 +9700,903 @@ msgstr "Kết quả then chốt của nhân viên"
 #: vietnam-ui-accessibility-and-onboarding
 msgid "and above"
 msgstr "trở lên"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Asset fine has been successfully {}."
+msgstr "Đã ghi nhận khoản phạt tài sản {} thành công."
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Assinees updated for the Ticket"
+msgstr "Đã cập nhật người được phân công xử lý yêu cầu hỗ trợ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Attendance %"
+msgstr "Tỷ lệ chấm công (%)"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Attendance % by department"
+msgstr "Tỷ lệ chấm công theo phòng ban (%)"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Attendance % by work type"
+msgstr "Tỷ lệ chấm công theo hình thức làm việc (%)"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Biometric user data updated successfully"
+msgstr "Đã cập nhật dữ liệu sinh trắc học của người dùng thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "CFD"
+msgstr "CFD"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Candidaate"
+msgstr "Ứng viên"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Create Google Meet"
+msgstr "Tạo cuộc họp Google Meet"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "DASHBOARD"
+msgstr "TỔNG QUAN"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "DOB"
+msgstr "Ngày sinh"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Dec"
+msgstr "Thg 12"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Department updated"
+msgstr "Đã cập nhật phòng ban"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Disciplinary action updated Successfully"
+msgstr "Đã cập nhật hình thức kỷ luật thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Document Expiry"
+msgstr "Ngày hết hạn tài liệu"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Drill-down"
+msgstr "Xem chi tiết"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "E-mail"
+msgstr "Email"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "EMPLOYEE"
+msgstr "NHÂN VIÊN"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Emergency Contact Relation"
+msgstr "Quan hệ với người liên hệ khẩn cấp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Emp Code"
+msgstr "Mã nhân viên"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Emp obj"
+msgstr "Đối tượng nhân viên"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Employee is inactive"
+msgstr "Nhân viên không còn hoạt động"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "End date breakdown"
+msgstr "Phân loại theo ngày kết thúc"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Error Occurred {}"
+msgstr "Đã xảy ra lỗi {}"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Expires from"
+msgstr "Hết hạn từ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Expiry"
+msgstr "Hết hạn"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Expiry Date"
+msgstr "Ngày hết hạn"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Explorer"
+msgstr "Trình khám phá dữ liệu"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "FAQ"
+msgstr "Câu hỏi thường gặp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "FAQs"
+msgstr "Câu hỏi thường gặp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "FNF"
+msgstr "Quyết toán nghỉ việc (FNF)"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "FTE (proxy)"
+msgstr "Nhân sự quy đổi toàn thời gian (ước tính)"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Feb"
+msgstr "Thg 2"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Filing Status Updated Successfully"
+msgstr "Đã cập nhật trạng thái khai thuế thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Fri"
+msgstr "Thứ Sáu"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "General"
+msgstr "Chung"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Google Client Secret"
+msgstr "Khóa bí mật Google Client"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Google Meet"
+msgstr "Google Meet"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Google Meet Integration"
+msgstr "Tích hợp Google Meet"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Google Meet Rules"
+msgstr "Quy tắc Google Meet"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Google Meet View"
+msgstr "Xem cuộc họp Google Meet"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Google Meeting"
+msgstr "Cuộc họp Google"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Google meeting"
+msgstr "Cuộc họp Google"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Group absence % by"
+msgstr "Nhóm tỷ lệ vắng mặt theo"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Gte"
+msgstr "Lớn hơn hoặc bằng"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "HALF"
+msgstr "NỬA"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Headcount Trend"
+msgstr "Xu hướng số lượng nhân sự"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Hires"
+msgstr "Số nhân viên tuyển mới"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Horilla"
+msgstr "Horilla"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Horilla Auth"
+msgstr "Xác thực Horilla"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Horilla Bot"
+msgstr "Trợ lý Horilla"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Horilla HRMS"
+msgstr "Horilla HRMS"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Hq"
+msgstr "Trụ sở chính"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "IPs"
+msgstr "Địa chỉ IP"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "If 'is_fixed' is False, 'based_on' is required."
+msgstr "Khi 'is_fixed' là False, bắt buộc nhập 'based_on'."
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "In CTC"
+msgstr "Trong tổng chi phí nhân sự"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "In-Date"
+msgstr "Ngày vào"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Installment Start Date"
+msgstr "Ngày bắt đầu trả góp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Installment schedule & repayment status"
+msgstr "Lịch trả góp và trạng thái thanh toán"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Installment start date"
+msgstr "Ngày bắt đầu trả góp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Invalid request"
+msgstr "Yêu cầu không hợp lệ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Is Digital Asset"
+msgstr "Là tài sản số"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Is active"
+msgstr "Đang hoạt động"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Joiner"
+msgstr "Nhân viên mới"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Joiners"
+msgstr "Nhân viên mới"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Jul"
+msgstr "Thg 7"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Jun"
+msgstr "Thg 6"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Key result archived successfully"
+msgstr "Đã lưu trữ kết quả then chốt thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Key result updated"
+msgstr "Đã cập nhật kết quả then chốt"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "LDAP"
+msgstr "LDAP"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Leave allocation request is updated successfully."
+msgstr "Đã cập nhật yêu cầu phân bổ phép thành công."
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Leave request is updated successfully"
+msgstr "Đã cập nhật đơn nghỉ phép thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Local backup automation setup updated."
+msgstr "Đã cập nhật thiết lập sao lưu tự động cục bộ."
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Lte"
+msgstr "Nhỏ hơn hoặc bằng"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "MO"
+msgstr "Thiếu giờ ra"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Mail Template"
+msgstr "Mẫu email"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Mail Templates"
+msgstr "Các mẫu email"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Male %"
+msgstr "Tỷ lệ nam (%)"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Mar"
+msgstr "Thg 3"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Max OT"
+msgstr "OT tối đa"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Meeting Link"
+msgstr "Liên kết cuộc họp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Meeting URL"
+msgstr "URL cuộc họp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Meeting added successfully"
+msgstr "Đã thêm cuộc họp thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Meeting archived successfully"
+msgstr "Đã lưu trữ cuộc họp thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Message Body"
+msgstr "Nội dung thông báo"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Meta Token"
+msgstr "Mã truy cập Meta"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Metric"
+msgstr "Chỉ số"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Microsoft Exchange or Outlook SMTP integration"
+msgstr "Tích hợp SMTP Microsoft Exchange hoặc Outlook"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Min OT"
+msgstr "OT tối thiểu"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Min. Income"
+msgstr "Thu nhập tối thiểu"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "MoM"
+msgstr "Biên bản cuộc họp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Models touched"
+msgstr "Các model liên quan"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Mon"
+msgstr "Thứ Hai"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "My Roster"
+msgstr "Lịch làm việc của tôi"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "NEW"
+msgstr "MỚI"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "New Attendance request updated"
+msgstr "Đã cập nhật yêu cầu chấm công mới"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Nil"
+msgstr "Không có"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Nov"
+msgstr "Thg 11"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "OR"
+msgstr "HOẶC"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "OT"
+msgstr "OT"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "OT Cut-Off/Day"
+msgstr "Ngưỡng OT mỗi ngày"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Oct"
+msgstr "Thg 10"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Of"
+msgstr "Của"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Offboarding Note"
+msgstr "Ghi chú nghỉ việc"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Offboarding Task status has been updated"
+msgstr "Đã cập nhật trạng thái công việc bàn giao"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Offboarding Updated"
+msgstr "Đã cập nhật nghỉ việc"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Offboarding stage has been changed"
+msgstr "Đã thay đổi giai đoạn nghỉ việc"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Oops..."
+msgstr "Rất tiếc..."
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Out Datetime"
+msgstr "Ngày giờ ra"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Outcome"
+msgstr "Kết quả"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Outlook Mail"
+msgstr "Thư Outlook"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "PAYROLL"
+msgstr "BẢNG LƯƠNG"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "PDF"
+msgstr "PDF"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "PDF · Excel"
+msgstr "PDF · Excel"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "PENDING"
+msgstr "ĐANG CHỜ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Past Date Leave Request Restriction has been disabled"
+msgstr "Đã tắt hạn chế gửi đơn nghỉ phép quá ngày"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Past Date Leave Request Restriction has been enabled"
+msgstr "Đã bật hạn chế gửi đơn nghỉ phép quá ngày"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Payment %"
+msgstr "Tỷ lệ thanh toán (%)"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Payroll Batch Line"
+msgstr "Dòng đợt tính lương"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Payroll Contract rows in window"
+msgstr "Các dòng hợp đồng trong kỳ lương"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Payroll Runs"
+msgstr "Các đợt tính lương"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Payslip Batch"
+msgstr "Đợt phiếu lương"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Payslip Generate Day"
+msgstr "Ngày tạo phiếu lương"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Payslip creation date"
+msgstr "Ngày tạo phiếu lương"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Payslips · status %(s)s"
+msgstr "Phiếu lương · trạng thái %(s)s"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Pending Hour Greater or Equal"
+msgstr "Số giờ đang chờ lớn hơn hoặc bằng"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Per payslip"
+msgstr "Theo phiếu lương"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Print PDF"
+msgstr "In PDF"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Purchase Date"
+msgstr "Ngày mua"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Purchase date from"
+msgstr "Ngày mua từ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Purchased Date"
+msgstr "Ngày mua"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Question Template"
+msgstr "Mẫu câu hỏi"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Question Template Created Successfully"
+msgstr "Đã tạo mẫu câu hỏi thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Question Template Updated Successfully"
+msgstr "Đã cập nhật mẫu câu hỏi thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Question Templates"
+msgstr "Các mẫu câu hỏi"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Question template does not exist"
+msgstr "Mẫu câu hỏi không tồn tại"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Question template updated"
+msgstr "Đã cập nhật mẫu câu hỏi"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Ratio %"
+msgstr "Tỷ lệ (%)"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Recruitment Pipeline"
+msgstr "Quy trình tuyển dụng"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Recruitment Pipeline Trend"
+msgstr "Xu hướng quy trình tuyển dụng"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Return Asset"
+msgstr "Trả tài sản"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Return Date Greater Or Equal"
+msgstr "Ngày trả từ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Return Date lesser Or Equal"
+msgstr "Ngày trả đến"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Roster Planner"
+msgstr "Lập lịch làm việc"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Rotate"
+msgstr "Luân phiên"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Rotate after"
+msgstr "Luân phiên sau"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Rotate after "
+msgstr "Luân phiên sau "
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Rotating Shift Created"
+msgstr "Đã tạo lịch xoay ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Rotating Shift Updated"
+msgstr "Đã cập nhật lịch xoay ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "SHORT"
+msgstr "NGẮN"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "SN"
+msgstr "STT"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Sat"
+msgstr "Thứ Bảy"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Schedule Date"
+msgstr "Ngày lập lịch"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Search filing statuses"
+msgstr "Tìm kiếm trạng thái khai thuế"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Sep"
+msgstr "Thg 9"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Seq"
+msgstr "Thứ tự"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Shift Allocation Requests"
+msgstr "Yêu cầu phân ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Shift Created"
+msgstr "Đã tạo ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Shift Day"
+msgstr "Ngày làm việc theo ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Shift Requests"
+msgstr "Các yêu cầu đổi ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Shift Schedule"
+msgstr "Lịch ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Shift Updated"
+msgstr "Đã cập nhật ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Shift request updated Successfully"
+msgstr "Đã cập nhật yêu cầu đổi ca thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Sl No."
+msgstr "STT"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Sl.No"
+msgstr "STT"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Slab"
+msgstr "Bậc"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Slabs"
+msgstr "Các bậc"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Stage saved"
+msgstr "Đã lưu giai đoạn"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Star"
+msgstr "Sao"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Status has been updated"
+msgstr "Đã cập nhật trạng thái"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Step"
+msgstr "Bước"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Suffix"
+msgstr "Hậu tố"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Suspension"
+msgstr "Tạm đình chỉ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Template Body"
+msgstr "Nội dung mẫu"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Template Diff"
+msgstr "So sánh mẫu"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Template as Attachment"
+msgstr "Đính kèm mẫu"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Textarea"
+msgstr "Ô nhập văn bản nhiều dòng"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Theme changed successfully"
+msgstr "Đã thay đổi giao diện thành công"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Thu"
+msgstr "Thứ Năm"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Time Runner"
+msgstr "Bộ thực thi thời gian"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Token"
+msgstr "Mã truy cập"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Token Expire"
+msgstr "Mã truy cập hết hạn"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Trigger"
+msgstr "Điều kiện kích hoạt"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Tue"
+msgstr "Thứ Ba"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Updation tag"
+msgstr "Nhãn cập nhật"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "User instance with this mail already exists"
+msgstr "Đã có người dùng với địa chỉ email này"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "VIP"
+msgstr "Ưu tiên đặc biệt"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Vacancy"
+msgstr "Vị trí tuyển dụng còn trống"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Vaccancy"
+msgstr "Vị trí tuyển dụng còn trống"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Vaccancy is filled"
+msgstr "Vị trí đã tuyển đủ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "View Clashes"
+msgstr "Xem xung đột"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "View FAQs"
+msgstr "Xem câu hỏi thường gặp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Viewed By"
+msgstr "Được xem bởi"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Views"
+msgstr "Lượt xem"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Visa-like docs"
+msgstr "Tài liệu tương tự visa"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Visa-like documents"
+msgstr "Tài liệu tương tự visa"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "When"
+msgstr "Khi"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Work Type Updated"
+msgstr "Đã cập nhật hình thức làm việc"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Write"
+msgstr "Viết"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "Your requested export is attached.\\n\\nReport: %(name)s\\nFormat: %(fmt)s"
+msgstr "Tệp xuất dữ liệu theo yêu cầu được đính kèm.\\n\\nBáo cáo: %(name)s\\nĐịnh dạng: %(fmt)s"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "ZIP"
+msgstr "Mã bưu chính"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "ZIP:"
+msgstr "Mã bưu chính:"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "ZKTeco / eSSL Biometric"
+msgstr "Sinh trắc học ZKTeco / eSSL"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "after"
+msgstr "sau"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "by"
+msgstr "theo"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "by "
+msgstr "theo "
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "d overdue"
+msgstr "ngày quá hạn"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "e.g. Adam"
+msgstr "Ví dụ: An"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "e.g. John, PEP01, PEP02"
+msgstr "Ví dụ: Nguyễn Văn An, NV001, NV002"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "e.g. Luis"
+msgstr "Ví dụ: Minh"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "e.g. New York"
+msgstr "Ví dụ: Hà Nội"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "e.g. PEP001"
+msgstr "Ví dụ: NV001"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "e.g. jane.doe@acme.com"
+msgstr "Ví dụ: nguyenvanan@example.com"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "false"
+msgstr "false"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "gdrive"
+msgstr "Google Drive"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "hrs"
+msgstr "giờ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "in"
+msgstr "trong"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "installment Amount"
+msgstr "Số tiền trả góp"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "nd day of month"
+msgstr "ngày trong tháng"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "out of"
+msgstr "trên tổng"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "pms"
+msgstr "Quản lý hiệu suất"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "public"
+msgstr "công khai"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "shift"
+msgstr "ca"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "templates-periods"
+msgstr "mẫu-kỳ"
+
+#: vietnam-ui-machine-rejected-human-edited
+msgid "🗄️ Archive selected templates"
+msgstr "🗄️ Lưu trữ các mẫu đã chọn"
