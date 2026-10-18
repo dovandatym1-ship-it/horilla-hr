@@ -9052,3 +9052,27 @@ msgstr "Loại thẻ"
 #: vietnam-ui-reviewed-payroll-bank-candidate
 msgid "Careers"
 msgstr "Cơ hội nghề nghiệp"
+
+#: vietnam-ui-mail-and-accessibility
+msgid "Don't want to receive mails like these anymore?"
+msgstr "Bạn không muốn tiếp tục nhận các email như thế này?"
+
+#: vietnam-ui-mail-and-accessibility
+msgid "Have a good day."
+msgstr "Chúc bạn một ngày tốt lành."
+
+#: vietnam-ui-mail-and-accessibility
+msgid "Hello %(employee_name)s, you have %(payslip_count)s payslip attachments."
+msgstr "Xin chào %(employee_name)s, bạn có %(payslip_count)s tệp phiếu lương đính kèm."
+
+#: vietnam-ui-mail-and-accessibility
+msgid "Upload Photo"
+msgstr "Tải ảnh lên"
+
+#: vietnam-ui-mail-and-accessibility
+msgid "Currently:"
+msgstr "Hiện tại:"
+
+#: vietnam-ui-mail-and-accessibility
+msgid "Delete Comment"
+msgstr "Xóa bình luận"
