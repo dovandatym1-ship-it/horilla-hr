@@ -1,0 +1,70 @@
+name: Vietnam HRM integrity
+
+on:
+  push:
+    branches:
+      - feature/vn-hrm-payroll-reconciliation
+  pull_request:
+    branches:
+      - feature/vn-hrm-domain
+      - feature/vn-dynamic-payroll-rules
+      - "2.0"
+  workflow_dispatch:
+
+jobs:
+  vn-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: horilla_ci
+          POSTGRES_PASSWORD: horilla_ci
+          POSTGRES_DB: horilla_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U horilla_ci -d horilla_ci"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DJANGO_SETTINGS_MODULE: horilla.settings
+      DEBUG: "True"
+      SECRET_KEY: ephemeral-vn-hrm-ci-secret-not-for-production
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      DATABASE_URL: postgres://horilla_ci:horilla_ci@localhost:5432/horilla_ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install OS libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends             libcairo2 libpango-1.0-0 libpangocairo-1.0-0             libgdk-pixbuf-2.0-0 libffi8 shared-mime-info
+      - name: Install requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Prepare local settings
+        run: |
+          if [ ! -f horilla/settings/local_settings.py ]; then
+            printf '%s\n' '# Created for CI only' > horilla/settings/local_settings.py
+          fi
+      - name: Django system check and migration drift
+        run: |
+          python manage.py check
+          python manage.py check --fail-level WARNING --tag horilla.tenancy
+          python manage.py makemigrations --check --dry-run
+      - name: Migrate fresh PostgreSQL schema
+        run: python manage.py migrate --noinput
+      - name: Vietnam HRM and payroll suites
+        run: >-
+          python manage.py test
+          vn_hrm.tests vn_payroll.tests
+          horilla.tests.test_vietnam_localization
+          payroll.tests.test_vietnam_currency
+          --noinput
