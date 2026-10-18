@@ -19,6 +19,13 @@ def preview_ruleset(rule_set, inputs, *, require_approved=False):
         raise ValidationError("Chưa được phép dùng bộ công thức chưa phê duyệt.")
     if not isinstance(inputs, dict):
         raise ValidationError("Đầu vào phải là một đối tượng JSON.")
+    expected = set(rule_set.input_names)
+    missing = expected - set(inputs)
+    extras = set(inputs) - expected
+    if missing:
+        raise ValidationError(f"Thiếu biến đầu vào bắt buộc: {sorted(missing)}")
+    if extras:
+        raise ValidationError(f"Biến đầu vào chưa khai báo: {sorted(extras)}")
     overrides = set(inputs).intersection(rule_set.parameters)
     if overrides:
         raise ValidationError(f"Không được ghi đè tham số chính sách: {sorted(overrides)}")
