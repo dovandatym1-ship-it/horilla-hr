@@ -129,7 +129,7 @@ class FormulaRule(models.Model):
                         raise InvalidFormula("Biểu thức không dùng danh sách bậc.")
                     validate_expression(self.expression, self.variables)
                 elif self.calculation_kind == "progressive":
-                    if self.expression.strip() or len(self.variables) != 1:
+                    if str(self.expression or "").strip() or len(self.variables) != 1:
                         raise InvalidFormula(
                             "Công thức lũy tiến cần đúng một biến và không có biểu thức."
                         )
@@ -157,7 +157,6 @@ class FormulaRule(models.Model):
                 candidates = type(self)._base_manager.filter(
                     company_id=self.company_id,
                     code=self.code,
-                    category=self.category,
                     status="approved",
                 ).exclude(pk=self.pk)
                 for other in candidates:
