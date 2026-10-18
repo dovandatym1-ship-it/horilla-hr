@@ -77,3 +77,9 @@ TC-UI-005: nút chốt kỳ có cảnh báo và không cho chốt khi tồn tạ
 TC-UI-006: giao diện responsive desktop/tablet, không tràn nút, form/phân trang điều khiển được bằng bàn phím.
 
 **Phê duyệt:** UX Lead + BA xác nhận nhãn/hành vi; HR và Kế toán xác nhận trạng thái/tiền; Tech Lead đảm bảo design system Horilla và API auth không bị thay đổi ngoài phạm vi.
+
+
+## 8. Phụ lục UI v1.1 — Field spec và Action guard
+Quy chuẩn tổng thể vẫn theo design system Horilla; [UI-11](11-UI-FORM-ACTION-SPECIFICATION.md) mô tả thêm danh mục form, datagrid, trường nhập, điều kiện required/readonly, role, button, confirm modal và message cho từng màn hình VN. Các hành động Duyệt/Từ chối/Chốt/Paid chỉ xuất hiện theo status và data scope; phía server kiểm tra độc lập theo [WF-13](13-WORKFLOW-STATE-TRANSITIONS.md) và [API-14](14-API-PERMISSION-ERROR-CONTRACT.md).
+
+**Hiện trạng:** phần mới ở PR #3 chủ yếu Django Admin dành cho superuser, không phải giao diện HRM Việt Nam hoàn chỉnh. Không đánh dấu triển khai xong UI-VN-EMP/ATT/LEV/PAY chỉ bằng mô tả TO-BE và ảnh mockup.
