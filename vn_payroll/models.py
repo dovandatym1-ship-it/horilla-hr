@@ -162,6 +162,16 @@ class FormulaRule(models.Model):
                         raise ValidationError("Quy tắc đã duyệt bị trùng khoảng hiệu lực.")
             if self.pk:
                 previous = type(self)._base_manager.select_for_update().get(pk=self.pk)
+                # Authorization must run before checking whether a direct approval
+                # skips review: bypass attempts must fail closed as permission errors.
+                if (
+                    self.status == "approved"
+                    and previous.status != "approved"
+                    and not approval_transition_enabled()
+                ):
+                    raise PermissionDenied(
+                        "Chỉ dịch vụ phê duyệt được kích hoạt công thức."
+                    )
                 allowed = {
                     "draft": {"draft", "review"},
                     "review": {"draft", "review", "approved"},
