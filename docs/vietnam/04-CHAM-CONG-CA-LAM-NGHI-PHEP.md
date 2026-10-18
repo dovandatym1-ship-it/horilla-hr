@@ -77,3 +77,14 @@ Bảng đối soát hàng nhân viên và ngày gồm: lịch gán, công chuẩ
 **DEC-OPS-01** giờ chốt ngày công ca đêm; **02** ngày nghỉ theo pháp nhân và vùng; **03** OT sau ca có duyệt hồi tố hay không; **04** công chuẩn cho nhóm ca luân phiên; **05** loại nghỉ có/không hưởng lương và cơ quan chi trả; **06** quy chế phép chuyển năm; **07** công tác/remote; **08** quy trình mở khóa kỳ công; **09** cách quy đổi phần ngày/giờ; **10** phân quyền duyệt chéo.
 
 **Căn cứ cần đối chiếu:** Bộ luật Lao động 45/2019/QH14 và Nghị định 145/2020/NĐ-CP với các văn bản sửa đổi, hướng dẫn và quy chế nội bộ hiệu lực tại ngày áp dụng. Thông số tiền, giờ giới hạn chính thức chỉ cấu hình sau khi xác nhận luật.
+
+
+## 9. Phụ lục OPS v1.1 — Validation và workflow chuẩn
+**Nguồn dữ liệu quyết định:** WorkCalendarVersion + raw log immutable + công hiệu lực + request correction/OT/leave approved + AttendancePeriodLockVersion. Giờ công, OT approved và số dư phép là các đại lượng riêng, không tự suy từ giờ check-in/out. Các trường thời gian phải tách nguồn UTC, múi giờ hiển thị và work_date của ca qua đêm.
+
+- **Correction**: \`VNAttendanceCorrection.requested_minutes\` hiện nhận -1440..1440; ý nghĩa delta/tổng giờ chưa có quyết định. Khi approved ở PR #3, trạng thái lưu trên model nhưng **chưa** cập nhật Attendance gốc. Cần source log, before/after, evidence, reviewer, kỳ khóa và apply idempotent.
+- **Leave ledger**: \`VNLeaveLedgerEntry\` chỉ append-only qua instance và unique \`(company,source_key)\`; không tự trừ \`AvailableLeave\`. Chốt đơn vị ngày/giờ, accrual, debit/credit, balance âm, carryforward và vòng đời cancellation trước khi tích hợp.
+- **OT**: chỉ phát tiền dựa trên giao của request approved với giờ thực tế xác nhận; phân đoạn theo ngày, ca đêm và loại ngày. Giới hạn/tỷ lệ cần phiên bản căn cứ được HR/Pháp chế duyệt; không nhập tỷ lệ hardcode vào SRS.
+- **Close attendance**: Không chốt khi thiếu ngoại lệ quan trọng; phải tạo snapshot/version/hash và người chốt; chỉnh sau Paid chuyển delta kỳ sau.
+
+Chi tiết [validation từng field](10-FIELD-LEVEL-VALIDATION-MATRIX.md), [UC](12-USE-CASE-DETAILS.md), [WF](13-WORKFLOW-STATE-TRANSITIONS.md), [UAT](15-TRACEABILITY-UAT-MATRIX.md).
