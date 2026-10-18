@@ -130,7 +130,7 @@ class VNRuleSetAdmin(StrictAdmin):
         for item in queryset:
             try:
                 with transaction.atomic():
-                    locked = VNRuleSet.objects.select_for_update().get(pk=item.pk)
+                    locked = VNRuleSet._base_manager.select_for_update().get(pk=item.pk)
                     locked.approve(request.user)
                 self.message_user(request, f"Đã duyệt: {locked}", level=messages.SUCCESS)
             except ValidationError as exc:
