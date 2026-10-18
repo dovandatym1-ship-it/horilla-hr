@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<h2>Bộ công thức: {{ rule_set.title }}</h2>
+<p><strong>Pháp nhân:</strong> {{ rule_set.company }} · <strong>Phiên bản:</strong> {{ rule_set.version }} ·
+<strong>Trạng thái:</strong> {{ rule_set.get_status_display }}</p>
+<p style="color:#9b4d00">Chỉ dùng dữ liệu giả lập. Chức năng này KHÔNG ghi vào phiếu lương hoặc thanh toán.</p>
+<form method="post">{% csrf_token %}
+{{ form.as_p }}
+<button type="submit" class="button default">Tính thử</button>
+</form>
+{% if error %}<p role="alert" style="color:#b00020">{{ error }}</p>{% endif %}
+{% if result %}
+<h3>Kết quả chạy thử phiên bản {{ result.rule_version }}</h3>
+<table>
+<thead><tr><th>Mã</th><th>Nội dung</th><th>Nhóm</th><th>Giá trị (chưa chốt làm tròn VND)</th></tr></thead>
+<tbody>{% for line in result.lines %}
+<tr><td>{{ line.code }}</td><td>{{ line.label }}</td><td>{{ line.category }}</td><td>{{ line.amount }}</td></tr>
+{% endfor %}</tbody>
+</table>
+{% endif %}
+{% endblock %}

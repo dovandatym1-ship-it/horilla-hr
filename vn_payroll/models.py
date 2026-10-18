@@ -1,0 +1,272 @@
+"""Editable, versioned rulebooks for Vietnamese payroll.
+
+The active Horilla payslip engine is NOT replaced by these tables. Production
+integration must first pass legal, finance and reconciliation acceptance gates.
+"""
+
+import ast
+import re
+from datetime import date
+from decimal import Decimal
+
+from django.conf import settings
+from django.core.exceptions import ValidationError
+from django.db import models
+from django.utils import timezone
+
+from base.horilla_company_manager import HorillaCompanyManager
+
+from vn_payroll.engine import FormulaError, as_decimal, validate_syntax
+
+CODE = re.compile(r"^[a-z][a-z0-9_]*$")
+
+
+def _check_parameters(values):
+    if not isinstance(values, dict) or len(values) > 80:
+        raise ValidationError("Tham số phải là đối tượng chứa tối đa 80 giá trị.")
+    for key, number in values.items():
+        if not isinstance(key, str) or not CODE.fullmatch(key):
+            raise ValidationError("Mã tham số không hợp lệ.")
+        if key in {"min", "max", "abs", "round_vnd"}:
+            raise ValidationError("Không dùng tên hàm làm mã tham số.")
+        try:
+            as_decimal(number)
+        except FormulaError as exc:
+            raise ValidationError(f"Tham số {key}: {exc}") from exc
+
+
+class VNRuleSet(models.Model):
+    """One version of a company-owned payroll rulebook."""
+
+    STATUS = [
+        ("draft", "Nháp"),
+        ("review", "Chờ duyệt"),
+        ("approved", "Đã duyệt"),
+        ("retired", "Ngừng áp dụng"),
+    ]
+    company = models.ForeignKey(
+        "base.Company", on_delete=models.PROTECT, related_name="vn_payroll_rule_sets"
+    )
+    code = models.SlugField(max_length=64)
+    version = models.PositiveIntegerField(default=1)
+    title = models.CharField(max_length=200)
+    status = models.CharField(max_length=12, choices=STATUS, default="draft")
+    effective_from = models.DateField()
+    effective_to = models.DateField(null=True, blank=True)
+    legal_reference = models.TextField(blank=True)
+    parameters = models.JSONField(default=dict, blank=True)
+    input_names = models.JSONField(default=list, blank=True)
+    golden_cases = models.JSONField(default=list, blank=True)
+    created_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True,
+        on_delete=models.PROTECT, related_name="+"
+    )
+    approved_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True,
+        on_delete=models.PROTECT, related_name="+"
+    )
+    approved_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = HorillaCompanyManager("company")
+
+    class Meta:
+        ordering = ("company_id", "code", "-version")
+        constraints = [
+            models.UniqueConstraint(
+                fields=("company", "code", "version"),
+                name="vn_payroll_ruleset_version_unique",
+            )
+        ]
+        permissions = [
+            ("approve_vn_ruleset", "Có quyền duyệt cấu hình lương Việt Nam"),
+        ]
+        verbose_name = "Bộ công thức lương Việt Nam"
+        verbose_name_plural = "Bộ công thức lương Việt Nam"
+
+    def __str__(self):
+        return f"{self.company_id}: {self.code} v{self.version} ({self.status})"
+
+    def clean(self):
+        super().clean()
+        if self.effective_to and self.effective_to < self.effective_from:
+            raise ValidationError("Ngày hết hiệu lực phải sau ngày bắt đầu.")
+        _check_parameters(self.parameters)
+        if not isinstance(self.golden_cases, list) or len(self.golden_cases) > 50:
+            raise ValidationError("Bộ kiểm thử đối soát phải là danh sách tối đa 50 trường hợp.")
+        for case in self.golden_cases:
+            if not isinstance(case, dict) or not isinstance(case.get("inputs"), dict) or not isinstance(case.get("expected"), dict) or not case["expected"]:
+                raise ValidationError("Mỗi tình huống cần inputs và expected không rỗng.")
+        if not isinstance(self.input_names, list) or len(self.input_names) > 80:
+            raise ValidationError("Danh sách biến đầu vào phải chứa tối đa 80 tên.")
+        reserved = set(self.parameters) | {"min", "max", "abs", "round_vnd"}
+        if any(
+            not isinstance(name, str) or not CODE.fullmatch(name) or name in reserved
+            for name in self.input_names
+        ):
+            raise ValidationError("Biến đầu vào phải viết thường và không trùng tham số/hàm.")
+        if len(set(self.input_names)) != len(self.input_names):
+            raise ValidationError("Biến đầu vào không được trùng nhau.")
+        if self.status == "approved":
+            if self.pk is None:
+                raise ValidationError("Không tạo trực tiếp bộ công thức đã duyệt.")
+            if not self.created_by_id or not self.approved_by_id or not self.approved_at or not self.legal_reference.strip():
+                raise ValidationError("Phải có người lập, người duyệt, ngày duyệt và căn cứ pháp lý/chính sách.")
+            if self.created_by_id == self.approved_by_id:
+                raise ValidationError("Người lập và người duyệt phải khác nhau.")
+            if not self.golden_cases:
+                raise ValidationError("Bộ công thức đã duyệt phải có Golden Cases.")
+            self.validate_rule_dependencies()
+            self.validate_golden_cases()
+            # Immutable supersession: the approved book with the latest
+            # effective_from takes precedence from that date. An older book
+            # remains available for earlier dates; never rewrite it.
+            conflict = VNRuleSet._base_manager.filter(
+                company_id=self.company_id, code=self.code,
+                status="approved", effective_from=self.effective_from,
+            ).exclude(pk=self.pk).exists()
+            if conflict:
+                raise ValidationError(
+                    "Chỉ một phiên bản được bắt đầu hiệu lực trong cùng một ngày."
+                )
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            old = VNRuleSet._base_manager.get(pk=self.pk)
+            if old.status == "approved":
+                # Permit retirement only; never overwrite approved evidence.
+                immutable = (
+                    "company_id", "code", "version", "title", "effective_from",
+                    "effective_to", "legal_reference", "parameters", "input_names", "golden_cases",
+                    "created_by_id", "approved_by_id", "approved_at",
+                )
+                if any(getattr(old, key) != getattr(self, key) for key in immutable):
+                    raise ValidationError("Không được sửa nội dung bộ quy tắc đã duyệt.")
+                if self.status not in ("approved", "retired"):
+                    raise ValidationError("Bộ đã duyệt chỉ có thể chuyển sang Ngừng áp dụng.")
+            if old.status == "retired":
+                raise ValidationError("Không thể chỉnh sửa bộ công thức đã ngừng áp dụng.")
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        if self.status in ("approved", "retired"):
+            raise ValidationError("Bộ đã duyệt phải được lưu lịch sử, không được xóa.")
+        return super().delete(*args, **kwargs)
+
+    def validate_rule_dependencies(self):
+        """Reject unknown variables, forward references and invalid rule ordering."""
+        known = set(self.parameters) | set(self.input_names)
+        for line in self.lines.order_by("position", "pk"):
+            if line.code in known:
+                raise ValidationError("Mã dòng trùng tên biến đầu vào/tham số: " + line.code)
+            try:
+                parsed = validate_syntax(line.expression)
+            except FormulaError as exc:
+                raise ValidationError(f"Công thức {line.code}: {exc}") from exc
+            referenced = {
+                node.id for node in ast.walk(parsed) if isinstance(node, ast.Name)
+            } - {"min", "max", "abs", "round_vnd"}
+            missing = referenced - known
+            if missing:
+                raise ValidationError(
+                    f"Công thức {line.code} có biến chưa khai báo/tính: {sorted(missing)}"
+                )
+            known.add(line.code)
+
+    def validate_golden_cases(self):
+        """Require financial-owner supplied synthetic fixtures to match exactly."""
+        from vn_payroll.services import preview_ruleset
+
+        if not self.golden_cases:
+            raise ValidationError("Cần ít nhất một bộ kiểm thử đối soát trước khi duyệt.")
+        for index, case in enumerate(self.golden_cases, start=1):
+            try:
+                result = preview_ruleset(self, case["inputs"])
+                amounts = {item["code"]: item["amount"] for item in result["lines"]}
+                for code, expected in case["expected"].items():
+                    if code not in amounts:
+                        raise ValidationError(f"Golden case {index}: không có dòng {code}.")
+                    if amounts[code] != as_decimal(expected):
+                        raise ValidationError(
+                            f"Golden case {index}: dòng {code} không bằng kết quả kỳ vọng."
+                        )
+            except (FormulaError, KeyError, TypeError) as exc:
+                raise ValidationError(f"Golden case {index} bị lỗi: {exc}") from exc
+
+    def approve(self, approver):
+        if self.status != "review":
+            raise ValidationError("Chỉ phê duyệt cấu hình ở trạng thái Chờ duyệt.")
+        if not approver or not approver.is_authenticated:
+            raise ValidationError("Người phê duyệt không hợp lệ.")
+        if not self.created_by_id:
+            raise ValidationError("Thiếu người lập bộ công thức.")
+        if self.created_by_id == approver.pk:
+            raise ValidationError("Người lập không được tự phê duyệt.")
+        if not self.lines.exists():
+            raise ValidationError("Bộ quy tắc không có công thức.")
+        self.approved_by = approver
+        self.approved_at = timezone.now()
+        self.status = "approved"
+        self.save()
+
+
+class VNPayRule(models.Model):
+    CATEGORY = [
+        ("earning", "Thu nhập"),
+        ("subtotal", "Tổng trung gian"),
+        ("tax", "Thuế TNCN"),
+        ("insurance_employee", "Bảo hiểm NLĐ"),
+        ("insurance_employer", "Bảo hiểm doanh nghiệp"),
+        ("deduction", "Khấu trừ khác"),
+        ("net", "Thực lĩnh"),
+    ]
+    rule_set = models.ForeignKey(
+        VNRuleSet, on_delete=models.CASCADE, related_name="lines"
+    )
+    position = models.PositiveIntegerField(default=10)
+    code = models.SlugField(max_length=64)
+    label = models.CharField(max_length=200)
+    category = models.CharField(max_length=24, choices=CATEGORY)
+    expression = models.CharField(max_length=700)
+    explanation = models.TextField(blank=True)
+
+    objects = HorillaCompanyManager("rule_set__company")
+
+    class Meta:
+        ordering = ("position", "pk")
+        constraints = [
+            models.UniqueConstraint(
+                fields=("rule_set", "code"), name="vn_payrule_code_unique"
+            ),
+            models.UniqueConstraint(
+                fields=("rule_set", "position"), name="vn_payrule_position_unique"
+            ),
+        ]
+        verbose_name = "Dòng công thức động"
+        verbose_name_plural = "Các dòng công thức động"
+
+    def __str__(self):
+        return f"{self.code} = {self.expression}"
+
+    def clean(self):
+        super().clean()
+        if self.rule_set_id and self.rule_set.status != "draft":
+            raise ValidationError("Chỉ sửa công thức khi bộ quy tắc ở trạng thái Nháp.")
+        if not CODE.fullmatch(self.code):
+            raise ValidationError("Mã dòng công thức phải viết thường, có dấu gạch dưới.")
+        if self.code in {"min", "max", "abs", "round_vnd"}:
+            raise ValidationError("Mã dòng công thức trùng tên hàm.")
+        try:
+            validate_syntax(self.expression)
+        except FormulaError as exc:
+            raise ValidationError(f"Biểu thức không hợp lệ: {exc}") from exc
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        if self.rule_set.status != "draft":
+            raise ValidationError("Chỉ xóa dòng ở trạng thái Nháp.")
+        return super().delete(*args, **kwargs)
