@@ -7272,3 +7272,19 @@ msgstr "Ngày nghỉ phép đã duyệt"
 #: vietnam-ui-audit-allocations-applications
 msgid "Approved OT hours"
 msgstr "Số giờ OT đã duyệt"
+
+#: vietnam-ui-password-reset-and-error
+msgid "Your password reset link is ready. Please check your inbox and spam folder."
+msgstr "Liên kết đặt lại mật khẩu đã sẵn sàng. Vui lòng kiểm tra hộp thư đến và thư mục spam."
+
+#: vietnam-ui-password-reset-and-error
+msgid "Registration Success - OpenHRMS Dashboard"
+msgstr "Đăng ký thành công - Tổng quan nhân sự"
+
+#: vietnam-ui-password-reset-and-error
+msgid "Forget Password Mail Send Successfully"
+msgstr "Đã gửi email đặt lại mật khẩu thành công"
+
+#: vietnam-ui-password-reset-and-error
+msgid "Only work with postgresql database."
+msgstr "Chức năng này chỉ hỗ trợ cơ sở dữ liệu PostgreSQL."
