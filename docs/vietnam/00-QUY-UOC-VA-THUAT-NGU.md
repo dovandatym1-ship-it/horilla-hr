@@ -83,3 +83,8 @@ Dùng mã cố định; không tái sử dụng mã đã hủy. Với field kỹ
 
 ## 7. Định nghĩa hoàn thành tài liệu
 Mỗi tài liệu có mã, phiên bản, ngày, người phê duyệt, phạm vi, chứng cứ AS-IS, TO-BE, ngoại lệ, BR, dữ liệu, phân quyền, TC, trace sang source code và backlog. Các mục chưa đủ luật hoặc quyết định quy chế phải ghi **OPEN/BLOCKED**; không được hợp thức hóa bằng số liệu mẫu.
+
+## 8. Phụ lục v1.1 — Chuẩn trạng thái yêu cầu và mã lỗi
+**CODE_STATIC_ONLY** = thấy field/model/guard trong code nhưng chưa chạy runtime; **AS_IS_VERIFIED** = hành vi được xác nhận bằng bằng chứng có version; **TO_BE** = cần triển khai; **BLOCKED_BY_POLICY** = thiếu quyết định nghiệp vụ được phê duyệt; **NOT_RUN** = chưa chạy testcase; **PASS** = có run evidence. Không dùng từ “đã hỗ trợ” cho hành vi thuộc TO_BE.
+
+Mỗi yêu cầu chi tiết phải liên kết \`F/UC/BR/DE/WF/UI/API/TC\` và có vai trò phê duyệt; không đặt \`Implemented\` chỉ vì có bản nháp trong docs. Validation chuẩn tại [10](10-FIELD-LEVEL-VALIDATION-MATRIX.md); UI action tại [11](11-UI-FORM-ACTION-SPECIFICATION.md); lỗi API tại [14](14-API-PERMISSION-ERROR-CONTRACT.md).
