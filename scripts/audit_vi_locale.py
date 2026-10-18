@@ -139,6 +139,15 @@ def main():
 
     missing_django = sorted(refs["django"] - django_ids)
     missing_js = sorted(refs["djangojs"] - js_ids)
+    total_references = len(refs["django"]) + len(refs["djangojs"])
+    translated_references = (
+        len(refs["django"] & django_ids) + len(refs["djangojs"] & js_ids)
+    )
+    # Distinct gettext keys, not rendered-string or screen-level coverage.
+    gettext_coverage_pct = (
+        round(translated_references * 100 / total_references, 2)
+        if total_references else 100.0
+    )
     print(json.dumps({
         "catalogues": catalogues,
         "scanned_source_files": files_scanned,
@@ -150,9 +159,19 @@ def main():
             "django": len(missing_django),
             "djangojs": len(missing_js),
         },
+        "gettext_coverage": {
+            "distinct_required": total_references,
+            "distinct_translated": translated_references,
+            "percentage": gettext_coverage_pct,
+            "metric_scope": "statically_detectable_simple_gettext_keys_only",
+        },
         "missing_examples": {
             "django": missing_django[:60],
             "djangojs": missing_js[:60],
+        },
+        "missing_all": {
+            "django": missing_django,
+            "djangojs": missing_js,
         },
         "unwrapped_html_candidates": candidate_count,
         "unwrapped_html_examples": literal_samples,
