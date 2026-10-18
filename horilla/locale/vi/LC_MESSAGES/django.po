@@ -5004,3 +5004,679 @@ msgstr "Quy định đơn giá áp dụng khi nhân viên quy đổi điểm th�
 #: vietnam-ui-asset-support-settings
 msgid "Leave Encashment Eligibility"
 msgstr "Điều kiện được thanh toán ngày phép"
+
+#: vietnam-ui-audit-remaining
+msgid " - Open Recruitments"
+msgstr " - Đợt tuyển dụng đang mở"
+
+#: vietnam-ui-audit-remaining
+msgid " Actions"
+msgstr " Thao tác"
+
+#: vietnam-ui-audit-remaining
+msgid " Add"
+msgstr " Thêm"
+
+#: vietnam-ui-audit-remaining
+msgid " Add To Rejected Candidates"
+msgstr " Thêm vào danh sách ứng viên bị từ chối"
+
+#: vietnam-ui-audit-remaining
+msgid " Added In Rejected Candidates"
+msgstr " Đã thêm vào danh sách ứng viên bị từ chối"
+
+#: vietnam-ui-audit-remaining
+msgid " Approve"
+msgstr " Phê duyệt"
+
+#: vietnam-ui-audit-remaining
+msgid " Are you sure want to delete this attendance?"
+msgstr " Bạn có chắc chắn muốn xóa bản ghi chấm công này không?"
+
+#: vietnam-ui-audit-remaining
+msgid " Are you sure you want to delete ?"
+msgstr " Bạn có chắc chắn muốn xóa không?"
+
+#: vietnam-ui-audit-remaining
+msgid " Are you sure you want to delete this shift request?"
+msgstr " Bạn có chắc chắn muốn xóa yêu cầu đổi ca này không?"
+
+#: vietnam-ui-audit-remaining
+msgid " Close"
+msgstr " Đóng"
+
+#: vietnam-ui-audit-remaining
+msgid " Create template group"
+msgstr " Tạo nhóm mẫu"
+
+#: vietnam-ui-audit-remaining
+msgid " Days"
+msgstr " Ngày"
+
+#: vietnam-ui-audit-remaining
+msgid " Do you want to reject this request?"
+msgstr " Bạn có muốn từ chối yêu cầu này không?"
+
+#: vietnam-ui-audit-remaining
+msgid " Don't choose net pay when pretax is enabled."
+msgstr " Không chọn lương thực lĩnh khi áp dụng khấu trừ trước thuế."
+
+#: vietnam-ui-audit-remaining
+msgid " Don't choose net pay when the tax is enabled."
+msgstr " Không chọn lương thực lĩnh khi áp dụng thuế."
+
+#: vietnam-ui-audit-remaining
+msgid " Don't choose taxable gross pay when pretax is enabled."
+msgstr " Không chọn tổng thu nhập tính thuế khi áp dụng khấu trừ trước thuế."
+
+#: vietnam-ui-audit-remaining
+msgid " OT Attendances"
+msgstr " Chấm công làm thêm giờ"
+
+#: vietnam-ui-audit-remaining
+msgid " Request Document"
+msgstr " Yêu cầu tài liệu"
+
+#: vietnam-ui-audit-remaining
+msgid " Resume"
+msgstr " Hồ sơ ứng viên"
+
+#: vietnam-ui-audit-remaining
+msgid " Send Mail"
+msgstr " Gửi email"
+
+#: vietnam-ui-audit-remaining
+msgid " Survey Template"
+msgstr " Mẫu khảo sát"
+
+#: vietnam-ui-audit-remaining
+msgid " Task"
+msgstr " Công việc"
+
+#: vietnam-ui-audit-remaining
+msgid " There are no ratings to display at the moment."
+msgstr " Hiện chưa có đánh giá nào để hiển thị."
+
+#: vietnam-ui-audit-remaining
+msgid " Validated Attendances"
+msgstr " Chấm công đã xác nhận"
+
+#: vietnam-ui-audit-remaining
+msgid " View Note"
+msgstr " Xem ghi chú"
+
+#: vietnam-ui-audit-remaining
+msgid " Views"
+msgstr " Lượt xem"
+
+#: vietnam-ui-audit-remaining
+msgid " days"
+msgstr " ngày"
+
+#: vietnam-ui-audit-remaining
+msgid " is validated"
+msgstr " đã được xác nhận"
+
+#: vietnam-ui-audit-remaining
+msgid " {} Overtime approved"
+msgstr " {} lượt làm thêm giờ đã duyệt"
+
+#: vietnam-ui-audit-remaining
+msgid " — Ctrl/Shift-click to select multiple days"
+msgstr " — Giữ Ctrl/Shift và nhấp để chọn nhiều ngày"
+
+#: vietnam-ui-audit-remaining
+msgid "\"Use TLS\" and \"Use SSL\" are mutually exclusive, "
+msgstr "Không thể bật đồng thời \"Dùng TLS\" và \"Dùng SSL\", "
+
+#: vietnam-ui-audit-remaining
+msgid "% hired"
+msgstr "% đã tuyển"
+
+#: vietnam-ui-audit-remaining
+msgid "%(actor)s %(verb)s %(action_object)s %(timesince)s ago"
+msgstr "%(actor)s %(verb)s %(action_object)s cách đây %(timesince)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(actor)s %(verb)s %(action_object)s on %(target)s %(timesince)s ago"
+msgstr "%(actor)s %(verb)s %(action_object)s trên %(target)s cách đây %(timesince)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(actor)s %(verb)s %(target)s %(timesince)s ago"
+msgstr "%(actor)s %(verb)s %(target)s cách đây %(timesince)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(actor)s %(verb)s %(timesince)s ago"
+msgstr "%(actor)s %(verb)s cách đây %(timesince)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(added)s added, %(removed)s removed for %(employee)s."
+msgstr "Đã thêm %(added)s, xóa %(removed)s cho %(employee)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(amount)s below %(limit)s"
+msgstr "%(amount)s thấp hơn %(limit)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(candidate)s added to onboarding"
+msgstr "Đã thêm %(candidate)s vào quy trình tiếp nhận"
+
+#: vietnam-ui-audit-remaining
+msgid "%(candidate)s deleted."
+msgstr "Đã xóa ứng viên %(candidate)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(candidate)s has already been converted to employee."
+msgstr "Ứng viên %(candidate)s đã được chuyển thành nhân viên."
+
+#: vietnam-ui-audit-remaining
+msgid "%(candidate_obj)s deleted."
+msgstr "Đã xóa %(candidate_obj)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(candidate_obj)s is %(message)s"
+msgstr "%(candidate_obj)s: %(message)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(cols)s must be a number of days, or left blank"
+msgstr "%(cols)s phải là số ngày hoặc để trống"
+
+#: vietnam-ui-audit-remaining
+msgid "%(component)s works basic pay out, so it is not "
+msgstr "%(component)s dùng để xác định lương cơ bản, vì vậy không "
+
+#: vietnam-ui-audit-remaining
+msgid "%(components)s component(s) %(verb)s %(count)s employee(s)."
+msgstr "%(components)s thành phần %(verb)s %(count)s nhân viên."
+
+#: vietnam-ui-audit-remaining
+msgid "%(count)s candidate's task status updated successfully"
+msgstr "Đã cập nhật thành công trạng thái công việc của %(count)s ứng viên"
+
+#: vietnam-ui-audit-remaining
+msgid "%(count)s contract(s) moved to %(structure)s."
+msgstr "Đã chuyển %(count)s hợp đồng sang %(structure)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(count)s day(s) with both attendance and leave, unresolved. "
+msgstr "Có %(count)s ngày vừa có chấm công vừa có nghỉ phép, chưa được xử lý. "
+
+#: vietnam-ui-audit-remaining
+msgid "%(created_count)s employees created."
+msgstr "Đã tạo %(created_count)s nhân viên."
+
+#: vietnam-ui-audit-remaining
+msgid "%(created_count)s projects imported."
+msgstr "Đã nhập %(created_count)s dự án."
+
+#: vietnam-ui-audit-remaining
+msgid "%(days)s of %(working)s working days"
+msgstr "%(days)s trên %(working)s ngày làm việc"
+
+#: vietnam-ui-audit-remaining
+msgid "%(emp_count)s payslip saved as draft"
+msgstr "Đã lưu %(emp_count)s phiếu lương dạng nháp"
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s %(date)s Attendance validated."
+msgstr "Đã xác nhận chấm công ngày %(date)s của %(employee)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s assigned to your ticket - %(ticket)s."
+msgstr "%(employee)s được giao xử lý yêu cầu hỗ trợ của bạn - %(ticket)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s don't have enough leave days to approve the request.."
+msgstr "%(employee)s không đủ số ngày phép để duyệt yêu cầu."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s requested revalidation for %(attendance_date)s attendance"
+msgstr "%(employee)s yêu cầu xác nhận lại chấm công ngày %(attendance_date)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s's %(date)s overtime approved"
+msgstr "Đã duyệt làm thêm giờ ngày %(date)s của %(employee)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s's %(objective)s deleted"
+msgstr "Đã xóa mục tiêu %(objective)s của %(employee)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s's Compensatory leave request has received a comment."
+msgstr "Đơn nghỉ bù của %(employee)s có bình luận mới."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s's attendance request has received a comment."
+msgstr "Yêu cầu chấm công của %(employee)s có bình luận mới."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s's compensatory leave request has received a comment."
+msgstr "Đơn nghỉ bù của %(employee)s có bình luận mới."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s's leave allocation request has received a comment."
+msgstr "Yêu cầu phân bổ phép của %(employee)s có bình luận mới."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s's leave request has received a comment."
+msgstr "Đơn nghỉ phép của %(employee)s có bình luận mới."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee)s's reimbursement request has received a comment."
+msgstr "Yêu cầu hoàn chi phí của %(employee)s có bình luận mới."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee_get)s requested a document."
+msgstr "%(employee_get)s đã yêu cầu tài liệu."
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee_get)s uploaded a document"
+msgstr "%(employee_get)s đã tải lên tài liệu"
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee_name)s's attendance request for %(attendance_date)s is validated"
+msgstr "Yêu cầu chấm công ngày %(attendance_date)s của %(employee_name)s đã được xác nhận"
+
+#: vietnam-ui-audit-remaining
+msgid "%(employee_name)s's attendance update request for %(attendance_date)s is created"
+msgstr "Đã tạo yêu cầu điều chỉnh chấm công ngày %(attendance_date)s của %(employee_name)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(field_label)s: %(error)s"
+msgstr "%(field_label)s: %(error)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(floor)s and above"
+msgstr "Từ %(floor)s trở lên"
+
+#: vietnam-ui-audit-remaining
+msgid "%(get_full_name)s requested for resignation."
+msgstr "%(get_full_name)s đã gửi đơn xin nghỉ việc."
+
+#: vietnam-ui-audit-remaining
+msgid "%(label)s has added a note on the candidate %(candidate)s"
+msgstr "%(label)s đã thêm ghi chú cho ứng viên %(candidate)s"
+
+#: vietnam-ui-audit-remaining
+msgid "%(n)d template(s) have valid syntax."
+msgstr "%(n)d mẫu có cú pháp hợp lệ."
+
+#: vietnam-ui-audit-remaining
+msgid "%(name)s's resignation letter is already rejected and cannot be modified."
+msgstr "Đơn xin nghỉ việc của %(name)s đã bị từ chối nên không thể sửa."
+
+#: vietnam-ui-audit-remaining
+msgid "%(ready)s of %(total)s active employees"
+msgstr "%(ready)s trên %(total)s nhân viên đang làm việc"
+
+#: vietnam-ui-audit-remaining
+msgid "%(recruitment)s has no stage.."
+msgstr "Đợt tuyển dụng %(recruitment)s chưa có giai đoạn."
+
+#: vietnam-ui-audit-remaining
+msgid "%(recruitment_obj)s is updated. You are chosen as one of the managers."
+msgstr "Đợt tuyển dụng %(recruitment_obj)s đã cập nhật. Bạn được chọn làm một trong các quản lý."
+
+#: vietnam-ui-audit-remaining
+msgid "%(stage)s stage in recruitment %(recruitment_id)s is updated. You are chosen as one of the managers."
+msgstr "Giai đoạn %(stage)s của đợt tuyển dụng %(recruitment_id)s đã cập nhật. Bạn được chọn làm một trong các quản lý."
+
+#: vietnam-ui-audit-remaining
+msgid "%(status)s is not a status."
+msgstr "%(status)s không phải trạng thái hợp lệ."
+
+#: vietnam-ui-audit-remaining
+msgid "%(success_count)s attendances deleted successfully."
+msgstr "Đã xóa thành công %(success_count)s bản ghi chấm công."
+
+#: vietnam-ui-audit-remaining
+msgid "%(timesheet)s deleted."
+msgstr "Đã xóa bản ghi thời gian %(timesheet)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s (copy)"
+msgstr "%(title)s (bản sao)"
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s Updated Successfully"
+msgstr "Đã cập nhật %(title)s thành công"
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s created successfully"
+msgstr "Đã tạo %(title)s thành công"
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s highlights — %(top)s."
+msgstr "Tổng quan %(title)s — %(top)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s is a standard component and cannot be deleted. "
+msgstr "%(title)s là thành phần chuẩn nên không thể xóa. "
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s is deleted."
+msgstr "Đã xóa %(title)s."
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s needs an amount, or a formula to work one out."
+msgstr "%(title)s cần số tiền hoặc công thức để tính số tiền."
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s updated successfully"
+msgstr "Đã cập nhật %(title)s thành công"
+
+#: vietnam-ui-audit-remaining
+msgid "%(title)s: %(problem)s"
+msgstr "%(title)s: %(problem)s"
+
+#: vietnam-ui-audit-remaining
+msgid "'Active until' must be after 'Active from'."
+msgstr "'Ngày kết thúc hiệu lực' phải sau 'Ngày bắt đầu hiệu lực'."
+
+#: vietnam-ui-audit-remaining
+msgid "'s Note"
+msgstr " - Ghi chú"
+
+#: vietnam-ui-audit-remaining
+msgid "'s Onboarding Tasks"
+msgstr " - Công việc tiếp nhận"
+
+#: vietnam-ui-audit-remaining
+msgid "'s Projects"
+msgstr " - Dự án"
+
+#: vietnam-ui-audit-remaining
+msgid "'s Talent Pools"
+msgstr " - Nguồn ứng viên tiềm năng"
+
+#: vietnam-ui-audit-remaining
+msgid "'s attendance request"
+msgstr " - yêu cầu chấm công"
+
+#: vietnam-ui-audit-remaining
+msgid "'s comments"
+msgstr " - bình luận"
+
+#: vietnam-ui-audit-remaining
+msgid "'s leave allocation request"
+msgstr " - yêu cầu phân bổ phép"
+
+#: vietnam-ui-audit-remaining
+msgid "'s leave request"
+msgstr " - đơn nghỉ phép"
+
+#: vietnam-ui-audit-remaining
+msgid "'s reimbursement request"
+msgstr " - yêu cầu hoàn chi phí"
+
+#: vietnam-ui-audit-remaining
+msgid "'s shift request"
+msgstr " - yêu cầu đổi ca"
+
+#: vietnam-ui-audit-remaining
+msgid "'s worktype request"
+msgstr " - yêu cầu đổi hình thức làm việc"
+
+#: vietnam-ui-audit-remaining
+msgid "'{leave_type}' can only be assigned once per employment and has already been assigned to this employee."
+msgstr "Loại nghỉ phép '{leave_type}' chỉ được phân bổ một lần trong thời gian làm việc và đã được phân bổ cho nhân viên này."
+
+#: vietnam-ui-audit-remaining
+msgid "(+) Joiners"
+msgstr "(+) Nhân viên mới"
+
+#: vietnam-ui-audit-remaining
+msgid "(Active)"
+msgstr "(Đang hoạt động)"
+
+#: vietnam-ui-audit-remaining
+msgid "(rounded for display)"
+msgstr "(đã làm tròn khi hiển thị)"
+
+#: vietnam-ui-audit-remaining
+msgid "(−) Leavers"
+msgstr "(−) Nhân viên nghỉ việc"
+
+#: vietnam-ui-audit-remaining
+msgid "* New hire (joined within the last year)"
+msgstr "* Nhân viên mới (vào làm trong 12 tháng gần nhất)"
+
+#: vietnam-ui-audit-remaining
+msgid "+ Add new task"
+msgstr "+ Thêm công việc mới"
+
+#: vietnam-ui-audit-remaining
+msgid "+ Create a new view…"
+msgstr "+ Tạo chế độ xem mới…"
+
+#: vietnam-ui-audit-remaining
+msgid "---Choose Action---"
+msgstr "---Chọn thao tác---"
+
+#: vietnam-ui-audit-remaining
+msgid "---Choose Batch No.---"
+msgstr "---Chọn số lô---"
+
+#: vietnam-ui-audit-remaining
+msgid "---Choose Job Role---"
+msgstr "---Chọn vai trò công việc---"
+
+#: vietnam-ui-audit-remaining
+msgid "---Choose Shift---"
+msgstr "---Chọn ca---"
+
+#: vietnam-ui-audit-remaining
+msgid "---Choose Skills---"
+msgstr "---Chọn kỹ năng---"
+
+#: vietnam-ui-audit-remaining
+msgid "---Choose Work Type---"
+msgstr "---Chọn hình thức làm việc---"
+
+#: vietnam-ui-audit-remaining
+msgid "---Choose employee---"
+msgstr "---Chọn nhân viên---"
+
+#: vietnam-ui-audit-remaining
+msgid "---Choose {label}---"
+msgstr "---Chọn {label}---"
+
+#: vietnam-ui-audit-remaining
+msgid "1 Star"
+msgstr "1 sao"
+
+#: vietnam-ui-audit-remaining
+msgid "2 Stars"
+msgstr "2 sao"
+
+#: vietnam-ui-audit-remaining
+msgid "3 Stars"
+msgstr "3 sao"
+
+#: vietnam-ui-audit-remaining
+msgid "4 Stars"
+msgstr "4 sao"
+
+#: vietnam-ui-audit-remaining
+msgid "5 Stars"
+msgstr "5 sao"
+
+#: vietnam-ui-audit-remaining
+msgid "15 characters max."
+msgstr "Tối đa 15 ký tự."
+
+#: vietnam-ui-audit-remaining
+msgid "12-hour or 24-hour display format"
+msgstr "Định dạng hiển thị 12 hoặc 24 giờ"
+
+#: vietnam-ui-audit-remaining
+msgid "1 day left"
+msgstr "Còn 1 ngày"
+
+#: vietnam-ui-audit-remaining
+msgid "1. Tax slabs"
+msgstr "1. Các bậc thuế"
+
+#: vietnam-ui-audit-remaining
+msgid "2. Adjustments"
+msgstr "2. Các khoản điều chỉnh"
+
+#: vietnam-ui-audit-remaining
+msgid "0–1 years"
+msgstr "0–1 năm"
+
+#: vietnam-ui-audit-remaining
+msgid "1–3 years"
+msgstr "1–3 năm"
+
+#: vietnam-ui-audit-remaining
+msgid "3–5 years"
+msgstr "3–5 năm"
+
+#: vietnam-ui-audit-remaining
+msgid "5–10 years"
+msgstr "5–10 năm"
+
+#: vietnam-ui-audit-remaining
+msgid "10+ years"
+msgstr "Từ 10 năm"
+
+#: vietnam-ui-audit-remaining
+msgid "0–30 days"
+msgstr "0–30 ngày"
+
+#: vietnam-ui-audit-remaining
+msgid "31–60 days"
+msgstr "31–60 ngày"
+
+#: vietnam-ui-audit-remaining
+msgid "61–90 days"
+msgstr "61–90 ngày"
+
+#: vietnam-ui-audit-remaining
+msgid "90 days – 1 year"
+msgstr "90 ngày – 1 năm"
+
+#: vietnam-ui-audit-remaining
+msgid "6-month avg"
+msgstr "Trung bình 6 tháng"
+
+#: vietnam-ui-audit-remaining
+msgid "6-month turnover rate"
+msgstr "Tỷ lệ biến động nhân sự trong 6 tháng"
+
+#: vietnam-ui-audit-remaining
+msgid "90-day attrition"
+msgstr "Tỷ lệ nghỉ việc trong 90 ngày"
+
+#: vietnam-ui-audit-remaining
+msgid "90-day outcomes"
+msgstr "Kết quả sau 90 ngày"
+
+#: vietnam-ui-audit-remaining
+msgid "90-day retention"
+msgstr "Tỷ lệ giữ chân nhân viên sau 90 ngày"
+
+#: vietnam-ui-audit-remaining
+msgid "90-day retention of hires with joining_date in period — not a "
+msgstr "Tỷ lệ giữ chân sau 90 ngày của nhân viên vào làm trong kỳ — không phải "
+
+#: vietnam-ui-audit-remaining
+msgid "360 Feedback"
+msgstr "Đánh giá 360 độ"
+
+#: vietnam-ui-audit-remaining
+msgid "360° Feedback"
+msgstr "Đánh giá 360 độ"
+
+#: vietnam-ui-audit-remaining
+msgid "A condition with the provided fields already exists"
+msgstr "Đã tồn tại điều kiện với các trường đã cung cấp"
+
+#: vietnam-ui-audit-remaining
+msgid "A draft contract already exists for this employee."
+msgstr "Nhân viên này đã có hợp đồng nháp."
+
+#: vietnam-ui-audit-remaining
+msgid "A holiday already exists for this date range for all companies."
+msgstr "Đã có ngày nghỉ lễ trong khoảng này cho toàn bộ công ty."
+
+#: vietnam-ui-audit-remaining
+msgid "A holiday already exists for this date range in this company."
+msgstr "Công ty này đã có ngày nghỉ lễ trong khoảng thời gian đã chọn."
+
+#: vietnam-ui-audit-remaining
+msgid "A holiday already exists for this date range."
+msgstr "Đã có ngày nghỉ lễ trong khoảng thời gian đã chọn."
+
+#: vietnam-ui-audit-remaining
+msgid "A late-come, early-out or leave penalty."
+msgstr "Khoản phạt đi muộn, về sớm hoặc nghỉ phép."
+
+#: vietnam-ui-audit-remaining
+msgid "A new comment has been created."
+msgstr "Đã thêm bình luận mới."
+
+#: vietnam-ui-audit-remaining
+msgid "A paid payslip cannot be edited"
+msgstr "Không thể sửa phiếu lương đã thanh toán"
+
+#: vietnam-ui-audit-remaining
+msgid "A paid payslip cannot be edited."
+msgstr "Không thể sửa phiếu lương đã thanh toán."
+
+#: vietnam-ui-audit-remaining
+msgid "A paid run cannot be changed. Correct it with another run."
+msgstr "Không thể sửa đợt lương đã trả. Cần lập đợt điều chỉnh mới."
+
+#: vietnam-ui-audit-remaining
+msgid "A paid run cannot be deleted. Correct it with another run."
+msgstr "Không thể xóa đợt lương đã trả. Cần lập đợt điều chỉnh mới."
+
+#: vietnam-ui-audit-remaining
+msgid "A period that has not begun cannot be paid."
+msgstr "Không thể thanh toán kỳ lương chưa bắt đầu."
+
+#: vietnam-ui-audit-remaining
+msgid "A rejected resignation letter cannot be modified."
+msgstr "Không thể sửa đơn nghỉ việc đã bị từ chối."
+
+#: vietnam-ui-audit-remaining
+msgid "A rejected resignation letter cannot be modified. Only deletion is allowed."
+msgstr "Không thể sửa đơn nghỉ việc đã bị từ chối; chỉ có thể xóa."
+
+#: vietnam-ui-audit-remaining
+msgid "A related Category or Batch number is invalid."
+msgstr "Danh mục hoặc mã lô liên quan không hợp lệ."
+
+#: vietnam-ui-audit-remaining
+msgid "A required value is missing in this row."
+msgstr "Dòng này thiếu giá trị bắt buộc."
+
+#: vietnam-ui-audit-remaining
+msgid "A role is a named set of employees who share the same access. Create a role, add members, then turn permissions on or off."
+msgstr "Vai trò là nhóm nhân viên có cùng quyền truy cập. Hãy tạo vai trò, thêm thành viên rồi bật hoặc tắt các quyền."
+
+#: vietnam-ui-audit-remaining
+msgid "A run that is %(current)s cannot become %(wanted)s."
+msgstr "Đợt lương có trạng thái %(current)s không thể chuyển thành %(wanted)s."
+
+#: vietnam-ui-audit-remaining
+msgid "A template is automatically locked when someone opens the edit page. "
+msgstr "Mẫu được tự động khóa khi có người mở trang chỉnh sửa. "
+
+#: vietnam-ui-audit-remaining
+msgid "A valid start date is required (YYYY-MM-DD)."
+msgstr "Cần ngày bắt đầu hợp lệ (YYYY-MM-DD)."
+
+#: vietnam-ui-audit-remaining
+msgid "A value is required for the selected condition type."
+msgstr "Loại điều kiện đã chọn yêu cầu nhập giá trị."
+
+#: vietnam-ui-audit-remaining
+msgid "A whole month"
+msgstr "Cả tháng"
+
+#: vietnam-ui-audit-remaining
+msgid "Something went wrong while processing payroll."
+msgstr "Đã xảy ra lỗi khi xử lý bảng lương."
