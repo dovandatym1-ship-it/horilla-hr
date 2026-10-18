@@ -77,7 +77,7 @@ class VNRuleSetAdmin(StrictAdmin):
     search_fields = ("code", "title")
     readonly_fields = ("created_by", "approved_by", "approved_at", "created_at", "status")
     inlines = [VNPayRuleInline]
-    actions = ["submit_for_review", "approve_checked", "retire_approved"]
+    actions = ["submit_for_review", "return_to_draft", "approve_checked", "retire_approved"]
 
     def get_inlines(self, request, obj):
         if obj is not None and obj.status != "draft":
@@ -113,6 +113,17 @@ class VNRuleSetAdmin(StrictAdmin):
                 self.message_user(request, f"Đã gửi duyệt: {item}", level=messages.SUCCESS)
             except ValidationError as exc:
                 self.message_user(request, str(exc), level=messages.ERROR)
+
+    @admin.action(description="Trả lại trạng thái Nháp để sửa công thức")
+    def return_to_draft(self, request, queryset):
+        for item in queryset:
+            if item.status != "review":
+                continue
+            item.status = "draft"
+            item.approved_by = None
+            item.approved_at = None
+            item.save()
+            self.message_user(request, f"Đã trả lại bản nháp {item}.", level=messages.SUCCESS)
 
     @admin.action(description="Phê duyệt bộ công thức (khác người tạo)")
     def approve_checked(self, request, queryset):
