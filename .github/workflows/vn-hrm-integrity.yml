@@ -71,6 +71,15 @@ jobs:
         with:
           name: vietnam-localization-audit
           path: vietnam-localization-audit.json
+      - name: Inventory remaining legacy FloatField money risks
+        run: |
+          python scripts/audit_payroll_float_fields.py > vn-payroll-float-inventory.json
+          python -m json.tool vn-payroll-float-inventory.json > /dev/null
+      - name: Upload legacy money field inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-payroll-float-inventory
+          path: vn-payroll-float-inventory.json
       - name: Django system check and migration drift
         run: |
           python manage.py check
