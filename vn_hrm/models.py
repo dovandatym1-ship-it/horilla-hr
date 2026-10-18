@@ -8,6 +8,25 @@ from base.horilla_company_manager import HorillaCompanyManager
 from .crypto import protect_identifier
 
 
+class SensitiveNoBulkQuerySet(models.QuerySet):
+    """Block ORM bulk changes that bypass validation and per-object audit."""
+
+    def update(self, **kwargs):
+        raise PermissionDenied("Không cho sửa hàng loạt bản ghi nghiệp vụ nhạy cảm.")
+
+    def delete(self):
+        raise PermissionDenied("Không cho xóa hàng loạt bản ghi nghiệp vụ nhạy cảm.")
+
+    def bulk_create(self, objs, **kwargs):
+        raise PermissionDenied("Không cho tạo hàng loạt bỏ qua validation.")
+
+    def bulk_update(self, objs, fields, **kwargs):
+        raise PermissionDenied("Không cho cập nhật hàng loạt bỏ qua validation.")
+
+
+SensitiveManager = HorillaCompanyManager.from_queryset(SensitiveNoBulkQuerySet)
+
+
 class VNCompanyProfile(models.Model):
     company = models.OneToOneField(
         "base.Company", on_delete=models.PROTECT, related_name="vn_legal_profile"
@@ -52,7 +71,7 @@ class VNEmployeeLegalProfile(models.Model):
     insurance_ciphertext = models.TextField(blank=True, editable=False)
     insurance_digest = models.CharField(max_length=64, blank=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
-    objects = HorillaCompanyManager("company")
+    objects = SensitiveManager("company")
 
     class Meta:
         permissions = [
@@ -85,6 +104,9 @@ class VNEmployeeLegalProfile(models.Model):
     def __str__(self):
         return f"VN legal profile {self.employee_id} / {self.company_id}"
 
+    def delete(self, *args, **kwargs):
+        raise PermissionDenied("Hồ sơ pháp lý không được xóa ngoài quy trình lưu trữ.")
+
 
 class VNDependent(models.Model):
     STATUS_CHOICES = [
@@ -108,7 +130,7 @@ class VNDependent(models.Model):
     verified_by = models.ForeignKey(
         settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.PROTECT
     )
-    objects = HorillaCompanyManager("company")
+    objects = SensitiveManager("company")
 
     def clean(self):
         super().clean()
@@ -136,7 +158,7 @@ class VNContractAmendment(models.Model):
     status = models.CharField(
         max_length=10, choices=STATUS_CHOICES, default="draft"
     )
-    objects = HorillaCompanyManager("company")
+    objects = SensitiveManager("company")
 
     class Meta:
         constraints = [
@@ -193,7 +215,7 @@ class VNLeaveLedgerEvent(models.Model):
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.PROTECT
     )
-    objects = HorillaCompanyManager("company")
+    objects = SensitiveManager("company")
 
     class Meta:
         constraints = [
@@ -230,7 +252,7 @@ class VNSensitiveAccessAudit(models.Model):
     purpose = models.CharField(max_length=255)
     action = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
-    objects = HorillaCompanyManager("company")
+    objects = SensitiveManager("company")
 
     def save(self, *args, **kwargs):
         if self.pk:
