@@ -9076,3 +9076,619 @@ msgstr "Hiện tại:"
 #: vietnam-ui-mail-and-accessibility
 msgid "Delete Comment"
 msgstr "Xóa bình luận"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carried forward"
+msgstr "Được chuyển sang kỳ sau"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carry Forward Days"
+msgstr "Ngày phép chuyển tiếp"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carry Forward Type"
+msgstr "Loại chuyển phép"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carry Forward with Expire"
+msgstr "Chuyển phép có hạn sử dụng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carry forward days"
+msgstr "Số ngày phép chuyển kỳ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "CarryForward Expired Date"
+msgstr "Ngày hết hạn phép chuyển kỳ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward"
+msgstr "Chuyển phép"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Days"
+msgstr "Ngày phép chuyển kỳ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Expire"
+msgstr "Hết hạn phép chuyển kỳ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Expire Date"
+msgstr "Ngày hết hạn phép chuyển kỳ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Expire In"
+msgstr "Thời hạn phép chuyển kỳ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Expire Period"
+msgstr "Kỳ hết hạn phép chuyển tiếp"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Expire in"
+msgstr "Hết hạn chuyển phép trong"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Expire period"
+msgstr "Kỳ hết hạn chuyển phép"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Expires In"
+msgstr "Phép chuyển kỳ hết hạn sau"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Leave Days"
+msgstr "Số ngày phép chuyển kỳ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Max"
+msgstr "Số ngày phép chuyển kỳ tối đa"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward Type"
+msgstr "Loại chuyển phép"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Carryforward to encash"
+msgstr "Phép chuyển kỳ được quy đổi thành tiền"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Categories"
+msgstr "Danh mục"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Category"
+msgstr "Danh mục"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Ceiling"
+msgstr "Mức trần"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Center"
+msgstr "Căn giữa"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Center (no element)"
+msgstr "Căn giữa (không có phần tử)"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Cess"
+msgstr "Thuế phụ thu"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Change"
+msgstr "Thay đổi"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Change Photo"
+msgstr "Đổi ảnh"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Change Username"
+msgstr "Đổi tên đăng nhập"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Change it"
+msgstr "Thay đổi"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Change status"
+msgstr "Đổi trạng thái"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Change the Designations"
+msgstr "Thay đổi chức danh"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Changed"
+msgstr "Đã thay đổi"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Chart"
+msgstr "Biểu đồ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Chart error"
+msgstr "Lỗi biểu đồ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Charts"
+msgstr "Các biểu đồ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check Connection"
+msgstr "Kiểm tra kết nối"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check In"
+msgstr "Chấm công vào"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check In Date"
+msgstr "Ngày chấm công vào"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check In/Check Out"
+msgstr "Chấm công vào/ra"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check Out"
+msgstr "Chấm công ra"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check Out Date"
+msgstr "Ngày chấm công ra"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check a salary"
+msgstr "Kiểm tra lương"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check date format."
+msgstr "Kiểm tra định dạng ngày."
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check in/Check out"
+msgstr "Chấm công vào/ra"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check the credentials"
+msgstr "Kiểm tra thông tin đăng nhập"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check the inputs"
+msgstr "Kiểm tra dữ liệu nhập"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check-in / Check-out Log"
+msgstr "Nhật ký chấm công vào/ra"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check-in Date"
+msgstr "Ngày chấm công vào"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Check-out Date"
+msgstr "Ngày chấm công ra"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Checked In On"
+msgstr "Đã chấm công vào ngày"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Checked In Today"
+msgstr "Đã chấm công vào hôm nay"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Children"
+msgstr "Con"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Choices"
+msgstr "Lựa chọn"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Choose Delivery Channel"
+msgstr "Chọn kênh gửi"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Choose Icon"
+msgstr "Chọn biểu tượng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Choose Report"
+msgstr "Chọn báo cáo"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Choose a salary structure."
+msgstr "Chọn cơ cấu lương."
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Choose a salary structure…"
+msgstr "Chọn cơ cấu lương…"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Choose valid choice"
+msgstr "Chọn giá trị hợp lệ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Claim Amount by Status"
+msgstr "Số tiền yêu cầu hoàn theo trạng thái"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Claim Request"
+msgstr "Yêu cầu nhận xử lý"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "ClaimRequest not found"
+msgstr "Không tìm thấy yêu cầu nhận xử lý"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Claims"
+msgstr "Các yêu cầu nhận xử lý"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Claims still in 'requested'"
+msgstr "Yêu cầu vẫn ở trạng thái 'đã gửi'"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Clashed Due To"
+msgstr "Xung đột do"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Clear Filter"
+msgstr "Xóa bộ lọc"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Clear Filters"
+msgstr "Xóa các bộ lọc"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Clear Notifications"
+msgstr "Xóa thông báo"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Clear grouping"
+msgstr "Bỏ nhóm dữ liệu"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Click to drill down"
+msgstr "Nhấp để xem chi tiết"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Click to rename"
+msgstr "Nhấp để đổi tên"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Click to see who"
+msgstr "Nhấp để xem người liên quan"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Click to toggle AND/OR"
+msgstr "Nhấp để chuyển điều kiện VÀ/HOẶC"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Click to upload"
+msgstr "Nhấp để tải lên"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Client ID"
+msgstr "Mã khách hàng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Client Secret"
+msgstr "Khóa bí mật khách hàng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Clock in date"
+msgstr "Ngày chấm công vào"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Clock out date"
+msgstr "Ngày chấm công ra"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Close note"
+msgstr "Đóng ghi chú"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Closed tickets excluded"
+msgstr "Không tính các yêu cầu hỗ trợ đã đóng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Closing"
+msgstr "Kết thúc"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Closing (active proxy)"
+msgstr "Số cuối kỳ (ước tính theo nhân viên đang làm việc)"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Closing (bridge)"
+msgstr "Số cuối kỳ (đối soát)"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Closing HC (proxy)"
+msgstr "Số nhân sự cuối kỳ (ước tính)"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Closing soon"
+msgstr "Sắp kết thúc"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Code"
+msgstr "Mã"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Cohort joiners"
+msgstr "Nhóm nhân viên vào làm cùng kỳ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Cohort outcomes"
+msgstr "Kết quả theo nhóm nhân viên"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Collapse All"
+msgstr "Thu gọn tất cả"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Colleague"
+msgstr "Đồng nghiệp"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "College or University"
+msgstr "Cao đẳng hoặc đại học"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Color"
+msgstr "Màu sắc"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Color Theme"
+msgstr "Chủ đề màu sắc"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Color Themes"
+msgstr "Các chủ đề màu"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Comma separated URIs"
+msgstr "Các URI phân cách bằng dấu phẩy"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Comment added successfully!"
+msgstr "Đã thêm bình luận thành công!"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Comment deleted successfully!"
+msgstr "Đã xóa bình luận thành công!"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Comment here"
+msgstr "Nhập bình luận tại đây"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Comment not found"
+msgstr "Không tìm thấy bình luận"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Comment not found."
+msgstr "Không tìm thấy bình luận."
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Comments disabled"
+msgstr "Đã tắt bình luận"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Comments of - "
+msgstr "Bình luận của - "
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Commission"
+msgstr "Hoa hồng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Address"
+msgstr "Địa chỉ công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Career Site"
+msgstr "Trang tuyển dụng công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company City"
+msgstr "Thành phố của công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Country"
+msgstr "Quốc gia của công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Experience"
+msgstr "Kinh nghiệm tại công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Logo"
+msgstr "Logo công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Name"
+msgstr "Tên công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company State"
+msgstr "Tỉnh/bang của công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Theme"
+msgstr "Giao diện công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Themes"
+msgstr "Các giao diện công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company Zip"
+msgstr "Mã bưu chính công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company group assignment"
+msgstr "Phân nhóm công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company group assignments"
+msgstr "Các phân nhóm công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company not found "
+msgstr "Không tìm thấy công ty "
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Company-specific settings"
+msgstr "Thiết lập riêng theo công ty"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compare"
+msgstr "So sánh"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compliance"
+msgstr "Tuân thủ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compliance Risk"
+msgstr "Rủi ro tuân thủ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compensatory Leave Request"
+msgstr "Đơn nghỉ bù"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compensatory Leave Requests"
+msgstr "Các đơn nghỉ bù"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compensatory leave"
+msgstr "Nghỉ bù"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compensatory leave request"
+msgstr "Yêu cầu nghỉ bù"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compensatory leave request approved"
+msgstr "Đã phê duyệt đơn nghỉ bù"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compensatory leave request rejected"
+msgstr "Đã từ chối đơn nghỉ bù"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Compensation"
+msgstr "Thu nhập và chế độ đãi ngộ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Component"
+msgstr "Thành phần tính lương"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Component type"
+msgstr "Loại thành phần tính lương"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Components in this structure"
+msgstr "Các thành phần trong cơ cấu lương"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Computed"
+msgstr "Đã tính"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Conditional"
+msgstr "Có điều kiện"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Conditions"
+msgstr "Điều kiện"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Confirmation"
+msgstr "Xác nhận"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Connection"
+msgstr "Kết nối"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Connection successful"
+msgstr "Kết nối thành công"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Contact"
+msgstr "Liên hệ"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Contract Details"
+msgstr "Chi tiết hợp đồng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Contract Document"
+msgstr "Tài liệu hợp đồng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Copy"
+msgstr "Sao chép"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Copy link"
+msgstr "Sao chép liên kết"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Cost"
+msgstr "Chi phí"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Count"
+msgstr "Số lượng"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Create New"
+msgstr "Tạo mới"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Create employee"
+msgstr "Tạo nhân viên"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Created by"
+msgstr "Người tạo"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Creator"
+msgstr "Người tạo"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Current"
+msgstr "Hiện tại"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Current Balance"
+msgstr "Số dư hiện tại"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Current Month"
+msgstr "Tháng hiện tại"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Current Status"
+msgstr "Trạng thái hiện tại"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Current year"
+msgstr "Năm hiện tại"
+
+#: vietnam-ui-reviewed-common-controls
+msgid "Custom Fields"
+msgstr "Trường tùy chỉnh"
