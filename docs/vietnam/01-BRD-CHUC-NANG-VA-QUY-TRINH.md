@@ -70,3 +70,10 @@ Các trạng thái có sẵn của Horilla khác nhau theo model; bảng trên l
 **DEC-VN-001**: xác định đối tượng triển khai (1 hoặc nhiều pháp nhân); **002**: quy chế công chuẩn/tháng; **003**: lịch ca, nghỉ bù; **004**: kỳ lương & ngày trả lương; **005**: tiền ngoài lương chịu thuế/BH; **006**: tính Gross/Net và quy tắc làm tròn; **007**: chính sách điều chỉnh sau Paid; **008**: phân quyền khoản nhạy cảm; **009**: hồ sơ/chứng từ cần lưu; **010**: pháp chế ký duyệt rule 2026.
 
 **Nghiệm thu BRD:** ký duyệt luồng E2E, bảng trạng thái, danh sách GAP và DEC; gắn UC/TC chi tiết tại các tài liệu kế tiếp.
+
+## 8. Phụ lục BRD v1.1 — Điểm giao nhận và phạm vi nghiệm thu
+Các BP-01..06 phía trên là **process map cấp cao**, không phải BPMN/UC đủ cho dev. Chi tiết trigger, state/action guard, nhánh nghiệp vụ và bù trừ được định nghĩa trong [WF-13](13-WORKFLOW-STATE-TRANSITIONS.md), [UC-12](12-USE-CASE-DETAILS.md).
+
+**Điều kiện bàn giao từng bước:** BP-01 giao Employee Active kèm pháp nhân có hiệu lực; BP-02 giao Contract+Amendment version, không ghi đè quá khứ; BP-03 giao Attendance Locked và correction decision có source; BP-04 giao ledger đã đối soát; BP-05 chỉ dùng snapshot/ruleset approved để tính, phiếu Paid immutable; BP-06 giao ngày nghỉ, quyết toán và xác nhận thu hồi quyền. Giao thiếu → tạo exception có owner, không tự chuyển bước.
+
+**Acceptance business:** HR duyệt dữ liệu nhân sự/HĐ/công/phép; Payroll/Finance duyệt đối soát tiền; Pháp chế duyệt legal rule/effective date; Security duyệt quyền dữ liệu, vault. Chưa có sign-off trên tài liệu này. Quy tắc chưa chốt trong [GAP-16](16-CODE-TO-DOC-GAP.md) phải giữ OPEN/BLOCKED_BY_POLICY.
