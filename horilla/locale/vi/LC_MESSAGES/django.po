@@ -4892,3 +4892,115 @@ msgstr "Loại yêu cầu hỗ trợ"
 #: vietnam-ui-onboarding-offboarding-support
 msgid "Till date"
 msgstr "Đến ngày"
+
+#: vietnam-ui-asset-support-settings
+msgid "Are you sure you want to delete this Key result?"
+msgstr "Bạn có chắc chắn muốn xóa kết quả then chốt này không?"
+
+#: vietnam-ui-asset-support-settings
+msgid "Serial No."
+msgstr "Số sê-ri"
+
+#: vietnam-ui-asset-support-settings
+msgid "Batch No"
+msgstr "Số lô"
+
+#: vietnam-ui-asset-support-settings
+msgid "Available / Total"
+msgstr "Sẵn có / Tổng cộng"
+
+#: vietnam-ui-asset-support-settings
+msgid "Duplicate"
+msgstr "Nhân bản"
+
+#: vietnam-ui-asset-support-settings
+msgid "Asset Report"
+msgstr "Báo cáo tài sản"
+
+#: vietnam-ui-asset-support-settings
+msgid "Do you want to delete this asset?"
+msgstr "Bạn có muốn xóa tài sản này không?"
+
+#: vietnam-ui-asset-support-settings
+msgid "Request User"
+msgstr "Người yêu cầu"
+
+#: vietnam-ui-asset-support-settings
+msgid "Asset Category"
+msgstr "Danh mục tài sản"
+
+#: vietnam-ui-asset-support-settings
+msgid "Approve request"
+msgstr "Phê duyệt yêu cầu"
+
+#: vietnam-ui-asset-support-settings
+msgid "Do you want to reject this request?"
+msgstr "Bạn có muốn từ chối yêu cầu này không?"
+
+#: vietnam-ui-asset-support-settings
+msgid "Selected Tickets"
+msgstr "Yêu cầu hỗ trợ đã chọn"
+
+#: vietnam-ui-asset-support-settings
+msgid "Select All Tickets"
+msgstr "Chọn tất cả yêu cầu hỗ trợ"
+
+#: vietnam-ui-asset-support-settings
+msgid "Unselect All Tickets"
+msgstr "Bỏ chọn tất cả yêu cầu hỗ trợ"
+
+#: vietnam-ui-asset-support-settings
+msgid "Export Tickets"
+msgstr "Xuất yêu cầu hỗ trợ"
+
+#: vietnam-ui-asset-support-settings
+msgid "My Tickets"
+msgstr "Yêu cầu hỗ trợ của tôi"
+
+#: vietnam-ui-asset-support-settings
+msgid "Suggested Tickets"
+msgstr "Yêu cầu hỗ trợ được đề xuất"
+
+#: vietnam-ui-asset-support-settings
+msgid "All Tickets"
+msgstr "Tất cả yêu cầu hỗ trợ"
+
+#: vietnam-ui-asset-support-settings
+msgid "There are no claim requests at the moment."
+msgstr "Hiện chưa có yêu cầu nhận xử lý nào."
+
+#: vietnam-ui-asset-support-settings
+msgid "Default Records Per Page"
+msgstr "Số bản ghi mỗi trang mặc định"
+
+#: vietnam-ui-asset-support-settings
+msgid "Default pagination for all views."
+msgstr "Thiết lập phân trang mặc định cho các màn hình."
+
+#: vietnam-ui-asset-support-settings
+msgid "Number of records shown per page across all list views."
+msgstr "Số bản ghi hiển thị trên mỗi trang tại tất cả màn hình danh sách."
+
+#: vietnam-ui-asset-support-settings
+msgid "Pagination"
+msgstr "Phân trang"
+
+#: vietnam-ui-asset-support-settings
+msgid "Encashment Settings"
+msgstr "Thiết lập quy đổi thành tiền"
+
+#: vietnam-ui-asset-support-settings
+msgid "Configure bonus and leave encashment redeem conditions."
+msgstr "Cấu hình điều kiện quy đổi điểm thưởng và ngày phép thành tiền."
+
+#: vietnam-ui-asset-support-settings
+msgid "Encashment Redeem Condition"
+msgstr "Điều kiện quy đổi thành tiền"
+
+#: vietnam-ui-asset-support-settings
+msgid "Define the unit values used when employees redeem bonus points or leave as encashment."
+msgstr "Quy định đơn giá áp dụng khi nhân viên quy đổi điểm thưởng hoặc ngày phép thành tiền."
+
+#: vietnam-ui-asset-support-settings
+msgid "Leave Encashment Eligibility"
+msgstr "Điều kiện được thanh toán ngày phép"
