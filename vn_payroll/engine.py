@@ -131,6 +131,51 @@ def _calculate(node, variables, depth):
     raise FormulaError("Unsupported or unsafe formula syntax.")
 
 
+# Allowed parse nodes for static validation of formulas at save time.
+_ALLOWED_NODES = (
+    ast.Expression, ast.Constant, ast.Name, ast.Load, ast.UnaryOp,
+    ast.UAdd, ast.USub, ast.BinOp, ast.Add, ast.Sub, ast.Mult,
+    ast.Div, ast.Compare, ast.Lt, ast.LtE, ast.Gt, ast.GtE,
+    ast.Eq, ast.NotEq, ast.BoolOp, ast.And, ast.Or, ast.IfExp,
+    ast.Call,
+)
+
+
+def validate_syntax(expression):
+    """Validate expression structure without executing it or binding inputs."""
+    if not isinstance(expression, str) or not 1 <= len(expression) <= MAX_EXPRESSION_LENGTH:
+        raise FormulaError("Formula must be between 1 and 700 characters.")
+    try:
+        tree = ast.parse(expression, mode="eval")
+    except (SyntaxError, ValueError, RecursionError) as exc:
+        raise FormulaError("Formula syntax is invalid.") from exc
+    nodes = list(ast.walk(tree))
+    if len(nodes) > MAX_AST_NODES:
+        raise FormulaError("Formula is too complex.")
+    for node in nodes:
+        if not isinstance(node, _ALLOWED_NODES):
+            raise FormulaError("Formula syntax is not permitted.")
+        if isinstance(node, ast.Name) and not NAME_PATTERN.fullmatch(node.id):
+            raise FormulaError("Invalid name in expression.")
+        if isinstance(node, ast.Constant):
+            if type(node.value) not in (bool, int, float):
+                raise FormulaError("Only numeric/boolean literals are allowed.")
+            if type(node.value) is not bool:
+                as_decimal(str(node.value))
+        if isinstance(node, ast.Call):
+            if not isinstance(node.func, ast.Name) or node.func.id not in {
+                "min", "max", "abs", "round_vnd"
+            } or node.keywords:
+                raise FormulaError("Unapproved function call.")
+            nargs = len(node.args)
+            if not (
+                (node.func.id in {"min", "max"} and 1 <= nargs <= 10)
+                or (node.func.id in {"abs", "round_vnd"} and nargs == 1)
+            ):
+                raise FormulaError("Invalid function argument count.")
+    return tree
+
+
 def evaluate(expression, variables):
     """Evaluate one formula from explicitly supplied, strictly numeric values.
 
@@ -138,8 +183,7 @@ def evaluate(expression, variables):
       'min(taxable, ceiling) * rate if taxable > 0 else 0'
     Rates and ceilings must be supplied via approved rules/inputs.
     """
-    if not isinstance(expression, str) or not 1 <= len(expression) <= MAX_EXPRESSION_LENGTH:
-        raise FormulaError("Formula must be between 1 and 700 characters.")
+    tree = validate_syntax(expression)
     if not isinstance(variables, dict) or len(variables) > 80:
         raise FormulaError("Invalid formula inputs.")
     clean = {}
@@ -147,12 +191,6 @@ def evaluate(expression, variables):
         if not isinstance(key, str) or not NAME_PATTERN.fullmatch(key):
             raise FormulaError("Invalid variable name.")
         clean[key] = as_decimal(value)
-    try:
-        tree = ast.parse(expression, mode="eval")
-    except (SyntaxError, ValueError, RecursionError) as exc:
-        raise FormulaError("Formula syntax is invalid.") from exc
-    if sum(1 for _ in ast.walk(tree)) > MAX_AST_NODES:
-        raise FormulaError("Formula is too complex.")
     try:
         return _number(_calculate(tree.body, clean, 0))
     except (InvalidOperation, OverflowError, RecursionError) as exc:
