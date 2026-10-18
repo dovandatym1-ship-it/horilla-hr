@@ -30,10 +30,11 @@ class Migration(migrations.Migration):
                 ("status", models.CharField(choices=[("draft", "Bản nháp"), ("review", "Chờ duyệt"), ("approved", "Đã duyệt"), ("retired", "Ngừng áp dụng")], default="draft", max_length=12)),
                 ("approved_at", models.DateTimeField(blank=True, null=True)),
                 ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("created_by", models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name="created_vn_formula_rules", to=settings.AUTH_USER_MODEL)),
                 ("approved_by", models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name="approved_vn_formula_rules", to=settings.AUTH_USER_MODEL)),
                 ("company", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name="vn_formula_rules", to="base.company")),
             ],
-            options={"ordering": ["company_id", "code", "-version"]},
+            options={"ordering": ["company_id", "code", "-version"], "permissions": [("approve_formularule", "Can approve Vietnam payroll formulas"), ("preview_formularule", "Can preview Vietnam payroll formulas")]},
         ),
         migrations.AddConstraint(
             model_name="formularule",
