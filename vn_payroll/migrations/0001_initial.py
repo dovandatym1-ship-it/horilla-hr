@@ -25,6 +25,7 @@ class Migration(migrations.Migration):
                 ("effective_to", models.DateField(blank=True, null=True)),
                 ("legal_reference", models.TextField(blank=True)),
                 ("parameters", models.JSONField(blank=True, default=dict)),
+                ("input_names", models.JSONField(blank=True, default=list)),
                 ("approved_at", models.DateTimeField(blank=True, null=True)),
                 ("created_at", models.DateTimeField(auto_now_add=True)),
                 ("approved_by", models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name="+", to=settings.AUTH_USER_MODEL)),
