@@ -100,6 +100,9 @@ INSTALLED_APPS = [
     "horilla_ldap",
     "horilla_dbtemplate",
     "horilla_tour",
+    # Vietnam extensions keep legal/finance policies outside upstream models.
+    "vn_hrm",
+    "vn_payroll",
 ]
 
 # ========================================
