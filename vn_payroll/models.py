@@ -206,3 +206,31 @@ class FormulaRule(models.Model):
                 places=self.decimal_places,
             )
         return evaluate(self.expression, inputs, places=self.decimal_places)
+
+
+class FormulaAuditEvent(models.Model):
+    """Append-only workflow event; never includes raw payroll/PII inputs."""
+
+    company = models.ForeignKey("base.Company", on_delete=models.PROTECT)
+    rule = models.ForeignKey(
+        FormulaRule, on_delete=models.PROTECT, related_name="audit_events"
+    )
+    actor = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT
+    )
+    action = models.CharField(max_length=24)
+    before_status = models.CharField(max_length=12, blank=True)
+    after_status = models.CharField(max_length=12)
+    created_at = models.DateTimeField(auto_now_add=True)
+    objects = FormulaRuleManager("company")
+
+    class Meta:
+        ordering = ["-created_at", "-pk"]
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            raise PermissionDenied("Sự kiện audit không được sửa.")
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise PermissionDenied("Không được xóa nhật ký quy tắc.")
