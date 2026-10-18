@@ -11,6 +11,12 @@ on:
       - "2.0"
   workflow_dispatch:
 
+# Keep only the newest commit under test; a stack of pushes otherwise
+# exhausts concurrent runners while every older job repeats migrations.
+concurrency:
+  group: vn-hrm-integrity-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   vn-checks:
     runs-on: ubuntu-latest
