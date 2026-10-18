@@ -37,7 +37,7 @@ def change_many_payslip_statuses(*, actor, payslip_ids, target_status):
     rows = list(
         Payslip._base_manager.select_related(
             "employee_id__employee_work_info"
-        ).select_for_update().filter(pk__in=payslip_ids).order_by("pk")
+        ).select_for_update(of=("self",)).filter(pk__in=payslip_ids).order_by("pk")
     )
     if len(rows) != len(payslip_ids):
         raise ValidationError("Có phiếu lương không tồn tại; không cập nhật một phần.")
