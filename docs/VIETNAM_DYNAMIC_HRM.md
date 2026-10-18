@@ -68,7 +68,7 @@ Tại màn hình danh sách → **Tính thử** → nhập dữ liệu JSON gi�
 ]
 ```
 
-Khi thay tỷ lệ, không sửa bộ đã duyệt. Tạo phiên bản mới có hiệu lực, bộ test mới, nguồn căn cứ và người phê duyệt khác. Các kỳ đã Paid giữ snapshot cũ. Phần kết nối snapshot vào Horilla Payroll còn phải được triển khai và UAT trước production.
+Khi thay tỷ lệ, không sửa bộ đã duyệt. Tạo phiên bản mới có `effective_from` muộn hơn và bộ test mới, nguồn căn cứ, người phê duyệt khác. **Cơ chế supersession:** khi có nhiều phiên bản đã duyệt cho cùng công ty/mã, phiên bản có ngày bắt đầu hiệu lực gần nhất nhưng không sau ngày cần tính được chọn. Phiên bản cũ vẫn còn để tra cứu kỳ trước. Không cho phép hai phiên bản được duyệt cùng mã/pháp nhân bắt đầu cùng một ngày. Quy tắc `effective_to` cần được rà soát cẩn thận: phiên bản ngắn hạn hết hiệu lực có thể làm phiên bản cũ còn hiệu lực trở thành bản áp dụng; không dựa vào đó để tự tạo chính sách hồi tố. Các kỳ đã Paid phải giữ snapshot luật/rule version cũ. Phần kết nối snapshot vào Horilla Payroll còn phải được triển khai và UAT trước production.
 
 ### 2.2. Ngôn ngữ biểu thức an toàn
 Hỗ trợ số/nguyên/Decimal, tên biến viết thường, `+`, `-`, `*`, `/`, `<`, `<=`, `>`, `>=`, `==`, `!=`, `and`, `or`, biểu thức `X if condition else Y`, `min(...)`, `max(...)`, `abs(...)`, `round_vnd(...)`. Không hỗ trợ `eval`, `exec`, `import`, attribute access, indexing, comprehension, `pow`, vòng lặp, function tự viết, network access. Tối đa 700 ký tự/100 AST node/20 lớp lồng, giới hạn biên trị số để tránh lỗi tính toán. Dùng số/giá trị tham số ở dạng **chuỗi số thập phân** (ví dụ `"0.08"`) để không nhập sai do số chấm động JSON.
