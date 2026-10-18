@@ -92,6 +92,10 @@ class VietnamPayrollSourceTests(TestCase):
         second = Attendance._base_manager.create(
             employee_id=self.employee, attendance_date=date(2026, 4, 8),
             attendance_validated=True, attendance_overtime_approve=True,
+        )
+        # Horilla's Attendance.save() re-computes approved seconds from its
+        # source fields; set the reviewed fixture value after initial save.
+        Attendance._base_manager.filter(pk=second.pk).update(
             approved_overtime_second=7200,
         )
         snapshot = period_sources(
