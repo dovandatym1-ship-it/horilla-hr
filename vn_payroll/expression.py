@@ -119,3 +119,51 @@ def evaluate(expression, variables, *, places=0):
         return result.quantize(quantum, rounding=ROUND_HALF_UP)
     except (InvalidOperation, Overflow) as exc:
         raise InvalidFormula("Rounding failed") from exc
+
+
+def validate_expression(expression, variable_names):
+    """Validate grammar and declared variables without evaluating sample values."""
+    if not isinstance(expression, str) or not expression.strip() or len(expression) > MAX_FORMULA_LENGTH:
+        raise InvalidFormula("Formula is missing or too long")
+    if not isinstance(variable_names, (list, tuple, set)):
+        raise InvalidFormula("Invalid variable declarations")
+    try:
+        tree = ast.parse(expression, mode="eval")
+    except (SyntaxError, ValueError) as exc:
+        raise InvalidFormula("Invalid expression syntax") from exc
+    if sum(1 for _ in ast.walk(tree)) > MAX_AST_NODES:
+        raise InvalidFormula("Formula is too complex")
+
+    def validate(node, depth=0):
+        if depth > MAX_DEPTH:
+            raise InvalidFormula("Formula nesting limit exceeded")
+        if isinstance(node, ast.Expression):
+            return validate(node.body, depth + 1)
+        if isinstance(node, ast.Constant) and type(node.value) in (int, float):
+            source = ast.get_source_segment(expression, node)
+            if source is None or not re.fullmatch(
+                r"(?:[0-9][0-9_]*)(?:\.[0-9_]+)?(?:[eE][+-]?[0-9_]+)?|\.[0-9_]+(?:[eE][+-]?[0-9_]+)?",
+                source,
+            ):
+                raise InvalidFormula("Invalid numeric literal")
+            _decimal(source.replace("_", ""))
+            return
+        if isinstance(node, ast.Name) and node.id in variable_names:
+            return
+        if isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.UAdd, ast.USub)):
+            return validate(node.operand, depth + 1)
+        if isinstance(node, ast.BinOp) and isinstance(node.op, (ast.Add, ast.Sub, ast.Mult, ast.Div)):
+            validate(node.left, depth + 1)
+            validate(node.right, depth + 1)
+            return
+        if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and not node.keywords:
+            if node.func.id == "abs" and len(node.args) == 1:
+                return validate(node.args[0], depth + 1)
+            if node.func.id in ("min", "max") and 1 <= len(node.args) <= 10:
+                for arg in node.args:
+                    validate(arg, depth + 1)
+                return
+        raise InvalidFormula("Unsupported formula operation or undeclared variable")
+
+    validate(tree)
+    return True
