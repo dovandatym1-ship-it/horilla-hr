@@ -59,3 +59,22 @@ python manage.py test horilla.tests.test_vietnam_localization --noinput
 ```
 
 Bản dịch cần giữ nguyên placeholder, cấu trúc giao diện và hỗ trợ chuyển ngôn ngữ; tránh thay thế hàng loạt chuỗi không qua gettext vì có thể làm sai thông tin/logic nghiệp vụ.
+
+## Kiểm kê mở rộng 18/10/2026 — tiếp tục Việt hóa (chưa nghiệm thu 100%)
+
+Báo cáo xuất trực tiếp từ GitHub Actions artifact `vietnam-localization-audit` tại commit `a3142d05`:
+
+| Chỉ số quét tĩnh | Giá trị đã đo |
+|---|---:|
+| Số khóa gettext Django + JavaScript được tham chiếu | 8.591 |
+| Số khóa có bản dịch tương ứng | 1.772 |
+| Tỷ lệ bao phủ nguồn gettext đơn giản | **20,63%** |
+| Số khóa Django còn thiếu | **6.819** |
+| Số khóa JavaScript `gettext()` còn thiếu | **0** |
+| Vị trí HTML được đánh dấu nghi vấn chưa bọc i18n | **319** |
+
+Các số liệu trên là **ảnh chụp thời điểm của CI**, không phải tỷ lệ màn hình đã dịch. Sau snapshot, còn có các bản dịch Django và sửa template tiếp tục được commit. Đây là phạm vi của công cụ quét tĩnh: `blocktrans`, JS nối chuỗi, nội dung phát sinh khi chạy, email, PDF/Excel và các thuộc tính động vẫn cần kiểm kê riêng.
+
+Đã sửa trực tiếp các trang HTML đăng nhập/đặt lại mật khẩu tĩnh (`auth/login.html`, `static/auth/*.html`) và template `templates/reset_send.html`, nhãn ảnh lỗi 404. Đã thêm kiểm thử runtime `gettext()` với `translation.override("vi")` và chuyển `en`; workflow CI yêu cầu không còn thiếu khóa JavaScript `gettext()` theo chỉ số quét tĩnh.
+
+**Điều kiện Done:** Sau khi nhập đầy đủ nguồn gettext còn thiếu, chạy lại `compilemessages`, kiểm tra thay đổi ngôn ngữ trong trình duyệt, không còn văn bản tiếng Anh ngoài tên riêng/mã kỹ thuật, kiểm tra tooltip/aria, email, báo cáo PDF/Excel, desktop/mobile và kiểm thử theo từng vai trò. Chỉ khi đó mới ghi Việt hóa giao diện 100%; không được đánh đồng catalog có `msgstr` với kết quả UAT.
