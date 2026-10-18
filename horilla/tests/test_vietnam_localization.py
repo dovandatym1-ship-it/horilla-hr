@@ -169,3 +169,18 @@ class VietnameseCatalogueIntegrityTests(SimpleTestCase):
             )
         )
 
+    def test_technical_icon_and_css_tokens_are_not_localized(self):
+        catalogue = self._translations("django.po")
+        for token in (
+            "caret down outline", "library outline", "add sharp",
+            "list outline", "grid outline", "cloud upload",
+            "chevron back outline", "chevron forward outline",
+            "mail open outline", "oh-link--secondary",
+        ):
+            with self.subTest(token=token):
+                self.assertEqual(catalogue[token], token)
+        with translation.override("vi"):
+            from django.utils.translation import gettext
+
+            self.assertEqual(gettext("grid outline"), "grid outline")
+            self.assertEqual(gettext("oh-link--secondary"), "oh-link--secondary")
