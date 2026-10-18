@@ -45,4 +45,18 @@ class Migration(migrations.Migration):
                 name="vn_formula_company_code_version_unique",
             ),
         ),
+        migrations.CreateModel(
+            name="FormulaAuditEvent",
+            fields=[
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("action", models.CharField(max_length=24)),
+                ("before_status", models.CharField(blank=True, max_length=12)),
+                ("after_status", models.CharField(max_length=12)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("actor", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL)),
+                ("company", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to="base.company")),
+                ("rule", models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name="audit_events", to="vn_payroll.formularule")),
+            ],
+            options={"ordering": ["-created_at", "-pk"]},
+        ),
     ]
