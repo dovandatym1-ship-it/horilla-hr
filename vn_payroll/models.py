@@ -54,6 +54,7 @@ class VNRuleSet(models.Model):
     legal_reference = models.TextField(blank=True)
     parameters = models.JSONField(default=dict, blank=True)
     input_names = models.JSONField(default=list, blank=True)
+    golden_cases = models.JSONField(default=list, blank=True)
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL, null=True, blank=True,
         on_delete=models.PROTECT, related_name="+"
@@ -87,6 +88,11 @@ class VNRuleSet(models.Model):
         if self.effective_to and self.effective_to < self.effective_from:
             raise ValidationError("Ngày hết hiệu lực phải sau ngày bắt đầu.")
         _check_parameters(self.parameters)
+        if not isinstance(self.golden_cases, list) or len(self.golden_cases) > 50:
+            raise ValidationError("Bộ kiểm thử đối soát phải là danh sách tối đa 50 trường hợp.")
+        for case in self.golden_cases:
+            if not isinstance(case, dict) or not isinstance(case.get("inputs"), dict) or not isinstance(case.get("expected"), dict) or not case["expected"]:
+                raise ValidationError("Mỗi tình huống cần inputs và expected không rỗng.")
         if not isinstance(self.input_names, list) or len(self.input_names) > 80:
             raise ValidationError("Danh sách biến đầu vào phải chứa tối đa 80 tên.")
         reserved = set(self.parameters) | {"min", "max", "abs", "round_vnd"}
@@ -117,7 +123,7 @@ class VNRuleSet(models.Model):
                 # Permit retirement only; never overwrite approved evidence.
                 immutable = (
                     "company_id", "code", "version", "title", "effective_from",
-                    "effective_to", "legal_reference", "parameters", "input_names",
+                    "effective_to", "legal_reference", "parameters", "input_names", "golden_cases",
                     "created_by_id", "approved_by_id", "approved_at",
                 )
                 if any(getattr(old, key) != getattr(self, key) for key in immutable):
@@ -153,6 +159,26 @@ class VNRuleSet(models.Model):
                     f"Công thức {line.code} có biến chưa khai báo/tính: {sorted(missing)}"
                 )
             known.add(line.code)
+
+    def validate_golden_cases(self):
+        """Require financial-owner supplied synthetic fixtures to match exactly."""
+        from vn_payroll.services import preview_ruleset
+
+        if not self.golden_cases:
+            raise ValidationError("Cần ít nhất một bộ kiểm thử đối soát trước khi duyệt.")
+        for index, case in enumerate(self.golden_cases, start=1):
+            try:
+                result = preview_ruleset(self, case["inputs"])
+                amounts = {item["code"]: item["amount"] for item in result["lines"]}
+                for code, expected in case["expected"].items():
+                    if code not in amounts:
+                        raise ValidationError(f"Golden case {index}: không có dòng {code}.")
+                    if amounts[code] != as_decimal(expected):
+                        raise ValidationError(
+                            f"Golden case {index}: dòng {code} không bằng kết quả kỳ vọng."
+                        )
+            except (FormulaError, KeyError, TypeError) as exc:
+                raise ValidationError(f"Golden case {index} bị lỗi: {exc}") from exc
 
     def approve(self, approver):
         if self.status != "review":
