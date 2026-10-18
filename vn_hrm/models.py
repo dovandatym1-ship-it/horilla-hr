@@ -15,6 +15,8 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
 
+from base.horilla_company_manager import HorillaCompanyManager
+
 
 class VNEmployeeLegalProfile(models.Model):
     employee = models.OneToOneField(
@@ -41,6 +43,8 @@ class VNEmployeeLegalProfile(models.Model):
     verified_at = models.DateTimeField(null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = HorillaCompanyManager("company")
 
     class Meta:
         verbose_name = "Hồ sơ pháp lý nhân viên Việt Nam"
@@ -89,6 +93,8 @@ class VNDependent(models.Model):
     evidence_ref = models.CharField(max_length=200, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    objects = HorillaCompanyManager("company")
+
     class Meta:
         verbose_name = "Người phụ thuộc"
         verbose_name_plural = "Người phụ thuộc"
@@ -136,6 +142,8 @@ class VNContractAmendment(models.Model):
     approved_at = models.DateTimeField(null=True, blank=True)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = HorillaCompanyManager("company")
 
     class Meta:
         constraints = [
@@ -200,6 +208,8 @@ class VNAttendanceCorrection(models.Model):
     reviewed_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    objects = HorillaCompanyManager("company")
+
     class Meta:
         verbose_name = "Đề nghị điều chỉnh chấm công"
         verbose_name_plural = "Đề nghị điều chỉnh chấm công"
@@ -235,6 +245,8 @@ class VNLeaveLedgerEntry(models.Model):
     units = models.DecimalField(max_digits=9, decimal_places=2)
     reason = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = HorillaCompanyManager("company")
 
     class Meta:
         constraints = [
