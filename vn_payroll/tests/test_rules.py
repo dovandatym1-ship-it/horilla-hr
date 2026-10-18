@@ -76,3 +76,49 @@ class VNRuleBookTests(TestCase):
                 rule_set=self.book, code="hack", position=40,
                 category="net", label="Unsafe", expression="salary.__class__",
             )
+
+    def test_bad_golden_case_blocks_approval(self):
+        self.book.golden_cases = [
+            {"inputs": {"salary": "10000000"}, "expected": {"net": "8999999"}}
+        ]
+        self.book.save()
+        self.book.status = "review"
+        self.book.save()
+        with self.assertRaises(ValidationError):
+            self.book.approve(self.approver)
+        self.book.refresh_from_db()
+        self.assertEqual(self.book.status, "review")
+
+    def test_forward_reference_blocks_approval(self):
+        VNPayRule.objects.create(
+            rule_set=self.book, code="bad_forward", position=40,
+            category="deduction", label="Không có biến", expression="future_result + 1"
+        )
+        self.book.status = "review"
+        self.book.save()
+        with self.assertRaises(ValidationError):
+            self.book.approve(self.approver)
+
+    def test_company_without_approved_rulebook_fails_closed(self):
+        second_company = make_company(name="Second VN Rule Company", address="Other")
+        self.book.status = "review"
+        self.book.save()
+        self.book.approve(self.approver)
+        with self.assertRaises(ValidationError):
+            approved_ruleset_for(second_company.pk, "monthly_payroll", date(2026, 2, 1))
+
+    def test_approved_rule_has_no_overlapping_effective_version(self):
+        self.book.status = "review"
+        self.book.save()
+        self.book.approve(self.approver)
+        second = VNRuleSet(
+            company=self.company, code="monthly_payroll", version=2,
+            title="Overlapping payroll version", effective_from=date(2026, 2, 1),
+            legal_reference="Review", status="approved",
+            approved_by=self.approver,
+            approved_at=self.book.approved_at,
+            created_by=self.maker,
+            input_names=["salary"], parameters={"rate": "0.11"},
+        )
+        with self.assertRaises(ValidationError):
+            second.save()
