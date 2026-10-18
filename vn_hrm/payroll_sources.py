@@ -147,16 +147,27 @@ def period_sources(
     attendance = Attendance._base_manager.filter(
         employee_id=employee_id, attendance_date__gte=start_date,
         attendance_date__lte=end_date,
-        attendance_validated=True, attendance_overtime_approve=True,
-    ).only("pk", "approved_overtime_second")
+    ).only(
+        "pk", "attendance_validated", "attendance_overtime_approve",
+        "approved_overtime_second",
+    ).order_by("pk")
     ot_seconds = 0
     attendance_ids = []
+    approved_ot_ids = []
     for entry in attendance:
-        secs = entry.approved_overtime_second
-        if not isinstance(secs, int) or isinstance(secs, bool) or secs < 0:
-            raise ValidationError("Số giây OT được duyệt không hợp lệ.")
-        ot_seconds += secs
+        # A validated working day does not need approved overtime. Filtering
+        # by both flags silently dropped normal working days from the source.
+        if not entry.attendance_validated:
+            raise ValidationError(
+                "Kỳ lương có bản ghi chấm công chưa xác nhận; phải chốt công trước."
+            )
         attendance_ids.append(entry.pk)
+        if entry.attendance_overtime_approve:
+            secs = entry.approved_overtime_second
+            if not isinstance(secs, int) or isinstance(secs, bool) or secs < 0:
+                raise ValidationError("Số giây OT được duyệt không hợp lệ.")
+            ot_seconds += secs
+            approved_ot_ids.append(entry.pk)
     ot_hours = Decimal(ot_seconds) / Decimal("3600")
 
     events = VNLeaveLedgerEvent._base_manager.filter(
@@ -170,6 +181,7 @@ def period_sources(
         "vn_approved_leave_days": leave_days,
         "vn_unpaid_leave_days": unpaid_leave,
         "vn_approved_ot_hours": ot_hours,
+        "vn_validated_attendance_days": Decimal(len(attendance_ids)),
         "vn_leave_balance": balance,
     }
     evidence = {
@@ -180,7 +192,9 @@ def period_sources(
         "wage_version": wage["version"],
         "wage_type": wage["wage_type"],
         "leave_request_ids": sorted(leave_ids),
+        "validated_attendance_ids": sorted(attendance_ids),
         "approved_attendance_ids": sorted(attendance_ids),
+        "approved_ot_attendance_ids": sorted(approved_ot_ids),
         "inputs": {key: str(val) for key, val in inputs.items()},
     }
     digest = sha256(json.dumps(
