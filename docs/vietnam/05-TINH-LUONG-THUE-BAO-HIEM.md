@@ -140,3 +140,9 @@ Nguồn: https://xaydungchinhsach.chinhphu.vn/nghi-dinh-so-293-2025-nd-cp-quy-di
 **Lưu ý tính cập nhật luật:** các con số và văn bản ở mục 4–6 là phiên bản tài liệu đang chờ người có trách nhiệm xác nhận hiệu lực/diễn giải từng đối tượng và kỳ tính; không tự động tạo tỷ lệ/tax rule production từ bảng này. Nếu có văn bản sửa đổi, phân loại/ưu tiên theo legal register mục 06 và Decision Log, ghi rõ nguồn chính thức.
 
 Chi tiết [RuleSet field validation](10-FIELD-LEVEL-VALIDATION-MATRIX.md), [Payroll workflow](13-WORKFLOW-STATE-TRANSITIONS.md), [test oracle](15-TRACEABILITY-UAT-MATRIX.md), [integration GAP](16-CODE-TO-DOC-GAP.md).
+
+
+### 11.1. Kết quả đối chiếu nguồn tại ngày 18/10/2026
+- Tham khảo [Công báo Luật 109/2025/QH15](https://congbao.chinhphu.vn/van-ban/luat-so-109-2025-qh15-468671.htm) và [hướng dẫn giảm trừ Chính phủ](https://xaydungchinhsach.chinhphu.vn/quy-dinh-giam-tru-gia-canh-119260703144038062.htm): xác nhận các mức giảm trừ gia cảnh 15,5 triệu/tháng và 6,2 triệu/tháng/người phụ thuộc theo trường hợp pháp luật cho phép.
+- Tham khảo [Nghị định 293/2025/NĐ-CP](https://xaydungchinhsach.chinhphu.vn/nghi-dinh-so-293-2025-nd-cp-quy-dinh-muc-luong-toi-thieu-doi-voi-nguoi-lao-dong-lam-viec-theo-hop-dong-lao-dong-119251110172808433.htm): xác nhận các mức lương tối thiểu 2026 trong bảng mục 5, nhưng vùng thực tế phải xác định theo địa điểm áp dụng có hiệu lực.
+- Tham khảo [19/VBHN-VPQH – Công báo 2026](https://congbao.chinhphu.vn/van-ban-dang-cong-bao/van-phong-quoc-hoi-c47/trang-15.htm) để xử lý mâu thuẫn trạng thái Luật BHXH giữa các cổng. Tỷ lệ, trần/sàn, nhóm lao động và thời điểm BH là **POLICY OPEN** cho đến khi Pháp chế/Kế toán duyệt và có Golden Cases.
