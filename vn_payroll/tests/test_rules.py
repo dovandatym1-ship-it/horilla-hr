@@ -13,8 +13,8 @@ from vn_payroll.services import approved_ruleset_for, preview_ruleset
 class VNRuleBookTests(TestCase):
     def setUp(self):
         self.company = make_company()
-        self.maker = make_user()
-        self.approver = make_user()
+        self.maker = make_user("vn_rule_maker")
+        self.approver = make_user("vn_rule_checker")
         self.book = VNRuleSet.objects.create(
             company=self.company, code="monthly_payroll", title="Bảng lương tùy chỉnh",
             version=1, effective_from=date(2026, 1, 1),
