@@ -34,6 +34,8 @@ jobs:
         run: |
           python scripts/generate_vi_draft.py --out /tmp/vn-i18n-draft --batch-size 8 --model-id VietAI/envit5-translation
           python -m json.tool /tmp/vn-i18n-draft/review_report.json >/dev/null
+          python scripts/qa_vi_draft.py --source /tmp/vn-i18n-draft/django.draft.po --out /tmp/vn-i18n-draft
+          python -m json.tool /tmp/vn-i18n-draft/quality_report.json > /dev/null
           cat /tmp/vn-i18n-draft/review_report.json | head -n 16
       - name: Upload translated draft and QA report
         if: always()
