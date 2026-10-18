@@ -1,0 +1,88 @@
+# Vietnamese notifications package translations — reviewed HRM terms
+msgid ""
+msgstr ""
+"Language: vi\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Mark selected notifications as unread"
+msgstr "Đánh dấu các thông báo đã chọn là chưa đọc"
+
+msgid "Notifications"
+msgstr "Thông báo"
+
+msgid "level"
+msgstr "mức độ"
+
+msgid "recipient"
+msgstr "người nhận"
+
+msgid "unread"
+msgstr "chưa đọc"
+
+msgid "actor content type"
+msgstr "loại nội dung người thực hiện"
+
+msgid "actor object id"
+msgstr "mã đối tượng người thực hiện"
+
+msgid "actor"
+msgstr "người thực hiện"
+
+msgid "verb"
+msgstr "hành động"
+
+msgid "description"
+msgstr "mô tả"
+
+msgid "target content type"
+msgstr "loại nội dung đích"
+
+msgid "target object id"
+msgstr "mã đối tượng đích"
+
+msgid "target"
+msgstr "đối tượng đích"
+
+msgid "action object content type"
+msgstr "loại nội dung đối tượng thao tác"
+
+msgid "action object object id"
+msgstr "mã đối tượng thao tác"
+
+msgid "action object"
+msgstr "đối tượng thao tác"
+
+msgid "timestamp"
+msgstr "thời điểm"
+
+msgid "public"
+msgstr "công khai"
+
+msgid "deleted"
+msgstr "đã xóa"
+
+msgid "emailed"
+msgstr "đã gửi email"
+
+msgid "data"
+msgstr "dữ liệu"
+
+msgid "Notification"
+msgstr "Thông báo"
+
+msgid "%(actor)s %(verb)s %(action_object)s on %(target)s %(timesince)s ago"
+msgstr "%(actor)s %(verb)s %(action_object)s trên %(target)s cách đây %(timesince)s"
+
+msgid "%(actor)s %(verb)s %(target)s %(timesince)s ago"
+msgstr "%(actor)s %(verb)s %(target)s cách đây %(timesince)s"
+
+msgid "%(actor)s %(verb)s %(action_object)s %(timesince)s ago"
+msgstr "%(actor)s %(verb)s %(action_object)s cách đây %(timesince)s"
+
+msgid "%(actor)s %(verb)s %(timesince)s ago"
+msgstr "%(actor)s %(verb)s cách đây %(timesince)s"
+
+msgid "Make a notification"
+msgstr "Tạo thông báo"
