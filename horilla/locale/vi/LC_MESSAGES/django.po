@@ -7288,3 +7288,987 @@ msgstr "Đã gửi email đặt lại mật khẩu thành công"
 #: vietnam-ui-password-reset-and-error
 msgid "Only work with postgresql database."
 msgstr "Chức năng này chỉ hỗ trợ cơ sở dữ liệu PostgreSQL."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Approved Request"
+msgstr "Yêu cầu đã phê duyệt"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Approved Request?"
+msgstr "Yêu cầu đã được duyệt?"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Approved leave days"
+msgstr "Số ngày nghỉ được duyệt"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Approved leave in period"
+msgstr "Ngày nghỉ đã duyệt trong kỳ"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Approved overtime"
+msgstr "Giờ làm thêm được duyệt"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Approved request"
+msgstr "Yêu cầu đã duyệt"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Approved vs pending hours"
+msgstr "Giờ đã duyệt và đang chờ"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Approved!"
+msgstr "Đã phê duyệt!"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Apr"
+msgstr "Thg 4"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "April"
+msgstr "Tháng Tư"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "As CSV"
+msgstr "Dạng CSV"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "As Excel"
+msgstr "Dạng Excel"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "As PDF"
+msgstr "Dạng PDF"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Allocated Date"
+msgstr "Ngày cấp phát tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Allocation"
+msgstr "Cấp phát tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Allocation / Employee"
+msgstr "Cấp phát tài sản / Nhân viên"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Allocations"
+msgstr "Các đợt cấp phát tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Batch"
+msgstr "Lô tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Batch Number"
+msgstr "Số lô tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Batches"
+msgstr "Các lô tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Categories"
+msgstr "Danh mục tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Category Creation"
+msgstr "Tạo danh mục tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Category Duplicate"
+msgstr "Nhân bản danh mục tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Category Update"
+msgstr "Cập nhật danh mục tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Creation"
+msgstr "Tạo tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Details"
+msgstr "Chi tiết tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Document"
+msgstr "Tài liệu tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Documents"
+msgstr "Các tài liệu tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Duplicate"
+msgstr "Nhân bản tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Fine"
+msgstr "Khoản phạt tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset History"
+msgstr "Lịch sử tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Information"
+msgstr "Thông tin tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Item"
+msgstr "Tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Items"
+msgstr "Các tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Name"
+msgstr "Tên tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Register"
+msgstr "Sổ quản lý tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Renewal"
+msgstr "Gia hạn tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Reports"
+msgstr "Báo cáo tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Request"
+msgstr "Yêu cầu cấp tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Request / Employee"
+msgstr "Yêu cầu tài sản / Nhân viên"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Request / Status"
+msgstr "Yêu cầu tài sản / Trạng thái"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Request Date"
+msgstr "Ngày yêu cầu tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Requests"
+msgstr "Các yêu cầu tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Requests To Approve"
+msgstr "Yêu cầu tài sản chờ duyệt"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Return"
+msgstr "Hoàn trả tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Return Form"
+msgstr "Biểu mẫu hoàn trả tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Return Successful!."
+msgstr "Hoàn trả tài sản thành công!"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Returned Successfully..."
+msgstr "Đã hoàn trả tài sản thành công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Rule"
+msgstr "Quy tắc tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Rules"
+msgstr "Các quy tắc tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Service Request"
+msgstr "Yêu cầu bảo trì tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Service Requests"
+msgstr "Các yêu cầu bảo trì tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Update"
+msgstr "Cập nhật tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Updated"
+msgstr "Đã cập nhật tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset User"
+msgstr "Người sử dụng tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset User Badge Id"
+msgstr "Mã nhân viên sử dụng tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset Warranty Expiry Date"
+msgstr "Ngày hết hạn bảo hành tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset allocated Successfully"
+msgstr "Cấp phát tài sản thành công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset allocated successfully!."
+msgstr "Cấp phát tài sản thành công!"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset allocation not found."
+msgstr "Không tìm thấy thông tin cấp phát tài sản."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset assignment not found"
+msgstr "Không tìm thấy thông tin giao tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset assignment not found."
+msgstr "Không tìm thấy thông tin giao tài sản."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset category"
+msgstr "Danh mục tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset category deleted."
+msgstr "Đã xóa danh mục tài sản."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset category description"
+msgstr "Mô tả danh mục tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset category name"
+msgstr "Tên danh mục tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset category not found"
+msgstr "Không tìm thấy danh mục tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset created successfully"
+msgstr "Đã tạo tài sản thành công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset deleted successfully"
+msgstr "Đã xóa tài sản thành công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset fine added"
+msgstr "Đã thêm khoản phạt tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset is in use"
+msgstr "Tài sản đang được sử dụng"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset items updated"
+msgstr "Đã cập nhật danh sách tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset list"
+msgstr "Danh sách tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset lot number"
+msgstr "Số lô tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset name"
+msgstr "Tên tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset not found"
+msgstr "Không tìm thấy tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset purchase cost"
+msgstr "Giá mua tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset purchase date"
+msgstr "Ngày mua tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset reassigned successfully."
+msgstr "Đã bàn giao lại tài sản thành công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset report added successfully."
+msgstr "Đã thêm báo cáo tài sản thành công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset request created!"
+msgstr "Đã tạo yêu cầu tài sản!"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset request not found."
+msgstr "Không tìm thấy yêu cầu tài sản."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset status"
+msgstr "Trạng thái tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset tracking"
+msgstr "Theo dõi tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Asset updated successfully"
+msgstr "Đã cập nhật tài sản thành công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "AssetRequest not found"
+msgstr "Không tìm thấy yêu cầu tài sản"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assets by Status"
+msgstr "Tài sản theo trạng thái"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assets tracked"
+msgstr "Tài sản đã theo dõi"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign Condition Images"
+msgstr "Gán ảnh điều kiện"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign Leave"
+msgstr "Phân bổ ngày phép"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign Leave Type"
+msgstr "Phân bổ loại nghỉ phép"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign Leaves"
+msgstr "Phân bổ phép"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign Shifts"
+msgstr "Phân ca"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign a structure"
+msgstr "Gán cơ cấu lương"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign shift"
+msgstr "Phân ca"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign to Companies"
+msgstr "Gán cho công ty"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assign user groups"
+msgstr "Gán nhóm người dùng"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned "
+msgstr "Đã phân công "
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned As"
+msgstr "Được phân công vai trò"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned By"
+msgstr "Người phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned Date"
+msgstr "Ngày được phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned Date From"
+msgstr "Ngày bắt đầu phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned Date To"
+msgstr "Ngày kết thúc phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned On"
+msgstr "Được phân công ngày"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned Shifts"
+msgstr "Các ca đã phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned To"
+msgstr "Được phân công cho"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned by"
+msgstr "Người phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned date"
+msgstr "Ngày phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigned leave not found."
+msgstr "Không tìm thấy phép đã phân bổ."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assignee Badge Id"
+msgstr "Mã nhân viên được giao"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assignee Department"
+msgstr "Phòng ban được giao"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assignee Job Position"
+msgstr "Vị trí được giao"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assignee Job Role"
+msgstr "Vai trò được giao"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assignee removed successfully."
+msgstr "Đã bỏ người được giao thành công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assignees"
+msgstr "Người được giao"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigner"
+msgstr "Người giao việc"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assigning Type"
+msgstr "Loại phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assignment Ageing (days held)"
+msgstr "Số ngày đã được giao"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Assignments"
+msgstr "Các phân công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "At Work"
+msgstr "Đang làm việc"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "At work"
+msgstr "Đang làm việc"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attach files"
+msgstr "Đính kèm tệp"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attachment Image"
+msgstr "Ảnh đính kèm"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attachment deleted"
+msgstr "Đã xóa tệp đính kèm"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attachment not found"
+msgstr "Không tìm thấy tệp đính kèm"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attachments added"
+msgstr "Đã thêm tệp đính kèm"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance & Overtime"
+msgstr "Chấm công và làm thêm giờ"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Added"
+msgstr "Đã thêm bản ghi chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Analytics"
+msgstr "Phân tích chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Batches"
+msgstr "Các đợt chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Break Point"
+msgstr "Ngưỡng chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Condition"
+msgstr "Điều kiện chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Conflict Resolution"
+msgstr "Xử lý xung đột chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Conflict Resolutions"
+msgstr "Các xử lý xung đột chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Daily Hours"
+msgstr "Giờ công từng ngày"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Daily Overview"
+msgstr "Tổng quan chấm công hằng ngày"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Dates"
+msgstr "Các ngày chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Day"
+msgstr "Ngày chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Days"
+msgstr "Số ngày chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Does not exists.."
+msgstr "Không tồn tại bản ghi chấm công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance From"
+msgstr "Chấm công từ ngày"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Percentage"
+msgstr "Tỷ lệ chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Rate"
+msgstr "Tỷ lệ chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Records"
+msgstr "Các bản ghi chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Records by Department"
+msgstr "Bản ghi chấm công theo phòng ban"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Report"
+msgstr "Báo cáo chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Reports"
+msgstr "Các báo cáo chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Rules"
+msgstr "Quy tắc chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Summary"
+msgstr "Tổng hợp chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Summary Hours"
+msgstr "Tổng hợp giờ chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Summary Override"
+msgstr "Điều chỉnh tổng hợp chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Summary Overrides"
+msgstr "Các điều chỉnh tổng hợp chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Till"
+msgstr "Chấm công đến ngày"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance To Validate "
+msgstr "Chấm công chờ xác nhận "
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Update Request"
+msgstr "Yêu cầu điều chỉnh chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Updated"
+msgstr "Đã cập nhật chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Updated."
+msgstr "Đã cập nhật chấm công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance Validated"
+msgstr "Chấm công đã xác nhận"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance account added"
+msgstr "Đã thêm tài khoản chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance account added."
+msgstr "Đã thêm tài khoản chấm công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance account updated"
+msgstr "Đã cập nhật tài khoản chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance activity deleted"
+msgstr "Đã xóa hoạt động chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance added."
+msgstr "Đã thêm chấm công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance clock in"
+msgstr "Giờ vào làm"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance clock out"
+msgstr "Giờ tan làm"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance date"
+msgstr "Ngày chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance date from"
+msgstr "Ngày chấm công từ"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance date till"
+msgstr "Ngày chấm công đến"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance deleted successfully"
+msgstr "Đã xóa chấm công thành công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance deleted."
+msgstr "Đã xóa chấm công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance not found"
+msgstr "Không tìm thấy bản ghi chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance not found."
+msgstr "Không tìm thấy bản ghi chấm công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance overtime approve"
+msgstr "Duyệt làm thêm giờ"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance record not found."
+msgstr "Không tìm thấy bản ghi chấm công."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance request created"
+msgstr "Đã tạo yêu cầu chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance request not found"
+msgstr "Không tìm thấy yêu cầu chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendance validated"
+msgstr "Đã xác nhận chấm công"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Attendees"
+msgstr "Người tham dự"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Atwork"
+msgstr "Trong giờ làm việc"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audience"
+msgstr "Đối tượng"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit"
+msgstr "Kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit Activity"
+msgstr "Lịch sử hoạt động kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit Fields"
+msgstr "Các trường kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit Tag Update"
+msgstr "Cập nhật nhãn kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit Tags"
+msgstr "Nhãn kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit Tracking"
+msgstr "Theo dõi kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit Tracking Configuration"
+msgstr "Cấu hình theo dõi kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit Tracking Configurations"
+msgstr "Các cấu hình theo dõi kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit configuration not found."
+msgstr "Không tìm thấy cấu hình kiểm toán."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Audit history"
+msgstr "Lịch sử kiểm toán"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Aug"
+msgstr "Thg 8"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "August"
+msgstr "Tháng Tám"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Authenticate"
+msgstr "Xác thực"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Authentication"
+msgstr "Xác thực"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Authentication Error"
+msgstr "Lỗi xác thực"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Auto Approve OT"
+msgstr "Tự động duyệt OT"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Auto Check Out"
+msgstr "Tự động chấm công ra"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Auto Generate"
+msgstr "Tự động tạo"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Auto Start Tour"
+msgstr "Tự động bắt đầu hướng dẫn"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Auto Validate Till"
+msgstr "Tự động xác nhận đến ngày"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Automatic Check Out Time"
+msgstr "Giờ tự động chấm công ra"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Automation Title"
+msgstr "Tiêu đề tự động hóa"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Automation deleted"
+msgstr "Đã xóa tác vụ tự động"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Automations"
+msgstr "Các tác vụ tự động hóa"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Available Days"
+msgstr "Ngày phép khả dụng"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Available Days to encash"
+msgstr "Ngày phép có thể quy đổi tiền"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Available Fields"
+msgstr "Các trường khả dụng"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Available Leave Days"
+msgstr "Ngày phép khả dụng"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Available Leave Reports"
+msgstr "Báo cáo ngày phép khả dụng"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Available days"
+msgstr "Ngày khả dụng"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Available days to encash"
+msgstr "Ngày có thể quy đổi tiền"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Available for All"
+msgstr "Áp dụng cho tất cả"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Average"
+msgstr "Trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Average rate"
+msgstr "Tỷ lệ trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg Days"
+msgstr "Số ngày trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg Days to Hire"
+msgstr "Số ngày tuyển dụng trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg Hrs/Day"
+msgstr "Số giờ trung bình/ngày"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg Net"
+msgstr "Thực lĩnh trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg Tenure (yrs)"
+msgstr "Thâm niên trung bình (năm)"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg Working Hours"
+msgstr "Giờ làm việc trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg age (days)"
+msgstr "Số ngày trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg days"
+msgstr "Số ngày trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg days to hire"
+msgstr "Số ngày tuyển dụng trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg net pay"
+msgstr "Thực lĩnh trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg span"
+msgstr "Khoảng thời gian trung bình"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Avg tenure (yrs)"
+msgstr "Thâm niên trung bình (năm)"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Back to Template"
+msgstr "Quay lại mẫu"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Back to history"
+msgstr "Quay lại lịch sử"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Back to inputs"
+msgstr "Quay lại dữ liệu nhập"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Back to listings"
+msgstr "Quay lại danh sách"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Backup DB"
+msgstr "Sao lưu cơ sở dữ liệu"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Backup Media"
+msgstr "Sao lưu dữ liệu đa phương tiện"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Bad"
+msgstr "Kém"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Badge"
+msgstr "Mã nhân viên"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Badge ID"
+msgstr "Mã nhân viên"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Badge ID Prefix"
+msgstr "Tiền tố mã nhân viên"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Badge ID is required."
+msgstr "Bắt buộc nhập mã nhân viên."
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Badge Prefix"
+msgstr "Tiền tố mã nhân viên"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Bal."
+msgstr "Số dư"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Balance"
+msgstr "Số dư"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Balance Amount"
+msgstr "Số tiền còn lại"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Balance of CTC"
+msgstr "Phần CTC còn lại"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Balance point(s) to redeem"
+msgstr "Điểm còn lại có thể quy đổi"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Balance points to redeem:"
+msgstr "Số điểm có thể quy đổi:"
+
+#: vietnam-ui-reviewed-asset-attendance
+msgid "Balance updated"
+msgstr "Đã cập nhật số dư"
