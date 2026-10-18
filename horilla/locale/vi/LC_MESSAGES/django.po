@@ -4212,3 +4212,347 @@ msgstr "Giờ 12 tiếng (ví dụ: 06:00 AM hoặc 06:00 PM)"
 #: vietnam-ui-project-settings-payroll
 msgid "24 Hr. (e.g., 06:00 or 18:00)"
 msgstr "Giờ 24 tiếng (ví dụ: 06:00 hoặc 18:00)"
+
+#: vietnam-ui-hrm-extra
+msgid "Publish Roster"
+msgstr "Công bố lịch làm việc"
+
+#: vietnam-ui-hrm-extra
+msgid "All Departments"
+msgstr "Tất cả phòng ban"
+
+#: vietnam-ui-hrm-extra
+msgid "Leave blank to publish all entries from start date"
+msgstr "Để trống để công bố tất cả lịch từ ngày bắt đầu"
+
+#: vietnam-ui-hrm-extra
+msgid "All unpublished roster entries in this range will be made visible to employees."
+msgstr "Tất cả lịch làm việc chưa công bố trong khoảng thời gian này sẽ được hiển thị cho nhân viên."
+
+#: vietnam-ui-hrm-extra
+msgid "Publish"
+msgstr "Công bố"
+
+#: vietnam-ui-hrm-extra
+msgid "Import Roster"
+msgstr "Nhập lịch làm việc"
+
+#: vietnam-ui-hrm-extra
+msgid "Download Roster Template"
+msgstr "Tải tệp mẫu lịch làm việc"
+
+#: vietnam-ui-hrm-extra
+msgid "Please select both dates."
+msgstr "Vui lòng chọn đủ hai ngày."
+
+#: vietnam-ui-hrm-extra
+msgid "End date cannot be before start date."
+msgstr "Ngày kết thúc không được trước ngày bắt đầu."
+
+#: vietnam-ui-hrm-extra
+msgid "Shift 1"
+msgstr "Ca 1"
+
+#: vietnam-ui-hrm-extra
+msgid "Shift 2"
+msgstr "Ca 2"
+
+#: vietnam-ui-hrm-extra
+msgid "Additional Shifts"
+msgstr "Các ca bổ sung"
+
+#: vietnam-ui-hrm-extra
+msgid "Are you sure you want to delete this rotating shift?"
+msgstr "Bạn có chắc chắn muốn xóa lịch xoay ca này không?"
+
+#: vietnam-ui-hrm-extra
+msgid "Work Type 1"
+msgstr "Hình thức làm việc 1"
+
+#: vietnam-ui-hrm-extra
+msgid "Work Type 2"
+msgstr "Hình thức làm việc 2"
+
+#: vietnam-ui-hrm-extra
+msgid "Are you sure you want to delete this rotating work type?"
+msgstr "Bạn có chắc chắn muốn xóa hình thức làm việc luân phiên này không?"
+
+#: vietnam-ui-hrm-extra
+msgid "Group"
+msgstr "Nhóm"
+
+#: vietnam-ui-hrm-extra
+msgid "Reveal"
+msgstr "Hiển thị"
+
+#: vietnam-ui-hrm-extra
+msgid "Collapse"
+msgstr "Thu gọn"
+
+#: vietnam-ui-hrm-extra
+msgid "Are you sure you want to delete this group?"
+msgstr "Bạn có chắc chắn muốn xóa nhóm này không?"
+
+#: vietnam-ui-hrm-extra
+msgid "Job Positions"
+msgstr "Vị trí công việc"
+
+#: vietnam-ui-hrm-extra
+msgid "Are you sure you want to delete this job position?"
+msgstr "Bạn có chắc chắn muốn xóa vị trí công việc này không?"
+
+#: vietnam-ui-hrm-extra
+msgid "Job Roles"
+msgstr "Vai trò công việc"
+
+#: vietnam-ui-hrm-extra
+msgid "Are you sure you want to delete this job role?"
+msgstr "Bạn có chắc chắn muốn xóa vai trò công việc này không?"
+
+#: vietnam-ui-hrm-extra
+msgid "Are you sure you want to delete this department?"
+msgstr "Bạn có chắc chắn muốn xóa phòng ban này không?"
+
+#: vietnam-ui-hrm-extra
+msgid "View in browser"
+msgstr "Xem trên trình duyệt"
+
+#: vietnam-ui-hrm-extra
+msgid "View Leave Request"
+msgstr "Xem đơn nghỉ phép"
+
+#: vietnam-ui-hrm-extra
+msgid "Unsubscribe here"
+msgstr "Hủy đăng ký tại đây"
+
+#: vietnam-ui-hrm-extra
+msgid "Import Leave Balances"
+msgstr "Nhập số dư nghỉ phép"
+
+#: vietnam-ui-hrm-extra
+msgid "User Photo"
+msgstr "Ảnh người dùng"
+
+#: vietnam-ui-hrm-extra
+msgid "Delete image"
+msgstr "Xóa ảnh"
+
+#: vietnam-ui-hrm-extra
+msgid "Profile"
+msgstr "Hồ sơ"
+
+#: vietnam-ui-hrm-extra
+msgid "Name"
+msgstr "Họ tên"
+
+#: vietnam-ui-hrm-extra
+msgid "e.g. Jane Doe"
+msgstr "Ví dụ: Nguyễn Văn An"
+
+#: vietnam-ui-hrm-extra
+msgid "Open Recruitment"
+msgstr "Đợt tuyển dụng đang mở"
+
+#: vietnam-ui-hrm-extra
+msgid "Choose Open Position"
+msgstr "Chọn vị trí đang tuyển"
+
+#: vietnam-ui-hrm-extra
+msgid "Choose Job Position"
+msgstr "Chọn vị trí công việc"
+
+#: vietnam-ui-hrm-extra
+msgid "e.g. janedoe@example.com"
+msgstr "Ví dụ: nguyenvanan@example.com"
+
+#: vietnam-ui-hrm-extra
+msgid "e.g. +1 245 999 999"
+msgstr "Ví dụ: 0912345678"
+
+#: vietnam-ui-hrm-extra
+msgid "Portfolio"
+msgstr "Hồ sơ năng lực"
+
+#: vietnam-ui-hrm-extra
+msgid "e.g. https://www.linktoportfolio.com/"
+msgstr "Ví dụ: https://www.example.com/"
+
+#: vietnam-ui-hrm-extra
+msgid "Change:"
+msgstr "Thay đổi:"
+
+#: vietnam-ui-hrm-extra
+msgid "e.g. Kerala"
+msgstr "Ví dụ: Hà Nội"
+
+#: vietnam-ui-hrm-extra
+msgid "Zip Code"
+msgstr "Mã bưu chính"
+
+#: vietnam-ui-hrm-extra
+msgid "e.g. 611 293"
+msgstr "Ví dụ: 100000"
+
+#: vietnam-ui-hrm-extra
+msgid "Not-Hired"
+msgstr "Không tuyển"
+
+#: vietnam-ui-hrm-extra
+msgid "Hired"
+msgstr "Đã tuyển"
+
+#: vietnam-ui-hrm-extra
+msgid "Converted"
+msgstr "Đã chuyển đổi"
+
+#: vietnam-ui-hrm-extra
+msgid "Specific Employees"
+msgstr "Nhân viên cụ thể"
+
+#: vietnam-ui-hrm-extra
+msgid "Excluded Employees"
+msgstr "Nhân viên không áp dụng"
+
+#: vietnam-ui-hrm-extra
+msgid "Taxable"
+msgstr "Chịu thuế"
+
+#: vietnam-ui-hrm-extra
+msgid "Condition Based"
+msgstr "Dựa trên điều kiện"
+
+#: vietnam-ui-hrm-extra
+msgid "Condition"
+msgstr "Điều kiện"
+
+#: vietnam-ui-hrm-extra
+msgid "Fixed"
+msgstr "Cố định"
+
+#: vietnam-ui-hrm-extra
+msgid "Based On"
+msgstr "Căn cứ tính"
+
+#: vietnam-ui-hrm-extra
+msgid "Rate"
+msgstr "Tỷ lệ"
+
+#: vietnam-ui-hrm-extra
+msgid "Do you want to delete this Allowance?"
+msgstr "Bạn có muốn xóa khoản phụ cấp này không?"
+
+#: vietnam-ui-hrm-extra
+msgid "List"
+msgstr "Danh sách"
+
+#: vietnam-ui-hrm-extra
+msgid "list outline"
+msgstr "Biểu tượng danh sách"
+
+#: vietnam-ui-hrm-extra
+msgid "Card"
+msgstr "Thẻ"
+
+#: vietnam-ui-hrm-extra
+msgid "grid outline"
+msgstr "Biểu tượng dạng lưới"
+
+#: vietnam-ui-hrm-extra
+msgid "Non Taxable"
+msgstr "Không chịu thuế"
+
+#: vietnam-ui-hrm-extra
+msgid "Not Fixed"
+msgstr "Không cố định"
+
+#: vietnam-ui-hrm-extra
+msgid "There are currently no allowances to consider."
+msgstr "Hiện chưa có khoản phụ cấp nào."
+
+#: vietnam-ui-hrm-extra
+msgid "Pretax"
+msgstr "Trước thuế"
+
+#: vietnam-ui-hrm-extra
+msgid "Do you want to delete this deduction?"
+msgstr "Bạn có muốn xóa khoản khấu trừ này không?"
+
+#: vietnam-ui-hrm-extra
+msgid "There are currently no deductions to consider."
+msgstr "Hiện chưa có khoản khấu trừ nào."
+
+#: vietnam-ui-hrm-extra
+msgid "chevron back outline"
+msgstr "Biểu tượng lùi"
+
+#: vietnam-ui-hrm-extra
+msgid "chevron forward outline"
+msgstr "Biểu tượng tiến"
+
+#: vietnam-ui-hrm-extra
+msgid "Wage"
+msgstr "Tiền lương"
+
+#: vietnam-ui-hrm-extra
+msgid "Calculate Leave Amount"
+msgstr "Tính tiền nghỉ phép"
+
+#: vietnam-ui-hrm-extra
+msgid "Deduction Amount For One Leave"
+msgstr "Tiền khấu trừ cho một ngày nghỉ"
+
+#: vietnam-ui-hrm-extra
+msgid "Deduct From Basic Pay"
+msgstr "Khấu trừ từ lương cơ bản"
+
+#: vietnam-ui-hrm-extra
+msgid "Pay Frequency"
+msgstr "Tần suất trả lương"
+
+#: vietnam-ui-hrm-extra
+msgid "There have been no contracts signed."
+msgstr "Chưa có hợp đồng được ký."
+
+#: vietnam-ui-hrm-extra
+msgid "Notice Period"
+msgstr "Thời gian báo trước"
+
+#: vietnam-ui-hrm-extra
+msgid "Default Notice Period"
+msgstr "Thời gian báo trước mặc định"
+
+#: vietnam-ui-hrm-extra
+msgid " Set initial notice period (in days)"
+msgstr " Thiết lập thời gian báo trước ban đầu (ngày)"
+
+#: vietnam-ui-hrm-extra
+msgid "Payroll runs"
+msgstr "Các đợt tính lương"
+
+#: vietnam-ui-hrm-extra
+msgid "Pay period"
+msgstr "Kỳ trả lương"
+
+#: vietnam-ui-hrm-extra
+msgid "Set once for the company. New payroll runs start from these dates."
+msgstr "Thiết lập một lần cho công ty. Các đợt tính lương mới sẽ sử dụng khoảng ngày này."
+
+#: vietnam-ui-hrm-extra
+msgid "When a pay month begins and ends"
+msgstr "Ngày bắt đầu và kết thúc tháng lương"
+
+#: vietnam-ui-hrm-extra
+msgid "This month, with these settings"
+msgstr "Tháng này theo cấu hình hiện tại"
+
+#: vietnam-ui-hrm-extra
+msgid "Period"
+msgstr "Kỳ"
+
+#: vietnam-ui-hrm-extra
+msgid "Pay date"
+msgstr "Ngày trả lương"
+
+#: vietnam-ui-hrm-extra
+msgid "Based on the saved settings. Save to see a change reflected here."
+msgstr "Dựa trên cấu hình đã lưu. Hãy lưu để cập nhật kết quả hiển thị."
