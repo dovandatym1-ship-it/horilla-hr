@@ -9692,3 +9692,11 @@ msgstr "Năm hiện tại"
 #: vietnam-ui-reviewed-common-controls
 msgid "Custom Fields"
 msgstr "Trường tùy chỉnh"
+
+#: vietnam-ui-accessibility-and-onboarding
+msgid "Employee Key Results"
+msgstr "Kết quả then chốt của nhân viên"
+
+#: vietnam-ui-accessibility-and-onboarding
+msgid "and above"
+msgstr "trở lên"
