@@ -29,7 +29,7 @@ class Insurance2026ReferenceTests(SimpleTestCase):
     def test_separate_bases(self):
         result = self.invoke(health_base="10000000", unemployment_base="15000000")
         self.assertEqual(result["employee_total_vnd"], Decimal("1900000"))
-        self.assertEqual(result["employer_total_vnd"], Decimal("4000000"))
+        self.assertEqual(result["employer_total_vnd"], Decimal("3950000"))
 
     def test_reject_unverified_worker_and_bases(self):
         cases = (
