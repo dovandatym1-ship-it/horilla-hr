@@ -3,7 +3,7 @@
 from datetime import date
 
 from django.core.exceptions import ValidationError
-from django.db import transaction
+from django.db.models import Q
 
 from vn_payroll.engine import FormulaError, calculate_lines
 from vn_payroll.models import VNRuleSet
@@ -52,8 +52,7 @@ def approved_ruleset_for(company_id, code, as_of):
         status="approved",
         effective_from__lte=as_of,
     ).filter(
-        __import__("django").db.models.Q(effective_to__isnull=True)
-        | __import__("django").db.models.Q(effective_to__gte=as_of)
+        Q(effective_to__isnull=True) | Q(effective_to__gte=as_of)
     )[:2])
     if len(found) != 1:
         raise ValidationError("Không tìm thấy đúng một bộ công thức đã duyệt có hiệu lực.")
