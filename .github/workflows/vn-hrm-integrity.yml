@@ -65,6 +65,7 @@ jobs:
           python manage.py compilemessages -l vi
           python scripts/audit_vi_locale.py > vietnam-localization-audit.json
           python -m json.tool vietnam-localization-audit.json > /dev/null
+          python -c 'import json; d=json.load(open("vietnam-localization-audit.json")); assert d["missing_gettext_keys"]["djangojs"] == 0, "Missing Vietnamese JavaScript gettext keys: " + str(d["missing_all"]["djangojs"])'
           python -c 'import json; d=json.load(open("vietnam-localization-audit.json")); print("Vietnam static gettext coverage:", d["gettext_coverage"]); print("Missing keys:", d["missing_gettext_keys"]); print("Unwrapped HTML candidates:", d["unwrapped_html_candidates"])'
           python -c 'import json; d=json.load(open("vietnam-localization-audit.json")); print("MISSING_DJANGO_SAMPLE:", json.dumps(d["missing_all"]["django"][:160], ensure_ascii=False)); print("MISSING_JS_SAMPLE:", json.dumps(d["missing_all"]["djangojs"][:80], ensure_ascii=False))'
           echo "Saved source-code localization inventory; not UAT approval."
