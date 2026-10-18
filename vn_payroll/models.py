@@ -118,15 +118,17 @@ class VNRuleSet(models.Model):
                 raise ValidationError("Bộ công thức đã duyệt phải có Golden Cases.")
             self.validate_rule_dependencies()
             self.validate_golden_cases()
-            # Distinct approved versions may not overlap for the same topic.
-            existing = VNRuleSet._base_manager.filter(
-                company_id=self.company_id, code=self.code, status="approved"
-            ).exclude(pk=self.pk)
-            for prior in existing.only("effective_from", "effective_to"):
-                if (self.effective_to is None or prior.effective_from <= self.effective_to) and (
-                    prior.effective_to is None or prior.effective_to >= self.effective_from
-                ):
-                    raise ValidationError("Bộ quy tắc đã duyệt bị chồng khoảng hiệu lực.")
+            # Immutable supersession: the approved book with the latest
+            # effective_from takes precedence from that date. An older book
+            # remains available for earlier dates; never rewrite it.
+            conflict = VNRuleSet._base_manager.filter(
+                company_id=self.company_id, code=self.code,
+                status="approved", effective_from=self.effective_from,
+            ).exclude(pk=self.pk).exists()
+            if conflict:
+                raise ValidationError(
+                    "Chỉ một phiên bản được bắt đầu hiệu lực trong cùng một ngày."
+                )
 
     def save(self, *args, **kwargs):
         if self.pk:
