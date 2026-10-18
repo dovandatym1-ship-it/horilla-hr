@@ -6,6 +6,7 @@ from decimal import Decimal
 from django.core.exceptions import PermissionDenied, ValidationError
 from django.test import TestCase
 
+from attendance.models import Attendance
 from horilla.testkit import make_company, make_employee, make_user
 from vn_hrm.tests.helpers import existing_or_active_contract
 from vn_hrm.models import VNContractAmendment
@@ -81,3 +82,45 @@ class VietnamPayrollSourceTests(TestCase):
         self.assertEqual(snapshot["inputs"]["vn_approved_ot_hours"], Decimal("0"))
         self.assertEqual(snapshot["inputs"]["vn_approved_leave_days"], Decimal("0"))
         self.assertEqual(len(snapshot["source_sha256"]), 64)
+
+    def test_validated_workdays_count_independent_of_ot_approval(self):
+        first = Attendance._base_manager.create(
+            employee_id=self.employee, attendance_date=date(2026, 4, 7),
+            attendance_validated=True, attendance_overtime_approve=False,
+            approved_overtime_second=0,
+        )
+        second = Attendance._base_manager.create(
+            employee_id=self.employee, attendance_date=date(2026, 4, 8),
+            attendance_validated=True, attendance_overtime_approve=True,
+            approved_overtime_second=7200,
+        )
+        snapshot = period_sources(
+            actor=self.checker, company_id=self.company.pk,
+            employee_id=self.employee.pk, contract_id=self.contract.pk,
+            start_date=date(2026, 4, 1), end_date=date(2026, 4, 30),
+        )
+        self.assertEqual(
+            snapshot["inputs"]["vn_validated_attendance_days"], Decimal("2")
+        )
+        self.assertEqual(
+            snapshot["inputs"]["vn_approved_ot_hours"], Decimal("2")
+        )
+        self.assertEqual(
+            snapshot["evidence"]["validated_attendance_ids"],
+            sorted([first.pk, second.pk]),
+        )
+        self.assertEqual(
+            snapshot["evidence"]["approved_ot_attendance_ids"], [second.pk]
+        )
+
+    def test_unvalidated_workday_fails_closed(self):
+        Attendance._base_manager.create(
+            employee_id=self.employee, attendance_date=date(2026, 4, 7),
+            attendance_validated=False,
+        )
+        with self.assertRaises(ValidationError):
+            period_sources(
+                actor=self.checker, company_id=self.company.pk,
+                employee_id=self.employee.pk, contract_id=self.contract.pk,
+                start_date=date(2026, 4, 1), end_date=date(2026, 4, 30),
+            )
