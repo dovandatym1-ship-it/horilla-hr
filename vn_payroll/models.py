@@ -14,6 +14,8 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
 
+from base.horilla_company_manager import HorillaCompanyManager
+
 from vn_payroll.engine import FormulaError, as_decimal, validate_syntax
 
 CODE = re.compile(r"^[a-z][a-z0-9_]*$")
@@ -65,6 +67,8 @@ class VNRuleSet(models.Model):
     )
     approved_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = HorillaCompanyManager("company")
 
     class Meta:
         ordering = ("company_id", "code", "-version")
@@ -216,6 +220,8 @@ class VNPayRule(models.Model):
     category = models.CharField(max_length=24, choices=CATEGORY)
     expression = models.CharField(max_length=700)
     explanation = models.TextField(blank=True)
+
+    objects = HorillaCompanyManager("rule_set__company")
 
     class Meta:
         ordering = ("position", "pk")
