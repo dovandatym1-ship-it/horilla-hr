@@ -15,7 +15,7 @@ from base.auth_backends import (
     get_effective_permission_codenames,
 )
 from base.models import Company
-from .models import FormulaRule
+from .models import FormulaAuditEvent, FormulaRule
 from .approval_guard import allow_approval_transition
 
 
@@ -51,6 +51,10 @@ def submit_for_review(rule_id, company_id, actor):
         rule.created_by = actor
     rule.status = "review"
     rule.save()
+    FormulaAuditEvent.objects.create(
+        company_id=company_id, rule=rule, actor=actor, action="submit",
+        before_status="draft", after_status="review",
+    )
     return rule
 
 
@@ -69,6 +73,10 @@ def approve_rule(rule_id, company_id, actor):
     rule.approved_at = timezone.now()
     with allow_approval_transition():
         rule.save()
+    FormulaAuditEvent.objects.create(
+        company_id=company_id, rule=rule, actor=actor, action="approve",
+        before_status="review", after_status="approved",
+    )
     return rule
 
 
@@ -81,6 +89,10 @@ def retire_rule(rule_id, company_id, actor):
     rule.status = "retired"
     with allow_approval_transition():
         rule.save()
+    FormulaAuditEvent.objects.create(
+        company_id=company_id, rule=rule, actor=actor, action="retire",
+        before_status="approved", after_status="retired",
+    )
     return rule
 
 
@@ -117,6 +129,10 @@ def create_next_version(rule_id, company_id, actor, effective_from):
         created_by=actor,
     )
     rule.save()
+    FormulaAuditEvent.objects.create(
+        company_id=company_id, rule=rule, actor=actor, action="version",
+        before_status=source.status, after_status="draft",
+    )
     return rule
 
 
