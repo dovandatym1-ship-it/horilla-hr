@@ -496,21 +496,24 @@ def settings(request):
 
 @login_required
 @permission_required("payroll.change_payslip")
+@require_http_methods(["POST"])
 def update_payslip_status(request, payslip_id):
     """
     This method is used to update the payslip confirmation status
     """
+    from django.core.exceptions import PermissionDenied, ValidationError
+    from vn_payroll.payslip_status import change_payslip_status
+
     status = request.POST.get("status")
     view = request.POST.get("view")
-    payslip = Payslip.objects.filter(id=payslip_id).first()
-    if not payslip:
-        return HorillaRedirect(request, message=_("Payslip not found."))
-    if payslip:
-        payslip.status = status
-        payslip.save()
-        messages.success(request, _("Payslip status updated"))
-    else:
-        messages.error(request, _("Payslip not found"))
+    try:
+        payslip = change_payslip_status(
+            actor=request.user, payslip_id=payslip_id, target_status=status
+        )
+    except (ValidationError, PermissionDenied, Payslip.DoesNotExist) as exc:
+        messages.error(request, str(exc))
+        return HorillaRedirect(request, message=_("Cannot change payslip status."))
+    messages.success(request, _("Payslip status updated"))
     if view:
         from .component_views import filter_payslip
 
@@ -527,23 +530,28 @@ def update_payslip_status(request, payslip_id):
 
 
 @login_required
+@permission_required("payroll.change_payslip")
 @hx_request_required
+@require_http_methods(["POST"])
 def update_payslip_status_no_id(request):
-    """
-    This method is used to update the payslip confirmation status
-    """
-    message = {"type": "success", "message": "Payslip status updated."}
-    if request.method == "POST":
-        ids_json = request.POST["ids"]
-        ids = json.loads(ids_json)
-        status = request.POST["status"]
-        slips = Payslip.objects.filter(id__in=ids)
-        slips.update(status=status)
-        message = {
-            "type": "success",
-            "message": f"{slips.count()} Payslips status updated.",
-        }
-    return JsonResponse(message)
+    """Apply scoped, transactional approval transitions, never bulk bypass."""
+    from django.core.exceptions import PermissionDenied, ValidationError
+    from vn_payroll.payslip_status import change_many_payslip_statuses
+
+    try:
+        ids = json.loads(request.POST.get("ids", "[]"))
+        status = request.POST.get("status")
+        updated = change_many_payslip_statuses(
+            actor=request.user, payslip_ids=ids, target_status=status
+        )
+    except (ValueError, TypeError, ValidationError, PermissionDenied) as exc:
+        return JsonResponse(
+            {"type": "error", "message": str(exc)}, status=400
+        )
+    return JsonResponse({
+        "type": "success",
+        "message": f"{updated} Payslips status updated.",
+    })
 
 
 @login_required
