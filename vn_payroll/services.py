@@ -106,6 +106,8 @@ def create_next_version(rule_id, company_id, actor, effective_from):
         title=source.title,
         category=source.category,
         expression=source.expression,
+        calculation_kind=source.calculation_kind,
+        brackets=list(source.brackets),
         variables=list(source.variables),
         decimal_places=source.decimal_places,
         effective_from=effective_from,
