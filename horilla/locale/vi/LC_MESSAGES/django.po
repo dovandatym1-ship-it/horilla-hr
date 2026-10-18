@@ -1748,3 +1748,371 @@ msgstr "Xem hồ sơ"
 #: vietnam-ui-coverage
 msgid "Add New"
 msgstr "Thêm mới"
+
+#: vietnam-ui-coverage
+msgid "Item has been deleted from the records."
+msgstr "Mục này đã được xóa khỏi hệ thống."
+
+#: vietnam-ui-coverage
+msgid "Jane mentioned you in a post."
+msgstr "Jane đã nhắc đến bạn trong một bài viết."
+
+#: vietnam-ui-coverage
+msgid "Aloyna shared a document with you."
+msgstr "Aloyna đã chia sẻ một tài liệu với bạn."
+
+#: vietnam-ui-coverage
+msgid "New event has been scheduled."
+msgstr "Đã lên lịch một sự kiện mới."
+
+#: vietnam-ui-coverage
+msgid "View all comments"
+msgstr "Xem tất cả bình luận"
+
+#: vietnam-ui-coverage
+msgid "Mail processing."
+msgstr "Đang xử lý gửi email."
+
+#: vietnam-ui-coverage
+msgid "Status not updated."
+msgstr "Chưa cập nhật được trạng thái."
+
+#: vietnam-ui-coverage
+msgid "Jan 03, 2023, at 11:13AM"
+msgstr "03/01/2023 lúc 11:13"
+
+#: vietnam-ui-coverage
+msgid "Jan 01, 2023, at 05:13PM"
+msgstr "01/01/2023 lúc 17:13"
+
+#: vietnam-ui-coverage
+msgid "Dec 31, 2022, at 02:00PM"
+msgstr "31/12/2022 lúc 14:00"
+
+#: vietnam-ui-coverage
+msgid "Dec 31, 2022, at 10:27AM"
+msgstr "31/12/2022 lúc 10:27"
+
+#: vietnam-ui-coverage
+msgid "Login - %(company_name)s Dashboard"
+msgstr "Đăng nhập - Bảng điều khiển %(company_name)s"
+
+#: vietnam-ui-coverage
+msgid "Please check your inputs."
+msgstr "Vui lòng kiểm tra dữ liệu đã nhập."
+
+#: vietnam-ui-coverage
+msgid "Select employee"
+msgstr "Chọn nhân viên"
+
+#: vietnam-ui-coverage
+msgid "Generate Payslips"
+msgstr "Tạo phiếu lương"
+
+#: vietnam-ui-coverage
+msgid "Employee name"
+msgstr "Họ tên nhân viên"
+
+#: vietnam-ui-coverage
+msgid "Missing permission"
+msgstr "Thiếu quyền truy cập"
+
+#: vietnam-ui-coverage
+msgid "Are you sure you want to proceed?"
+msgstr "Bạn có chắc chắn muốn tiếp tục?"
+
+#: vietnam-ui-coverage
+msgid "Are you sure you want to delete?"
+msgstr "Bạn có chắc chắn muốn xóa?"
+
+#: vietnam-ui-coverage
+msgid "Confirm Delete"
+msgstr "Xác nhận xóa"
+
+#: vietnam-ui-coverage
+msgid "Email sent successfully."
+msgstr "Đã gửi email thành công."
+
+#: vietnam-ui-coverage
+msgid "Email sending failed."
+msgstr "Gửi email thất bại."
+
+#: vietnam-ui-coverage
+msgid "Please select at least one record."
+msgstr "Vui lòng chọn ít nhất một bản ghi."
+
+#: vietnam-ui-coverage
+msgid "Select employees"
+msgstr "Chọn nhân viên"
+
+#: vietnam-ui-coverage
+msgid "Loading"
+msgstr "Đang tải"
+
+#: vietnam-ui-coverage
+msgid "Saving..."
+msgstr "Đang lưu..."
+
+#: vietnam-ui-coverage
+msgid "Processing..."
+msgstr "Đang xử lý..."
+
+#: vietnam-ui-coverage
+msgid "Processing"
+msgstr "Đang xử lý"
+
+#: vietnam-ui-coverage
+msgid "Select All Employees"
+msgstr "Chọn tất cả nhân viên"
+
+#: vietnam-ui-coverage
+msgid "Clear Selection"
+msgstr "Bỏ chọn"
+
+#: vietnam-ui-coverage
+msgid "Selected"
+msgstr "Đã chọn"
+
+#: vietnam-ui-coverage
+msgid "Unselect All"
+msgstr "Bỏ chọn tất cả"
+
+#: vietnam-ui-coverage
+msgid "Could not be updated."
+msgstr "Không thể cập nhật."
+
+#: vietnam-ui-coverage
+msgid "View Payslip"
+msgstr "Xem phiếu lương"
+
+#: vietnam-ui-coverage
+msgid "Payslip Details"
+msgstr "Chi tiết phiếu lương"
+
+#: vietnam-ui-coverage
+msgid "Payslip Generation"
+msgstr "Tạo phiếu lương"
+
+#: vietnam-ui-coverage
+msgid "Payroll Batch"
+msgstr "Đợt tính lương"
+
+#: vietnam-ui-coverage
+msgid "Payroll Batches"
+msgstr "Các đợt tính lương"
+
+#: vietnam-ui-coverage
+msgid "Amount to Pay"
+msgstr "Số tiền cần chi trả"
+
+#: vietnam-ui-coverage
+msgid "Total Employees"
+msgstr "Tổng số nhân viên"
+
+#: vietnam-ui-coverage
+msgid "Total Gross Pay"
+msgstr "Tổng thu nhập trước khấu trừ"
+
+#: vietnam-ui-coverage
+msgid "Total Net Pay"
+msgstr "Tổng thực lĩnh"
+
+#: vietnam-ui-coverage
+msgid "Total Tax"
+msgstr "Tổng tiền thuế"
+
+#: vietnam-ui-coverage
+msgid "Total Insurance"
+msgstr "Tổng tiền bảo hiểm"
+
+#: vietnam-ui-coverage
+msgid "Total Overtime"
+msgstr "Tổng số giờ làm thêm"
+
+#: vietnam-ui-coverage
+msgid "Bank"
+msgstr "Ngân hàng"
+
+#: vietnam-ui-coverage
+msgid "Bank Account"
+msgstr "Tài khoản ngân hàng"
+
+#: vietnam-ui-coverage
+msgid "Please login"
+msgstr "Vui lòng đăng nhập"
+
+#: vietnam-ui-coverage
+msgid "Incorrect username or password."
+msgstr "Tên đăng nhập hoặc mật khẩu không đúng."
+
+#: vietnam-ui-coverage
+msgid "Enter Username"
+msgstr "Nhập tên đăng nhập"
+
+#: vietnam-ui-coverage
+msgid "Enter username"
+msgstr "Nhập tên đăng nhập"
+
+#: vietnam-ui-coverage
+msgid "Enter password"
+msgstr "Nhập mật khẩu"
+
+#: vietnam-ui-coverage
+msgid "Save and Continue"
+msgstr "Lưu và tiếp tục"
+
+#: vietnam-ui-coverage
+msgid "Save and Close"
+msgstr "Lưu và đóng"
+
+#: vietnam-ui-coverage
+msgid "Your changes have been saved."
+msgstr "Đã lưu thay đổi."
+
+#: vietnam-ui-coverage
+msgid "Are you sure you want to log out?"
+msgstr "Bạn có chắc chắn muốn đăng xuất?"
+
+#: vietnam-ui-coverage
+msgid "Information"
+msgstr "Thông tin"
+
+#: vietnam-ui-coverage
+msgid "Employee Information"
+msgstr "Thông tin nhân viên"
+
+#: vietnam-ui-coverage
+msgid "Contact Information"
+msgstr "Thông tin liên hệ"
+
+#: vietnam-ui-coverage
+msgid "Work Details"
+msgstr "Chi tiết công việc"
+
+#: vietnam-ui-coverage
+msgid "Personal Details"
+msgstr "Thông tin cá nhân"
+
+#: vietnam-ui-coverage
+msgid "Work Email"
+msgstr "Email công việc"
+
+#: vietnam-ui-coverage
+msgid "Date of Joining"
+msgstr "Ngày vào làm"
+
+#: vietnam-ui-coverage
+msgid "Position"
+msgstr "Chức danh"
+
+#: vietnam-ui-coverage
+msgid "Designation"
+msgstr "Chức danh"
+
+#: vietnam-ui-coverage
+msgid "Employment Status"
+msgstr "Trạng thái làm việc"
+
+#: vietnam-ui-coverage
+msgid "Employment Contract"
+msgstr "Hợp đồng lao động"
+
+#: vietnam-ui-coverage
+msgid "Number of Employees"
+msgstr "Số lượng nhân viên"
+
+#: vietnam-ui-coverage
+msgid "Active Employees"
+msgstr "Nhân viên đang làm việc"
+
+#: vietnam-ui-coverage
+msgid "Inactive Employees"
+msgstr "Nhân viên ngừng làm việc"
+
+#: vietnam-ui-coverage
+msgid "Attendance Validation"
+msgstr "Xác nhận chấm công"
+
+#: vietnam-ui-coverage
+msgid "Unpaid"
+msgstr "Không hưởng lương"
+
+#: vietnam-ui-coverage
+msgid "Not Approved"
+msgstr "Chưa phê duyệt"
+
+#: vietnam-ui-coverage
+msgid "Waiting for approval"
+msgstr "Chờ phê duyệt"
+
+#: vietnam-ui-coverage
+msgid "Reason for Rejection"
+msgstr "Lý do từ chối"
+
+#: vietnam-ui-coverage
+msgid "Request Date"
+msgstr "Ngày yêu cầu"
+
+#: vietnam-ui-coverage
+msgid "Approved Date"
+msgstr "Ngày phê duyệt"
+
+#: vietnam-ui-coverage
+msgid "Rejected Date"
+msgstr "Ngày từ chối"
+
+#: vietnam-ui-coverage
+msgid "Request Details"
+msgstr "Chi tiết yêu cầu"
+
+#: vietnam-ui-coverage
+msgid "Day Shift"
+msgstr "Ca ngày"
+
+#: vietnam-ui-coverage
+msgid "Night Shift"
+msgstr "Ca đêm"
+
+#: vietnam-ui-coverage
+msgid "Public Holiday"
+msgstr "Ngày nghỉ lễ"
+
+#: vietnam-ui-coverage
+msgid "Company Holiday"
+msgstr "Ngày nghỉ của doanh nghiệp"
+
+#: vietnam-ui-coverage
+msgid "Calendar"
+msgstr "Lịch"
+
+#: vietnam-ui-coverage
+msgid "Today"
+msgstr "Hôm nay"
+
+#: vietnam-ui-coverage
+msgid "Yesterday"
+msgstr "Hôm qua"
+
+#: vietnam-ui-coverage
+msgid "Tomorrow"
+msgstr "Ngày mai"
+
+#: vietnam-ui-coverage
+msgid "This Month"
+msgstr "Tháng này"
+
+#: vietnam-ui-coverage
+msgid "Last Month"
+msgstr "Tháng trước"
+
+#: vietnam-ui-coverage
+msgid "This Year"
+msgstr "Năm nay"
+
+#: vietnam-ui-coverage
+msgid "Last Year"
+msgstr "Năm trước"
+
+#: vietnam-ui-coverage
+msgid "Custom Range"
+msgstr "Khoảng tùy chỉnh"
