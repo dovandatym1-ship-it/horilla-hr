@@ -69,3 +69,13 @@ Tạo issue `REG-CHANGE` khi có văn bản mới → thu thập URL, số, ban 
 Quyết định đang mở và chủ sở hữu được liệt kê tại [GAP-16 §4](16-CODE-TO-DOC-GAP.md): mã nhân viên, vault/PII, người phụ thuộc, chồng HĐ, điều chỉnh công, OT, phép, PIT/BH/rounding, bank reconciliation, RBAC và cutover.
 
 **Mỗi decision record bắt buộc:** ID, vấn đề, phương án và tác động, căn cứ văn bản/đường dẫn + đoạn/khoản, phạm vi áp dụng, from/to, người soạn, HR/Payroll/Pháp chế phê duyệt, ngày quyết định, status OPEN/APPROVED/RETIRED, test oracle và phương án hồi tố. \`OPEN\` có ảnh hưởng critical ⇒ \`BLOCKED_BY_POLICY\` ở UC/API.
+
+
+## 8. Rà soát nguồn pháp luật cấp cao (18/10/2026)
+| Nhóm | Đối chiếu nguồn chính thức | Ghi nhận và hành động |
+|---|---|---|
+| Thuế TNCN | [Luật 109/2025/QH15 – Công báo](https://congbao.chinhphu.vn/van-ban/luat-so-109-2025-qh15-468671.htm); [giảm trừ gia cảnh](https://xaydungchinhsach.chinhphu.vn/quy-dinh-giam-tru-gia-canh-119260703144038062.htm) | Xác nhận căn cứ mức 15,5 triệu/tháng bản thân và 6,2 triệu/tháng/NPT theo điều kiện; không bỏ qua tình trạng cư trú và kỳ áp dụng; vẫn cần kiểm toán chính sách PIT cho từng nhóm người lao động. |
+| Lương tối thiểu | [Nghị định 293/2025/NĐ-CP – Chính phủ](https://xaydungchinhsach.chinhphu.vn/nghi-dinh-so-293-2025-nd-cp-quy-dinh-muc-luong-toi-thieu-doi-voi-nguoi-lao-dong-lam-viec-theo-hop-dong-lao-dong-119251110172808433.htm) | Đối chiếu được 4 mức tháng/giờ tài liệu PAY-05, hiệu lực từ 01/01/2026; mapping địa điểm theo Phụ lục và lịch sử phải được xác nhận trước tính HĐ. |
+| BHXH | [Luật 41/2024/QH15 – Cổng chính phủ](https://vanban.chinhphu.vn/?classid=1&docid=211199&orggroupid=1&pageid=27160); [Công báo Văn bản hợp nhất 19/VBHN-VPQH ngày 12/02/2026](https://congbao.chinhphu.vn/van-ban-dang-cong-bao/van-phong-quoc-hoi-c47/trang-15.htm); [Trang thuộc tính VBPL](https://vbpl.vn/tw/Pages/vbpq-thuoctinh.aspx?ItemID=175027) | **Dữ liệu hiệu lực đang mâu thuẫn giữa cổng tra cứu** (VBPL ghi hết hiệu lực 01/01/2026; cổng khác tiếp tục dẫn Luật BHXH và bản hợp nhất 2026). Không suy rằng chế độ BHXH bị bãi bỏ; Pháp chế phải đối chiếu VBHN, các luật sửa đổi và điều khoản hiệu lực để chốt rule version. |
+
+**Giới hạn:** đây là xác minh nguồn chính cấp văn bản và các mức nêu trong tài liệu, không phải legal sign-off cho toàn bộ biểu thuế, điều kiện giảm trừ, các tỷ lệ BH và các nghiệp vụ phức tạp. Mọi bản cấu hình sử dụng để trả lương phải có review riêng.
