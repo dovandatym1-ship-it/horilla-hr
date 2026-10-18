@@ -117,3 +117,19 @@ class VietnameseCatalogueIntegrityTests(SimpleTestCase):
         self.assertIn("{% trans 'Status not updated.' %}", payslips)
         self.assertNotIn(">My Profile</a>", navbar)
         self.assertNotIn(">Log out</a>", navbar)
+
+    def test_compiled_vietnamese_messages_are_served(self):
+        from django.utils.translation import gettext
+
+        with translation.override("vi"):
+            self.assertEqual(gettext("Sign In"), "Đăng nhập")
+            self.assertEqual(gettext("Payslip"), "Phiếu lương")
+            self.assertEqual(gettext("Add Candidate"), "Thêm ứng viên")
+            self.assertEqual(gettext("Project Dashboard"), "Tổng quan dự án")
+            self.assertEqual(
+                gettext("Social Insurance"), "Bảo hiểm xã hội"
+            )
+
+        with translation.override("en"):
+            self.assertEqual(gettext("Sign In"), "Sign In")
+
