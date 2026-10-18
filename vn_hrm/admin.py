@@ -54,7 +54,12 @@ class DependentAdmin(VNRootOnlyAdmin):
 class ContractAmendmentAdmin(VNRootOnlyAdmin):
     list_display = ("amendment_code", "company", "contract", "effective_date", "status")
     list_filter = ("company", "status")
-    readonly_fields = ("status", "created_at")
+    readonly_fields = ("status", "created_by", "approved_by", "approved_at", "created_at")
+
+    def save_model(self, request, obj, form, change):
+        if not change:
+            obj.created_by = request.user
+        super().save_model(request, obj, form, change)
     actions = ["approve_amendments"]
 
     def get_readonly_fields(self, request, obj=None):
@@ -72,9 +77,8 @@ class ContractAmendmentAdmin(VNRootOnlyAdmin):
         for item in queryset:
             if item.status != "draft":
                 continue
-            item.status = "approved"
             try:
-                item.save()
+                item.approve(request.user)
                 self.message_user(request, f"Đã duyệt phụ lục {item.amendment_code}.", messages.SUCCESS)
             except ValidationError as exc:
                 self.message_user(request, str(exc), messages.ERROR)
@@ -84,8 +88,13 @@ class ContractAmendmentAdmin(VNRootOnlyAdmin):
 class AttendanceCorrectionAdmin(VNRootOnlyAdmin):
     list_display = ("employee", "company", "work_date", "requested_minutes", "status")
     list_filter = ("company", "status", "work_date")
-    readonly_fields = ("status", "reviewed_by", "reviewed_at", "created_at")
+    readonly_fields = ("status", "requested_by", "reviewed_by", "reviewed_at", "created_at")
     actions = ["approve_requests", "reject_requests"]
+
+    def save_model(self, request, obj, form, change):
+        if not change:
+            obj.requested_by = request.user
+        super().save_model(request, obj, form, change)
 
     def get_readonly_fields(self, request, obj=None):
         if obj and obj.status != "pending":
