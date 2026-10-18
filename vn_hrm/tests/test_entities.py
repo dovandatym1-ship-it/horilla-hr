@@ -9,8 +9,9 @@ from decimal import Decimal
 
 from django.core.exceptions import ValidationError
 from django.test import TestCase
+from django.utils import timezone
 
-from horilla.testkit import make_company, make_employee, make_leave_type
+from horilla.testkit import make_company, make_employee, make_leave_type, make_user
 from vn_hrm.models import (
     VNAttendanceCorrection,
     VNDependent,
@@ -63,6 +64,8 @@ class VNHRMDataTests(TestCase):
         )
         self.assertEqual(item.status, "pending")
         item.status = "approved"
+        item.reviewed_by = make_user("reviewer_vn_attendance")
+        item.reviewed_at = timezone.now()
         item.save()
         item.reason = "Tự sửa sau phê duyệt"
         with self.assertRaises(ValidationError):
