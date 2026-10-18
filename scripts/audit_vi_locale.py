@@ -30,6 +30,12 @@ VISIBLE_ATTR = re.compile(
 )
 LATIN = re.compile(r"[A-Za-z]{3,}")
 VI_DIACRITICS = re.compile(r"[À-ỹĐđ]")
+HARD_CODED_EN_LANG = re.compile(r"""<html\b[^>]*\blang\s*=\s*['"]en['"]""", re.I)
+JS_DIALOG = re.compile(
+    r"""\b(?:alert|confirm|prompt)\(\s*(['"])([^'"]{3,160})\1""",
+    re.I,
+)
+
 
 
 def catalogue_entries(path):
@@ -155,6 +161,8 @@ def main():
     literal_samples = []
     candidate_count = 0
     files_scanned = 0
+    hardcoded_en_lang = []
+    js_dialogs = []
     for path in source_files():
         try:
             content = path.read_text(encoding="utf-8")
@@ -163,6 +171,11 @@ def main():
         files_scanned += 1
         relative = str(path.relative_to(ROOT))
         if path.suffix == ".html":
+            if HARD_CODED_EN_LANG.search(content):
+                hardcoded_en_lang.append(relative)
+            for dialog in JS_DIALOG.finditer(content):
+                if LATIN.search(dialog.group(2)) and not VI_DIACRITICS.search(dialog.group(2)):
+                    js_dialogs.append({"file": relative, "text": dialog.group(2)})
             refs["django"].update(m.group(2) for m in DJANGO_TAG.finditer(content))
             values = visible_candidates(content)
             candidate_count += len(values)
@@ -172,6 +185,9 @@ def main():
             refs["django"].update(m.group(2) for m in PYTHON_GETTEXT.finditer(content))
         elif path.suffix == ".js":
             refs["djangojs"].update(m.group(2) for m in JS_GETTEXT.finditer(content))
+            for dialog in JS_DIALOG.finditer(content):
+                if LATIN.search(dialog.group(2)) and not VI_DIACRITICS.search(dialog.group(2)):
+                    js_dialogs.append({"file": relative, "text": dialog.group(2)})
 
     missing_django = sorted(refs["django"] - django_ids)
     missing_js = sorted(refs["djangojs"] - js_ids)
@@ -209,6 +225,10 @@ def main():
             "django": missing_django,
             "djangojs": missing_js,
         },
+        "hardcoded_english_html_lang_count": len(hardcoded_en_lang),
+        "hardcoded_english_html_lang_files": hardcoded_en_lang,
+        "unwrapped_javascript_dialog_count": len(js_dialogs),
+        "unwrapped_javascript_dialog_examples": js_dialogs[:75],
         "unwrapped_html_candidates": candidate_count,
         "unwrapped_html_examples": literal_samples[:60],
         "unwrapped_html_all": literal_samples,
