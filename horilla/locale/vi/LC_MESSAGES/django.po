@@ -3415,7 +3415,7 @@ msgstr "Xem dự án"
 
 #: vietnam-ui-project-settings-payroll
 msgid "caret down outline"
-msgstr "Biểu tượng mở danh sách"
+msgstr "caret down outline"
 
 #: vietnam-ui-project-settings-payroll
 msgid "Add Stage"
@@ -3467,11 +3467,11 @@ msgstr "cho:"
 
 #: vietnam-ui-project-settings-payroll
 msgid "library outline"
-msgstr "Biểu tượng thư viện"
+msgstr "library outline"
 
 #: vietnam-ui-project-settings-payroll
 msgid "add sharp"
-msgstr "Biểu tượng thêm"
+msgstr "add sharp"
 
 #: vietnam-ui-project-settings-payroll
 msgid "Select Row"
@@ -4115,7 +4115,7 @@ msgstr "Nhập bản ghi"
 
 #: vietnam-ui-project-settings-payroll
 msgid "cloud upload"
-msgstr "Biểu tượng tải lên đám mây"
+msgstr "cloud upload"
 
 #: vietnam-ui-project-settings-payroll
 msgid "Do you want to download the template?"
@@ -4447,7 +4447,7 @@ msgstr "Danh sách"
 
 #: vietnam-ui-hrm-extra
 msgid "list outline"
-msgstr "Biểu tượng danh sách"
+msgstr "list outline"
 
 #: vietnam-ui-hrm-extra
 msgid "Card"
@@ -4455,7 +4455,7 @@ msgstr "Thẻ"
 
 #: vietnam-ui-hrm-extra
 msgid "grid outline"
-msgstr "Biểu tượng dạng lưới"
+msgstr "grid outline"
 
 #: vietnam-ui-hrm-extra
 msgid "Non Taxable"
@@ -4483,11 +4483,11 @@ msgstr "Hiện chưa có khoản khấu trừ nào."
 
 #: vietnam-ui-hrm-extra
 msgid "chevron back outline"
-msgstr "Biểu tượng lùi"
+msgstr "chevron back outline"
 
 #: vietnam-ui-hrm-extra
 msgid "chevron forward outline"
-msgstr "Biểu tượng tiến"
+msgstr "chevron forward outline"
 
 #: vietnam-ui-hrm-extra
 msgid "Wage"
@@ -4711,7 +4711,7 @@ msgstr "Thư mời làm việc"
 
 #: vietnam-ui-onboarding-offboarding-support
 msgid "mail open outline"
-msgstr "Biểu tượng mở thư"
+msgstr "mail open outline"
 
 #: vietnam-ui-onboarding-offboarding-support
 msgid "Send Portal / Start Onboarding"
@@ -4803,7 +4803,7 @@ msgstr "Người thay đổi"
 
 #: vietnam-ui-onboarding-offboarding-support
 msgid "oh-link--secondary"
-msgstr "Liên kết phụ"
+msgstr "oh-link--secondary"
 
 #: vietnam-ui-onboarding-offboarding-support
 msgid "Created the ticket "
