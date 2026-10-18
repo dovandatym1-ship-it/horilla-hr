@@ -145,10 +145,6 @@ class FormulaRule(models.Model):
         """No in-place edits to approved rules, including direct instance.save()."""
         self.full_clean()
         with transaction.atomic():
-            if self.status == "approved" and not approval_transition_enabled():
-                raise PermissionDenied("Chỉ dịch vụ phê duyệt được kích hoạt công thức.")
-            if self.status == "retired" and not approval_transition_enabled():
-                raise PermissionDenied("Chỉ dịch vụ phê duyệt được ngừng công thức.")
             # A company-wide lock serializes overlapping rule approvals.
             if self.status == "approved":
                 from base.models import Company
@@ -187,6 +183,10 @@ class FormulaRule(models.Model):
                     }
                     if before != after:
                         raise ValidationError("Quy tắc đã duyệt là bất biến; hãy tạo phiên bản mới.")
+            if self.status == "approved" and not approval_transition_enabled():
+                raise PermissionDenied("Chỉ dịch vụ phê duyệt được kích hoạt công thức.")
+            if self.status == "retired" and not approval_transition_enabled():
+                raise PermissionDenied("Chỉ dịch vụ phê duyệt được ngừng công thức.")
             return super().save(*args, **kwargs)
 
     def delete(self, *args, **kwargs):
