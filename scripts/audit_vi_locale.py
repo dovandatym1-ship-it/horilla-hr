@@ -101,7 +101,8 @@ def visible_candidates(contents):
     )
 
     def looks_like_english_copy(value):
-        if not LATIN.search(value) or any(c in value for c in ("{", "}", "$")):
+        candidate = re.sub(r"&(?:#[0-9]+|[a-zA-Z]+);?", "", value)
+        if not LATIN.search(candidate) or any(c in value for c in ("{", "}", "$")):
             return False
         if VI_DIACRITICS.search(value):
             return False
@@ -124,8 +125,10 @@ def visible_candidates(contents):
         if not looks_like_english_copy(value):
             continue
         parent_tag = contents[contents.rfind("<", 0, match.start()):match.start()]
+        if re.search(r"<(?:ion-icon|mat-icon)\b", parent_tag, flags=re.I):
+            continue
         if re.search(
-            r"<(?:ion-icon|mat-icon|i|span)\b[^>]*(?:material-icons|"
+            r"<(?:i|span)\b[^>]*(?:material-icons|"
             r"material-symbols|icon-font|\bicon\b)",
             parent_tag, flags=re.I,
         ):
@@ -174,7 +177,10 @@ def main():
             if HARD_CODED_EN_LANG.search(content):
                 hardcoded_en_lang.append(relative)
             for dialog in JS_DIALOG.finditer(content):
-                if LATIN.search(dialog.group(2)) and not VI_DIACRITICS.search(dialog.group(2)):
+                if (LATIN.search(dialog.group(2))
+                    and not VI_DIACRITICS.search(dialog.group(2))
+                    and "{%" not in dialog.group(2)
+                    and "{{" not in dialog.group(2)):
                     js_dialogs.append({"file": relative, "text": dialog.group(2)})
             refs["django"].update(m.group(2) for m in DJANGO_TAG.finditer(content))
             values = visible_candidates(content)
@@ -186,7 +192,10 @@ def main():
         elif path.suffix == ".js":
             refs["djangojs"].update(m.group(2) for m in JS_GETTEXT.finditer(content))
             for dialog in JS_DIALOG.finditer(content):
-                if LATIN.search(dialog.group(2)) and not VI_DIACRITICS.search(dialog.group(2)):
+                if (LATIN.search(dialog.group(2))
+                    and not VI_DIACRITICS.search(dialog.group(2))
+                    and "{%" not in dialog.group(2)
+                    and "{{" not in dialog.group(2)):
                     js_dialogs.append({"file": relative, "text": dialog.group(2)})
 
     missing_django = sorted(refs["django"] - django_ids)
