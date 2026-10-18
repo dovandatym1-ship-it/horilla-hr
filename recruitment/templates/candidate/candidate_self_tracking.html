@@ -1,7 +1,8 @@
 {% load static i18n recruitmentfilters horillafilters %}
 {% get_company as theme_obj %}
 <!DOCTYPE html>
-<html lang="en">
+{% get_current_language as current_language %}
+<html lang="{{ current_language }}">
     <!-- Previous head section remains the same -->
     <head>
         <meta charset="UTF-8">
