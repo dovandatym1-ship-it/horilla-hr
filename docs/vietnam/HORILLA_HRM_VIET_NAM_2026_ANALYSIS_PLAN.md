@@ -313,3 +313,11 @@ Nhánh `feature/vietnam-hrm-foundation` là bước đầu để đưa tài li�
 ---
 
 **Độ tin cậy:** kiểm tra trực tiếp mã nguồn tĩnh cho module/engine/nội dung được dẫn đường; đề xuất GAP khi thiếu cấu trúc trong các model và tệp liên quan đã đọc. Cụm “chưa có” không hàm ý đã exhaustively grep được mọi dòng/mọi nhánh. Phải tiếp tục chạy & kiểm tra chức năng thực tế ở P0. Bộ quy tắc pháp lý là yêu cầu phân tích, không thay cho ý kiến phê duyệt của chuyên gia lao động/thuế/bảo hiểm trước production.
+
+
+## Phụ lục kế hoạch 18/10/2026 — Chốt tài liệu v1.1 trước khi code
+1. Review toàn bộ [DE/Validation-10](10-FIELD-LEVEL-VALIDATION-MATRIX.md) với model code và HR/Payroll, chốt field owner, scope và policy.
+2. Review [UI-11](11-UI-FORM-ACTION-SPECIFICATION.md), [UC-12](12-USE-CASE-DETAILS.md) và [WF-13](13-WORKFLOW-STATE-TRANSITIONS.md); đánh dấu từng action CODE/TO-BE.
+3. Review [API-14](14-API-PERMISSION-ERROR-CONTRACT.md) theo router hiện có, thực hiện RBAC tenant/field, tránh coi endpoint minh họa là endpoint đã tồn tại.
+4. Mở backlog đóng 20 GAP [16](16-CODE-TO-DOC-GAP.md) và đánh test theo [15](15-TRACEABILITY-UAT-MATRIX.md); không bỏ qua integration Payroll/Leave/Attendance và PII.
+5. Chạy baseline migrate/check/test, negative/security, golden payroll độc lập, UAT, phê duyệt nghiệp vụ/pháp chế; chỉ sau đó mới merge/bật tính năng production. Hiện trạng NOT RUN, không tự đánh PASS.
