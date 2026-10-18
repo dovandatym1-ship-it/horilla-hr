@@ -5,7 +5,7 @@ an amendment boundary, leave request is partially outside the period, or
 an approved amount would be ambiguous. This is a reconciliation/preview layer.
 """
 
-from datetime import date, timedelta
+from datetime import date
 from decimal import Decimal
 from hashlib import sha256
 import json
@@ -121,7 +121,10 @@ def period_sources(
 
     approved_leave = LeaveRequest._base_manager.filter(
         employee_id=employee_id, status="approved",
-        start_date__lte=end_date, end_date__gte=start_date,
+        start_date__lte=end_date,
+    ).filter(
+        Q(end_date__gte=start_date)
+        | Q(end_date__isnull=True, start_date__gte=start_date)
     ).select_related("leave_type_id")
     leave_days = Decimal("0")
     unpaid_leave = Decimal("0")
@@ -130,7 +133,8 @@ def period_sources(
         # Requested days is for the WHOLE request. Prorating across pay
         # periods using days-in-range would silently misprice half-day,
         # schedule and holiday rules. Require an explicit split upstream.
-        if request.start_date < start_date or request.end_date > end_date:
+        leave_end = request.end_date or request.start_date
+        if request.start_date < start_date or leave_end > end_date:
             raise ValidationError("Nghỉ phép giao hai kỳ; cần phân bổ theo ngày.")
         days = as_decimal(request.requested_days, field="Số ngày nghỉ đã duyệt")
         if days < 0:
