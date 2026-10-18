@@ -81,3 +81,8 @@ Yêu cầu sửa chứa ngày công, log gốc, giá trị đề xuất, lý do,
 
 ## 8. Truy vết và tiêu chí phê duyệt
 Thiết lập trace theo chuỗi `F → UC → BR → DE → API/Model → AC → TC → PR`. Không phát triển tác vụ có nhiều giả định luật chưa duyệt; tách rõ mục `BLOCKED_BY_POLICY`. Trưởng HR/Kế toán/Pháp chế đồng duyệt các BR tiền lương; Tech Lead và QA duyệt triển khai/test.
+
+## 9. Phụ lục SRS v1.1 — Đặc tả thực thi và phân rã sâu
+Bảng 23 UC mục 2 là **index**; mô tả từng UC theo actor, PRE/MAIN/ALT/POST, quyền, audit và TC ở [UC-12](12-USE-CASE-DETAILS.md). Mỗi trường input/output và rule liên trường phải lấy từ [VALIDATION-10](10-FIELD-LEVEL-VALIDATION-MATRIX.md), mỗi action từ [WF-13](13-WORKFLOW-STATE-TRANSITIONS.md), mã lỗi/HTTP/schema/role scope từ [API-14](14-API-PERMISSION-ERROR-CONTRACT.md), UI cụ thể từ [UI-11](11-UI-FORM-ACTION-SPECIFICATION.md).
+
+**Chuẩn mỗi request trước khi READY:** có field R/nullable/default/length/enum/date/effective/unique, server validator, code error tiếng Việt, role+tenant+field guard, transaction và idempotency, main/alternate/error transitions, positive/negative/boundary/concurrent test, mapping model/serializer/API, evidence và reviewer. Nếu thiếu nguyên tắc pháp lý hoặc policy → giữ \`BLOCKED_BY_POLICY\`. Không suy rằng VNRuleSet preview là tính lương production; không suy rằng approval phiếu công/phép đã đồng bộ Horilla từ PR #3 (tham chiếu [GAP-16](16-CODE-TO-DOC-GAP.md)).
