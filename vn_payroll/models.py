@@ -12,6 +12,7 @@ from django.core.exceptions import PermissionDenied
 from base.horilla_company_manager import HorillaCompanyManager
 
 from .expression import InvalidFormula, evaluate, validate_expression
+from .approval_guard import approval_transition_enabled
 
 class FormulaRuleQuerySet(models.QuerySet):
     """Forbid bulk paths which bypass clean(), approval and version history."""
@@ -120,6 +121,26 @@ class FormulaRule(models.Model):
         """No in-place edits to approved rules, including direct instance.save()."""
         self.full_clean()
         with transaction.atomic():
+            if self.status == "approved" and not approval_transition_enabled():
+                raise PermissionDenied("Chỉ dịch vụ phê duyệt được kích hoạt công thức.")
+            if self.status == "retired" and not approval_transition_enabled():
+                raise PermissionDenied("Chỉ dịch vụ phê duyệt được ngừng công thức.")
+            # A company-wide lock serializes overlapping rule approvals.
+            if self.status == "approved":
+                from base.models import Company
+
+                Company.objects.select_for_update().get(pk=self.company_id)
+                candidates = type(self)._base_manager.filter(
+                    company_id=self.company_id,
+                    code=self.code,
+                    category=self.category,
+                    status="approved",
+                ).exclude(pk=self.pk)
+                for other in candidates:
+                    if (not other.effective_to or other.effective_to >= self.effective_from) and (
+                        not self.effective_to or other.effective_from <= self.effective_to
+                    ):
+                        raise ValidationError("Quy tắc đã duyệt bị trùng khoảng hiệu lực.")
             if self.pk:
                 previous = type(self)._base_manager.select_for_update().get(pk=self.pk)
                 allowed = {
@@ -146,9 +167,12 @@ class FormulaRule(models.Model):
             return super().save(*args, **kwargs)
 
     def delete(self, *args, **kwargs):
-        if self.status != "draft":
-            raise PermissionDenied("Chỉ được xóa bản nháp.")
-        return super().delete(*args, **kwargs)
+        with transaction.atomic():
+            if self.pk:
+                status = type(self)._base_manager.select_for_update().get(pk=self.pk).status
+                if status != "draft":
+                    raise PermissionDenied("Chỉ được xóa bản nháp chưa được duyệt.")
+            return super().delete(*args, **kwargs)
 
     def calculate_preview(self, inputs):
         """Preview only. No payslip, payroll batch or payment is mutated."""
