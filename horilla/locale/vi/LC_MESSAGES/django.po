@@ -2116,3 +2116,415 @@ msgstr "Năm trước"
 #: vietnam-ui-coverage
 msgid "Custom Range"
 msgstr "Khoảng tùy chỉnh"
+
+#: vietnam-ui-core-pages
+msgid "Toggle Search"
+msgstr "Bật/tắt tìm kiếm"
+
+#: vietnam-ui-core-pages
+msgid "search outline"
+msgstr "Biểu tượng tìm kiếm"
+
+#: vietnam-ui-core-pages
+msgid "Search Input"
+msgstr "Ô tìm kiếm"
+
+#: vietnam-ui-core-pages
+msgid "add outline"
+msgstr "Biểu tượng thêm"
+
+#: vietnam-ui-core-pages
+msgid "Page not found. 404."
+msgstr "Không tìm thấy trang (404)."
+
+#: vietnam-ui-core-pages
+msgid "ellipsis vertical sharp"
+msgstr "Các thao tác khác"
+
+#: vietnam-ui-core-pages
+msgid "Batch"
+msgstr "Đợt tính lương"
+
+#: vietnam-ui-core-pages
+msgid "First"
+msgstr "Đầu tiên"
+
+#: vietnam-ui-core-pages
+msgid "Last"
+msgstr "Cuối cùng"
+
+#: vietnam-ui-core-pages
+msgid "No search result found!"
+msgstr "Không tìm thấy kết quả tìm kiếm!"
+
+#: vietnam-ui-core-pages
+msgid "Wage Type"
+msgstr "Hình thức trả lương"
+
+#: vietnam-ui-core-pages
+msgid "Contract wage"
+msgstr "Lương theo hợp đồng"
+
+#: vietnam-ui-core-pages
+msgid " Update"
+msgstr " Cập nhật"
+
+#: vietnam-ui-core-pages
+msgid "create outline"
+msgstr "Biểu tượng tạo mới"
+
+#: vietnam-ui-core-pages
+msgid "Do you want to delete this Contract?"
+msgstr "Bạn có muốn xóa hợp đồng này không?"
+
+#: vietnam-ui-core-pages
+msgid "trash outline"
+msgstr "Biểu tượng xóa"
+
+#: vietnam-ui-core-pages
+msgid "Just now"
+msgstr "Vừa xong"
+
+#: vietnam-ui-core-pages
+msgid "Toggle auto-refresh"
+msgstr "Bật/tắt làm mới tự động"
+
+#: vietnam-ui-core-pages
+msgid "This Week"
+msgstr "Tuần này"
+
+#: vietnam-ui-core-pages
+msgid "From"
+msgstr "Từ"
+
+#: vietnam-ui-core-pages
+msgid "To"
+msgstr "Đến"
+
+#: vietnam-ui-core-pages
+msgid "Customize"
+msgstr "Tùy chỉnh"
+
+#: vietnam-ui-core-pages
+msgid "Payslip Pipeline"
+msgstr "Tiến trình xử lý phiếu lương"
+
+#: vietnam-ui-core-pages
+msgid "Selected period — status distribution"
+msgstr "Phân bố trạng thái trong kỳ đã chọn"
+
+#: vietnam-ui-core-pages
+msgid "Payroll Cost Trend"
+msgstr "Xu hướng chi phí lương"
+
+#: vietnam-ui-core-pages
+msgid "Gross, deductions & net — last 6 months"
+msgstr "Tổng thu nhập, khấu trừ và thực lĩnh trong 6 tháng gần nhất"
+
+#: vietnam-ui-core-pages
+msgid "Cost by Department"
+msgstr "Chi phí theo phòng ban"
+
+#: vietnam-ui-core-pages
+msgid "This month"
+msgstr "Tháng này"
+
+#: vietnam-ui-core-pages
+msgid "Net pay by department"
+msgstr "Thực lĩnh theo phòng ban"
+
+#: vietnam-ui-core-pages
+msgid "Requests by status"
+msgstr "Yêu cầu theo trạng thái"
+
+#: vietnam-ui-core-pages
+msgid "Reimbursements & Encashments"
+msgstr "Hoàn chi phí và thanh toán phép"
+
+#: vietnam-ui-core-pages
+msgid "Pending requests by type"
+msgstr "Yêu cầu chờ xử lý theo loại"
+
+#: vietnam-ui-core-pages
+msgid "Contribution Cost"
+msgstr "Chi phí đóng góp"
+
+#: vietnam-ui-core-pages
+msgid "Employee and employer share, paid payslips"
+msgstr "Phần đóng của người lao động và doanh nghiệp, từ phiếu lương đã trả"
+
+#: vietnam-ui-core-pages
+msgid "Payroll Run Progress"
+msgstr "Tiến độ chạy bảng lương"
+
+#: vietnam-ui-core-pages
+msgid "Employees by payslip status"
+msgstr "Nhân viên theo trạng thái phiếu lương"
+
+#: vietnam-ui-core-pages
+msgid "Contracts Ending"
+msgstr "Hợp đồng sắp hết hạn"
+
+#: vietnam-ui-core-pages
+msgid "Contracts ending or expired"
+msgstr "Hợp đồng sắp hết hạn hoặc đã hết hạn"
+
+#: vietnam-ui-core-pages
+msgid "Next 60 days"
+msgstr "Trong 60 ngày tới"
+
+#: vietnam-ui-core-pages
+msgid "Active Loans"
+msgstr "Khoản vay đang hoạt động"
+
+#: vietnam-ui-core-pages
+msgid "Active loans"
+msgstr "Khoản vay đang hoạt động"
+
+#: vietnam-ui-core-pages
+msgid "Customize Dashboard"
+msgstr "Tùy chỉnh bảng điều khiển"
+
+#: vietnam-ui-core-pages
+msgid "Custom range"
+msgstr "Khoảng thời gian tùy chọn"
+
+#: vietnam-ui-core-pages
+msgid "m ago"
+msgstr "phút trước"
+
+#: vietnam-ui-core-pages
+msgid "Auto-refresh ON (5 min)"
+msgstr "Đang tự làm mới (5 phút/lần)"
+
+#: vietnam-ui-core-pages
+msgid "Auto-refresh OFF"
+msgstr "Đã tắt tự làm mới"
+
+#: vietnam-ui-core-pages
+msgid "vs"
+msgstr "so với"
+
+#: vietnam-ui-core-pages
+msgid "No paid payslips in"
+msgstr "Không có phiếu lương đã thanh toán trong"
+
+#: vietnam-ui-core-pages
+msgid "Net Payroll"
+msgstr "Tổng lương thực lĩnh"
+
+#: vietnam-ui-core-pages
+msgid "No Active Loans"
+msgstr "Không có khoản vay đang hoạt động"
+
+#: vietnam-ui-core-pages
+msgid "Pending Requests"
+msgstr "Yêu cầu đang chờ xử lý"
+
+#: vietnam-ui-core-pages
+msgid "No payslips this month"
+msgstr "Không có phiếu lương trong tháng này"
+
+#: vietnam-ui-core-pages
+msgid "No payroll data"
+msgstr "Chưa có dữ liệu tính lương"
+
+#: vietnam-ui-core-pages
+msgid "departments"
+msgstr "phòng ban"
+
+#: vietnam-ui-core-pages
+msgid "more"
+msgstr "thêm"
+
+#: vietnam-ui-core-pages
+msgid "No reimbursements"
+msgstr "Không có khoản hoàn chi phí"
+
+#: vietnam-ui-core-pages
+msgid "Requests"
+msgstr "Yêu cầu"
+
+#: vietnam-ui-core-pages
+msgid "No pending requests"
+msgstr "Không có yêu cầu đang chờ"
+
+#: vietnam-ui-core-pages
+msgid "Employee share"
+msgstr "Phần đóng của người lao động"
+
+#: vietnam-ui-core-pages
+msgid "Employer share"
+msgstr "Phần đóng của doanh nghiệp"
+
+#: vietnam-ui-core-pages
+msgid "Paid payslips · based on the applied filter:"
+msgstr "Phiếu lương đã trả · theo bộ lọc đang áp dụng:"
+
+#: vietnam-ui-core-pages
+msgid "No contributions in this period"
+msgstr "Không có khoản đóng góp trong kỳ này"
+
+#: vietnam-ui-core-pages
+msgid "employees still to run · based on the applied filter:"
+msgstr "nhân viên chưa chạy lương · theo bộ lọc đang áp dụng:"
+
+#: vietnam-ui-core-pages
+msgid "Every employee has a payslip · based on the applied filter:"
+msgstr "Tất cả nhân viên đều có phiếu lương · theo bộ lọc đang áp dụng:"
+
+#: vietnam-ui-core-pages
+msgid "No employees with an active contract"
+msgstr "Không có nhân viên có hợp đồng còn hiệu lực"
+
+#: vietnam-ui-core-pages
+msgid "No contracts ending soon"
+msgstr "Không có hợp đồng sắp hết hạn"
+
+#: vietnam-ui-core-pages
+msgid "No active loans"
+msgstr "Không có khoản vay đang hoạt động"
+
+#: vietnam-ui-core-pages
+msgid "Remaining"
+msgstr "Còn lại"
+
+#: vietnam-ui-core-pages
+msgid "This employee is already related in,"
+msgstr "Nhân viên này đã được liên kết trong,"
+
+#: vietnam-ui-core-pages
+msgid "Send Mail"
+msgstr "Gửi email"
+
+#: vietnam-ui-core-pages
+msgid "Offline"
+msgstr "Ngoại tuyến"
+
+#: vietnam-ui-core-pages
+msgid "Online"
+msgstr "Trực tuyến"
+
+#: vietnam-ui-core-pages
+msgid "Unselect All Employees"
+msgstr "Bỏ chọn tất cả nhân viên"
+
+#: vietnam-ui-core-pages
+msgid "Export Employees"
+msgstr "Xuất dữ liệu nhân viên"
+
+#: vietnam-ui-core-pages
+msgid "Badge Id"
+msgstr "Mã nhân viên"
+
+#: vietnam-ui-core-pages
+msgid "Export Individual Data"
+msgstr "Xuất dữ liệu cá nhân"
+
+#: vietnam-ui-core-pages
+msgid "Do you want to archive this employee?"
+msgstr "Bạn có muốn lưu trữ hồ sơ nhân viên này không?"
+
+#: vietnam-ui-core-pages
+msgid "Archive"
+msgstr "Lưu trữ"
+
+#: vietnam-ui-core-pages
+msgid "Do you want to un-archive this employee?"
+msgstr "Bạn có muốn khôi phục hồ sơ nhân viên này không?"
+
+#: vietnam-ui-core-pages
+msgid "Un-Archive"
+msgstr "Khôi phục"
+
+#: vietnam-ui-core-pages
+msgid "All non-active contracts of the employee will also be deleted. Do you want to continue ?"
+msgstr "Tất cả hợp đồng không còn hiệu lực của nhân viên cũng sẽ bị xóa. Bạn có muốn tiếp tục không?"
+
+#: vietnam-ui-core-pages
+msgid "Export Data"
+msgstr "Xuất dữ liệu"
+
+#: vietnam-ui-core-pages
+msgid " Activities"
+msgstr " Hoạt động"
+
+#: vietnam-ui-core-pages
+msgid "Today's Attendances"
+msgstr "Chấm công hôm nay"
+
+#: vietnam-ui-core-pages
+msgid "On Time"
+msgstr "Đúng giờ"
+
+#: vietnam-ui-core-pages
+msgid "Late Arrival"
+msgstr "Đi muộn"
+
+#: vietnam-ui-core-pages
+msgid "Attendance Analytic"
+msgstr "Phân tích chấm công"
+
+#: vietnam-ui-core-pages
+msgid "Date range"
+msgstr "Khoảng ngày"
+
+#: vietnam-ui-core-pages
+msgid "Offline Employees"
+msgstr "Nhân viên ngoại tuyến"
+
+#: vietnam-ui-core-pages
+msgid "Hours Chart"
+msgstr "Biểu đồ giờ công"
+
+#: vietnam-ui-core-pages
+msgid "On Break"
+msgstr "Đang nghỉ giữa ca"
+
+#: vietnam-ui-core-pages
+msgid "Overtime To Approve"
+msgstr "Làm thêm giờ chờ duyệt"
+
+#: vietnam-ui-core-pages
+msgid "Attendance To Validate"
+msgstr "Chấm công cần xác nhận"
+
+#: vietnam-ui-core-pages
+msgid "Department Overtime Chart"
+msgstr "Biểu đồ làm thêm giờ theo phòng ban"
+
+#: vietnam-ui-core-pages
+msgid "Lock sidebar open"
+msgstr "Cố định thanh điều hướng"
+
+#: vietnam-ui-core-pages
+msgid "Unlock sidebar (auto-collapses on hover-out)"
+msgstr "Bỏ cố định thanh điều hướng (tự thu gọn khi rời chuột)"
+
+#: vietnam-ui-core-pages
+msgid "Company logo"
+msgstr "Biểu trưng công ty"
+
+#: vietnam-ui-core-pages
+msgid "Main navigation"
+msgstr "Điều hướng chính"
+
+#: vietnam-ui-core-pages
+msgid "Horilla HR version"
+msgstr "Phiên bản Horilla HR"
+
+#: vietnam-ui-core-pages
+msgid "Version"
+msgstr "Phiên bản"
+
+#: vietnam-ui-core-pages
+msgid "Toggle theme"
+msgstr "Chuyển giao diện sáng/tối"
+
+#: vietnam-ui-core-pages
+msgid "Take a tour"
+msgstr "Xem hướng dẫn sử dụng"
+
+#: vietnam-ui-core-pages
+msgid "Clear All"
+msgstr "Xóa tất cả"
