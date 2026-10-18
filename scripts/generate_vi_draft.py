@@ -19,7 +19,9 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.audit_vi_locale import DJANGO_TAG, PYTHON_GETTEXT, source_files
 
-MODEL_ID = "Helsinki-NLP/opus-mt-en-vi"
+MARIAN_MODEL_ID = "Helsinki-NLP/opus-mt-en-vi"
+ENVIT5_MODEL_ID = "VietAI/envit5-translation"
+MODEL_ID = MARIAN_MODEL_ID
 PLACEHOLDER = re.compile(
     r"(%\([a-zA-Z_][a-zA-Z_0-9]*\)[#0 +.-]*[a-zA-Z]|"
     r"%(?:\d+\$)?[sdfr]|"
@@ -87,7 +89,7 @@ def build_translation_requests(keys, existing):
     return key_parts, sorted(requests), excluded
 
 
-def model_translations(texts, *, batch_size):
+def model_translations(texts, *, batch_size, model_id=MODEL_ID):
     """Batch CPU translation; translated fragments contain no protected tokens."""
     if not texts:
         return {}
@@ -95,14 +97,16 @@ def model_translations(texts, *, batch_size):
     from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
     torch.set_num_threads(2)
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
-    model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_ID)
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
     model.eval()
     results = {}
     for offset in range(0, len(texts), batch_size):
         batch = texts[offset:offset + batch_size]
-        # Marian eng->vie has an explicit target tag in its model card.
-        prefixed = [">>vie<< " + item for item in batch]
+        # EnViT5 requires en: input and returns vi: output, whereas Marian
+        # requires the translation language marker in its source text.
+        prefixed = [("en: " if model_id == ENVIT5_MODEL_ID else ">>vie<< ") + item
+                    for item in batch]
         inputs = tokenizer(prefixed, padding=True, truncation=True,
                            max_length=192, return_tensors="pt")
         with torch.inference_mode():
@@ -112,13 +116,16 @@ def model_translations(texts, *, batch_size):
             )
         translated = tokenizer.batch_decode(output, skip_special_tokens=True)
         for source, target in zip(batch, translated):
-            results[source] = target.strip()
+            target = target.strip()
+            if model_id == ENVIT5_MODEL_ID and target.startswith("vi:"):
+                target = target[3:].strip()
+            results[source] = target
         if (offset // batch_size) % 15 == 0:
             print(f"Translated {min(offset + batch_size, len(texts))}/{len(texts)} fragments", flush=True)
     return results
 
 
-def build_draft(*, target, batch_size):
+def build_draft(*, target, batch_size, model_id=MODEL_ID):
     import polib
 
     original_path = ROOT / "horilla/locale/vi/LC_MESSAGES/django.po"
@@ -126,7 +133,7 @@ def build_draft(*, target, batch_size):
     existing = {entry.msgid: entry.msgstr for entry in original
                 if entry.msgid and entry.msgstr and "fuzzy" not in entry.flags}
     key_parts, requests, excluded = build_translation_requests(source_keys(), existing)
-    translations = model_translations(requests, batch_size=batch_size)
+    translations = model_translations(requests, batch_size=batch_size, model_id=model_id)
     created = []
     rejected = {}
     for key, parts in key_parts.items():
@@ -166,7 +173,7 @@ def build_draft(*, target, batch_size):
     original.save(str(draft))
     report = {
         "input_source": "simple Django gettext extraction",
-        "model": MODEL_ID,
+        "model": model_id,
         "translated_draft_count": len(created),
         "rejected_count": len(rejected),
         "excluded_count": len(excluded),
@@ -193,7 +200,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--batch-size", type=int, default=16)
+    parser.add_argument("--model-id", choices=(MARIAN_MODEL_ID, ENVIT5_MODEL_ID),
+                        default=MARIAN_MODEL_ID)
     args = parser.parse_args()
     if not 1 <= args.batch_size <= 64:
         parser.error("--batch-size must be between 1 and 64")
-    raise SystemExit(build_draft(target=args.out, batch_size=args.batch_size))
+    raise SystemExit(build_draft(target=args.out, batch_size=args.batch_size,
+                                 model_id=args.model_id))
