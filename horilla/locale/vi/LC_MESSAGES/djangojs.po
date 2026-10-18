@@ -444,3 +444,83 @@ msgstr "Làm mới"
 #: vietnam-ui-js
 msgid "Please choose an option."
 msgstr "Vui lòng chọn một tùy chọn."
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to delete all the selected attendances?"
+msgstr "Bạn có chắc chắn muốn xóa toàn bộ bản ghi chấm công đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "No rows are selected for deleting attendances."
+msgstr "Chưa chọn bản ghi chấm công nào để xóa."
+
+#: vietnam-ui-js-runtime
+msgid "Uploading..."
+msgstr "Đang tải lên..."
+
+#: vietnam-ui-js-runtime
+msgid "No Records found"
+msgstr "Không tìm thấy bản ghi"
+
+#: vietnam-ui-js-runtime
+msgid "Ok"
+msgstr "Đồng ý"
+
+#: vietnam-ui-js-runtime
+msgid "Do you want to download the excel file?"
+msgstr "Bạn có muốn tải tệp Excel không?"
+
+#: vietnam-ui-js-runtime
+msgid "No rows are selected from the records."
+msgstr "Chưa chọn bản ghi nào."
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to delete all the selected records?"
+msgstr "Bạn có chắc chắn muốn xóa toàn bộ bản ghi đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to archive all the selected records?"
+msgstr "Bạn có chắc chắn muốn lưu trữ toàn bộ bản ghi đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to reject all the selected requests?"
+msgstr "Bạn có chắc chắn muốn từ chối toàn bộ yêu cầu đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to approve all the selected requests?"
+msgstr "Bạn có chắc chắn muốn phê duyệt toàn bộ yêu cầu đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to unarchive all the selected records?"
+msgstr "Bạn có chắc chắn muốn khôi phục toàn bộ bản ghi đã lưu trữ không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to reset the password for all selected employees? Their current password will stop working immediately."
+msgstr "Bạn có chắc chắn muốn đặt lại mật khẩu của toàn bộ nhân viên đã chọn không? Mật khẩu hiện tại sẽ lập tức hết hiệu lực."
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to send an invitation email to all selected employees?"
+msgstr "Bạn có chắc chắn muốn gửi email mời cho toàn bộ nhân viên đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Total vacancy is %(vacancy)s."
+msgstr "Tổng số vị trí tuyển dụng là %(vacancy)s."
+
+#: vietnam-ui-js-runtime
+msgid "Are you sure to change the candidate from %(from)s stage to %(to)s stage"
+msgstr "Bạn có chắc chắn muốn chuyển ứng viên từ giai đoạn %(from)s sang %(to)s không?"
+
+#: vietnam-ui-js-runtime
+msgid "Retry"
+msgstr "Thử lại"
+
+#: vietnam-ui-js-runtime
+msgid "Something went wrong while loading this data."
+msgstr "Đã xảy ra lỗi khi tải dữ liệu."
+
+#: vietnam-ui-js-runtime
+msgid "Request failed (status %(status)s)."
+msgstr "Yêu cầu thất bại (mã trạng thái %(status)s)."
+
+#: vietnam-ui-js-runtime
+msgid "The request took too long to respond."
+msgstr "Yêu cầu phản hồi quá lâu."
