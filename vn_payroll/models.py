@@ -4,6 +4,7 @@ The active Horilla payslip engine is NOT replaced by these tables. Production
 integration must first pass legal, finance and reconciliation acceptance gates.
 """
 
+import ast
 import re
 from datetime import date
 from decimal import Decimal
@@ -52,6 +53,7 @@ class VNRuleSet(models.Model):
     effective_to = models.DateField(null=True, blank=True)
     legal_reference = models.TextField(blank=True)
     parameters = models.JSONField(default=dict, blank=True)
+    input_names = models.JSONField(default=list, blank=True)
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL, null=True, blank=True,
         on_delete=models.PROTECT, related_name="+"
@@ -85,6 +87,16 @@ class VNRuleSet(models.Model):
         if self.effective_to and self.effective_to < self.effective_from:
             raise ValidationError("Ngày hết hiệu lực phải sau ngày bắt đầu.")
         _check_parameters(self.parameters)
+        if not isinstance(self.input_names, list) or len(self.input_names) > 80:
+            raise ValidationError("Danh sách biến đầu vào phải chứa tối đa 80 tên.")
+        if len(set(self.input_names)) != len(self.input_names):
+            raise ValidationError("Biến đầu vào không được trùng nhau.")
+        reserved = set(self.parameters) | {"min", "max", "abs", "round_vnd"}
+        if any(
+            not isinstance(name, str) or not CODE.fullmatch(name) or name in reserved
+            for name in self.input_names
+        ):
+            raise ValidationError("Biến đầu vào phải viết thường và không trùng tham số/hàm.")
         if self.status == "approved":
             if not self.approved_by_id or not self.approved_at or not self.legal_reference.strip():
                 raise ValidationError("Phải có người duyệt, ngày duyệt và căn cứ chính sách/pháp lý.")
@@ -105,7 +117,7 @@ class VNRuleSet(models.Model):
                 # Permit retirement only; never overwrite approved evidence.
                 immutable = (
                     "company_id", "code", "version", "title", "effective_from",
-                    "effective_to", "legal_reference", "parameters",
+                    "effective_to", "legal_reference", "parameters", "input_names",
                     "created_by_id", "approved_by_id", "approved_at",
                 )
                 if any(getattr(old, key) != getattr(self, key) for key in immutable):
@@ -121,6 +133,26 @@ class VNRuleSet(models.Model):
         if self.status in ("approved", "retired"):
             raise ValidationError("Bộ đã duyệt phải được lưu lịch sử, không được xóa.")
         return super().delete(*args, **kwargs)
+
+    def validate_rule_dependencies(self):
+        """Reject unknown variables, forward references and invalid rule ordering."""
+        known = set(self.parameters) | set(self.input_names)
+        for line in self.lines.order_by("position", "pk"):
+            if line.code in known:
+                raise ValidationError("Mã dòng trùng tên biến đầu vào/tham số: " + line.code)
+            try:
+                parsed = validate_syntax(line.expression)
+            except FormulaError as exc:
+                raise ValidationError(f"Công thức {line.code}: {exc}") from exc
+            referenced = {
+                node.id for node in ast.walk(parsed) if isinstance(node, ast.Name)
+            } - {"min", "max", "abs", "round_vnd"}
+            missing = referenced - known
+            if missing:
+                raise ValidationError(
+                    f"Công thức {line.code} có biến chưa khai báo/tính: {sorted(missing)}"
+                )
+            known.add(line.code)
 
     def approve(self, approver):
         if self.status != "review":
