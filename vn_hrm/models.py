@@ -203,8 +203,8 @@ class VNContractAmendment(models.Model):
                 raise ValidationError("Người duyệt và người lập phải khác nhau.")
         if self.contract_id:
             work_info = getattr(self.contract.employee_id, "employee_work_info", None)
-            if work_info is not None and work_info.company_id_id != self.company_id:
-                raise ValidationError("Pháp nhân khác với hợp đồng của nhân viên.")
+            if work_info is None or work_info.company_id_id != self.company_id:
+                raise ValidationError("Không xác định được pháp nhân hợp lệ của hợp đồng.")
 
     def save(self, *args, **kwargs):
         self.full_clean()
