@@ -128,3 +128,15 @@ Nguồn: https://xaydungchinhsach.chinhphu.vn/nghi-dinh-so-293-2025-nd-cp-quy-di
 
 ## 10. Điều kiện Go/No-Go
 **No-Go** nếu chưa có bộ golden payroll kiểm toán độc lập, văn bản/phiên bản được HR/Kế toán/Pháp chế duyệt, 100% case pháp nhân bị ngăn truy cập, khóa dữ liệu Paid, đối soát Net/Bank, backup & rollback thực nghiệm. Tài liệu chỉ chốt yêu cầu; không chứng nhận ứng dụng đã tuân thủ.
+
+
+## 11. Phụ lục Payroll v1.1 — Quy tắc thực thi, kết nối và cổng pháp lý
+**Phân biệt 2 workflow:** (a) cấu hình/kiểm thử/duyệt \`VNRuleSet\` với \`VNPayRule\` ở PR #3 — đã có model, service, Admin preview và unit tests viết; (b) kỳ lương chính thức có Contract/Attendance/Leave/Tax/Insurance snapshot/Payslip/Bank/Paid — **chưa tích hợp adapter** từ engine mới vào \`payroll_run.py\` và quy trình chi trả Horilla.
+
+**Contract dữ liệu bắt buộc để tích hợp:** company, employee, pay_period, pay_date, tax_recognition_date, contract/effective wage version, attendance_lock_version, approved OT/leave source, residency/dependent eligibility version, income taxability/insurance-ability tags, rule_set version, rounding mode, source hash, dòng earning/insurance NLĐ+DN/tax/deduction/net và reconciliation. Phép tính chính thức chỉ nhận tham số luật đã phê duyệt; test independent golden trường hợp ranh giới.
+
+**Gate:** Không đưa tính lương chính thức vào Paid nếu thiếu (1) pháp nhân và scope, (2) HĐ/công/OT/phép có hiệu lực/chốt, (3) policy thuế-BH/OT có căn cứ và ngày hiệu lực, (4) Golden Cases độc lập của Kế toán, (5) đối soát gross/net/phiếu ngân hàng, (6) khóa Paid immutable và audit, (7) UAT pháp lý.
+
+**Lưu ý tính cập nhật luật:** các con số và văn bản ở mục 4–6 là phiên bản tài liệu đang chờ người có trách nhiệm xác nhận hiệu lực/diễn giải từng đối tượng và kỳ tính; không tự động tạo tỷ lệ/tax rule production từ bảng này. Nếu có văn bản sửa đổi, phân loại/ưu tiên theo legal register mục 06 và Decision Log, ghi rõ nguồn chính thức.
+
+Chi tiết [RuleSet field validation](10-FIELD-LEVEL-VALIDATION-MATRIX.md), [Payroll workflow](13-WORKFLOW-STATE-TRANSITIONS.md), [test oracle](15-TRACEABILITY-UAT-MATRIX.md), [integration GAP](16-CODE-TO-DOC-GAP.md).
