@@ -10600,3 +10600,11 @@ msgstr "mẫu-kỳ"
 #: vietnam-ui-machine-rejected-human-edited
 msgid "🗄️ Archive selected templates"
 msgstr "🗄️ Lưu trữ các mẫu đã chọn"
+
+#: vietnam-ui-export-and-confirm-dialog
+msgid "No table found to export."
+msgstr "Không tìm thấy bảng dữ liệu để xuất."
+
+#: vietnam-ui-export-and-confirm-dialog
+msgid "Do you want to change archive status of this project?"
+msgstr "Bạn có muốn thay đổi trạng thái lưu trữ của dự án này không?"
