@@ -97,3 +97,8 @@ Mỗi mã DE là một khái niệm bắt buộc chuẩn hóa, không đồng ng
 
 ## 6. Việc cần xác nhận trước DDL
 Đối tượng lao động Việt Nam/người nước ngoài; một hay nhiều HĐLĐ đồng thời; multi-company; tổ chức dữ liệu cá nhân và consent theo trường hợp; chính sách mã hóa và khóa; đồng nhất mã ngân hàng; nguồn master data địa giới; thời hạn lưu hồ sơ; kiến trúc đồng bộ upstream. Không mở migration production trước khi HR/Kế toán/Tech Lead ký duyệt.
+
+## 7. Phụ lục Data Dictionary v1.1 — Logic DE và validation field thật
+Các dòng DE mục 3 là **mức logic**, không phải toàn bộ Django field/DDL. Ma trận [VALIDATION-10](10-FIELD-LEVEL-VALIDATION-MATRIX.md) bổ sung từng trường VNEmployeeLegalProfile, VNDependent, VNContractAmendment, VNAttendanceCorrection, VNLeaveLedgerEntry, VNRuleSet/VNPayRule, cùng API/import/action guard, lỗi và khoảng thời gian.
+
+**Sai khác cần làm rõ:** \`Dependent.relationship_code\` enum TO-BE vs \`VNDependent.relationship\` text; \`AttendanceDecision\` theo yêu cầu vs \`VNAttendanceCorrection\` chưa có source_log và before/after; \`LeaveLedger\` theo SRS vs ledger độc lập; \`EmployeeIdentity.citizen_id\` encrypted TO-BE vs VN profile chỉ có suffix+opaque vault_ref; \`PayRunSnapshot\` chưa được tích hợp production. Không coi cấu trúc TO-BE đã được migrate. Xem [Code GAP-16](16-CODE-TO-DOC-GAP.md) trước khi chốt field/migration.
