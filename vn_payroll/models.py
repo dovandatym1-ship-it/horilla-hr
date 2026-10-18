@@ -108,8 +108,16 @@ class VNRuleSet(models.Model):
         if len(set(self.input_names)) != len(self.input_names):
             raise ValidationError("Biến đầu vào không được trùng nhau.")
         if self.status == "approved":
-            if not self.approved_by_id or not self.approved_at or not self.legal_reference.strip():
-                raise ValidationError("Phải có người duyệt, ngày duyệt và căn cứ chính sách/pháp lý.")
+            if self.pk is None:
+                raise ValidationError("Không tạo trực tiếp bộ công thức đã duyệt.")
+            if not self.created_by_id or not self.approved_by_id or not self.approved_at or not self.legal_reference.strip():
+                raise ValidationError("Phải có người lập, người duyệt, ngày duyệt và căn cứ pháp lý/chính sách.")
+            if self.created_by_id == self.approved_by_id:
+                raise ValidationError("Người lập và người duyệt phải khác nhau.")
+            if not self.golden_cases:
+                raise ValidationError("Bộ công thức đã duyệt phải có Golden Cases.")
+            self.validate_rule_dependencies()
+            self.validate_golden_cases()
             # Distinct approved versions may not overlap for the same topic.
             existing = VNRuleSet._base_manager.filter(
                 company_id=self.company_id, code=self.code, status="approved"
