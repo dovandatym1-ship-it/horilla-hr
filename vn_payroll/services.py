@@ -60,7 +60,9 @@ def approved_ruleset_for(company_id, code, as_of):
         effective_from__lte=as_of,
     ).filter(
         Q(effective_to__isnull=True) | Q(effective_to__gte=as_of)
-    )[:2])
-    if len(found) != 1:
-        raise ValidationError("Không tìm thấy đúng một bộ công thức đã duyệt có hiệu lực.")
+    ).order_by("-effective_from", "-version")[:2])
+    if not found:
+        raise ValidationError("Chưa có bộ công thức đã duyệt có hiệu lực.")
+    if len(found) > 1 and found[0].effective_from == found[1].effective_from:
+        raise ValidationError("Ngày hiệu lực trùng nhau: cần xử lý xung đột.")
     return found[0]
