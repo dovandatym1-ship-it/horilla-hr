@@ -5,6 +5,7 @@ from decimal import Decimal
 from django.core.exceptions import PermissionDenied, ValidationError
 from django.db import transaction
 from django.db.models import Sum
+from django.utils import timezone
 
 from base.auth_backends import (
     get_allowed_company_ids,
@@ -13,8 +14,10 @@ from base.auth_backends import (
 from base.models import Company
 from employee.models import Employee
 from .crypto import mask_identifier, reveal_identifier
+from .approval_guard import allow_hr_approval
 from .models import (
     VNDependent,
+    VNContractAmendment,
     VNEmployeeLegalProfile,
     VNLeaveLedgerEvent,
     VNSensitiveAccessAudit,
@@ -119,7 +122,8 @@ def verify_dependent(*, actor, company_id, dependent_id):
     obj.verified_by = actor
     obj.status = "verified"
     obj.full_clean()
-    obj.save()
+    with allow_hr_approval():
+        obj.save()
     return obj
 
 
@@ -167,3 +171,46 @@ def leave_balance(*, actor, company_id, employee_id):
         company_id=company_id, employee_id=employee_id
     ).aggregate(total=Sum("units"))["total"]
     return total if total is not None else Decimal("0")
+
+
+@transaction.atomic
+def submit_contract_amendment(*, actor, company_id, amendment_id):
+    require_company_permission(actor, company_id, "change_vncontractamendment")
+    amendment = VNContractAmendment._base_manager.select_for_update().get(
+        pk=amendment_id, company_id=company_id
+    )
+    if amendment.status != "draft":
+        raise ValidationError("Chỉ được gửi duyệt phụ lục ở trạng thái nháp.")
+    if amendment.created_by_id is None:
+        amendment.created_by = actor
+    amendment.status = "review"
+    amendment.save()
+    return amendment
+
+
+@transaction.atomic
+def approve_contract_amendment(*, actor, company_id, amendment_id):
+    require_company_permission(actor, company_id, "approve_vncontractamendment")
+    Company.objects.select_for_update().get(pk=company_id)
+    amendment = VNContractAmendment._base_manager.select_for_update().get(
+        pk=amendment_id, company_id=company_id
+    )
+    if amendment.status != "review":
+        raise ValidationError("Phụ lục chưa gửi duyệt.")
+    if amendment.created_by_id is None or amendment.created_by_id == actor.pk:
+        raise PermissionDenied("Người lập và người duyệt phụ lục phải khác nhau.")
+    peers = VNContractAmendment._base_manager.filter(
+        company_id=company_id, contract_id=amendment.contract_id, status="approved"
+    ).exclude(pk=amendment.pk)
+    for peer in peers:
+        if (
+            (peer.effective_to is None or peer.effective_to >= amendment.effective_from)
+            and (amendment.effective_to is None or peer.effective_from <= amendment.effective_to)
+        ):
+            raise ValidationError("Có phụ lục được duyệt chồng khoảng hiệu lực.")
+    amendment.status = "approved"
+    amendment.approved_by = actor
+    amendment.approved_at = timezone.now()
+    with allow_hr_approval():
+        amendment.save()
+    return amendment
