@@ -107,18 +107,35 @@ class VNRuleBookTests(TestCase):
         with self.assertRaises(ValidationError):
             approved_ruleset_for(second_company.pk, "monthly_payroll", date(2026, 2, 1))
 
-    def test_approved_rule_has_no_overlapping_effective_version(self):
+    def test_new_version_supersedes_without_rewriting_history(self):
         self.book.status = "review"
         self.book.save()
         self.book.approve(self.approver)
-        second = VNRuleSet(
+        newer = VNRuleSet.objects.create(
             company=self.company, code="monthly_payroll", version=2,
-            title="Overlapping payroll version", effective_from=date(2026, 2, 1),
-            legal_reference="Review", status="approved",
-            approved_by=self.approver,
-            approved_at=self.book.approved_at,
-            created_by=self.maker,
+            title="Next rate", effective_from=date(2026, 7, 1),
+            legal_reference="New approved company policy",
             input_names=["salary"], parameters={"rate": "0.11"},
+            golden_cases=[
+                {"inputs": {"salary": "10000000"}, "expected": {"net": "8900000"}}
+            ],
+            created_by=self.maker,
         )
-        with self.assertRaises(ValidationError):
-            second.save()
+        for row in self.book.lines.all():
+            VNPayRule.objects.create(
+                rule_set=newer, code=row.code, position=row.position,
+                category=row.category, label=row.label, expression=row.expression,
+            )
+        newer.status = "review"
+        newer.save()
+        newer.approve(self.approver)
+        self.assertEqual(
+            approved_ruleset_for(self.company.pk, "monthly_payroll", date(2026, 6, 30)).pk,
+            self.book.pk,
+        )
+        self.assertEqual(
+            approved_ruleset_for(self.company.pk, "monthly_payroll", date(2026, 7, 1)).pk,
+            newer.pk,
+        )
+        self.book.refresh_from_db()
+        self.assertEqual(self.book.parameters["rate"], "0.1")
