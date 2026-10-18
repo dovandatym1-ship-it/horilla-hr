@@ -49,7 +49,7 @@ class FormulaEngineTests(SimpleTestCase):
             "salary.__class__", "salary[0]", "[1, 2, 3]",
             "1 ** 1000000", "(lambda x: x)(salary)",
             "open('/etc/passwd')", "str(salary)",
-            "salary // 2", "sum([1,2])",
+            "salary // 2", "sum([1,2])", "salary * 0.1",
             "'hello'", "salary and 1",
         ):
             with self.subTest(formula=bad), self.assertRaises(FormulaError):
