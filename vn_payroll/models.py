@@ -13,6 +13,7 @@ from base.horilla_company_manager import HorillaCompanyManager
 
 from .expression import InvalidFormula, evaluate, validate_expression
 from .approval_guard import approval_transition_enabled
+from .brackets import progressive_amount, validate_brackets
 
 class FormulaRuleQuerySet(models.QuerySet):
     """Forbid bulk paths which bypass clean(), approval and version history."""
@@ -56,7 +57,13 @@ class FormulaRule(models.Model):
     version = models.PositiveIntegerField(default=1)
     title = models.CharField(max_length=255)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
-    expression = models.TextField(max_length=1000)
+    calculation_kind = models.CharField(
+        max_length=20,
+        choices=[("expression", "Biểu thức"), ("progressive", "Lũy tiến theo bậc")],
+        default="expression",
+    )
+    expression = models.TextField(max_length=1000, blank=True)
+    brackets = models.JSONField(default=list, blank=True)
     # Required variable names. Values are supplied at runtime, not stored here.
     variables = models.JSONField(default=list)
     decimal_places = models.PositiveSmallIntegerField(default=0)
@@ -117,7 +124,18 @@ class FormulaRule(models.Model):
             errors["status"] = "Quy tắc chưa duyệt không thể chứa thời điểm duyệt."
         if self.variables and isinstance(self.variables, list) and not errors:
             try:
-                validate_expression(self.expression, self.variables)
+                if self.calculation_kind == "expression":
+                    if self.brackets:
+                        raise InvalidFormula("Biểu thức không dùng danh sách bậc.")
+                    validate_expression(self.expression, self.variables)
+                elif self.calculation_kind == "progressive":
+                    if self.expression.strip() or len(self.variables) != 1:
+                        raise InvalidFormula(
+                            "Công thức lũy tiến cần đúng một biến và không có biểu thức."
+                        )
+                    validate_brackets(self.brackets)
+                else:
+                    raise InvalidFormula("Loại công thức không hợp lệ.")
             except (InvalidFormula, TypeError, ValueError) as exc:
                 errors["expression"] = str(exc)
         if errors:
@@ -182,4 +200,10 @@ class FormulaRule(models.Model):
 
     def calculate_preview(self, inputs):
         """Preview only. No payslip, payroll batch or payment is mutated."""
+        if self.calculation_kind == "progressive":
+            return progressive_amount(
+                inputs[self.variables[0]],
+                self.brackets,
+                places=self.decimal_places,
+            )
         return evaluate(self.expression, inputs, places=self.decimal_places)
