@@ -10840,3 +10840,255 @@ msgstr "Lương cơ bản theo hợp đồng"
 #: vi-reviewed-hrm-2026-10-19
 msgid "Conversion Rate"
 msgstr "Tỷ lệ chuyển đổi"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Comparison"
+msgstr "So sánh"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Complaint"
+msgstr "Khiếu nại"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Completing"
+msgstr "Đang hoàn tất"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Completion Date"
+msgstr "Ngày hoàn thành"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Condition Field"
+msgstr "Trường điều kiện"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Condition Type"
+msgstr "Loại điều kiện"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Condition Value"
+msgstr "Giá trị điều kiện"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Config"
+msgstr "Cấu hình"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Confirm New Password"
+msgstr "Xác nhận mật khẩu mới"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Confirm Publish"
+msgstr "Xác nhận công bố"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Confirm Restore"
+msgstr "Xác nhận khôi phục"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Confirm Stage Change"
+msgstr "Xác nhận thay đổi giai đoạn"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Conflict"
+msgstr "Xung đột"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Conflict Type"
+msgstr "Loại xung đột"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Conflicting Records"
+msgstr "Bản ghi xung đột"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Conflicts"
+msgstr "Các xung đột"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Congrats..."
+msgstr "Chúc mừng..."
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Connection Successful"
+msgstr "Kết nối thành công"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Connection Unsuccessful"
+msgstr "Kết nối thất bại"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Contact Name"
+msgstr "Tên người liên hệ"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Contact Relation"
+msgstr "Mối quan hệ với người liên hệ"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Contains"
+msgstr "Chứa"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Content Preview"
+msgstr "Xem trước nội dung"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Contract Created"
+msgstr "Đã tạo hợp đồng"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Convert To Employee"
+msgstr "Chuyển thành nhân viên"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Current Step"
+msgstr "Bước hiện tại"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Current Stage"
+msgstr "Giai đoạn hiện tại"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Customer Support"
+msgstr "Hỗ trợ khách hàng"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Daily Attendance"
+msgstr "Chấm công hằng ngày"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Daily Report"
+msgstr "Báo cáo hằng ngày"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Date Range"
+msgstr "Khoảng ngày"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Deadline"
+msgstr "Hạn chót"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Decision"
+msgstr "Quyết định"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Department Managers"
+msgstr "Người quản lý các phòng ban"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Download Report"
+msgstr "Tải báo cáo"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Drag and drop"
+msgstr "Kéo và thả"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Duplicate Record"
+msgstr "Bản ghi trùng lặp"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Emergency Contact"
+msgstr "Liên hệ khẩn cấp"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Employee Attendance"
+msgstr "Chấm công nhân viên"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Employee Documents"
+msgstr "Tài liệu nhân viên"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Employee Number"
+msgstr "Mã nhân viên"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Employee Portal"
+msgstr "Cổng thông tin nhân viên"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Employee Requests"
+msgstr "Yêu cầu của nhân viên"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "End of Probation"
+msgstr "Kết thúc thử việc"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Enter Details"
+msgstr "Nhập thông tin chi tiết"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Export Report"
+msgstr "Xuất báo cáo"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Filter by Department"
+msgstr "Lọc theo phòng ban"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "HR Department"
+msgstr "Phòng nhân sự"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Hire Date"
+msgstr "Ngày tuyển dụng"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Hiring Manager"
+msgstr "Người quản lý tuyển dụng"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Leave Policy"
+msgstr "Chính sách nghỉ phép"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Performance Review"
+msgstr "Đánh giá hiệu suất"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Probation Period"
+msgstr "Thời gian thử việc"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Rejected Candidates"
+msgstr "Ứng viên bị từ chối"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Salary Component"
+msgstr "Thành phần lương"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Send Notification"
+msgstr "Gửi thông báo"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Task Completed"
+msgstr "Công việc hoàn thành"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Time Sheet"
+msgstr "Bảng ghi giờ công"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Total Deduction"
+msgstr "Tổng khấu trừ"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "User Permission"
+msgstr "Quyền người dùng"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Work Experience"
+msgstr "Kinh nghiệm làm việc"
+
+#: vi-reviewed-hrm-short-2026-10-19
+msgid "Working Hours"
+msgstr "Giờ làm việc"
