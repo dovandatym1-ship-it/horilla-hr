@@ -815,7 +815,7 @@
         async function exportTableToExcel(containerId, filename) {
             let table = document.querySelector(`#${containerId} .pvtTable`);
             if (!table) {
-                alert("No table found to export.");
+                alert("{% trans 'No table found to export.' %}");
                 return;
             }
 
@@ -1113,7 +1113,7 @@
         function exportTableToCSV(containerId, filename) {
             var table = document.querySelector(`#${containerId} .pvtTable`);
             if (!table) {
-                alert("No table found to export.");
+                alert("{% trans 'No table found to export.' %}");
                 return;
             }
 
@@ -1193,7 +1193,7 @@
         async function exportTableToPDF(containerId, filename) {
             var table = document.querySelector(`#${containerId} .pvtTable`);
             if (!table) {
-                alert("No table found to export.");
+                alert("{% trans 'No table found to export.' %}");
                 return;
             }
 

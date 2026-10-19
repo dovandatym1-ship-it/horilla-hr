@@ -145,10 +145,6 @@ class FormulaRule(models.Model):
         """No in-place edits to approved rules, including direct instance.save()."""
         self.full_clean()
         with transaction.atomic():
-            if self.status == "approved" and not approval_transition_enabled():
-                raise PermissionDenied("Chỉ dịch vụ phê duyệt được kích hoạt công thức.")
-            if self.status == "retired" and not approval_transition_enabled():
-                raise PermissionDenied("Chỉ dịch vụ phê duyệt được ngừng công thức.")
             # A company-wide lock serializes overlapping rule approvals.
             if self.status == "approved":
                 from base.models import Company
@@ -166,6 +162,16 @@ class FormulaRule(models.Model):
                         raise ValidationError("Quy tắc đã duyệt bị trùng khoảng hiệu lực.")
             if self.pk:
                 previous = type(self)._base_manager.select_for_update().get(pk=self.pk)
+                # Authorization must run before checking whether a direct approval
+                # skips review: bypass attempts must fail closed as permission errors.
+                if (
+                    self.status == "approved"
+                    and previous.status != "approved"
+                    and not approval_transition_enabled()
+                ):
+                    raise PermissionDenied(
+                        "Chỉ dịch vụ phê duyệt được kích hoạt công thức."
+                    )
                 allowed = {
                     "draft": {"draft", "review"},
                     "review": {"draft", "review", "approved"},
@@ -187,6 +193,10 @@ class FormulaRule(models.Model):
                     }
                     if before != after:
                         raise ValidationError("Quy tắc đã duyệt là bất biến; hãy tạo phiên bản mới.")
+            if self.status == "approved" and not approval_transition_enabled():
+                raise PermissionDenied("Chỉ dịch vụ phê duyệt được kích hoạt công thức.")
+            if self.status == "retired" and not approval_transition_enabled():
+                raise PermissionDenied("Chỉ dịch vụ phê duyệt được ngừng công thức.")
             return super().save(*args, **kwargs)
 
     def delete(self, *args, **kwargs):
@@ -234,3 +244,72 @@ class FormulaAuditEvent(models.Model):
 
     def delete(self, *args, **kwargs):
         raise PermissionDenied("Không được xóa nhật ký quy tắc.")
+
+
+class VNPayrollReconciliationSnapshot(models.Model):
+    """Immutable audit evidence of one approved rule preview, NEVER a payline.
+
+    A new source fingerprint produces a new snapshot, never rewrites historical
+    calculations. No API or background job can use this row as a payment order.
+    """
+
+    company = models.ForeignKey(
+        "base.Company", on_delete=models.PROTECT,
+        related_name="vn_payroll_reconciliation_snapshots",
+    )
+    employee = models.ForeignKey(
+        "employee.Employee", on_delete=models.PROTECT,
+        related_name="vn_payroll_reconciliation_snapshots",
+    )
+    contract = models.ForeignKey(
+        "payroll.Contract", on_delete=models.PROTECT,
+        related_name="vn_payroll_reconciliation_snapshots",
+    )
+    rule = models.ForeignKey(
+        FormulaRule, on_delete=models.PROTECT,
+        related_name="reconciliation_snapshots",
+    )
+    actor = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT,
+        related_name="vn_payroll_reconciliation_snapshots",
+    )
+    period_start = models.DateField()
+    period_end = models.DateField()
+    source_sha256 = models.CharField(max_length=64)
+    input_sha256 = models.CharField(max_length=64)
+    record_sha256 = models.CharField(max_length=64, unique=True)
+    rule_version = models.PositiveIntegerField()
+    result_exact = models.DecimalField(max_digits=24, decimal_places=6)
+    created_at = models.DateTimeField(auto_now_add=True)
+    objects = FormulaRuleManager("company")
+
+    class Meta:
+        ordering = ["-created_at", "-pk"]
+        permissions = [
+            ("record_vnpayrollreconciliationsnapshot",
+             "Can record Vietnam payroll reconciliation evidence"),
+        ]
+
+    def clean(self):
+        super().clean()
+        if self.period_end and self.period_start and self.period_end < self.period_start:
+            raise ValidationError("Kỳ đối soát không hợp lệ.")
+        if self.rule_id and self.rule.company_id != self.company_id:
+            raise ValidationError("Quy tắc đối soát thuộc pháp nhân khác.")
+        if self.result_exact is not None and not self.result_exact.is_finite():
+            raise ValidationError("Kết quả đối soát không hữu hạn.")
+        for key in ("source_sha256", "input_sha256", "record_sha256"):
+            digest = getattr(self, key)
+            if not isinstance(digest, str) or len(digest) != 64 or any(
+                char not in "0123456789abcdef" for char in digest
+            ):
+                raise ValidationError("Giá trị fingerprint không hợp lệ.")
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            raise PermissionDenied("Bản đối soát bất biến; chỉ được tạo bản mới.")
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise PermissionDenied("Không được xóa chứng cứ đối soát lương.")

@@ -1,0 +1,112 @@
+name: Vietnam HRM integrity
+
+on:
+  push:
+    branches:
+      - feature/vn-hrm-payroll-reconciliation
+  pull_request:
+    branches:
+      - feature/vn-hrm-domain
+      - feature/vn-dynamic-payroll-rules
+      - "2.0"
+  workflow_dispatch:
+
+# Keep only the newest commit under test; a stack of pushes otherwise
+# exhausts concurrent runners while every older job repeats migrations.
+concurrency:
+  group: vn-hrm-integrity-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  vn-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: horilla_ci
+          POSTGRES_PASSWORD: horilla_ci
+          POSTGRES_DB: horilla_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U horilla_ci -d horilla_ci"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DJANGO_SETTINGS_MODULE: horilla.settings
+      DEBUG: "True"
+      SECRET_KEY: ephemeral-vn-hrm-ci-secret-not-for-production
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      DATABASE_URL: postgres://horilla_ci:horilla_ci@localhost:5432/horilla_ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install OS libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends             libcairo2 libpango-1.0-0 libpangocairo-1.0-0             libgdk-pixbuf-2.0-0 libffi8 shared-mime-info gettext
+      - name: Install requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Prepare local settings
+        run: |
+          if [ ! -f horilla/settings/local_settings.py ]; then
+            printf '%s\n' '# Created for CI only' > horilla/settings/local_settings.py
+          fi
+      - name: Compile and inventory Vietnamese UI translations
+        run: |
+          python manage.py compilemessages -l vi
+          python scripts/audit_vi_locale.py > vietnam-localization-audit.json
+          python -m json.tool vietnam-localization-audit.json > /dev/null
+          python -c 'import json; d=json.load(open("vietnam-localization-audit.json")); assert d["missing_gettext_keys"]["djangojs"] == 0, "Missing Vietnamese JavaScript gettext keys: " + str(d["missing_all"]["djangojs"])'
+          python -c 'import json; d=json.load(open("vietnam-localization-audit.json")); assert d["hardcoded_english_html_lang_count"] == 0, "English HTML lang attributes remain: " + str(d["hardcoded_english_html_lang_files"])'
+          python -c 'import json; d=json.load(open("vietnam-localization-audit.json")); print("Vietnam static gettext coverage:", d["gettext_coverage"]); print("Missing keys:", d["missing_gettext_keys"]); print("Unwrapped HTML candidates:", d["unwrapped_html_candidates"])'
+          python -c 'import json; d=json.load(open("vietnam-localization-audit.json")); print("MISSING_DJANGO_SAMPLE:", json.dumps(d["missing_all"]["django"][:160], ensure_ascii=False)); print("MISSING_JS_SAMPLE:", json.dumps(d["missing_all"]["djangojs"][:80], ensure_ascii=False))'
+          echo "Saved source-code localization inventory; not UAT approval."
+      - name: Upload Vietnamese localization inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: vietnam-localization-audit
+          path: vietnam-localization-audit.json
+      - name: Inventory remaining legacy FloatField money risks
+        run: |
+          python scripts/audit_payroll_float_fields.py > vn-payroll-float-inventory.json
+          python -m json.tool vn-payroll-float-inventory.json > /dev/null
+      - name: Upload legacy money field inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-payroll-float-inventory
+          path: vn-payroll-float-inventory.json
+      - name: Django system check and migration drift
+        run: |
+          python manage.py check
+          python manage.py check --fail-level WARNING --tag horilla.tenancy
+          python manage.py makemigrations --check --dry-run
+      - name: Migrate fresh PostgreSQL schema
+        run: python manage.py migrate --noinput
+      - name: Vietnam HRM and payroll suites
+        run: >-
+          python manage.py test
+          vn_hrm.tests vn_payroll.tests
+          horilla.tests.test_vietnam_localization
+          payroll.tests.test_vietnam_currency
+          --noinput
+      - name: Extract all Django gettext keys including blocktrans
+        run: |
+          python manage.py makemessages -l vi --no-wrap --ignore=node_modules --ignore=media --ignore=staticfiles
+          python scripts/audit_vi_locale.py > vietnam-extracted-gettext-audit.json
+          python -m json.tool vietnam-extracted-gettext-audit.json > /dev/null
+          echo "Extraction is for audit only; never commits generated untranslated keys."
+      - name: Upload full gettext source extraction inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-full-gettext-extraction-audit
+          path: vietnam-extracted-gettext-audit.json
+

@@ -1,6 +1,7 @@
 {% load static i18n %}
 <!DOCTYPE html>
-<html lang="en">
+{% get_current_language as current_language %}
+<html lang="{{ current_language }}">
 
 <head>
   <meta charset="UTF-8" />
@@ -102,7 +103,7 @@
       <tr>
         <td align="center" style="padding-top: 0px;">
           <p style="width: 95%;">
-            Hi, {{record.instances.0.get_name}}. You got {{record.count}} attachments of payslips,<br> Have a good day.
+            {% blocktrans with employee_name=record.instances.0.get_name payslip_count=record.count %}Hello {{ employee_name }}, you have {{ payslip_count }} payslip attachments.{% endblocktrans %}<br> {% trans "Have a good day." %}
           </p>
         </td>
       </tr>
@@ -132,7 +133,7 @@
             ">
           This mail was sent you because your email has been enrolled as an
           employee at {{record.instances.0.get_company}}.<br />
-          Don't want to receive mails like these anymore?
+          {% trans "Don\'t want to receive mails like these anymore?" %}
           <a href="#" style="color: #5c5c5c">{% trans "Unsubscribe here" %}</a>.
         </td>
       </tr>

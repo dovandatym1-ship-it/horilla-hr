@@ -108,3 +108,471 @@ msgstr "Ứng viên đang tiếp nhận"
 
 msgid "Candidates per Stage"
 msgstr "Ứng viên theo giai đoạn"
+
+#: vietnam-ui-js
+msgid "Do you want to send the payslip by mail?"
+msgstr "Bạn có muốn gửi phiếu lương qua email không?"
+
+#: vietnam-ui-js
+msgid "Do you want to download the Excel file?"
+msgstr "Bạn có muốn tải tệp Excel không?"
+
+#: vietnam-ui-js
+msgid "Do you want to delete the selected payslips?"
+msgstr "Bạn có muốn xóa các phiếu lương đã chọn không?"
+
+#: vietnam-ui-js
+msgid "Do you want to delete the selected employees?"
+msgstr "Bạn có muốn xóa các nhân viên đã chọn không?"
+
+#: vietnam-ui-js
+msgid "Do you want to archive the selected employees?"
+msgstr "Bạn có muốn lưu trữ các nhân viên đã chọn không?"
+
+#: vietnam-ui-js
+msgid "Do you want to unarchive the selected employees?"
+msgstr "Bạn có muốn khôi phục các nhân viên đã lưu trữ không?"
+
+#: vietnam-ui-js
+msgid "Do you want to approve the selected leave requests?"
+msgstr "Bạn có muốn duyệt các đơn nghỉ phép đã chọn không?"
+
+#: vietnam-ui-js
+msgid "Do you want to download the template?"
+msgstr "Bạn có muốn tải tệp mẫu không?"
+
+#: vietnam-ui-js
+msgid "Select all"
+msgstr "Chọn tất cả"
+
+#: vietnam-ui-js
+msgid "Selected"
+msgstr "Đã chọn"
+
+#: vietnam-ui-js
+msgid "selected"
+msgstr "đã chọn"
+
+#: vietnam-ui-js
+msgid "No rows selected."
+msgstr "Chưa chọn dòng nào."
+
+#: vietnam-ui-js
+msgid "No records selected."
+msgstr "Chưa chọn bản ghi nào."
+
+#: vietnam-ui-js
+msgid "Please select at least one item."
+msgstr "Vui lòng chọn ít nhất một mục."
+
+#: vietnam-ui-js
+msgid "Please select at least one employee."
+msgstr "Vui lòng chọn ít nhất một nhân viên."
+
+#: vietnam-ui-js
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#: vietnam-ui-js
+msgid "Cancel"
+msgstr "Hủy"
+
+#: vietnam-ui-js
+msgid "Close"
+msgstr "Đóng"
+
+#: vietnam-ui-js
+msgid "Delete"
+msgstr "Xóa"
+
+#: vietnam-ui-js
+msgid "Download"
+msgstr "Tải xuống"
+
+#: vietnam-ui-js
+msgid "Save"
+msgstr "Lưu"
+
+#: vietnam-ui-js
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#: vietnam-ui-js
+msgid "Update"
+msgstr "Cập nhật"
+
+#: vietnam-ui-js
+msgid "Add"
+msgstr "Thêm"
+
+#: vietnam-ui-js
+msgid "Clear"
+msgstr "Xóa"
+
+#: vietnam-ui-js
+msgid "Apply"
+msgstr "Áp dụng"
+
+#: vietnam-ui-js
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: vietnam-ui-js
+msgid "Filter"
+msgstr "Lọc"
+
+#: vietnam-ui-js
+msgid "Export"
+msgstr "Xuất dữ liệu"
+
+#: vietnam-ui-js
+msgid "Import"
+msgstr "Nhập dữ liệu"
+
+#: vietnam-ui-js
+msgid "Approve"
+msgstr "Duyệt"
+
+#: vietnam-ui-js
+msgid "Reject"
+msgstr "Từ chối"
+
+#: vietnam-ui-js
+msgid "Yes"
+msgstr "Có"
+
+#: vietnam-ui-js
+msgid "No"
+msgstr "Không"
+
+#: vietnam-ui-js
+msgid "Success"
+msgstr "Thành công"
+
+#: vietnam-ui-js
+msgid "Error"
+msgstr "Lỗi"
+
+#: vietnam-ui-js
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#: vietnam-ui-js
+msgid "Loading..."
+msgstr "Đang tải..."
+
+#: vietnam-ui-js
+msgid "Processing..."
+msgstr "Đang xử lý..."
+
+#: vietnam-ui-js
+msgid "Please wait..."
+msgstr "Vui lòng chờ..."
+
+#: vietnam-ui-js
+msgid "Invalid file type."
+msgstr "Loại tệp không hợp lệ."
+
+#: vietnam-ui-js
+msgid "Invalid date."
+msgstr "Ngày không hợp lệ."
+
+#: vietnam-ui-js
+msgid "No data available"
+msgstr "Không có dữ liệu"
+
+#: vietnam-ui-js
+msgid "No records found."
+msgstr "Không tìm thấy bản ghi."
+
+#: vietnam-ui-js
+msgid "Something went wrong."
+msgstr "Đã xảy ra lỗi."
+
+#: vietnam-ui-js
+msgid "Please try again."
+msgstr "Vui lòng thử lại."
+
+#: vietnam-ui-js
+msgid "Status not updated."
+msgstr "Chưa cập nhật được trạng thái."
+
+#: vietnam-ui-js
+msgid "Mail processing."
+msgstr "Đang xử lý gửi email."
+
+#: vietnam-ui-js
+msgid "Are you sure?"
+msgstr "Bạn có chắc chắn không?"
+
+#: vietnam-ui-js
+msgid "Are you sure you want to proceed?"
+msgstr "Bạn có chắc chắn muốn tiếp tục?"
+
+#: vietnam-ui-js
+msgid "Your changes have been saved."
+msgstr "Đã lưu các thay đổi."
+
+#: vietnam-ui-js
+msgid "Failed to update."
+msgstr "Không thể cập nhật."
+
+#: vietnam-ui-js
+msgid "Updated successfully."
+msgstr "Đã cập nhật thành công."
+
+#: vietnam-ui-js
+msgid "Deleted successfully."
+msgstr "Đã xóa thành công."
+
+#: vietnam-ui-js
+msgid "Saved successfully."
+msgstr "Đã lưu thành công."
+
+#: vietnam-ui-js
+msgid "Please select a date."
+msgstr "Vui lòng chọn ngày."
+
+#: vietnam-ui-js
+msgid "Please select employees."
+msgstr "Vui lòng chọn nhân viên."
+
+#: vietnam-ui-js
+msgid "Select a file"
+msgstr "Chọn tệp"
+
+#: vietnam-ui-js
+msgid "Download Excel"
+msgstr "Tải Excel"
+
+#: vietnam-ui-js
+msgid "Download PDF"
+msgstr "Tải PDF"
+
+#: vietnam-ui-js
+msgid "Report"
+msgstr "Báo cáo"
+
+#: vietnam-ui-js
+msgid "Reports"
+msgstr "Báo cáo"
+
+#: vietnam-ui-js
+msgid "Calendar"
+msgstr "Lịch"
+
+#: vietnam-ui-js
+msgid "Today"
+msgstr "Hôm nay"
+
+#: vietnam-ui-js
+msgid "This Month"
+msgstr "Tháng này"
+
+#: vietnam-ui-js
+msgid "Last Month"
+msgstr "Tháng trước"
+
+#: vietnam-ui-js
+msgid "Employee"
+msgstr "Nhân viên"
+
+#: vietnam-ui-js
+msgid "Payslip"
+msgstr "Phiếu lương"
+
+#: vietnam-ui-js
+msgid "Payroll"
+msgstr "Bảng lương"
+
+#: vietnam-ui-js
+msgid "Attendance"
+msgstr "Chấm công"
+
+#: vietnam-ui-js
+msgid "Overtime"
+msgstr "Làm thêm giờ"
+
+#: vietnam-ui-js
+msgid "Leave"
+msgstr "Nghỉ phép"
+
+#: vietnam-ui-js
+msgid "Unpaid Leave"
+msgstr "Nghỉ không lương"
+
+#: vietnam-ui-js
+msgid "Pending"
+msgstr "Đang chờ"
+
+#: vietnam-ui-js
+msgid "Approved"
+msgstr "Đã phê duyệt"
+
+#: vietnam-ui-js
+msgid "Rejected"
+msgstr "Đã từ chối"
+
+#: vietnam-ui-js
+msgid "View Details"
+msgstr "Xem chi tiết"
+
+#: vietnam-ui-js
+msgid "Total"
+msgstr "Tổng cộng"
+
+#: vietnam-ui-js
+msgid "Amount"
+msgstr "Số tiền"
+
+#: vietnam-ui-js
+msgid "Gross Pay"
+msgstr "Tổng thu nhập"
+
+#: vietnam-ui-js
+msgid "Net Pay"
+msgstr "Thực lĩnh"
+
+#: vietnam-ui-js
+msgid "Add New"
+msgstr "Thêm mới"
+
+#: vietnam-ui-js
+msgid "Refresh"
+msgstr "Làm mới"
+
+#: vietnam-ui-js
+msgid "Please choose an option."
+msgstr "Vui lòng chọn một tùy chọn."
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to delete all the selected attendances?"
+msgstr "Bạn có chắc chắn muốn xóa toàn bộ bản ghi chấm công đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "No rows are selected for deleting attendances."
+msgstr "Chưa chọn bản ghi chấm công nào để xóa."
+
+#: vietnam-ui-js-runtime
+msgid "Uploading..."
+msgstr "Đang tải lên..."
+
+#: vietnam-ui-js-runtime
+msgid "No Records found"
+msgstr "Không tìm thấy bản ghi"
+
+#: vietnam-ui-js-runtime
+msgid "Ok"
+msgstr "Đồng ý"
+
+#: vietnam-ui-js-runtime
+msgid "Do you want to download the excel file?"
+msgstr "Bạn có muốn tải tệp Excel không?"
+
+#: vietnam-ui-js-runtime
+msgid "No rows are selected from the records."
+msgstr "Chưa chọn bản ghi nào."
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to delete all the selected records?"
+msgstr "Bạn có chắc chắn muốn xóa toàn bộ bản ghi đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to archive all the selected records?"
+msgstr "Bạn có chắc chắn muốn lưu trữ toàn bộ bản ghi đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to reject all the selected requests?"
+msgstr "Bạn có chắc chắn muốn từ chối toàn bộ yêu cầu đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to approve all the selected requests?"
+msgstr "Bạn có chắc chắn muốn phê duyệt toàn bộ yêu cầu đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to unarchive all the selected records?"
+msgstr "Bạn có chắc chắn muốn khôi phục toàn bộ bản ghi đã lưu trữ không?"
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to reset the password for all selected employees? Their current password will stop working immediately."
+msgstr "Bạn có chắc chắn muốn đặt lại mật khẩu của toàn bộ nhân viên đã chọn không? Mật khẩu hiện tại sẽ lập tức hết hiệu lực."
+
+#: vietnam-ui-js-runtime
+msgid "Do you really want to send an invitation email to all selected employees?"
+msgstr "Bạn có chắc chắn muốn gửi email mời cho toàn bộ nhân viên đã chọn không?"
+
+#: vietnam-ui-js-runtime
+msgid "Total vacancy is %(vacancy)s."
+msgstr "Tổng số vị trí tuyển dụng là %(vacancy)s."
+
+#: vietnam-ui-js-runtime
+msgid "Are you sure to change the candidate from %(from)s stage to %(to)s stage"
+msgstr "Bạn có chắc chắn muốn chuyển ứng viên từ giai đoạn %(from)s sang %(to)s không?"
+
+#: vietnam-ui-js-runtime
+msgid "Retry"
+msgstr "Thử lại"
+
+#: vietnam-ui-js-runtime
+msgid "Something went wrong while loading this data."
+msgstr "Đã xảy ra lỗi khi tải dữ liệu."
+
+#: vietnam-ui-js-runtime
+msgid "Request failed (status %(status)s)."
+msgstr "Yêu cầu thất bại (mã trạng thái %(status)s)."
+
+#: vietnam-ui-js-runtime
+msgid "The request took too long to respond."
+msgstr "Yêu cầu phản hồi quá lâu."
+
+#: vietnam-ui-js-completion
+msgid "A rejection reason is required."
+msgstr "Bắt buộc nhập lý do từ chối."
+
+#: vietnam-ui-js-completion
+msgid "An attendance request exists for updating this attendance prior to validation."
+msgstr "Đã có yêu cầu điều chỉnh chấm công này trước khi xác nhận."
+
+#: vietnam-ui-js-completion
+msgid "Feedback"
+msgstr "Phản hồi"
+
+#: vietnam-ui-js-completion
+msgid "Hired Candidates"
+msgstr "Ứng viên đã tuyển"
+
+#: vietnam-ui-js-completion
+msgid "Imported Successfully!"
+msgstr "Nhập dữ liệu thành công!"
+
+#: vietnam-ui-js-completion
+msgid "Key Result"
+msgstr "Kết quả then chốt"
+
+#: vietnam-ui-js-completion
+msgid "Name of Employees"
+msgstr "Tên nhân viên"
+
+#: vietnam-ui-js-completion
+msgid "Number of Candidates"
+msgstr "Số lượng ứng viên"
+
+#: vietnam-ui-js-completion
+msgid "Objective"
+msgstr "Mục tiêu"
+
+#: vietnam-ui-js-completion
+msgid "Please upload a file with the .xlsx extension only."
+msgstr "Chỉ được tải lên tệp có phần mở rộng .xlsx."
+
+#: vietnam-ui-js-completion
+msgid "Rejection reason"
+msgstr "Lý do từ chối"
+
+#: vietnam-ui-js-completion
+msgid "The candidate is being moved from %(from)s to the %(to)s stage. Do you want to proceed?"
+msgstr "Ứng viên sẽ được chuyển từ giai đoạn %(from)s sang %(to)s. Bạn có muốn tiếp tục không?"
+
+#: vietnam-ui-js-completion
+msgid "Upload Completed!"
+msgstr "Tải lên hoàn tất!"

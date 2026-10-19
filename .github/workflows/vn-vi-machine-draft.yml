@@ -1,0 +1,47 @@
+name: Vietnam localization draft (offline model)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/vn-hrm-payroll-reconciliation
+    paths:
+      - scripts/generate_vi_draft.py
+      - .github/workflows/vn-vi-machine-draft.yml
+
+permissions:
+  contents: read
+
+jobs:
+  draft-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TRANSFORMERS_NO_ADVISORY_WARNINGS: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install CPU translation tools (CI only)
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install "transformers>=4.45,<5" sentencepiece polib
+      - name: Build fuzzy Vietnamese drafts without modifying production locale
+        run: |
+          python scripts/generate_vi_draft.py --out /tmp/vn-i18n-draft --batch-size 8 --model-id VietAI/envit5-translation
+          python -m json.tool /tmp/vn-i18n-draft/review_report.json >/dev/null
+          python scripts/qa_vi_draft.py --source /tmp/vn-i18n-draft/django.draft.po --out /tmp/vn-i18n-draft
+          python -m json.tool /tmp/vn-i18n-draft/quality_report.json > /dev/null
+          cat /tmp/vn-i18n-draft/review_report.json | head -n 16
+      - name: Upload translated draft and QA report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vn-i18n-envit5-draft-review-required
+          path: /tmp/vn-i18n-draft/
+          if-no-files-found: warn
+          retention-days: 14

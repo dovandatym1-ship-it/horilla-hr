@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load i18n %}
+{% trans "and above" as and_above %}
 {% load widget_tweaks %}
 {% block content %}
 <section class="oh-wrapper oh-main__topbar">
@@ -61,7 +62,7 @@
                     {% endfor %}
                   </td>
                   <td style="padding:6px;">
-                    {% render_field bracket_form.max_income class="oh-input" placeholder="and above" %}
+                    {% render_field bracket_form.max_income class="oh-input" placeholder=and_above %}
                     {% for error in bracket_form.max_income.errors %}
                       <div class="text-sm" style="color:#b00020;">{{ error }}</div>
                     {% endfor %}

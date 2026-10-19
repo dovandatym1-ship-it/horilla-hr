@@ -6,7 +6,7 @@ from django.core.exceptions import PermissionDenied, ValidationError
 from django.test import TestCase
 
 from horilla.testkit import make_company, make_employee, make_user
-from payroll.tests.factories_payroll import make_active_contract
+from vn_hrm.tests.helpers import existing_or_active_contract
 from vn_hrm.models import VNContractAmendment
 from vn_hrm.services import approve_contract_amendment, submit_contract_amendment
 
@@ -20,8 +20,8 @@ class ContractAmendmentTests(TestCase):
         cls.employee = make_employee(
             company=cls.company, email="vncontract-employee@example.com"
         )
-        cls.contract = make_active_contract(
-            cls.employee, contract_start_date=date(2026, 1, 1)
+        cls.contract = existing_or_active_contract(
+            cls.employee, start_date=date(2026, 1, 1)
         )
 
     def amendment(self, version=1, *, effective_from=None):

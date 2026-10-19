@@ -58,3 +58,29 @@ Không dùng chức năng cấu hình/tính thử để khẳng định phần m
 
 ## 6. Quy tắc phát hành
 **No-Go** nếu còn trường hợp thiếu quyền, lộ PII, logic chi trả chưa đối soát, migration drift, không thể restore hoặc rule thời điểm hiệu lực chưa được phê duyệt. Không merge trực tiếp vào `2.0` hoặc đánh dấu UAT PASS khi chưa có bằng chứng chạy.
+
+
+---
+
+## 7. Cập nhật Phase 2 — PR #6 (18/10/2026)
+
+Phần kiểm kê ở các mục trên phản ánh trạng thái PR #5. PR #6 tiếp tục triển khai code trên nhánh `feature/vn-hrm-payroll-reconciliation`, **chưa merge**, chỉ dùng để đối soát trước chi trả:
+
+- `vn_hrm/payroll_sources.py`: lookup phụ lục `approved` theo ngày, snapshot số ngày nghỉ duyệt/OT đã duyệt/chấm công validated/sổ phép; từ chối phụ lục thay đổi hoặc nghỉ phép giao kỳ không thể phân bổ an toàn.
+- `vn_payroll/decimal_tools.py`: phép tính Decimal của VND, tỷ lệ và trần cấu hình; KHÔNG khôi phục lỗi đã phát sinh từ core FloatField.
+- `vn_payroll/golden_cases.py`: độc lập so khớp ít nhất ba test vectors cho rule có hiệu lực đã được duyệt; yêu cầu căn cứ pháp lý với danh mục tax/insurance, không tự xác nhận tính hợp pháp.
+- `vn_hrm/reports.py`: Gross/Net aggregate và CSV không chứa PII, chỉ sử dụng các phiếu confirmed/paid và kiểm tra phạm vi công ty cùng quyền `view_payslip`.
+- `scripts/audit_vi_locale.py`: kiểm kê gettext tiếng Việt; `docs/VN_HRM_UAT_MATRIX.md`: danh sách kịch bản UAT phải nghiệm thu.
+- `.github/workflows/vn-hrm-integrity.yml`: CI PostgreSQL, Django system check, migration drift, migration và test.
+
+| Hạng mục | Kết quả hiện có | Chưa đủ để đánh dấu hoàn tất |
+|---|---|---|
+| Việt hóa 100% | Nền tảng gettext + công cụ đo | Còn hàng nghìn chuỗi và nhiều UI/JS/Email/PDF/Excel chưa thẩm tra |
+| Phụ lục → tính lương | Lookup phụ lục approved và preview | Chưa thay thế pipeline phiếu lương chính thức |
+| Phép/công/OT → Payroll | Approved input và snapshot read-only | Chưa xử lý tất cả giao kỳ/khóa sổ/payline |
+| Thay FloatField tiền lõi | Decimal boundary và thử nghiệm độc lập | Chưa migrate toàn bộ FloatField và thuật toán sử dụng float |
+| Báo cáo Việt Nam | Tổng hợp nội bộ Gross/Net + CSV | Chưa phải tờ khai TNCN/BHXH/bảng ngân hàng |
+| Thuế/BH độc lập | Runner golden case, rule động | Chưa có bộ luật chuẩn theo hiệu lực được thẩm định/đối soát |
+| Django/migration/CI/UAT | CI được tạo/kích hoạt | PASS/FAIL phải dựa trên log thực; UAT chưa thực hiện |
+
+**Quyết định phát hành: NO-GO cho production payroll/chi trả** cho đến khi các mục còn lại đã kiểm chứng. PR #6 ở trạng thái draft để tránh hiểu sai về việc hoàn thành nghiệm thu.
