@@ -10608,3 +10608,235 @@ msgstr "Không tìm thấy bảng dữ liệu để xuất."
 #: vietnam-ui-export-and-confirm-dialog
 msgid "Do you want to change archive status of this project?"
 msgstr "Bạn có muốn thay đổi trạng thái lưu trữ của dự án này không?"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "A one-off, on this payslip only. No allowance or deduction is created, so nobody's next payslip changes."
+msgstr "Chỉ áp dụng một lần trên phiếu lương này. Không tạo phụ cấp hoặc khấu trừ mới, nên phiếu lương kỳ sau không bị ảnh hưởng."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "against this payslip's own figures"
+msgstr "theo số liệu của chính phiếu lương này"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Are you sure want to delete this attendance?"
+msgstr "Bạn có chắc chắn muốn xóa bản ghi chấm công này không?"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Are you sure you want to delete this candidate?"
+msgstr "Bạn có chắc chắn muốn xóa ứng viên này không?"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Are you sure you want to delete this offboarding?"
+msgstr "Bạn có chắc chắn muốn xóa hồ sơ nghỉ việc này không?"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Are you sure you want to delete this payslip auto generate?"
+msgstr "Bạn có chắc chắn muốn xóa cấu hình tự động tạo phiếu lương này không?"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Are you sure you want to remove this department manager?"
+msgstr "Bạn có chắc chắn muốn bỏ người quản lý phòng ban này không?"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Assign managers responsible for helpdesk tickets per department."
+msgstr "Phân công người quản lý chịu trách nhiệm xử lý yêu cầu hỗ trợ theo phòng ban."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance % by shift"
+msgstr "Tỷ lệ chấm công theo ca (%)"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance account updated successfully."
+msgstr "Đã cập nhật tài khoản chấm công thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance activity Does not exists.."
+msgstr "Không tồn tại hoạt động chấm công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance activity imported successfully"
+msgstr "Đã nhập hoạt động chấm công thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance batch created successfully."
+msgstr "Đã tạo đợt chấm công thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance Break-point settings created."
+msgstr "Đã tạo cấu hình thời gian nghỉ giữa ca."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance Break-point settings updated."
+msgstr "Đã cập nhật cấu hình thời gian nghỉ giữa ca."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance for this employee on the current date already exists."
+msgstr "Nhân viên này đã có bản ghi chấm công trong ngày hiện tại."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "attendance overlaps approved leave"
+msgstr "chấm công trùng với thời gian nghỉ phép đã được duyệt"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance request has been approved"
+msgstr "Yêu cầu chấm công đã được phê duyệt"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance request has been rejected"
+msgstr "Yêu cầu chấm công đã bị từ chối"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Attendance update request created."
+msgstr "Đã tạo yêu cầu điều chỉnh chấm công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Auto payslip generate activated successfully."
+msgstr "Đã bật tự động tạo phiếu lương thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Auto payslip generate deactivated successfully."
+msgstr "Đã tắt tự động tạo phiếu lương thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Automatically generate payslips for employees on a scheduled day of the month."
+msgstr "Tự động tạo phiếu lương cho nhân viên vào ngày được lên lịch trong tháng."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Average tenure and tenure bands by department."
+msgstr "Thâm niên trung bình và các nhóm thâm niên theo phòng ban."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Basic pay was changed by hand on this payslip."
+msgstr "Lương cơ bản trên phiếu lương này đã được chỉnh sửa thủ công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Batch attendance title updated sucessfully."
+msgstr "Đã cập nhật tên đợt chấm công thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "By approving the request employee will added to the offboarding pipeline"
+msgstr "Khi phê duyệt yêu cầu, nhân viên sẽ được đưa vào quy trình nghỉ việc."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "by department — last 6 months"
+msgstr "theo phòng ban — 6 tháng gần nhất"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "By enabling the feature candidates can track their recruitment progress"
+msgstr "Khi bật tính năng này, ứng viên có thể theo dõi tiến độ tuyển dụng."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "By enabling the feature candidates can view their recruitment overall rating"
+msgstr "Khi bật tính năng này, ứng viên có thể xem đánh giá tổng thể trong quá trình tuyển dụng."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "By enabling this, employees can mark their attendance using face detection."
+msgstr "Khi bật tính năng này, nhân viên có thể chấm công bằng nhận diện khuôn mặt."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "By enabling this, you track the late comes and early outs of employees in their attendance."
+msgstr "Khi bật tính năng này, hệ thống theo dõi việc đi muộn và về sớm của nhân viên qua dữ liệu chấm công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Candidate Added to Onboarding Stage"
+msgstr "Đã thêm ứng viên vào giai đoạn tiếp nhận nhân sự"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Candidate archived successfully.."
+msgstr "Đã lưu trữ ứng viên thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "candidate deleted successfully"
+msgstr "Đã xóa ứng viên thành công"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Candidate is not in rejected list"
+msgstr "Ứng viên không nằm trong danh sách bị từ chối"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Candidate onboarding stage updated"
+msgstr "Đã cập nhật giai đoạn tiếp nhận của ứng viên"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "candidate or status is missing"
+msgstr "Thiếu ứng viên hoặc trạng thái"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Candidate rejection deleted successfully"
+msgstr "Đã xóa thông tin từ chối ứng viên thành công"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Candidate removed from rejected list"
+msgstr "Đã đưa ứng viên ra khỏi danh sách bị từ chối"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Candidate task stage updated successfully."
+msgstr "Đã cập nhật giai đoạn công việc của ứng viên thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Candidate unarchived successfully.."
+msgstr "Đã bỏ lưu trữ ứng viên thành công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "candidate(s)"
+msgstr "ứng viên"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Change any amount, or tick a line to leave it off this payslip."
+msgstr "Điều chỉnh số tiền hoặc chọn một dòng để không tính dòng đó vào phiếu lương."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Click a department to see who left."
+msgstr "Nhấp vào phòng ban để xem danh sách nhân viên đã nghỉ việc."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Comma-separated tags. E.g. 'email,onboarding,pdf'"
+msgstr "Các nhãn cách nhau bằng dấu phẩy, ví dụ: 'email,onboarding,pdf'"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Compensatory Leave Created"
+msgstr "Đã tạo đơn nghỉ bù"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Compensatory Leave Type"
+msgstr "Loại nghỉ bù"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Compensatory Leave Updated"
+msgstr "Đã cập nhật nghỉ bù"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Complete Profile"
+msgstr "Hoàn thiện hồ sơ"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Condition Operator"
+msgstr "Toán tử điều kiện"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Configure attendance tracking, check-in/out, biometric and IP restriction rules."
+msgstr "Cấu hình theo dõi chấm công, giờ vào/ra, sinh trắc học và quy tắc hạn chế IP."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Configure department-based conditions and manager sequences for multi-level request approvals."
+msgstr "Cấu hình điều kiện theo phòng ban và thứ tự người quản lý phê duyệt yêu cầu nhiều cấp."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Configure the location and radius within which employees are allowed to mark their attendance."
+msgstr "Cấu hình vị trí và bán kính cho phép nhân viên chấm công."
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Contact & Address"
+msgstr "Liên hệ và địa chỉ"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Contact & Compensation"
+msgstr "Thông tin liên hệ và chế độ đãi ngộ"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Contract Basic"
+msgstr "Lương cơ bản theo hợp đồng"
+
+#: vi-reviewed-hrm-2026-10-19
+msgid "Conversion Rate"
+msgstr "Tỷ lệ chuyển đổi"
