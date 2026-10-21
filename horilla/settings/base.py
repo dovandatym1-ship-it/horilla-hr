@@ -375,6 +375,7 @@ WSGI_APPLICATION = "horilla.wsgi.application"
 LANGUAGE_CODE = env("LANGUAGE_CODE", default="vi")
 TIME_ZONE = env("TIME_ZONE", default="Asia/Ho_Chi_Minh")
 DEFAULT_CURRENCY_SYMBOL = env("DEFAULT_CURRENCY_SYMBOL", default="₫")
+SYSTEM_DISPLAY_NAME = env("SYSTEM_DISPLAY_NAME", default="Hệ thống HRM - HVNH")
 # Only Vietnamese gets these display/input formats; other locales use Django's own.
 FORMAT_MODULE_PATH = ["horilla.vietnam_formats"]
 USE_THOUSAND_SEPARATOR = True

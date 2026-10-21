@@ -7,7 +7,7 @@ from django.db.models.signals import m2m_changed, post_save
 from django.dispatch import receiver
 from django.forms import ValidationError
 from django.urls import reverse_lazy
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 from base.horilla_company_manager import HorillaCompanyManager
 from employee.models import Employee

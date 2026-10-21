@@ -1,7 +1,8 @@
 {% load static i18n horillafilters %}
 {% get_hq_company as hq_company %}
 <!DOCTYPE html>
-<html lang="en">
+{% get_current_language as current_language %}
+<html lang="{{ current_language }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

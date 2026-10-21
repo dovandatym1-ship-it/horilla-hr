@@ -17,6 +17,13 @@ class VietnameseLocalizationTests(SimpleTestCase):
         self.assertIn("vi", dict(settings.LANGUAGES))
         self.assertEqual(settings.FORMAT_MODULE_PATH, ["horilla.vietnam_formats"])
 
+    @override_settings(WHITE_LABELLING=False, SYSTEM_DISPLAY_NAME="Hệ thống HRM - HVNH")
+    def test_system_display_name(self):
+        from base.context_processors import white_labelling_company
+
+        context = white_labelling_company(object())
+        self.assertEqual(context["white_label_company_name"], "Hệ thống HRM - HVNH")
+
     def test_vietnamese_date_and_time_formats(self):
         with translation.override("vi"):
             self.assertEqual(formats.get_format("DATE_FORMAT"), "d/m/Y")
@@ -55,3 +62,132 @@ class VietnameseLocalizationTests(SimpleTestCase):
         middleware = DefaultLanguageMiddleware(lambda r: r)
         middleware(request)
         self.assertNotIn("HTTP_ACCEPT_LANGUAGE", request.META)
+
+
+class VietnameseCatalogueIntegrityTests(SimpleTestCase):
+    """Regression gate for critical Vietnamese copy in both gettext catalogues."""
+
+    @staticmethod
+    def _translations(catalogue):
+        import ast
+        from pathlib import Path
+        import re
+
+        root = Path(__file__).resolve().parents[2]
+        path = root / "horilla" / "locale" / "vi" / "LC_MESSAGES" / catalogue
+        raw = path.read_text(encoding="utf-8")
+        pairs = re.findall(
+            r'^msgid (".*")\nmsgstr (".*")$', raw, flags=re.MULTILINE
+        )
+        result = {}
+        for source, translation in pairs:
+            key = ast.literal_eval(source)
+            value = ast.literal_eval(translation)
+            if not key:
+                continue
+            if key in result:
+                raise AssertionError(f"Duplicate msgid in {catalogue}: {key}")
+            result[key] = value
+        return result
+
+    def test_django_core_hrm_and_payslip_translations(self):
+        catalogue = self._translations("django.po")
+        self.assertGreaterEqual(len(catalogue), 590)
+        self.assertEqual(catalogue["Sign In"], "Đăng nhập")
+        self.assertEqual(catalogue["Payslip"], "Phiếu lương")
+        self.assertEqual(catalogue["Social Insurance"], "Bảo hiểm xã hội")
+        self.assertEqual(catalogue["Contract Amendment"], "Phụ lục hợp đồng")
+        self.assertEqual(
+            catalogue["Status not updated."], "Chưa cập nhật được trạng thái."
+        )
+
+    def test_javascript_dialog_translations(self):
+        catalogue = self._translations("djangojs.po")
+        self.assertGreaterEqual(len(catalogue), 110)
+        self.assertEqual(catalogue["Confirm"], "Xác nhận")
+        self.assertEqual(catalogue["Cancel"], "Hủy")
+        self.assertEqual(
+            catalogue["Do you want to send the payslip by mail?"],
+            "Bạn có muốn gửi phiếu lương qua email không?",
+        )
+
+    def test_source_templates_do_not_hardcode_critical_english(self):
+        from pathlib import Path
+
+        root = Path(__file__).resolve().parents[2]
+        navbar = (root / "templates" / "navbar.html").read_text(encoding="utf-8")
+        payslips = (
+            root / "payroll" / "templates" / "payroll" / "payslip"
+            / "view_payslips.html"
+        ).read_text(encoding="utf-8")
+        self.assertIn('{% trans "Mark as read" %}', navbar)
+        self.assertIn("{% trans 'Status not updated.' %}", payslips)
+        self.assertNotIn(">My Profile</a>", navbar)
+        self.assertNotIn(">Log out</a>", navbar)
+
+    def test_compiled_vietnamese_messages_are_served(self):
+        from django.utils.translation import gettext
+
+        with translation.override("vi"):
+            self.assertEqual(gettext("Sign In"), "Đăng nhập")
+            self.assertEqual(gettext("Payslip"), "Phiếu lương")
+            self.assertEqual(gettext("Add Candidate"), "Thêm ứng viên")
+            self.assertEqual(gettext("Project Dashboard"), "Tổng quan dự án")
+            self.assertEqual(
+                gettext("Social Insurance"), "Bảo hiểm xã hội"
+            )
+
+        with translation.override("en"):
+            self.assertEqual(gettext("Sign In"), "Sign In")
+
+    def test_machine_drafts_with_misleading_hrm_terms_are_not_auto_approved(self):
+        from scripts.qa_vi_draft import review_one
+
+        self.assertTrue(
+            any(
+                "attendance" in item
+                for item in review_one(
+                    "Attendance Report", "Báo cáo người tham dự"
+                )
+            )
+        )
+        self.assertTrue(
+            any(
+                "asset" in item
+                for item in review_one(
+                    "Asset Request", "Yêu cầu xác thực"
+                )
+            )
+        )
+        self.assertTrue(
+            any(
+                "payslip" in item
+                for item in review_one(
+                    "Download Payslip", "Tải xuống tệp"
+                )
+            )
+        )
+        self.assertTrue(
+            any(
+                "observed_mt_error" in item
+                for item in review_one(
+                    "Gross pay", "Số tiền thô tục"
+                )
+            )
+        )
+
+    def test_technical_icon_and_css_tokens_are_not_localized(self):
+        catalogue = self._translations("django.po")
+        for token in (
+            "caret down outline", "library outline", "add sharp",
+            "list outline", "grid outline", "cloud upload",
+            "chevron back outline", "chevron forward outline",
+            "mail open outline", "oh-link--secondary",
+        ):
+            with self.subTest(token=token):
+                self.assertEqual(catalogue[token], token)
+        with translation.override("vi"):
+            from django.utils.translation import gettext
+
+            self.assertEqual(gettext("grid outline"), "grid outline")
+            self.assertEqual(gettext("oh-link--secondary"), "oh-link--secondary")

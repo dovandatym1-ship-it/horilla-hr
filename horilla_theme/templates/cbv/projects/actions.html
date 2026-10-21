@@ -16,7 +16,7 @@
             <a
                 class="oh-btn oh-btn--light-bkg oh-btn--sq-sm"
                 href="{{instance.get_archive_url}}"
-                onclick="return confirm('Do you want to {{instance.archive_status}} this project?')"
+                onclick="return confirm('{% trans "Do you want to change archive status of this project?" %}')"
                 title="{% trans 'Archive' %}"
             >
                 <ion-icon name="archive"></ion-icon>
@@ -25,7 +25,7 @@
             <a
                 class="oh-btn oh-btn--light-bkg oh-btn--sq-sm"
                 href="{{instance.get_archive_url}}"
-                onclick="return confirm('Do you want to {{instance.archive_status}} this project?')"
+                onclick="return confirm('{% trans "Do you want to change archive status of this project?" %}')"
                 title="{% trans 'Un-Archive' %}"
             >
                 <ion-icon name="archive"></ion-icon>
