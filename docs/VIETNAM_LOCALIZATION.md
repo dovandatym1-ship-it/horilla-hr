@@ -1,4 +1,13 @@
-# Vietnamese localization: first executable slice
+# Việt hóa giao diện — Hệ thống HRM - HVNH
+
+## Đồng bộ vào nhánh `2.0` — 21/10/2026
+
+- PR #2 đã được merge: nền tảng ngôn ngữ `vi`, múi giờ Việt Nam, định dạng và đơn vị tiền tệ VND.
+- Tích hợp thêm các bản dịch và template đa module từ nhánh phát triển PR #6 dưới dạng thay đổi **chỉ liên quan đến Việt hóa**; không nhập các module `vn_hrm`/`vn_payroll` hay luồng tính lương chưa nghiệm thu.
+- Tên hiển thị mặc định: **Hệ thống HRM - HVNH**, có thể cấu hình bằng `SYSTEM_DISPLAY_NAME`; giữ nguyên định danh package Django và cơ chế logo doanh nghiệp.
+- `msgfmt --check` cho ba catalog tiếng Việt đã thành công, còn cảnh báo metadata PO chưa đầy đủ. Chưa có UAT đa vai trò để khẳng định Việt hóa 100%.
+
+## Phạm vi ban đầu
 
 This branch introduces **runtime code**, unlike the documentation-only planning PR.
 
@@ -11,7 +20,7 @@ This branch introduces **runtime code**, unlike the documentation-only planning 
 
 ## Deploy
 ```bash
-git checkout feature/vn-i18n-foundation
+git checkout 2.0
 docker compose up --build -d
 ```
 The Dockerfile already compiles `.po` catalogs to `.mo` via `msgfmt`. Development Compose bind-mounts source code, and its entrypoint compiles missing catalogs. Manual development without Docker needs **GNU gettext** and:
@@ -37,3 +46,44 @@ Existing `PayrollSettings` rows and users' explicit session currency preferences
 
 ## Remaining code work
 Core UX translations beyond the curated first catalog, custom JS strings, company-specific date configuration, employee legal identity data, employment contracts, attendance/OT policies, leave rules and statutory payroll are **not yet implemented**. Never use this slice as proof of Vietnamese payroll compliance. See the business analysis in PR #1 (docs/vietnam).
+
+## Bổ sung Việt hóa liên module — 18/10/2026 (PR #6)
+
+Cập nhật có thể kiểm tra trong nhánh `feature/vn-hrm-payroll-reconciliation`:
+- `horilla/locale/vi/LC_MESSAGES/django.po`: **908 msgid có bản dịch**, không có mục `msgstr` trống trong các cặp đơn giản đã kiểm tra.
+- `horilla/locale/vi/LC_MESSAGES/djangojs.po`: **137 msgid có bản dịch**, không có mục `msgstr` trống trong các cặp đơn giản đã kiểm tra.
+- Phạm vi thêm: đăng nhập, thanh điều hướng, phiếu lương và PDF, dashboard Payroll, nhân viên, công/phép/OT, tuyển dụng, tiếp nhận, nghỉ việc, helpdesk, tài sản và hiệu suất.
+- Chuẩn hóa `lang` của trang đăng nhập và PDF theo ngôn ngữ đang kích hoạt; thay một số chuỗi tiếng Anh hardcode trong navbar/JavaScript phiếu lương bằng `{% trans %}`.
+- `horilla/tests/test_vietnam_localization.py`: regression assertions kiểm tra catalog và một số chuỗi UI trọng yếu.
+- `scripts/audit_vi_locale.py`: kiểm kê tự động tham chiếu gettext thiếu và ứng viên chuỗi HTML chưa bọc i18n.
+- `.github/workflows/vn-hrm-integrity.yml`: biên dịch `vi` và tải lên artifact `vietnam-localization-audit.json` khi CI chạy.
+
+**Giới hạn:** 908 + 137 là tổng số `msgid` có bản dịch trong **hai catalog**, không phải tỷ lệ 100% trên toàn bộ giao diện. Repo có hơn hai nghìn HTML template và nhiều chuỗi ngoài gettext. Mọi email, báo cáo, PDF/Excel, tooltip, toast, JS động, màn hình responsive và quyền theo vai trò còn phải kiểm kê và UAT trực tiếp; chưa đạt điều kiện tuyên bố Việt hóa 100%.
+
+Lệnh kiểm tra:
+```sh
+python manage.py compilemessages -l vi
+python scripts/audit_vi_locale.py
+python manage.py test horilla.tests.test_vietnam_localization --noinput
+```
+
+Bản dịch cần giữ nguyên placeholder, cấu trúc giao diện và hỗ trợ chuyển ngôn ngữ; tránh thay thế hàng loạt chuỗi không qua gettext vì có thể làm sai thông tin/logic nghiệp vụ.
+
+## Kiểm kê mở rộng 18/10/2026 — tiếp tục Việt hóa (chưa nghiệm thu 100%)
+
+Báo cáo xuất trực tiếp từ GitHub Actions artifact `vietnam-localization-audit` tại commit `a3142d05`:
+
+| Chỉ số quét tĩnh | Giá trị đã đo |
+|---|---:|
+| Số khóa gettext Django + JavaScript được tham chiếu | 8.591 |
+| Số khóa có bản dịch tương ứng | 1.772 |
+| Tỷ lệ bao phủ nguồn gettext đơn giản | **20,63%** |
+| Số khóa Django còn thiếu | **6.819** |
+| Số khóa JavaScript `gettext()` còn thiếu | **0** |
+| Vị trí HTML được đánh dấu nghi vấn chưa bọc i18n | **319** |
+
+Các số liệu trên là **ảnh chụp thời điểm của CI**, không phải tỷ lệ màn hình đã dịch. Sau snapshot, còn có các bản dịch Django và sửa template tiếp tục được commit. Đây là phạm vi của công cụ quét tĩnh: `blocktrans`, JS nối chuỗi, nội dung phát sinh khi chạy, email, PDF/Excel và các thuộc tính động vẫn cần kiểm kê riêng.
+
+Đã sửa trực tiếp các trang HTML đăng nhập/đặt lại mật khẩu tĩnh (`auth/login.html`, `static/auth/*.html`) và template `templates/reset_send.html`, nhãn ảnh lỗi 404. Đã thêm kiểm thử runtime `gettext()` với `translation.override("vi")` và chuyển `en`; workflow CI yêu cầu không còn thiếu khóa JavaScript `gettext()` theo chỉ số quét tĩnh.
+
+**Điều kiện Done:** Sau khi nhập đầy đủ nguồn gettext còn thiếu, chạy lại `compilemessages`, kiểm tra thay đổi ngôn ngữ trong trình duyệt, không còn văn bản tiếng Anh ngoài tên riêng/mã kỹ thuật, kiểm tra tooltip/aria, email, báo cáo PDF/Excel, desktop/mobile và kiểm thử theo từng vai trò. Chỉ khi đó mới ghi Việt hóa giao diện 100%; không được đánh đồng catalog có `msgstr` với kết quả UAT.

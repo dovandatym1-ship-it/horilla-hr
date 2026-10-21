@@ -1,7 +1,7 @@
 {
-    "name": "Horilla",
-    "short_name": "Horilla",
-    "description": "Free and Open Source HR Software",
+    "name": "Hệ thống HRM - HVNH",
+    "short_name": "HRM - HVNH",
+    "description": "Hệ thống quản lý nhân sự - Học viện Ngân hàng",
     "start_url": "/",
     "display": "standalone",
     "background_color": "orangered",

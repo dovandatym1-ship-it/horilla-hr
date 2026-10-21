@@ -1,12 +1,13 @@
 {% load static %}
 {% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+{% get_current_language as current_language %}
+<html lang="{{ current_language }}">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login - {{ white_label_company_name }} Dashboard</title>
+        <title>{% trans "Login" %} - {{ white_label_company_name }}</title>
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -54,7 +55,7 @@
                                 id="username"
                                 name="username"
                                 class="oh-input w-100"
-                                placeholder="{% trans 'e.g. adam.luis@horilla.com' %}"
+                                placeholder="{% trans 'Email' %}"
                             >
                         </div>
                         <div class="oh-input-group">
@@ -144,7 +145,7 @@
                         alt="{{white_label_company_name}}"
                         style=" opacity:.90; 200px; height: 140px;"
                     {% else %}
-                        "{% static 'images/ui/auth-logo.png' %}" alt="{% trans 'Horilla' %}"
+                        "{% static 'images/ui/auth-logo.png' %}" alt="{{ white_label_company_name }}"
                     {% endif %}"
                     >
                     {% if white_label_company %}
