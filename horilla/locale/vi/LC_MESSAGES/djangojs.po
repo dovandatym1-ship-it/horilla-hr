@@ -1,0 +1,110 @@
+# Django JavaScript — Vietnamese localization
+# This is a curated first catalog; untranslated source strings fall back to English.
+msgid ""
+msgstr ""
+"Project-Id-Version: horilla-hr vietnam 1.0\n"
+"Language: vi\n"
+"Language-Team: Vietnamese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "An unexpected error occurred. Please refresh the page."
+msgstr "Đã xảy ra lỗi. Vui lòng tải lại trang."
+
+msgid "Do you really want to validate all the selected attendances?"
+msgstr "Bạn có muốn xác nhận toàn bộ bản ghi chấm công đã chọn không?"
+
+msgid "No rows are selected from Validate Attendances."
+msgstr "Chưa chọn bản ghi chấm công nào để xác nhận."
+
+msgid "Do you really want to approve OT for all the selected attendances?"
+msgstr "Bạn có muốn duyệt làm thêm giờ cho toàn bộ bản ghi đã chọn không?"
+
+msgid "No rows are selected from OT Attendances."
+msgstr "Chưa chọn bản ghi làm thêm giờ nào."
+
+msgid "Do you really want to reject all the selected attendance requests?"
+msgstr "Bạn có muốn từ chối toàn bộ yêu cầu điều chỉnh công đã chọn không?"
+
+msgid "Pending Attendance Update Request!"
+msgstr "Có yêu cầu điều chỉnh công đang chờ xử lý!"
+
+msgid "View Request"
+msgstr "Xem yêu cầu"
+
+msgid "Employees Imported Successfully"
+msgstr "Nhập dữ liệu nhân viên thành công"
+
+msgid "You have"
+msgstr "Bạn có"
+
+msgid "errors. Do you want to download the error list?"
+msgstr "lỗi. Bạn có muốn tải danh sách lỗi không?"
+
+msgid "Download error list & Skip Import"
+msgstr "Tải danh sách lỗi và bỏ qua nhập dữ liệu"
+
+msgid "Download error list & Continue Import"
+msgstr "Tải danh sách lỗi và tiếp tục nhập dữ liệu"
+
+msgid "Invalid File"
+msgstr "Tệp không hợp lệ"
+
+msgid "Please upload a valid XLSX file."
+msgstr "Vui lòng tải lên tệp XLSX hợp lệ."
+
+msgid "Stage updated"
+msgstr "Đã cập nhật giai đoạn"
+
+msgid "Failed to update sequence: "
+msgstr "Không thể cập nhật thứ tự: "
+
+msgid "Sequence updated"
+msgstr "Đã cập nhật thứ tự"
+
+msgid "Confirm Stage Change"
+msgstr "Xác nhận chuyển giai đoạn"
+
+msgid "Don't show this again in this session"
+msgstr "Không hiển thị lại trong phiên này"
+
+msgid "Cannot Change Stage"
+msgstr "Không thể chuyển giai đoạn"
+
+msgid "This move is not allowed."
+msgstr "Không được phép thực hiện thay đổi này."
+
+msgid "Employees"
+msgstr "Nhân viên"
+
+msgid "Number of days"
+msgstr "Số ngày"
+
+msgid "Draft"
+msgstr "Nháp"
+
+msgid "Review Ongoing"
+msgstr "Đang rà soát"
+
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+msgid "Leave count"
+msgstr "Số ngày nghỉ"
+
+msgid "Do you wish to create a Leave Report?"
+msgstr "Bạn có muốn tạo báo cáo nghỉ phép không?"
+
+msgid "Do you want to reject the selected leave requests?"
+msgstr "Bạn có muốn từ chối các đơn nghỉ phép đã chọn không?"
+
+msgid "Onboarding Candidates"
+msgstr "Ứng viên đang tiếp nhận"
+
+msgid "Candidates per Stage"
+msgstr "Ứng viên theo giai đoạn"

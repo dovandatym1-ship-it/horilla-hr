@@ -4,6 +4,8 @@ context_processor.py
 This module is used to register context processor`
 """
 
+from django.conf import settings as django_settings
+
 from employee.models import Employee
 from payroll.models import tax_models as models
 from payroll.models.models import Deduction
@@ -21,7 +23,7 @@ def default_currency(request):
         # for a brand new employee's very first request), so reuse this
         # instance directly instead of re-querying for it.
         settings = models.PayrollSettings()
-        settings.currency_symbol = "$"
+        settings.currency_symbol = django_settings.DEFAULT_CURRENCY_SYMBOL
         settings.company_id = getattr(request, "selected_company_instance", None)
         settings.save()
     symbol = settings.currency_symbol

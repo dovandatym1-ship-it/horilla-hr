@@ -371,12 +371,18 @@ WSGI_APPLICATION = "horilla.wsgi.application"
 # ========================================
 # INTERNATIONALIZATION
 # ========================================
-LANGUAGE_CODE = "en-us"
-TIME_ZONE = env("TIME_ZONE", default="Asia/Kolkata")
+# Vietnamese-first defaults on this fork; both are configurable for other deployments.
+LANGUAGE_CODE = env("LANGUAGE_CODE", default="vi")
+TIME_ZONE = env("TIME_ZONE", default="Asia/Ho_Chi_Minh")
+DEFAULT_CURRENCY_SYMBOL = env("DEFAULT_CURRENCY_SYMBOL", default="₫")
+# Only Vietnamese gets these display/input formats; other locales use Django's own.
+FORMAT_MODULE_PATH = ["horilla.vietnam_formats"]
+USE_THOUSAND_SEPARATOR = True
 USE_I18N = True
 USE_TZ = True
 
 LANGUAGES = (
+    ("vi", "Tiếng Việt"),
     ("en", "English (US)"),
     ("de", "Deutsch"),
     ("es", "Español"),
